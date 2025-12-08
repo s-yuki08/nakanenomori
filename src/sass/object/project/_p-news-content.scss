@@ -20,11 +20,8 @@
   }
 }
 
-.p-news__item + .p-news__item {
-  margin-top: rem(40);
-  @include mq(md) {
-    margin-top: rem(15);
-  }
+.p-news__item {
+  flex: 1;
 }
 
 .p-news-content__meta {

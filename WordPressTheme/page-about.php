@@ -75,12 +75,13 @@ get_template_part('parts/header-bg');
       <div class="p-director__body">
         <p class="p-director__text">
           私たちは、これまで目黒区内で地域住民に愛される医療を長年行ってきました。<br>
-          そこで得た想いを新たに、「中根の森に根ざすやさしさを、心と体に。<br>
-          笑顔が育つ、地域の“かかりつけの森”」をめざして、<br class="u-desktop">
+          そこで得た想いを新たに、「中根の森に根ざすやさしさを、心と体に。<br class="u-desktop">
+          笑顔が育つ、地域の“かかりつけの森” 」をめざして、<br class="u-desktop">
           “なかねの森病院”を創設しました。<br>
-          すべてを包み込み、癒す“森”であるよう、<br>
-          最新そして最善の医療と看護を目指します。<br>
-          温かさとやる気あふれる国内トップクラスの先端医療を担う<br class="u-desktop">医師と看護師と理学療法士が、<br class="u-desktop">“なかねの森”となってチーム医療を行います。
+          すべてを包み込み、見守る“森”となれるよう、<br class="u-desktop">
+          最善そして最新の医療と看護を目指します。<br>
+          温かさとやる気あふれるすべての医療スタッフが、<br class="u-desktop">
+          “なかねの森”となってチーム医療を行います。
         </p>
       </div>
       <div class="p-director__image-wrapper">
@@ -209,31 +210,31 @@ get_template_part('parts/header-bg');
     ?>
 
     <?php if (!empty($images)) : ?>
-    <div class="p-facility__gallery">
-      <ul class="p-facility__list">
-        <?php foreach ($images as $image) : ?>
-        <li class="p-facility__item">
-          <img src="<?php echo esc_url($image['src']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
-          <p class="p-facility__item-text"><?php echo esc_html($image['alt']); ?></p>
-        </li>
-        <?php endforeach; ?>
-      </ul>
-    </div>
+      <div class="p-facility__gallery">
+        <ul class="p-facility__list">
+          <?php foreach ($images as $image) : ?>
+            <li class="p-facility__item">
+              <img src="<?php echo esc_url($image['src']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+              <p class="p-facility__item-text"><?php echo esc_html($image['alt']); ?></p>
+            </li>
+          <?php endforeach; ?>
+        </ul>
+      </div>
     <?php else : ?>
-    <!-- 未入力時のフォールバック表示 -->
-    <div class="p-facility__gallery">
-      <ul class="p-facility__list">
-        <li class="p-facility__item">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/dummy_01.png" alt="受付・待合室">
-        </li>
-        <li class="p-facility__item">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/dummy_02.png" alt="受付・待合室">
-        </li>
-        <li class="p-facility__item">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/dummy_03.png" alt="受付・待合室">
-        </li>
-      </ul>
-    </div>
+      <!-- 未入力時のフォールバック表示 -->
+      <div class="p-facility__gallery">
+        <ul class="p-facility__list">
+          <li class="p-facility__item">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/dummy_01.png" alt="受付・待合室">
+          </li>
+          <li class="p-facility__item">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/dummy_02.png" alt="受付・待合室">
+          </li>
+          <li class="p-facility__item">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/dummy_03.png" alt="受付・待合室">
+          </li>
+        </ul>
+      </div>
     <?php endif; ?>
   </div>
 </section>
@@ -284,13 +285,13 @@ get_template_part('parts/header-bg');
 
             if (!empty($link)) {
               echo '<li class="p-staff__item"><a href="' . esc_url($link) . '">' .
-                    esc_html($dept['label']) .
-                    '<span class="p-staff__arr"></span></a></li>';
+                esc_html($dept['label']) .
+                '<span class="p-staff__arr"></span></a></li>';
             } else {
               // 非公開などの場合は非リンク表示
               echo '<li class="p-staff__item is-disabled"><span>' .
-                    esc_html($dept['label']) .
-                    '</span></li>';
+                esc_html($dept['label']) .
+                '</span></li>';
             }
           }
           ?>

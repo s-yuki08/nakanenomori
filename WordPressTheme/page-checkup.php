@@ -16,6 +16,12 @@
               </a>
             </li>
             <li class="p-checkup__item">
+              <a href="#generalCheckup">
+                <span>目黒区特定健康診査・がん検診</span>
+                <span class="p-checkup__arr"></span>
+              </a>
+            </li>
+            <li class="p-checkup__item">
               <a href="#brainDock">
                 <span>脳ドック</span>
                 <span class="p-checkup__arr"></span>
@@ -47,9 +53,13 @@
     <div class="p-generalCheckup__wrapper">
       <div class="p-generalCheckup__lead">
         <p class="p-generalCheckup__leadText">
-          企業などの事業者が常時使用する労働安全衛生法で義務づけている内容の健康診断です。<br>
-          企業へ就業、または学校の指示で健康診断書を提出する際の健康診断です。<br>
-          健診項目は労働衛生規則（労働安全衛生規則第43条）に基づいた内容となっております。
+          企業などの事業者が常時使用する労働安全衛生法で義務づけている内容の健康診断です。<br>
+          企業へ就業、または学校の指示で健康診断書を提出する際の健康診断です。<br>
+          健診項目は労働衛生規則(労働安全衛生規則第43条)に基づいた内容となっております。<br>
+          健診をご希望の方は、お電話でのご予約をお願いいたします。<br>
+
+          ※2025年12月現在、予約外でも受け付けておりますので、ご都合と体調のよい時に当院へお越しください。<br>
+          お待たせすることなく、1時間程度で実施いたします。
         </p>
       </div>
       <div class="p-generalCheckup__contents">
@@ -393,12 +403,6 @@
             <span class="p-medicalDock__priceValue">￥ 30,000 <small>（税別）</small></span>
           </div>
         </div>
-        <div class="p-medicalDock__priceCard">
-          <div class="p-medicalDock__priceRow">
-            <span class="p-medicalDock__priceLabel">基本コース(一泊)</span>
-            <span class="p-medicalDock__priceValue">￥ 68,000 <small>（税別）</small></span>
-          </div>
-        </div>
       </div>
 
       <h3 class="p-medicalDock__optionHeading">
@@ -408,6 +412,10 @@
 
       <div class="p-medicalDock__priceCardWrapper">
         <ul class="p-medicalDock__priceCard">
+          <li class="p-medicalDock__price">
+            <span class="p-medicalDock__priceLabel">CT<br class="u-mobile">（頭部、胸部、腹部骨盤部）</span>
+            <span class="p-medicalDock__priceValue">￥ 20,000 <small>（税別）</small></span>
+          </li>
           <li class="p-medicalDock__price">
             <span class="p-medicalDock__priceLabel">腫瘍マーカー<br class="u-mobile">（胃がん/肺がん等）
               <br>上部消化管内視鏡（GF）</span>

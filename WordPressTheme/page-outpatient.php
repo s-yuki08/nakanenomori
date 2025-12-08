@@ -6,7 +6,7 @@
     <div class="p-outpatient__wrapper">
       <div class="p-outpatient__left">
         <div class="p-outpatient__headline">
-          <h2 class="p-outpatient__title">はじめて来院される方へ</h2>
+          <h2 class="p-outpatient__title">外来受診される方へ</h2>
         </div>
         <nav class="p-outpatient__nav">
           <ul class="p-outpatient__list">
@@ -114,14 +114,14 @@
       <div class="p-bring__list-wrapper">
         <ul class="p-bring__list-left">
           <li class="p-bring__item">・マイナンバーカード（または健康保険証）</li>
-          <li class="p-bring__item">・後期高齢者医療保険者証</li>
+          <li class="p-bring__item">・後期高齢者医療被保険者証</li>
         </ul>
         <ul class="p-bring__list-center">
           <li class="p-bring__item">・各種医療証</li>
           <li class="p-bring__item">・他病院の紹介状</li>
         </ul>
         <ul class="p-bring__list-right">
-          <li class="p-bring__item">・お薬手帳</li>
+          <li class="p-bring__item">・おくすり手帳</li>
         </ul>
       </div>
     </div>
@@ -150,7 +150,7 @@
         <li class="p-flow-list__item">
           <div class="p-flow-list__item-wrap">
             <p class="p-flow-list__item-title">電話で予約</p>
-            <p class="p-flow-list__item-text">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            <p class="p-flow-list__item-text">電話で予約のテキストが入ります</p>
           </div>
         </li>
         <li class="p-flow-list__item">

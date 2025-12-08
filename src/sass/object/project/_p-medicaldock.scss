@@ -147,11 +147,11 @@
 
 .p-medicalDock__priceRow {
   display: grid;
-  grid-template-columns: rem(180) 1fr;
+  grid-template-columns: rem(200) 1fr;
   align-items: center;
   border: 1px solid $color-gray-light;
   @include mq("md") {
-    grid-template-columns: rem(180) 1fr;
+    grid-template-columns: rem(200) 1fr;
   }
 }
 
@@ -201,7 +201,7 @@
 
 .p-medicalDock__price {
   display: grid;
-  grid-template-columns: rem(180) 1fr;
+  grid-template-columns: rem(200) 1fr;
   border: 1px solid $color-gray-light;
   background: $color-white;
   align-items: center;

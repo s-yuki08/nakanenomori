@@ -118,7 +118,7 @@
 
 .p-visit__card-content {
   padding: rem(20) rem(15);
-  border: 3px solid $color-orange;
+  border: 3px solid #ff649f;
   border-radius: 18px;
   @include mq(md) {
     padding: rem(20) rem(15);
@@ -126,7 +126,7 @@
 }
 
 .p-visit__lead {
-  color: $color-orange;
+  color: #ff649f;
   font-weight: $medium;
   font-family: $heading-family;
   font-size: rem(17);
@@ -136,6 +136,11 @@
     font-size: rem(20);
   }
 }
+
+.p-visit__lead span {
+  display: inline-block;
+}
+
 .p-visit__lead.p-visit__lead--center {
   margin-top: rem(33);
   @include mq(md) {

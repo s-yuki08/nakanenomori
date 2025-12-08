@@ -142,44 +142,48 @@
       <ol class="p-flow__list p-flow-list">
         <li class="p-flow-list__item">
           <div class="p-flow-list__item-wrap">
-            <p class="p-flow-list__item-title">電話で予約</p>
-            <p class="p-flow-list__item-text">電話で予約のテキストが入ります</p>
+            <p class="p-flow-list__item-title">電話での予約</p>
+            <p class="p-flow-list__item-text">
+              来院される日時が定まっている場合には、お電話で受診予約を承ります。
+              <br>
+              初診の方も、予約外の再診も随時お受付いたします。受付時間内にお越し下さい。
+              <br>
+              緊急の場合など、ご不明な点がある時には、お電話でお問い合わせください。
+            </p>
           </div>
         </li>
         <li class="p-flow-list__item">
           <div class="p-flow-list__item-wrap">
-            <p class="p-flow-list__item-title">受付</p>
-            <p class="p-flow-list__item-text">テキストテキストテキストテキストテキスト</p>
-          </div>
-        </li>
-        <li class="p-flow-list__item">
-          <div class="p-flow-list__item-wrap">
-            <p class="p-flow-list__item-title">診療科受付</p>
-            <p class="p-flow-list__item-text">テキストテキストテキストテキストテキストテキストテキスト</p>
+            <p class="p-flow-list__item-title">受 付</p>
+            <p class="p-flow-list__item-text">外来窓口にて受付いたします。</p>
           </div>
         </li>
         <li class="p-flow-list__item">
           <div class="p-flow-list__item-wrap">
             <p class="p-flow-list__item-title">診察・検査</p>
-            <p class="p-flow-list__item-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-          </div>
-        </li>
-        <li class="p-flow-list__item">
-          <div class="p-flow-list__item-wrap">
-            <p class="p-flow-list__item-title">会計</p>
-            <p class="p-flow-list__item-text">テキストテキストテキストテキストテキストテキストテキスト</p>
+            <p class="p-flow-list__item-text">
+              各診療科の外来担当医が診察させていただきます。
+              <br>
+              診察が終わりましたら、外来待合でお待ちください。
+            </p>
           </div>
         </li>
         <li class="p-flow-list__item">
           <div class="p-flow-list__item-wrap">
             <p class="p-flow-list__item-title">お薬の受け取り</p>
-            <p class="p-flow-list__item-text">テキストテキストテキストテキストテキストテキストテキスト</p>
+            <p class="p-flow-list__item-text">院内処方の場合、当院の薬剤師が調剤したお薬をお持ちいたします。この際に、お薬の内容についても説明させていただきます。院外処方の場合には、会計時に処方箋をお渡しします。</p>
+          </div>
+        </li>
+        <li class="p-flow-list__item">
+          <div class="p-flow-list__item-wrap">
+            <p class="p-flow-list__item-title">会 計</p>
+            <p class="p-flow-list__item-text">お会計が済みましたら、外来窓口からお呼びいたします。</p>
           </div>
         </li>
         <li class="p-flow-list__item">
           <div class="p-flow-list__item-wrap">
             <p class="p-flow-list__item-title">ご帰宅</p>
-            <p class="p-flow-list__item-text">テキストテキストテキストテキストテキストテキストテキスト</p>
+            <p class="p-flow-list__item-text">気をつけてお帰りください。</p>
           </div>
         </li>
       </ol>

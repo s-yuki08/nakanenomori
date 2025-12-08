@@ -317,7 +317,6 @@ if (envSection) {
       // 下方向ちょい早めに発火したい時に調整
       threshold: 0.2 // 20%見えたら発火
     });
-
     io.observe(envSection);
   }
 }

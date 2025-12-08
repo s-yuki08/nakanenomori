@@ -55,17 +55,13 @@
   <div class="p-initialVisit__inner l-inner">
     <h3 class="p-initialVisit__title c-section-title">
       <span class="c-section-title__dot"></span>
-      初診について
+      はじめて受診される方へ
     </h3>
 
     <div class="p-initialVisit__body">
-      <p class="p-initialVisit__text">“ちょっと気になる症状”でも、私たちにご相談ください。<br>
-        診療科は同じであっても、あらわれる症状には人それぞれに違いがあります。<br>
-        ご自身で「このくらい大丈夫」と思っていても、いずれ大きな病気につながることも少なくありません。
-        <br>
-        この程度で病院に行ってもいいのかな？などと思わず、できるだけ早めにご相談ください。
-        <br>
-        診療科で悩むときは、「総合診療科」をご予約いただければ、診察後に適切な診療科をご案内いたします。
+      <p class="p-initialVisit__text">
+        ご自身で「このくらい大丈夫」と思えるようなことでも、放っておくと大きな病気につながってしまう場合もあります。<br>
+        「こんなことで病院に行ってもいいのかな？」と思わず、気になることがあれば、お気軽にご相談ください。
       </p>
     </div>
   </div>

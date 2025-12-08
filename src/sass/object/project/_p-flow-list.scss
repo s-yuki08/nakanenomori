@@ -33,6 +33,7 @@
 .p-flow-list__item-wrap {
   padding: rem(20) rem(16);
   border: rem(2) solid $color-cyan;
+  flex-grow: 1;
   @include mq(md) {
     padding: rem(25) rem(27);
   }

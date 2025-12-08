@@ -203,14 +203,9 @@
         <a href="tel:0364213724" class="p-contact__tel">03-6421-3724</a>
       </p>
 
-      <p class="p-contact__desc u-desktop">
-        電話受付時間／平日9:00〜17:00・土曜日9:00〜13:00<br>
+      <p class="p-contact__desc">
+        電話受付時間　午前 9:00～12:00 ／ 午後14:00～17:00
       </p>
-      <p class="p-contact__desc u-desktop">※救急センターへの問い合わせは24時間対応</p>
-      <p class="p-contact__desc u-mobile">
-        電話受付時間<br>平日9:00〜17:00・土曜日9:00〜13:00<br>
-      </p>
-      <p class="p-contact__desc u-mobile">※救急センターへの問い合わせは24時間対応</p>
     </div>
   </div>
 </section>

@@ -2059,7 +2059,7 @@ select::-ms-expand {
 }
 
 .p-contact__text {
-	font-size: 1.125rem;
+	font-size: 1rem;
 	font-weight: 500;
 	margin-bottom: 0.75rem;
 }
@@ -2074,7 +2074,7 @@ select::-ms-expand {
 }
 
 .p-contact__desc {
-	font-size: 0.875rem;
+	font-size: 1rem;
 }
 
 .p-department-link {
@@ -2837,6 +2837,7 @@ select::-ms-expand {
 
 .p-flow-list__item-wrap {
 	border: 0.125rem solid #13acb9;
+	flex-grow: 1;
 	padding: 1.25rem 1rem;
 }
 
@@ -7847,7 +7848,7 @@ a:hover {
 }
 
 .p-contact__desc {
-	font-size: 1rem;
+	font-size: 1.125rem;
 	line-height: 1.9;
 }
 

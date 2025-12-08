@@ -1,0 +1,10291 @@
+body {
+	font-family: "I-OTFゴシックオールドPro M";
+}
+
+.u-desktop {
+	display: none;
+}
+
+/* ============================================
+ Utility
+ ============================================ */
+
+.u-text-primary {
+	color: #6494d3;
+}
+
+.u-text-secondary {
+	color: #aaa;
+}
+
+/* リキッドレイアウト対応 */
+
+html {
+	font-size: 16px;
+}
+
+/* pcの電話番号発信対応 */
+
+/* ホバー */
+
+a {
+	-webkit-text-decoration: none;
+	color: inherit;
+	text-decoration: none;
+	transition: opacity 0.3s;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default padding */
+
+ul,
+ol {
+	padding: 0;
+}
+
+/* Remove default margin */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/* Set core root defaults */
+
+html {
+	scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+
+body {
+	line-height: 1.5;
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+
+ul,
+ol {
+	list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+
+a:not([class]) {
+	-webkit-text-decoration-skip: ink;
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+
+img {
+	display: block;
+	max-width: 100%;
+	width: 100%;
+}
+
+/* Natural flow and rhythm in articles by default */
+
+article > * + * {
+	margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Blur images when they have no alt attribute */
+
+img:not([alt]) {
+	filter: blur(10px);
+}
+
+/* フォームリセット */
+
+input,
+button,
+select,
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: transparent;
+	border: none;
+	border-radius: 0;
+	font: inherit;
+	outline: none;
+}
+
+textarea {
+	resize: vertical;
+}
+
+input[type=checkbox],
+input[type=radio] {
+	display: none;
+}
+
+input[type=submit],
+input[type=button],
+label,
+button,
+select {
+	cursor: pointer;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+.l-access {
+	margin-top: 2.875rem;
+}
+
+.l-accordion-sp {
+	margin-top: -5.3125rem;
+}
+
+.l-affiliation {
+	margin-top: 2.5rem;
+	padding-bottom: 2.5rem;
+}
+
+.l-basicPolicy {
+	margin-top: 2.5rem;
+}
+
+.l-bring {
+	margin-top: 3.75rem;
+}
+
+.l-brainDock {
+	margin-top: 2.5rem;
+}
+
+.l-company {
+	margin-top: 3.125rem;
+}
+
+.l-consultation-hours {
+	margin-top: 3.4375rem;
+}
+
+.l-contact {
+	padding-bottom: 3.75rem;
+	padding-top: 3.75rem;
+}
+
+.l-department-link {
+	padding-bottom: 2.5rem;
+	padding-top: 2.5rem;
+}
+
+.l-department-service {
+	margin-top: 2.5rem;
+}
+
+.l-department {
+	padding-bottom: 2.5rem;
+	padding-top: 6.25rem;
+}
+
+.l-director {
+	margin-top: 3.75rem;
+}
+
+.l-disease {
+	margin-top: 2.5rem;
+}
+
+.l-doctorIntro {
+	margin-bottom: 2.5rem;
+	margin-top: 2.5rem;
+}
+
+.l-environment {
+	margin-top: 2.5rem;
+}
+
+.l-facility {
+	margin-top: 2.5rem;
+}
+
+.l-faqContact {
+	padding-top: 8.125rem;
+	position: relative;
+}
+
+.l-faq {
+	margin-top: 5rem;
+	padding-bottom: 5rem;
+}
+
+.l-flow {
+	margin-top: 3.75rem;
+}
+
+.l-footer {
+	padding-bottom: 1.4375rem;
+	padding-top: 2.5rem;
+}
+
+.l-generalCheckup {
+	padding-top: 6.25rem;
+}
+
+.l-general-medicine {
+	padding-bottom: 2.5rem;
+	padding-top: 6.25rem;
+}
+
+.l-greeting {
+	padding-top: 0.625rem;
+}
+
+.l-header {
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 900;
+}
+
+.l-homeNews {
+	padding-bottom: 2.5rem;
+	padding-top: 6.875rem;
+}
+
+.l-hospital-caution {
+	margin-top: 2.5rem;
+}
+
+.l-hospital-cost {
+	margin-top: 2.5rem;
+}
+
+.l-hospital-discharge {
+	margin-top: 2.5rem;
+}
+
+.l-hospitalFlow {
+	margin-top: 2.5rem;
+}
+
+.l-hours {
+	padding-bottom: 1.75rem;
+	padding-top: 3.375rem;
+}
+
+.l-info {
+	padding-bottom: 2.5rem;
+	padding-top: 2.3125rem;
+}
+
+.l-initialVisit {
+	margin-top: 3.125rem;
+}
+
+.l-inner {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 37.5rem;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 100%;
+}
+
+.l-lead {
+	padding-bottom: 1.9375rem;
+	padding-top: 1.25rem;
+}
+
+.l-loading {
+	left: 0;
+	position: fixed;
+	top: 0;
+	z-index: 999;
+}
+
+.l-medicalDock {
+	margin-top: 2.5rem;
+	padding-bottom: 2.5rem;
+}
+
+.l-menu-link {
+	padding-top: 2rem;
+}
+
+.l-message {
+	padding-bottom: 3.125rem;
+	padding-top: 2.1875rem;
+}
+
+.l-mission {
+	margin-top: 2.5rem;
+}
+
+.l-header {
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 900;
+}
+
+.l-news-detail {
+	padding-bottom: 6.25rem;
+	padding-top: 6.875rem;
+}
+
+.l-news {
+	padding-top: 2.5rem;
+}
+
+.l-not-found {
+	padding-bottom: 6.25rem;
+	padding-top: 6.25rem;
+}
+
+.l-nursing {
+	padding-top: 6.25rem;
+	position: relative;
+}
+
+.l-office-staff {
+	margin-top: 2.5rem;
+}
+
+.l-paginavi {
+	margin-top: 2.5rem;
+}
+
+.l-partner {
+	margin-top: 3.125rem;
+	padding-bottom: 3.125rem;
+}
+
+.l-privacy-policy {
+	padding-bottom: 7.5rem;
+	padding-top: 7.5rem;
+}
+
+.l-recruit-contact {
+	padding-bottom: 11.25rem;
+	padding-top: 6.25rem;
+}
+
+.l-recruit-flow {
+	margin-top: 2.5rem;
+}
+
+.l-recruit-info {
+	margin-top: 2.5rem;
+}
+
+.l-schedule {
+	margin-top: 2.5rem;
+}
+
+.l-sitemap {
+	padding-bottom: 11.25rem;
+	padding-top: 6.25rem;
+}
+
+.l-staff-link {
+	height: 81.25rem;
+	padding-bottom: 2.5rem;
+	padding-top: 2.5rem;
+}
+
+.l-staff {
+	margin-top: 2.5rem;
+}
+
+.l-visit {
+	padding-bottom: 3.75rem;
+	padding-top: 2.5rem;
+}
+
+.c-bird-bg {
+	position: relative;
+}
+
+.c-bird-bg::before {
+	display: none;
+}
+
+.c-breadcrumb {
+	background-color: #F7F7F7;
+	font-size: 0.6875rem;
+	padding: 0.3125rem 0;
+}
+
+.c-button a {
+	background: #fff;
+	border: 1px solid #13b979;
+	border-radius: 50px;
+	color: #000000;
+	display: inline-block;
+	font-size: 1.25rem;
+	font-weight: 400;
+	line-height: 1;
+	padding: 1.0625rem 3.0625rem;
+	position: relative;
+	width: 17.125rem;
+}
+
+.c-button a::after {
+	background-image: url(../images/common/arrow-right.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	bottom: 0;
+	content: "";
+	height: 1.5625rem;
+	margin: auto;
+	position: absolute;
+	right: 1.875rem;
+	top: 0;
+	transition: right 0.3s;
+	width: 1.5625rem;
+}
+
+/* ============================================
+ Component - Card
+ ============================================ */
+
+.c-card {
+	align-items: center;
+	align-items: center;
+	animation: fadeInUp 0.5s ease forwards;
+	background: #f6f8fc;
+	border-radius: 0.75rem;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+	display: flex;
+	flex-direction: column;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	justify-content: flex-start;
+	opacity: 0;
+	padding: 0.625rem 0.625rem;
+	position: relative;
+	transform: translateY(20px);
+}
+
+.c-card:nth-child(1) {
+	animation-delay: 0.1s;
+}
+
+.c-card:nth-child(2) {
+	animation-delay: 0.2s;
+}
+
+.c-card:nth-child(3) {
+	animation-delay: 0.3s;
+}
+
+.c-card:nth-child(4) {
+	animation-delay: 0.4s;
+}
+
+.c-card__label {
+	color: #707070;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 11px;
+	font-weight: 400;
+	letter-spacing: 0.3px;
+	margin-bottom: 1.5rem;
+	position: relative;
+}
+
+.c-card__label::before {
+	background: #1346b9;
+	bottom: -15%;
+	content: "";
+	height: 1px;
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+	width: 1.625rem;
+}
+
+.c-card__date {
+	color: #aaa;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 10px;
+	font-weight: 400;
+	margin-top: 0.625rem;
+}
+
+/* ============================================
+ Component - Circle Chart (スタッフ構成比)
+ ============================================ */
+
+.c-circle-chart {
+	height: 8.125rem;
+	position: relative;
+	width: 8.125rem;
+}
+
+.c-circle-chart__svg {
+	height: 100%;
+	transform: rotate(-90deg);
+	width: 100%;
+}
+
+/* 右半分に回すため青だけ追加で 180deg 回転 */
+
+.c-circle-chart__progress--pink {
+	transform: rotate(180deg);
+	transform-origin: 70px 70px; /* cx, cy と一致 */
+}
+
+.c-circle-chart__bg {
+	fill: none;
+	stroke: #efefef;
+	stroke-width: 11;
+}
+
+.c-circle-chart__progress {
+	fill: none;
+	stroke-width: 11;
+	stroke-linecap: round;
+	transition: stroke-dashoffset 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.c-circle-chart__progress--pink {
+	stroke: #ff6b9d;
+}
+
+.c-circle-chart__progress--blue {
+	stroke: #6494d3;
+}
+
+.c-circle-chart__content {
+	left: 50%;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.c-circle-chart__ratio {
+	align-items: baseline;
+	display: flex;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	gap: 1px;
+	justify-content: center;
+}
+
+.c-circle-chart__ratio-num {
+	font-feature-settings: "tnum";
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 2.125rem;
+	font-weight: 600;
+	line-height: 1;
+}
+
+.c-circle-chart__ratio-num--pink {
+	color: #ff6b9d;
+}
+
+.c-circle-chart__ratio-num--blue {
+	color: #6494d3;
+}
+
+.c-circle-chart__ratio-separator {
+	color: #333;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 0.8125rem;
+	font-weight: 500;
+	margin: 0 1px;
+}
+
+.c-circle-chart__label {
+	color: #888;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 0.625rem;
+	font-weight: 400;
+	margin-top: 0.3125rem;
+}
+
+.c-circle-chart__label.c-circle-chart__label--pink {
+	color: #ff6b9d;
+}
+
+.c-circle-chart__label.c-circle-chart__label--blue {
+	color: #6494d3;
+}
+
+/* ============================================
+ Component - Donut Chart (有給取得率)
+ ============================================ */
+
+.c-donut-chart {
+	height: 8.125rem;
+	position: relative;
+	width: 8.125rem;
+}
+
+.c-donut-chart__svg {
+	height: 100%;
+	transform: rotate(-90deg);
+	width: 100%;
+}
+
+.c-donut-chart__bg {
+	fill: none;
+	stroke: #ebebeb;
+	stroke-width: 12;
+}
+
+.c-donut-chart__progress {
+	fill: none;
+	stroke: #6494d3;
+	stroke-width: 12;
+	stroke-linecap: round;
+	transition: stroke-dashoffset 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.c-donut-chart__content {
+	align-items: baseline;
+	display: flex;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	justify-content: flex-end;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.c-donut-chart__value {
+	font-feature-settings: "tnum";
+	color: #6494d3;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 1.75rem;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.c-donut-chart__percent {
+	color: #6494d3;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 0.6875rem;
+	font-weight: 600;
+}
+
+.c-hamburger {
+	height: 1.875rem;
+	position: relative;
+	width: 1.875rem;
+	z-index: 100;
+}
+
+.c-hamburger span {
+	background-color: #fff;
+	height: 0.125rem;
+	position: absolute;
+	transition: 0.3s;
+	width: inherit;
+}
+
+.c-hamburger span:nth-child(1) {
+	top: 15%;
+}
+
+.c-hamburger span:nth-child(2) {
+	opacity: 1;
+	top: 51%;
+}
+
+.c-hamburger span:nth-child(3) {
+	top: 85%;
+}
+
+.c-hamburger.is-active span:nth-child(1) {
+	top: 60%;
+	transform: rotate(45deg);
+}
+
+.c-hamburger.is-active span:nth-child(2) {
+	opacity: 0;
+	top: 51%;
+}
+
+.c-hamburger.is-active span:nth-child(3) {
+	top: 60%;
+	transform: rotate(-45deg);
+}
+
+/* ============================================
+ Component - Overtime (残業時間)
+ ============================================ */
+
+.c-overtime {
+	align-items: baseline;
+	display: flex;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	gap: 1px;
+	line-height: 1;
+	margin-top: 2rem;
+}
+
+.c-overtime__value {
+	font-feature-settings: "tnum";
+	color: #6494d3;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-weight: 700;
+	line-height: 1;
+}
+
+.c-overtime__value--large {
+	font-size: 2.5rem;
+}
+
+.c-overtime__value--small {
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 38px;
+	font-weight: 600;
+}
+
+.c-overtime__unit {
+	color: #aaa;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 12px;
+	font-weight: 400;
+	margin-left: 2px;
+}
+
+.c-overtime__unit--small {
+	align-self: flex-end;
+	margin-bottom: 3px;
+}
+
+.c-page-top {
+	bottom: 0.9375rem;
+	overflow: hidden;
+	position: fixed;
+	right: 1.25rem;
+}
+
+.c-page-top a {
+	display: block;
+	height: 3.75rem;
+	position: relative;
+	width: 3.75rem;
+}
+
+.c-page-top a span {
+	-webkit-transition: opacity 0.5s, background-image 0.5s;
+	background-image: url("../images/common/arrow-top.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	position: absolute;
+	transition: opacity 0.5s, background-image 0.5s;
+	width: 100%;
+	z-index: 1000;
+}
+
+.c-section-title {
+	align-items: center;
+	color: #000000;
+	display: flex;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.25rem;
+	font-weight: 700;
+	gap: 0.5rem;
+	line-height: 1.6;
+}
+
+.c-section-title__dot {
+	background-color: #13acb9;
+	border-radius: 50%;
+	flex-shrink: 0;
+	height: 1.5625rem;
+	width: 1.5625rem;
+}
+
+.c-section-title__dot.c-section-title__dot--green {
+	background-color: #13b979;
+	border-radius: 50%;
+	flex-shrink: 0;
+	height: 1.5625rem;
+	width: 1.5625rem;
+}
+
+.c-section-title__dot.c-section-title__dot--pink {
+	background-color: #ff649f;
+	border-radius: 50%;
+	flex-shrink: 0;
+	height: 1.5625rem;
+	width: 1.5625rem;
+}
+
+.c-section-title__dot.c-section-title__dot--orange {
+	background-color: #ffa934;
+	border-radius: 50%;
+	flex-shrink: 0;
+	height: 1.5625rem;
+	width: 1.5625rem;
+}
+
+.c-section-title__dot.c-section-title__dot--blue {
+	background-color: #1346b9;
+	border-radius: 50%;
+	flex-shrink: 0;
+	height: 1.5625rem;
+	width: 1.5625rem;
+}
+
+.c-section-title__dot.c-section-title__dot--cyan {
+	background-color: #13acb9;
+	border-radius: 50%;
+	flex-shrink: 0;
+	height: 1.5625rem;
+	width: 1.5625rem;
+}
+
+.c-section-title__dot.c-section-title__dot--navy {
+	background-color: #232e83;
+	border-radius: 50%;
+	flex-shrink: 0;
+	height: 1.5625rem;
+	width: 1.5625rem;
+}
+
+/* ============================================
+ Component - Stat Value (平均年齢)
+ ============================================ */
+
+.c-stat-value {
+	font-feature-settings: "tnum";
+	color: #6494d3;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 2.25rem;
+	font-weight: 700;
+	line-height: 1;
+	margin-top: 2rem;
+}
+
+.c-stat-value__unit {
+	color: #aaa;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 0.75rem;
+	font-weight: 400;
+}
+
+.p-about {
+	padding-top: 6.25rem;
+	position: relative;
+}
+
+.p-about__wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+
+.p-about__left {
+	margin-top: 2.5rem;
+	position: relative;
+}
+
+.p-about__headline {
+	align-items: center;
+	display: flex;
+	margin-bottom: 18px;
+}
+
+.p-about__title {
+	color: #232e83;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.25rem;
+	font-weight: 700;
+	padding-left: 3.75rem;
+	position: relative;
+}
+
+.p-about__title::before {
+	background-image: url(../images/common/about_icon.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 3.75rem;
+	left: 0;
+	position: absolute;
+	top: -0.9375rem;
+	width: 2.875rem;
+}
+
+.p-about__title::after {
+	background-color: #232e83;
+	border-radius: 2px;
+	content: "";
+	height: 0.125rem;
+	margin-left: 1.25rem;
+	width: 8.75rem;
+}
+
+.p-about__nav {
+	margin-top: 1.875rem;
+	width: 100%;
+}
+
+.p-about__nav::before {
+	display: none;
+}
+
+.p-about__list {
+	display: flex;
+	flex-direction: column;
+	gap: 0.625rem;
+	width: 100%;
+}
+
+.p-about__item a {
+	align-items: center;
+	color: #000000;
+	display: flex;
+	font-size: 1.125rem;
+	gap: 14px;
+	justify-content: space-between;
+	padding: 0.75rem 0.625rem 0.75rem 0;
+	transition: opacity 0.3s ease;
+}
+
+.p-about__item a:hover {
+	opacity: 0.7;
+}
+
+.p-about__arr {
+	background-image: url(../images/common/arrow-navy.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 1.25rem;
+	width: 1.25rem;
+}
+
+.p-about__right {
+	width: 100%;
+}
+
+.p-about__image {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.p-about__image img {
+	-o-object-fit: cover;
+	aspect-ratio: 16/9;
+	border-radius: 20px;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.p-accordion-sp-heading {
+	background: #fff;
+	border: 2px solid #232e83;
+	border-radius: 20px;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+	width: 100%;
+}
+
+.p-accordion-sp__trigger {
+	-webkit-tap-highlight-color: transparent;
+	align-items: center;
+	background: #fff;
+	border: 0;
+	border-radius: 24px;
+	color: #232e83;
+	display: flex;
+	font-size: max(18px, min(4vw, 26px));
+	font-weight: 500;
+	gap: 12px;
+	justify-content: space-between;
+	letter-spacing: 0.12em;
+	padding: 0.71875rem 1.5rem;
+	position: relative;
+	width: 100%;
+}
+
+.p-accordion-sp__title {
+	align-items: center;
+	display: flex;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.25rem;
+	font-weight: 700;
+	gap: 0.45em;
+	letter-spacing: 0.3em;
+}
+
+.p-accordion-sp__chev {
+	height: 1.75rem;
+	transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+	width: 1.75rem;
+}
+
+.p-accordion-sp.is-open .p-accordion-sp__chev {
+	transform: rotate(180deg);
+}
+
+.p-accordion-sp__panel {
+	height: 0;
+	overflow: hidden;
+	padding: 0 0.75rem;
+	transition: padding 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.p-accordion-sp.is-open .p-accordion-sp__panel {
+	padding: 0.375rem 0.75rem 1.25rem;
+}
+
+.p-accordion-sp__list {
+	grid-gap: 0.875rem;
+	display: grid;
+	gap: 0.875rem;
+	list-style: none;
+	margin: 0.625rem 0.5rem 0.875rem;
+	padding: 0;
+}
+
+.p-accordion-sp__item {
+	position: relative;
+}
+
+.p-accordion-sp__link {
+	align-items: center;
+	background: #fff;
+	border: 2px solid #13acb9;
+	border-radius: 16px;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+	color: #13acb9;
+	display: flex;
+	justify-content: left;
+	padding: 1.125rem 0.625rem;
+	position: relative;
+}
+
+.p-accordion-sp__link::before {
+	background-image: url(../images/common/medical-questionnaire-icon.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	height: 3.125rem;
+	left: 5%;
+	position: absolute;
+	top: 10%;
+	width: 2.125rem;
+}
+
+.p-accordion-sp__link.p-accordion-sp__link--green {
+	align-items: center;
+	background: #fff;
+	border: 2px solid #13b979;
+	border-radius: 16px;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+	color: #13b979;
+	display: flex;
+	justify-content: left;
+	padding: 1.125rem 1.25rem;
+	position: relative;
+}
+
+.p-accordion-sp__link.p-accordion-sp__link--green::before {
+	background-image: url(../images/common/stethoscope-icon.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	height: 2.5rem;
+	left: 5%;
+	position: absolute;
+	top: 20%;
+	width: 2.5rem;
+}
+
+.p-accordion-sp__link.p-accordion-sp__link--blue {
+	align-items: center;
+	background: #fff;
+	border: 2px solid #1346b9;
+	border-radius: 16px;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+	color: #1346b9;
+	display: flex;
+	justify-content: left;
+	padding: 1.125rem 1.25rem;
+	position: relative;
+}
+
+.p-accordion-sp__link.p-accordion-sp__link--blue::before {
+	background-image: url(../images/common/recruit-icon.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	height: 1.875rem;
+	left: 5%;
+	position: absolute;
+	top: 27%;
+	width: 2.5rem;
+}
+
+.p-accordion-sp__link.p-accordion-sp__link--pink {
+	align-items: center;
+	background: #fff;
+	border: 2px solid #ff649f;
+	border-radius: 16px;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+	color: #ff649f;
+	display: flex;
+	justify-content: left;
+	padding: 1.125rem 1.25rem;
+	position: relative;
+}
+
+.p-accordion-sp__link.p-accordion-sp__link--pink::before {
+	background-image: url(../images/common/bed-icon.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	height: 2.5rem;
+	left: 5%;
+	position: absolute;
+	top: 15%;
+	width: 2.5rem;
+}
+
+.p-accordion-sp__link.p-accordion-sp__link--orange {
+	align-items: center;
+	background: #fff;
+	border: 2px solid #ffa934;
+	border-radius: 16px;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+	color: #ffa934;
+	display: flex;
+	justify-content: left;
+	padding: 1.125rem 1.25rem;
+	position: relative;
+}
+
+.p-accordion-sp__link.p-accordion-sp__link--orange::before {
+	background-image: url(../images/common/human-icon.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	height: 1.875rem;
+	left: 5%;
+	position: absolute;
+	top: 35%;
+	width: 2.5rem;
+}
+
+.p-accordion-sp__link.p-accordion-sp__link--navy {
+	align-items: center;
+	background: #fff;
+	border: 2px solid #232e83;
+	border-radius: 16px;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+	color: #232e83;
+	display: flex;
+	justify-content: left;
+	padding: 1.125rem 1.25rem;
+	position: relative;
+}
+
+.p-accordion-sp__link.p-accordion-sp__link--navy::before {
+	background-image: url(../images/common/heart-icon.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	height: 2.5rem;
+	left: 5%;
+	position: absolute;
+	top: 25%;
+	width: 2.5rem;
+}
+
+.p-accordion-sp__text {
+	font-size: 1.125rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	padding-left: 3.125rem;
+}
+
+.p-accordion-sp__arrow {
+	flex: 0 0 auto;
+	height: 24px;
+	position: relative;
+	width: 24px;
+}
+
+.p-access__inner.l-inner {
+	max-width: 37.5rem;
+}
+
+.p-access__title {
+	color: #232e83;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.25rem;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	text-align: left;
+}
+
+.p-access__wrapper {
+	margin-top: 1.875rem;
+}
+
+.p-access__contents {
+	width: 100%;
+}
+
+.p-access__map {
+	width: 100%;
+}
+
+.p-access__text {
+	margin-top: 1.625rem;
+	position: relative;
+	width: 100%;
+}
+
+.p-access__map iframe {
+	border-radius: 16px;
+	height: 14.375rem;
+	width: 100%;
+}
+
+.p-access__addr {
+	color: #000000;
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: 0.1em;
+	line-height: 1.8;
+	position: relative;
+}
+
+.p-access__addr::before {
+	background-image: url(../images/common/tree_icon_2.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 5.0625rem;
+	position: absolute;
+	right: 3%;
+	top: 5%;
+	width: 4.5rem;
+	z-index: 1;
+}
+
+.p-access__list {
+	margin-top: 1.625rem;
+}
+
+.p-access__item {
+	align-items: flex-start;
+	display: flex;
+	gap: 0.5rem;
+	line-height: 1.7;
+}
+
+.p-access__item + .p-access__item {
+	margin-top: 1.5rem;
+}
+
+.p-access__bullet {
+	background-image: url(../images/common/arrow_icon_circle.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: block;
+	height: 1.25rem;
+	margin-top: 0.0625rem;
+	width: 1.25rem;
+}
+
+.p-access__item span {
+	font-size: 1rem;
+	letter-spacing: 0.1em;
+	line-height: 1.6;
+}
+
+.p-access__tel-wrapper {
+	margin-top: 2.5rem;
+}
+
+.p-access__telLabel {
+	color: #000000;
+	font-size: 0.875rem;
+	font-weight: 500;
+}
+
+.p-access__tel {
+	margin-top: 0.625rem;
+}
+
+.p-access__tel a {
+	color: #232e83;
+	font-size: 1.875rem;
+	font-weight: 700;
+}
+
+.p-access__tel a:hover {
+	opacity: 0.8;
+}
+
+.p-affiliation__inner.l-inner {
+	max-width: 37.5rem;
+}
+
+.p-affiliation__content {
+	margin-top: 0.9375rem;
+}
+
+.p-affiliation__table-wrap {
+	width: 100%;
+}
+
+.p-affiliation__table {
+	border: 1px solid #707070;
+	border-collapse: collapse;
+	font-size: 0.9375rem;
+	text-align: center;
+	width: 100%;
+}
+
+.p-affiliation__table th,
+.p-affiliation__table td {
+	border: 1px solid #707070;
+	padding: 0.75rem 0.625rem;
+	vertical-align: middle;
+}
+
+.p-affiliation__table th {
+	background: #f4f4f4;
+	font-weight: 700;
+}
+
+.p-affiliation__table td a {
+	transition: opacity 0.3s;
+}
+
+.p-affiliation__table td a:hover {
+	opacity: 0.8;
+}
+
+.p-affiliation__icon {
+	display: inline-block;
+	height: 1.25rem;
+	margin-left: 1.25rem;
+	position: relative;
+	vertical-align: middle;
+	width: 1.25rem;
+}
+
+.p-affiliation__icon::before {
+	background-image: url(../images/common/link-icon.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 1.25rem;
+	position: absolute;
+	right: 50%;
+	top: -15%;
+	width: 1.25rem;
+	z-index: 1;
+}
+
+.p-affiliation__table-wrap {
+	-webkit-overflow-scrolling: touch; /* スムーズスクロール（iOS） */
+	overflow-x: auto;
+}
+
+.p-affiliation__table {
+	border-collapse: collapse;
+	min-width: 600px; /* テーブル幅を広げてスクロール余地を作る */
+	white-space: nowrap; /* 折り返し防止 */
+}
+
+.p-basicPolicy {
+	position: relative;
+}
+
+.p-basicPolicy::before {
+	background: url(../images/common/tree.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 5.125rem;
+	position: absolute;
+	right: 12%;
+	top: -6%;
+	width: 2.5rem;
+}
+
+.p-basicPolicy__inner.l-inner {
+	max-width: 37.5rem;
+}
+
+.p-basicPolicy__content {
+	margin-top: 0.9375rem;
+	width: 100%;
+}
+
+.p-basicPolicy__list {
+	counter-reset: number;
+}
+
+.p-basicPolicy__item {
+	display: flex;
+}
+
+.p-basicPolicy__item + .p-basicPolicy__item {
+	margin-top: 1.25rem;
+}
+
+.p-basicPolicy__item::before {
+	align-items: center;
+	background-color: #232e83;
+	color: #fff;
+	content: counter(number);
+	counter-increment: number;
+	display: inline-flex;
+	flex-shrink: 0;
+	font-size: 1.125rem;
+	justify-content: center;
+	line-height: 1;
+	width: 2.1875rem;
+}
+
+.p-basicPolicy__box {
+	border: 0.125rem solid #232e83;
+	flex-grow: 1;
+	padding: 0.9375rem 0.625rem;
+}
+
+.p-basicPolicy__head {
+	color: #232e83;
+	flex-shrink: 0;
+	font-size: 1.0625rem;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	line-height: 1;
+}
+
+.p-basicPolicy__desc {
+	font-size: 0.75rem;
+	line-height: 1.3;
+	margin-top: 0.625rem;
+}
+
+/* link style (下線だけ青で) */
+
+.p-basicPolicy__link {
+	-webkit-text-decoration: underline;
+	color: #1b2b7a;
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+
+.p-brainDock__inner.l-inner {
+	max-width: 67.5rem;
+}
+
+.p-brainDock__wrapper {
+	margin-top: 0.9375rem;
+}
+
+.p-brainDock__body {
+	width: 100%;
+}
+
+.p-brainDock__text {
+	font-size: 1rem;
+	letter-spacing: 0.05em;
+	line-height: 1.9;
+}
+
+.p-brainDock__contents {
+	margin: 0 auto;
+	max-width: 42rem;
+	width: 100%;
+}
+
+.p-brainDock__heading {
+	margin-top: 1.875rem;
+}
+
+.p-brainDock__headingTitle {
+	background: #fff;
+	border: 1px solid #232e83;
+	border-radius: 20px;
+	color: #232e83;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1rem;
+	font-weight: 700;
+	max-width: 9.375rem;
+	padding: 0.3125rem 1.875rem;
+	text-align: center;
+	width: 100%;
+}
+
+.p-brainDock__headingTitle.p-brainDock__headingTitle--middle {
+	max-width: 12.5rem;
+}
+
+.p-brainDock__tableWrap {
+	margin-top: 0.9375rem;
+	overflow-x: auto;
+}
+
+.p-brainDock__tableInner {
+	width: 100%;
+}
+
+.p-brainDock__table {
+	border: 1px solid #adadad;
+	border-collapse: collapse;
+	font-size: 0.875rem;
+	width: 100%;
+}
+
+.p-brainDock__table th,
+.p-brainDock__table td {
+	border: 1px solid #adadad;
+	padding: 0.625rem 0.75rem;
+	vertical-align: top;
+}
+
+.p-brainDock__table thead th {
+	background: #f4f4f4;
+	font-size: 0.875rem;
+	font-weight: 700;
+	text-align: center;
+}
+
+.p-brainDock__table thead th {
+	background: #f4f4f4;
+	font-size: 0.875rem;
+	font-weight: 700;
+	text-align: center;
+}
+
+.p-brainDock__table tbody th {
+	background: rgba(35, 46, 131, 0.07);
+	font-size: 0.875rem;
+	font-weight: 700;
+	text-align: center;
+	width: 16%;
+}
+
+.p-brainDock__table td {
+	font-size: 0.875rem;
+	line-height: 1.9;
+}
+
+.p-brainDock__priceCardWrapper {
+	margin-top: 0.9375rem;
+}
+
+.p-brainDock__priceCard {
+	background: #fff;
+	border: 1px solid #adadad;
+	width: 100%;
+}
+
+.p-brainDock__priceRow {
+	align-items: center;
+	display: grid;
+	grid-template-columns: 9.375rem 1fr;
+}
+
+.p-brainDock__priceCard + .p-brainDock__priceCard {
+	margin-top: 0.625rem;
+}
+
+.p-brainDock__priceRow > span {
+	border-right: 1px solid #adadad;
+	padding: 0.875rem 1.125rem;
+}
+
+.p-brainDock__priceRow > span:last-child {
+	border-right: 0;
+	font-weight: 700;
+	text-align: center;
+}
+
+.p-brainDock__priceLabel {
+	background: rgba(35, 46, 131, 0.07);
+	font-size: 0.875rem;
+	padding: 0.875rem 1.125rem;
+	text-align: center;
+}
+
+.p-brainDock__priceValue {
+	font-size: 1rem;
+	font-weight: 700;
+	padding: 0.875rem 1.125rem;
+	text-align: center;
+}
+
+.p-brainDock__priceValue small {
+	font-size: 0.5625rem;
+	font-weight: 400;
+}
+
+.p-brainDock__note {
+	font-size: 0.71875rem;
+	margin-top: 0.625rem;
+}
+
+.p-brainDock__alertWrapper {
+	margin-top: 0.9375rem;
+}
+
+.p-brainDock__alertWrapperInner {
+	width: 100%;
+}
+
+.p-brainDock__alert {
+	background: #eff0f7;
+	border-radius: 50px;
+	padding: 1.75rem 1.125rem;
+}
+
+.p-brainDock__alertTitle {
+	color: #1346b9;
+	font-size: 0.9375rem;
+	font-weight: 700;
+	margin-bottom: 0.625rem;
+	text-align: center;
+}
+
+.p-brainDock__alertText {
+	font-size: 0.875rem;
+	line-height: 1.8;
+	margin-top: 0.625rem;
+}
+
+.p-brainDock__alertList {
+	font-size: 0.875rem;
+	line-height: 1.8;
+	padding-left: 1.25rem;
+	text-indent: -1em;
+}
+
+.p-brainDock__alertItem {
+	margin-bottom: 0.25rem;
+}
+
+.p-brainDock__leadWrapper {
+	margin-top: 0.625rem;
+}
+
+.p-brainDock__lead2 {
+	font-size: 0.90625rem;
+	letter-spacing: 0.05em;
+	line-height: 1.8;
+}
+
+.p-brainDock__flow-wrapper {
+	margin-top: 0.625rem;
+}
+
+.p-brainDock__flow-inner {
+	width: 100%;
+}
+
+.p-brainDock__flow-text {
+	font-size: 0.9375rem;
+	letter-spacing: 0.05em;
+	line-height: 1.8;
+}
+
+.p-brainDock__flow-list {
+	counter-reset: num;
+	margin-top: 0.625rem;
+}
+
+.p-brainDock__flow-list li {
+	counter-increment: num;
+	font-size: 0.90625rem;
+	line-height: 1.9;
+	margin-top: 0.75rem;
+	padding-left: 2em;
+	position: relative;
+}
+
+.p-brainDock__flow-list li::before {
+	align-items: center;
+	background-color: #1346b9;
+	border-radius: 50%;
+	color: #fff;
+	content: counter(num);
+	display: inline-grid;
+	font-size: 0.8125rem;
+	font-weight: 700;
+	height: 1.4em;
+	justify-items: center;
+	left: 0;
+	line-height: 1;
+	place-items: center;
+	position: absolute;
+	top: 0.1875rem;
+	width: 1.4em;
+}
+
+.p-brainDock__headingTitle.p-brainDock__headingTitle--long {
+	max-width: 15.625rem;
+}
+
+.p-brainDock__tableWrap {
+	-webkit-overflow-scrolling: touch;
+	margin-left: -1rem;
+	margin-right: -1rem;
+	overflow-x: auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.p-brainDock__tableInner {
+	min-width: 45rem; /* スクロール発生のための最小幅 */
+}
+
+.p-bring__inner.l-inner {
+	width: 100%;
+}
+
+.p-bring__box {
+	margin-top: 1.25rem;
+}
+
+.p-bring__list-wrapper {
+	border: 2px solid #13acb9;
+	border-radius: 1.25rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.625rem;
+	padding: 0.625rem 0.875rem;
+	width: 100%;
+}
+
+.p-bring__list-left {
+	width: 100%;
+}
+
+.p-bring__list-center {
+	width: 100%;
+}
+
+.p-bring__list-right {
+	width: 100%;
+}
+
+.p-bring__item {
+	font-size: 0.9375rem;
+	line-height: 1.8;
+}
+
+.p-bring__item + .p-bring__item {
+	margin-top: 0.625rem;
+}
+
+.p-bring__desc {
+	margin-top: 0.875rem;
+	width: 100%;
+}
+
+.p-bring__desc-text {
+	color: #000000;
+	font-size: 1rem;
+	letter-spacing: 0.05em;
+	line-height: 1.8;
+}
+
+.p-checkup {
+	padding-top: 6.25rem;
+	position: relative;
+}
+
+.p-checkup__wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+
+.p-checkup__left {
+	margin-top: 2.5rem;
+	position: relative;
+}
+
+.p-checkup__headline {
+	align-items: center;
+	display: flex;
+	margin-bottom: 18px;
+}
+
+.p-checkup__title {
+	color: #232e83;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.25rem;
+	font-weight: 700;
+	padding-left: 3.75rem;
+	position: relative;
+}
+
+.p-checkup__title::before {
+	background-image: url(../images/common/checkup-icon.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 2.5rem;
+	left: 0;
+	position: absolute;
+	top: -0.625rem;
+	width: 3rem;
+}
+
+.p-checkup__title::after {
+	background-color: #232e83;
+	border-radius: 2px;
+	content: "";
+	height: 0.125rem;
+	margin-left: 1.25rem;
+	width: 8.75rem;
+}
+
+.p-checkup__nav {
+	margin-top: 1.875rem;
+	width: 100%;
+}
+
+.p-checkup__list {
+	display: flex;
+	flex-direction: column;
+	gap: 0.625rem;
+	width: 100%;
+}
+
+.p-checkup__item a {
+	align-items: center;
+	color: #000000;
+	display: flex;
+	font-size: 1.125rem;
+	gap: 14px;
+	justify-content: space-between;
+	padding: 0.75rem 0.625rem 0.75rem 0;
+	transition: opacity 0.3s ease;
+}
+
+.p-checkup__item a:hover {
+	opacity: 0.7;
+}
+
+.p-checkup__arr {
+	background-image: url(../images/common/arrow-navy.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 1.25rem;
+	width: 1.25rem;
+}
+
+.p-checkup__right {
+	width: 100%;
+}
+
+.p-checkup__image {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.p-checkup__image img {
+	-o-object-fit: cover;
+	aspect-ratio: 16/9;
+	border-radius: 20px;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.p-consultation-hours__inner.l-inner {
+	width: 100%;
+}
+
+.p-consultation-hours__wrapper {
+	margin-top: 0.625rem;
+}
+
+.p-consultation-hours__contents {
+	width: 100%;
+}
+
+.p-consultation-hours__image {
+	-webkit-overflow-scrolling: touch;
+	overflow-x: auto;
+	overscroll-behavior-x: contain;
+	white-space: nowrap;
+}
+
+.p-consultation-hours__image img {
+	display: block;
+	height: auto;
+	max-width: none;
+	width: 50rem;
+}
+
+.p-consultation-hours__aside {
+	margin-top: 1rem;
+	width: 100%;
+}
+
+.p-consultation-hours__info {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.p-consultation-hours__info-item {
+	align-items: flex-start;
+	display: flex;
+	gap: 0.625rem;
+}
+
+.p-consultation-hours__info-item:last-child {
+	margin-top: 0.625rem;
+}
+
+.p-consultation-hours__info-item dt {
+	font-size: 0.9375rem;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	width: 20%;
+}
+
+.p-consultation-hours__info-item dd {
+	font-size: 0.9375rem;
+	width: 80%;
+}
+
+.p-consultation-hours__urgent {
+	font-size: 0.9375rem;
+	letter-spacing: 0.05em;
+	line-height: 1.8;
+	margin-top: 0.625rem;
+}
+
+.p-consultation-hours__note-wrapper {
+	margin-top: 0.9375rem;
+}
+
+.p-consultation-hours__note {
+	font-size: 0.9375rem;
+}
+
+.p-contact__inner.l-inner {
+	width: 100%;
+}
+
+.p-contact__inner.p-contact__inner--green.l-inner {
+	width: 100%;
+}
+
+.p-contact__title {
+	align-items: center;
+	color: #000000;
+	display: flex;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.375rem;
+	font-weight: 700;
+	gap: 0.625rem;
+	margin-bottom: 1.75rem;
+}
+
+.p-contact__dot {
+	background-color: #13acb9;
+	border-radius: 50%;
+	flex-shrink: 0;
+	height: 16px;
+	width: 16px;
+}
+
+.p-contact__box {
+	border: 2px solid #13acb9;
+	border-radius: 20px;
+	color: #000000;
+	font-family: "I-OTFゴシックオールドPro M";
+	line-height: 1.8;
+	margin: 0 auto;
+	max-width: 31.25rem;
+	padding: 2.25rem 1.25rem;
+	text-align: center;
+	width: 100%;
+}
+
+.p-contact__tel {
+	border-bottom: 1px solid #13acb9;
+	color: #13acb9;
+	font-size: 1.375rem;
+	font-weight: 700;
+	margin-bottom: 0.75rem;
+}
+
+.p-contact__box.p-contact__box--green {
+	border-color: #13b979;
+}
+
+.p-contact__text {
+	font-size: 1.125rem;
+	font-weight: 500;
+	margin-bottom: 0.75rem;
+}
+
+.p-contact__tel.p-contact__tel--green {
+	color: #13b979;
+	transition: opacity 0.3s;
+}
+
+.p-contact__tel.p-contact__tel--green:hover {
+	opacity: 0.8;
+}
+
+.p-contact__desc {
+	font-size: 0.875rem;
+}
+
+.p-department-link {
+	height: 68.75rem;
+	position: relative;
+}
+
+.p-department {
+	height: 75rem;
+	position: relative;
+}
+
+.p-department::after {
+	display: none;
+}
+
+.p-department__inner.l-inner {
+	height: inherit;
+}
+
+.p-department__heading {
+	align-items: center;
+	display: flex;
+	gap: 0.8rem;
+	margin-bottom: 1.5rem;
+	position: relative;
+}
+
+.p-department__title {
+	color: #13b979;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.5rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	line-height: 1;
+}
+
+.p-department__heading::after {
+	background-color: #13b979;
+	border-radius: 2px;
+	content: "";
+	flex-grow: 1;
+	height: 2px;
+	margin-left: 0.9375rem;
+}
+
+.p-department__nav {
+	height: 100%;
+	margin-top: 1.25rem;
+	position: relative;
+}
+
+.p-department__list {
+	grid-gap: 5%;
+	display: grid;
+	gap: 5%;
+	grid-template-columns: repeat(1, 1fr);
+}
+
+.p-department__item a {
+	-webkit-text-decoration: none;
+	align-items: center;
+	border: 1px solid #13b979;
+	border-radius: 1.5625rem;
+	color: #000000;
+	display: flex;
+	font-size: 1.375rem;
+	justify-content: space-between;
+	padding: 0.75rem 1.25rem;
+	text-decoration: none;
+	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.p-department__arr {
+	height: 1.25rem;
+	position: relative;
+	width: 1.25rem;
+}
+
+.p-department__arr::before,
+.p-department__arr::after {
+	background-repeat: no-repeat;
+	background-size: cover;
+	bottom: 0;
+	content: "";
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: opacity 0.4s ease-in-out;
+}
+
+.p-department__arr::before {
+	background-image: url(../images/common/arrow-right.svg);
+	opacity: 1;
+}
+
+.p-department__arr::after {
+	background-image: url(../images/common/arrow-white.svg);
+	opacity: 0;
+}
+
+.p-director__inner.l-inner {
+	max-width: 37.5rem;
+}
+
+.p-director__title {
+	align-items: center;
+	color: #000000;
+	display: flex;
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+
+.p-director__wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.p-director__body {
+	font-size: 0.9375rem;
+	padding-top: 0.8125rem;
+}
+
+.p-director__pill-text {
+	font-size: 1rem;
+	line-height: 1.87;
+	margin-top: 1.125rem;
+}
+
+.p-director__content {
+	margin-top: 2.5rem;
+	width: 100%;
+}
+
+.p-director__pill {
+	border: 0.0625rem solid #232e83;
+	border-radius: 30px;
+	color: #232e83;
+	display: inline-block;
+	font-size: 1.125rem;
+	font-weight: 700;
+	line-height: 1;
+	padding: 0.375rem 1.125rem;
+	text-align: center;
+	width: 9.375rem;
+}
+
+.p-director__text {
+	font-size: 1rem;
+	line-height: 1.87;
+}
+
+.p-director__image-wrapper {
+	margin-top: 1.875rem;
+	width: 100%;
+}
+
+.p-director__image {
+	height: 100%;
+	width: 100%;
+}
+
+.p-director__image img {
+	-o-object-fit: cover;
+	aspect-ratio: 323/320;
+	border-radius: 20px;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.p-director__cap {
+	color: #4a4a4a;
+	font-size: 13.5px;
+	line-height: 1.6;
+	margin: 10px 0 0;
+}
+
+.p-director__name {
+	font-weight: 700;
+	margin: 0.2em 0 0;
+}
+
+.p-director__kana {
+	color: #6b6b6b;
+	font-weight: 400;
+}
+
+.p-disease__inner {
+	margin: 0 auto;
+	padding: 0 0.9375rem;
+	width: 100%;
+}
+
+/* 見出し */
+
+.p-disease__title {
+	align-items: center;
+	color: #000000;
+	display: flex;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.25rem;
+	font-weight: 700;
+	gap: 0.75rem;
+	margin: 0 0 0.875rem;
+	width: 100%;
+}
+
+/* 本文 */
+
+.p-disease__body {
+	color: #000000;
+	font-size: 1rem;
+	letter-spacing: 0.02em;
+	line-height: 2; /* 画像の行間に合わせて広めに */
+}
+
+.p-disease__body p {
+	margin: 0;
+}
+
+/* SP調整 */
+
+.p-doctorIntro__inner {
+	margin: 0 auto;
+	padding: 0 0.9375rem;
+	width: 100%;
+}
+
+/* タイトル */
+
+.p-doctorIntro__title {
+	align-items: center;
+	color: #000000;
+	display: flex;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.25rem;
+	font-weight: 700;
+	gap: 0.625rem;
+	margin-bottom: 1.5rem;
+}
+
+/* 医師選択ボタン */
+
+.p-doctorIntro__list {
+	grid-gap: 1.0625rem;
+	display: grid;
+	gap: 1.0625rem;
+	grid-template-columns: repeat(1, 1fr);
+	margin-bottom: 2.5rem;
+}
+
+.p-doctorIntro__item {
+	width: 100%;
+}
+
+.p-doctorIntro__btn {
+	background: #fff;
+	border: 1.5px solid #13b979;
+	border-radius: 50px;
+	color: #13b979;
+	cursor: pointer;
+	font-size: 1rem;
+	font-weight: 600;
+	padding: 0.9375rem 2.5rem;
+	transition: all 0.3s ease;
+	width: 100%;
+}
+
+.p-doctorIntro__btn.is-active,
+.p-doctorIntro__btn:hover {
+	background: #13b979;
+	color: #fff;
+}
+
+/* プロフィール全体 */
+
+.p-doctorIntro__profile {
+	display: flex;
+	flex-direction: column-reverse;
+	gap: 1.25rem;
+}
+
+/* 左側テキスト部分 */
+
+.p-doctorIntro__label {
+	font-size: 0.9375rem;
+	margin-bottom: 0.25rem;
+}
+
+.p-doctorIntro__name {
+	font-size: 1.125rem;
+	font-weight: 700;
+	margin: 0;
+}
+
+.p-doctorIntro__kana {
+	color: #777;
+	font-size: 0.8125rem;
+	margin-bottom: 1.5rem;
+}
+
+.p-doctorIntro__data {
+	margin-top: 1.25rem;
+}
+
+.p-doctorIntro__data dt {
+	border-bottom: 1px solid #13b979;
+	color: #000000;
+	font-size: 1rem;
+	font-weight: 700;
+	margin-top: 1.25rem;
+	padding-bottom: 0.375rem;
+}
+
+.p-doctorIntro__data dd {
+	color: #000000;
+	font-size: 1rem;
+	line-height: 1.9;
+	margin: 0;
+}
+
+.p-doctorIntro__data p {
+	color: #000000;
+	font-size: 0.875rem;
+	line-height: 2;
+	margin: 0;
+}
+
+/* 右側画像部分 */
+
+.p-doctorIntro__img {
+	width: 100%;
+}
+
+.p-doctorIntro__img img {
+	-o-object-fit: cover;
+	aspect-ratio: 1/1;
+	border-radius: 1.25rem;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.p-doctorIntro__content {
+	border-bottom: 1px solid #adadad;
+	padding-bottom: 2.5rem;
+}
+
+.p-doctorIntro__message {
+	margin-top: 1.25rem;
+}
+
+.p-doctorIntro__message-title {
+	border-bottom: 1px solid #13b979;
+	font-size: 1.125rem;
+	font-weight: 700;
+	padding-bottom: 0.375rem;
+}
+
+.p-doctorIntro__message-text {
+	font-size: 1rem;
+	line-height: 1.9;
+	margin-top: 0.625rem;
+}
+
+.p-environment {
+	line-height: 2;
+	position: relative;
+	text-align: center;
+}
+
+.p-environment__block {
+	padding-bottom: 1.5625rem;
+	padding-top: 1.5625rem;
+}
+
+.p-environment__sub {
+	color: #1346b9;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 0.75rem;
+	letter-spacing: 0.15em;
+	line-height: 1;
+}
+
+.p-environment__title {
+	color: #1346b9;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 1.5625rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	line-height: 1;
+	padding-top: 0.625rem;
+	text-transform: uppercase;
+}
+
+.p-environment__lead {
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 0.875rem;
+	line-height: 1.9;
+	margin-top: 1rem;
+}
+
+.p-environment__catch {
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 1.75rem;
+	font-weight: 700;
+	letter-spacing: 0.07em;
+	line-height: 1.8;
+}
+
+.p-environment__text-body {
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	margin-top: 1.25rem;
+}
+
+.p-environment__text {
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 0.875rem;
+	letter-spacing: 0.05em;
+	line-height: 2.5;
+}
+
+.p-environment__leaf {
+	position: absolute;
+}
+
+.p-environment__container {
+	grid-gap: 2%;
+	display: grid;
+	gap: 2%;
+	grid-template-columns: repeat(2, 1fr);
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+/* voices */
+
+.p-environment__voices {
+	background: #f6f8fc;
+	border-radius: 0.75rem;
+	padding: 3.125rem 1.25rem;
+}
+
+.p-environment__voices-title {
+	color: #000000;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 1rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	line-height: 1;
+	margin-bottom: 2.5rem;
+	position: relative;
+	text-align: center;
+}
+
+.p-environment__voices-title::before {
+	background: #1346b9;
+	bottom: -65%;
+	content: "";
+	height: 1px;
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+	width: 1.625rem;
+}
+
+.p-environment__voices-grid {
+	grid-gap: 1.5rem;
+	display: grid;
+	gap: 1.5rem;
+	grid-template-columns: repeat(1, 1fr);
+}
+
+.p-environment__voice {
+	background: #fff;
+	border-radius: 0.625rem;
+	box-shadow: 0 0.1875rem 0.625rem rgba(0, 0, 0, 0.04);
+	padding: 1.75rem;
+}
+
+.p-environment__voice-title {
+	color: #1346b9;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.7;
+	margin-bottom: 0.625rem;
+	text-align: center;
+}
+
+.p-environment__voice-text {
+	color: #000000;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 0.8125rem;
+	line-height: 1.8;
+	margin-top: 0.625rem;
+	text-align: left;
+}
+
+.p-environment__voice-meta {
+	color: #707070;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 0.8125rem;
+	margin-top: 0.625rem;
+	text-align: center;
+}
+
+/* anim */
+
+.p-facility__inner.l-inner {
+	max-width: 37.5rem;
+}
+
+.p-facility__gallery {
+	margin-top: 1.25rem;
+	width: 100%;
+}
+
+.p-facility__list {
+	grid-gap: 0.75rem;
+	display: grid;
+	gap: 0.75rem;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.p-facility__item {
+	width: 100%;
+}
+
+.p-facility__item img {
+	-o-object-fit: cover;
+	aspect-ratio: 288/236; /* この比率で高さが自動算出される */
+	display: block; /* NG: height: 100%;  ←削除 */
+	height: auto; /* ←追加 */
+	object-fit: cover;
+	width: 100%;
+}
+
+.p-facility__item-text {
+	color: #1346b9;
+	font-size: 1rem;
+	font-weight: 400;
+	letter-spacing: 0.1em;
+	margin-top: 0.625rem;
+	text-align: center;
+}
+
+.p-faqContact__inner.l-inner {
+	margin: 0 auto;
+	padding: 0 0.9375rem;
+	width: 100%;
+}
+
+.p-faqContact__title {
+	align-items: center;
+	color: #1346b9;
+	display: flex;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.375rem;
+	font-weight: 700;
+	gap: 0.625rem;
+	justify-content: center;
+	margin-bottom: 1.75rem;
+}
+
+.p-faqContact__dot {
+	background-color: #1346b9;
+	border-radius: 50%;
+	flex-shrink: 0;
+	height: 16px;
+	width: 16px;
+}
+
+/* box */
+
+.p-faqContact__box {
+	border: 2px solid #1346b9;
+	border-radius: 20px;
+	color: #000000;
+	font-family: "I-OTFゴシックオールドPro M";
+	line-height: 1.8;
+	margin: 0 auto;
+	max-width: 31.25rem;
+	padding: 2.25rem 1.25rem;
+	text-align: center;
+	width: 100%;
+}
+
+.p-faqContact__box.p-faqContact__box--green {
+	border-color: #13b979;
+}
+
+.p-faqContact__label {
+	display: block;
+	font-size: 1.125rem;
+	font-weight: 500;
+}
+
+.p-faqContact__tel {
+	-webkit-text-decoration: underline;
+	color: #1346b9;
+	font-size: 1.5rem;
+	font-weight: 700;
+	text-decoration: underline;
+	transition: color 0.2s;
+	transition: opacity 0.3s;
+}
+
+.p-faqContact__tel.p-faqContact__tel--green {
+	color: #13b979;
+}
+
+.p-faqContact__tel:hover {
+	color: #232e83;
+}
+
+.p-faqContact__tel.p-faqContact__tel--green:hover {
+	opacity: 0.8;
+}
+
+.p-faqContact__note {
+	font-size: 0.75rem;
+	line-height: 1.9;
+	margin-top: 0.625rem;
+}
+
+.p-faq__title {
+	color: #1346b9;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.25rem;
+	font-weight: 700;
+	position: relative;
+	text-align: center;
+}
+
+.p-faq__title::before,
+.p-faq__title::after {
+	background: #1346b9;
+	content: "";
+	height: 0.125rem;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 5rem;
+}
+
+.p-faq__title::before {
+	right: calc(50% + 5rem);
+}
+
+.p-faq__title::after {
+	left: calc(50% + 5rem);
+}
+
+.p-faq__wrapper {
+	margin-top: 1.875rem;
+}
+
+.p-faq__list {
+	width: 100%;
+}
+
+.p-faq__item {
+	border-bottom: 1px solid #1346b9;
+	padding-bottom: 3.125rem;
+}
+
+.p-faq__item + .p-faq__item {
+	margin-top: 3.125rem;
+}
+
+.p-faq__item-question {
+	align-items: center;
+	color: #1346b9;
+	display: flex;
+	font-size: 1rem;
+	font-weight: 700;
+	gap: 0.75rem;
+	line-height: 1.6;
+}
+
+.p-faq__item-dot {
+	background-color: #1346b9;
+	border-radius: 50%;
+	flex-shrink: 0;
+	height: 1.5625rem;
+	width: 1.5625rem;
+}
+
+.p-faq__item-answer {
+	padding-left: 1.875rem;
+	padding-top: 0.9375rem;
+	width: 100%;
+}
+
+.p-faq__item-answer-text {
+	font-size: 0.875rem;
+	line-height: 1.9;
+	margin-top: 0.625rem;
+	padding-left: 0.4375rem;
+}
+
+.p-faq__btn {
+	margin-top: 1.8rem;
+	text-align: left;
+}
+
+.p-faq__btn a {
+	-webkit-text-decoration: none;
+	align-items: center;
+	border: 1px solid #1346b9;
+	border-radius: 30px;
+	color: #1346b9;
+	display: inline-flex;
+	font-size: 0.95rem;
+	font-weight: 600;
+	gap: 0.5rem;
+	padding: 0.6rem 1.4rem;
+	text-decoration: none;
+	transition: background 0.3s ease, color 0.3s;
+}
+
+.p-faq__arr {
+	background-image: url(../images/common/arrow-blue.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 0.9375rem;
+	transition: background-image 0.3s;
+	width: 0.9375rem;
+}
+
+.p-flow-list {
+	counter-reset: number;
+}
+
+.p-flow-list__item {
+	display: flex;
+}
+
+.p-flow-list__item + .p-flow-list__item {
+	margin-top: 1.25rem;
+}
+
+.p-flow-list__item::before {
+	align-items: center;
+	background-color: #13acb9;
+	color: #fff;
+	content: counter(number);
+	counter-increment: number;
+	display: inline-flex;
+	flex-shrink: 0;
+	font-size: 1.125rem;
+	justify-content: center;
+	line-height: 1;
+	width: 2.5rem;
+}
+
+.p-flow-list__item-wrap {
+	align-items: center;
+	border: 0.125rem solid #13acb9;
+	display: flex;
+	flex-grow: 1;
+	padding: 0.625rem 1.25rem 0.625rem 0;
+}
+
+.p-flow-list__item-title {
+	flex-shrink: 0;
+	font-size: 0.875rem;
+	font-weight: 700;
+	line-height: 1;
+	text-align: center;
+	width: 40%;
+}
+
+.p-flow-list__item-text {
+	border-left: 0.125rem solid #13acb9;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-left: 1rem;
+}
+
+.p-flow__inner.l-inner {
+	width: 100%;
+}
+
+.p-flow__body {
+	margin-top: 1.25rem;
+}
+
+.p-flow__list {
+	width: 100%;
+}
+
+.p-footer {
+	background-color: #f4f4f4;
+}
+
+.p-footer__logo img {
+	-o-object-fit: contain;
+	height: auto;
+	object-fit: contain;
+	width: 100%;
+}
+
+.p-footer__tel {
+	margin: 0 0 1.25rem 1.875rem;
+	text-align: center;
+}
+
+.p-footer__tel a {
+	color: #000000;
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.p-footer__subLinks {
+	list-style: none;
+	margin-top: 1.375rem;
+	width: 35%;
+}
+
+.p-footer__subLink + .p-footer__subLink {
+	margin-top: 0.625rem;
+}
+
+.p-footer__subLink a {
+	-webkit-text-decoration: underline;
+	color: #232e83;
+	font-size: 1rem;
+	letter-spacing: 0.05em;
+	line-height: 1;
+	text-decoration: underline;
+}
+
+.p-footer__nav-wrap {
+	align-items: flex-end;
+	display: flex;
+	justify-content: space-between;
+}
+
+.p-footer__link {
+	width: 65%;
+}
+
+.p-footer__item {
+	width: 100%;
+}
+
+.p-footer__item + .p-footer__item {
+	margin-top: 0.5rem;
+}
+
+.p-footer__item a {
+	align-items: center;
+	color: #000000;
+	display: inline-flex;
+	font-size: 1rem;
+	letter-spacing: 0.05em;
+	line-height: 1.9;
+	line-height: 1;
+	padding-bottom: 0.5rem;
+	padding-left: 1.8125rem;
+	padding-top: 0.5rem;
+	width: 100%;
+}
+
+.p-footer__circle {
+	position: relative;
+}
+
+.p-footer__circle::before,
+.p-footer__circle::after {
+	background-image: url(../images/common/arrow-right-circle.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 1.4375rem;
+	left: -29px;
+	position: absolute;
+	top: -13px;
+	width: 1.4375rem;
+	z-index: 1;
+}
+
+.p-footer__circle::before {
+	background-image: url(../images/common/arrow-right-circle.svg);
+	opacity: 1;
+	transition: opacity 0.4s ease-in-out;
+}
+
+.p-footer__circle::after {
+	background-image: url(../images/common/arrow-right-navy.svg);
+	opacity: 0;
+	transition: opacity 0.4s ease-in-out;
+}
+
+.p-footer__privacy {
+	align-self: start;
+	margin-top: 0.75rem;
+	width: 100%;
+}
+
+.p-footer__privacy a {
+	-webkit-text-decoration: none;
+	align-items: center;
+	color: #707070;
+	display: inline-flex;
+	font-size: 0.9375rem;
+	letter-spacing: 0.05em;
+	line-height: 1;
+	padding-left: 1.8125rem;
+	text-decoration: none;
+}
+
+.p-footer__circle-gray {
+	position: relative;
+}
+
+.p-footer__circle-gray::before {
+	background-image: url(../images/common/arrow-right-circle-gray.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 1.375rem;
+	left: -29px;
+	position: absolute;
+	top: -12px;
+	transition: transform 0.3s ease-in-out;
+	width: 1.375rem;
+	z-index: 1;
+}
+
+.p-footer__bottom {
+	margin-top: 1.375rem;
+}
+
+.p-footer__sitemap a {
+	color: #13acb9;
+	font-size: 1rem;
+	letter-spacing: 0.05em;
+	line-height: 1;
+	margin-top: 1.375rem;
+	text-align: center;
+	width: 100%;
+}
+
+.p-footer__copyright {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	margin-top: 1rem;
+}
+
+.p-footer__copy {
+	color: #707070;
+	font-size: 0.625rem;
+	letter-spacing: 0.05em;
+	line-height: 1;
+	text-align: center;
+}
+
+.p-general-medicine {
+	height: 100%;
+	position: relative;
+}
+
+.p-general-medicine__heading {
+	background: #fff;
+	border: 1px solid #13b979;
+	border-radius: 20px;
+	padding: 0.625rem 1.875rem;
+	width: 100%;
+}
+
+.p-general-medicine__title {
+	color: #13b979;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.25rem;
+}
+
+.p-general-medicine__content {
+	margin-top: 1.5625rem;
+	width: 100%;
+}
+
+.p-general-medicine__text {
+	font-size: 1rem;
+	letter-spacing: 0.05em;
+	line-height: 1.9;
+}
+
+.p-generalCheckup {
+	position: relative;
+}
+
+.p-generalCheckup__inner.l-inner {
+	max-width: 67.5rem;
+}
+
+.p-generalCheckup__wrapper {
+	margin-top: 0.9375rem;
+}
+
+.p-generalCheckup__lead {
+	width: 100%;
+}
+
+.p-generalCheckup__leadText {
+	font-size: 1rem;
+	letter-spacing: 0.05em;
+	line-height: 1.9;
+}
+
+.p-generalCheckup__contents {
+	margin: 0 auto;
+	max-width: 42rem;
+	width: 100%;
+}
+
+.p-generalCheckup__heading {
+	margin-top: 0.9375rem;
+}
+
+.p-generalCheckup__heading.p-generalCheckup__heading--table {
+	margin-top: 1.875rem;
+}
+
+.p-generalCheckup__headingTitle {
+	background: #fff;
+	border: 1px solid #232e83;
+	border-radius: 20px;
+	color: #232e83;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1rem;
+	font-weight: 700;
+	max-width: 9.375rem;
+	padding: 0.3125rem 1.875rem;
+	text-align: center;
+	width: 100%;
+}
+
+.p-generalCheckup__bulletsWrapper {
+	margin-top: 0.9375rem;
+}
+
+.p-generalCheckup__bullets {
+	padding-left: 1.25rem;
+	width: 100%;
+}
+
+.p-generalCheckup__bullet {
+	font-size: 1rem;
+	letter-spacing: 0.05em;
+	line-height: 1.9;
+	text-indent: -1em;
+}
+
+.p-generalCheckup__bulletDot {
+	background: #1346b9;
+	border-radius: 50%;
+	display: inline-block;
+	height: 0.625rem;
+	width: 0.625rem;
+}
+
+.p-generalCheckup__bullet + .p-generalCheckup__bullet {
+	margin-top: 0.3125rem;
+}
+
+.p-generalCheckup__bulletText {
+	font-size: 1rem;
+	letter-spacing: 0.05em;
+	line-height: 1.9;
+}
+
+.p-generalCheckup__tableWrap {
+	margin-top: 0.9375rem;
+	overflow-x: auto;
+}
+
+.p-generalCheckup__tableInner {
+	width: 100%;
+}
+
+.p-generalCheckup__table {
+	border: 1px solid #adadad;
+	border-collapse: collapse;
+	font-size: 0.875rem;
+	width: 100%;
+}
+
+.p-generalCheckup__table th,
+.p-generalCheckup__table td {
+	border: 1px solid #adadad;
+	padding: 0.75rem 0.75rem;
+	vertical-align: top;
+}
+
+.p-generalCheckup__table thead th {
+	background: #f4f4f4;
+	font-size: 0.875rem;
+	font-weight: 700;
+	text-align: center;
+}
+
+.p-generalCheckup__table tbody th {
+	background: rgba(35, 46, 131, 0.07);
+	font-size: 0.875rem;
+	font-weight: 700;
+	text-align: center;
+	width: 16%;
+}
+
+.p-generalCheckup__table td {
+	font-size: 0.875rem;
+}
+
+.p-generalCheckup__cellList {
+	line-height: 1.9;
+}
+
+.p-generalCheckup__priceCardWrapper {
+	margin-top: 0.9375rem;
+}
+
+.p-generalCheckup__priceCard {
+	background: #fff;
+	border: 1px solid #adadad;
+	width: 100%;
+}
+
+.p-generalCheckup__priceRow {
+	display: grid;
+	grid-template-columns: 9.375rem 1fr;
+}
+
+.p-generalCheckup__priceRow > span {
+	border-right: 1px solid #adadad;
+	padding: 0.875rem 1.125rem;
+}
+
+.p-generalCheckup__priceRow > span:last-child {
+	border-right: 0;
+	font-weight: 700;
+	text-align: center;
+}
+
+.p-generalCheckup__priceLabel {
+	background: rgba(35, 46, 131, 0.07);
+	font-weight: 700;
+	padding: 0.875rem 1.125rem;
+	text-align: center;
+}
+
+.p-generalCheckup__priceValue {
+	font-size: 1rem;
+	font-weight: 700;
+	padding: 0.875rem 1.125rem;
+	text-align: center;
+}
+
+.p-generalCheckup__priceValue small {
+	font-size: 0.5625rem;
+	font-weight: 400;
+}
+
+.p-generalCheckup__note {
+	font-size: 0.71875rem;
+	margin-top: 0.625rem;
+}
+
+.p-generalCheckup__tableWrap {
+	-webkit-overflow-scrolling: touch;
+	margin-left: -1rem;
+	margin-right: -1rem;
+	overflow-x: auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.p-generalCheckup__tableInner {
+	min-width: 45rem; /* スクロール発生のための最小幅 */
+}
+
+.p-greeting__inner.l-inner {
+	max-width: 37.5rem;
+}
+
+.p-greeting__wrapper {
+	display: flex;
+	flex-direction: column-reverse;
+	position: relative;
+}
+
+.p-greeting__contents {
+	padding-top: 2.25rem;
+}
+
+.p-greeting__title {
+	border-bottom: 2px solid #232e83;
+	color: #232e83;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.375rem;
+	letter-spacing: 0.05em;
+	padding-bottom: 0.5rem;
+}
+
+.p-greeting__text {
+	font-size: 1rem;
+	letter-spacing: 0.03em;
+	line-height: 1.87;
+	padding-top: 1.125rem;
+}
+
+.p-greeting__image-contents {
+	padding-top: 2.3125rem;
+}
+
+.p-greeting__image {
+	width: 100%;
+}
+
+.p-greeting__image img {
+	-o-object-fit: cover;
+	aspect-ratio: 672/530;
+	border-radius: 1.25rem;
+	height: auto;
+	object-fit: cover;
+	width: 100%;
+}
+
+.p-greeting__director {
+	font-size: 0.9375rem;
+	letter-spacing: 0.05em;
+	line-height: 1.5;
+	margin-top: 0.71875rem;
+}
+
+.p-greeting__name {
+	font-size: 1rem;
+}
+
+.p-header-bg {
+	position: relative;
+}
+
+.p-header-bg::before {
+	background: url(../images/common/header_top.png);
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	bottom: 0;
+	content: "";
+	height: 6.875rem;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+.p-header {
+	background-color: transparent;
+	height: 3.75rem;
+	transition: background-color 0.3s;
+}
+
+.p-header.is-color {
+	background-color: rgba(255, 255, 255, 0.68);
+}
+
+.p-header__inner {
+	display: flex;
+	height: inherit;
+	justify-content: space-between;
+	padding-left: 0.9375rem;
+}
+
+.p-header__logo {
+	height: inherit;
+	max-width: 17.75rem;
+	width: 100%;
+	z-index: 999;
+}
+
+.p-header__logo a {
+	align-items: center;
+	display: flex;
+	height: inherit;
+}
+
+.p-header__logo img {
+	-o-object-fit: contain;
+	height: 100%;
+	object-fit: contain;
+	width: 100%;
+}
+
+.p-header__nav {
+	display: none;
+	height: inherit;
+}
+
+.p-header__nav-list.p-header__nav-list--top {
+	align-items: center;
+	display: flex;
+	height: 35%;
+	justify-content: center;
+	padding-top: 1.25rem;
+}
+
+.p-header__nav-list.p-header__nav-list--bottom {
+	display: flex;
+	height: 50%;
+	justify-content: center;
+}
+
+.p-header__nav-item {
+	height: 100%;
+}
+
+.p-header__nav-item a {
+	align-items: center;
+	color: #000000;
+	display: flex;
+	font-size: 1.1875rem;
+	font-weight: 500;
+	height: 100%;
+	letter-spacing: 0.1em;
+	line-height: 1;
+	padding-left: max(1rem, min(1.369vw, 1.5625rem));
+	padding-right: max(1rem, min(1.369vw, 1.5625rem));
+	position: relative;
+	transition: color 0.3s, transform 0.3s;
+}
+
+.p-header__nav-item.p-header__nav-item--qa a {
+	background-color: #1346b9;
+	border-radius: 1.25rem;
+	color: #fff;
+	font-size: 0.9375rem;
+	padding-top: 0.5rem 0.625rem;
+	transition: opacity 0.3s color 0.3s;
+}
+
+.p-header__nav-item.p-header__nav-item--tel a {
+	color: #232e83;
+	font-size: 2.0625rem;
+	font-weight: 600;
+	letter-spacing: 0.01em;
+	line-height: 1;
+	padding-left: 0.625rem;
+}
+
+.p-header__hamburger {
+	background-color: #fff;
+	border: none;
+	cursor: pointer;
+	height: inherit;
+	margin: 0;
+	outline: none;
+	padding: 0;
+	position: relative;
+	transition: 0.3s;
+	width: 3.75rem;
+	z-index: 999;
+}
+
+.p-header__hamburger.is-open {
+	background-color: #fff;
+}
+
+.p-header__hamburger span {
+	background-color: #232e83;
+	border-radius: 0.125rem;
+	display: block;
+	height: 2px;
+	left: 50%;
+	position: relative;
+	transform: translateX(-50%);
+	transition: 0.5s;
+	width: 1.875rem;
+}
+
+.p-header__hamburger span:nth-of-type(1) {
+	top: -0.375rem;
+}
+
+.p-header__hamburger span:nth-of-type(2) {
+	top: 0rem;
+}
+
+.p-header__hamburger span:nth-of-type(3) {
+	top: 0.375rem;
+}
+
+.p-header__hamburger.is-open span:nth-of-type(1) {
+	top: 0;
+	transform: translateX(-50%) rotate(45deg);
+}
+
+.p-header__hamburger.is-open span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.p-header__hamburger.is-open span:nth-of-type(3) {
+	top: -0.25rem;
+	transform: translateX(-50%) rotate(-45deg);
+}
+
+.p-header__drawer {
+	background: url(../images/common/drawer_bg.png);
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	bottom: 0;
+	display: none;
+	height: 100vh;
+	left: 0;
+	overflow-y: scroll;
+	padding: 9.375rem 0;
+	position: absolute;
+	right: 0;
+	scrollbar-width: none;
+	top: 0;
+	width: 100%;
+	z-index: 900;
+}
+
+.p-header__drawer::-webkit-scrollbar {
+	display: none;
+}
+
+.p-header__drawer-nav {
+	margin: auto;
+	padding: 0 1.25rem;
+	width: 100%;
+}
+
+.p-header__drawer-item a {
+	border-bottom: 1px solid #707070;
+	color: #000000;
+	display: block;
+	font-size: 1.375rem;
+	font-weight: 500;
+	letter-spacing: 0.05em;
+	line-height: 1.3;
+	padding: 1.0625rem 1.25rem;
+	position: relative;
+}
+
+.p-header__drawer-item a::before {
+	background-image: url(../images/common/drawer_arrow.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	height: 1.25rem;
+	position: absolute;
+	right: 8%;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 1.25rem;
+}
+
+.p-header__drawer-list-bottom {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 0.625rem;
+	justify-content: center;
+	margin-top: 1.25rem;
+	width: 100%;
+}
+
+.p-header__drawer-item-tel a {
+	color: #232e83;
+	font-size: 2rem;
+}
+
+.p-header__drawer-item-qa {
+	margin-top: 0.625rem;
+}
+
+.p-header__drawer-item-qa a {
+	background-color: #1346b9;
+	border-radius: 0.625rem;
+	color: #fff;
+	font-size: 0.9375rem;
+	padding: 0.625rem 1.25rem;
+}
+
+.p-homeNews__inner.l-inner {
+	max-width: 37.5rem;
+	width: 100%;
+}
+
+.p-homeNews__heading {
+	border-bottom: 1px solid #232e83;
+	padding-bottom: 0.5rem;
+	width: 100%;
+}
+
+.p-homeNews__wrapper {
+	height: inherit;
+	margin-top: 1.25rem;
+	width: 100%;
+}
+
+.p-homeNews__list {
+	height: inherit;
+	width: 100%;
+}
+
+.p-homeNews__item {
+	border-bottom: 1px solid #e6ecff;
+	height: inherit;
+	width: 100%;
+}
+
+.p-homeNews__item + .p-homeNews__item {
+	margin-top: 2.5rem;
+}
+
+.p-homeNews__item a {
+	border-bottom: 1px solid #7990c4;
+	display: inline-block;
+	padding: 1.375rem 0 1.5rem;
+	position: relative;
+	width: 100%;
+}
+
+.p-homeNews__article {
+	margin: 0 auto;
+	width: 100%;
+}
+
+.p-homeNews__title {
+	color: #232e83;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1rem;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+	line-height: 1.8;
+}
+
+/* 日付 */
+
+.p-homeNews__date {
+	color: #707070;
+	display: inline-block;
+	font-size: 0.75rem;
+	margin-top: 0.625rem;
+	width: 100%;
+}
+
+.p-homeNews__excerpt {
+	color: #707070;
+	font-size: 0.875rem;
+	margin-top: 0.625rem;
+}
+
+.p-homeNews__more {
+	margin-top: 0.875rem;
+	text-align: right;
+	width: 100%;
+}
+
+.p-homeNews__moreLink {
+	color: #232e83;
+	display: inline-block;
+	font-size: 0.875rem;
+}
+
+.p-homeNews__moreLink span {
+	border-right: 1px solid #232e83;
+	border-top: 1px solid #232e83;
+	display: inline-block;
+	height: 0.75rem;
+	margin-left: 0.3125rem;
+	transform: rotate(45deg);
+	width: 0.75rem;
+}
+
+/* 空データ時 */
+
+.p-homeNews__empty {
+	color: #6b7280;
+	font-size: 14px;
+	margin: 24px 0;
+}
+
+/* ===== SP ===== */
+
+/* ===== PAGENAVI ===== */
+
+.p-homeNews__pagenavi {
+	margin-top: 2.5rem;
+}
+
+.p-homeNews__pagenavi-inner {
+	clear: both;
+	text-align: center;
+}
+
+.p-hospital-caution {
+	height: 100%;
+	position: relative;
+}
+
+.p-hospital-caution__inner.l-inner {
+	margin: 0 auto;
+	max-width: 37.5rem;
+	padding: 0 0.9375rem;
+	width: 100%;
+}
+
+.p-hospital-caution__content {
+	margin-top: 0.875rem;
+	width: 100%;
+}
+
+.p-hospital-caution__text {
+	font-size: 0.9375rem;
+	letter-spacing: 0.05em;
+	line-height: 1.9;
+}
+
+.p-hospital-caution__text.p-hospital-caution__text--list {
+	margin-left: 0.625rem;
+	text-indent: -1em;
+}
+
+.p-hospital-cost {
+	height: 100%;
+	position: relative;
+}
+
+.p-hospital-cost__inner.l-inner {
+	margin: 0 auto;
+	max-width: 37.5rem;
+	padding: 0 0.9375rem;
+	width: 100%;
+}
+
+.p-hospital-cost__content {
+	margin-top: 0.875rem;
+	width: 100%;
+}
+
+.p-hospital-cost__text {
+	font-size: 0.9375rem;
+	letter-spacing: 0.05em;
+	line-height: 1.9;
+}
+
+.p-hospital-cost__text.p-hospital-cost__text--list {
+	margin-left: 0.625rem;
+	text-indent: -1em;
+}
+
+.p-hospital-discharge {
+	height: 100%;
+	position: relative;
+}
+
+.p-hospital-discharge__inner.l-inner {
+	margin: 0 auto;
+	max-width: 37.5rem;
+	padding: 0 0.9375rem;
+	width: 100%;
+}
+
+.p-hospital-discharge__content {
+	margin-top: 0.875rem;
+	width: 100%;
+}
+
+.p-hospital-discharge__text {
+	font-size: 0.9375rem;
+	letter-spacing: 0.05em;
+	line-height: 1.9;
+}
+
+.p-hospital-discharge__text.p-hospital-discharge__text--list {
+	margin-left: 0.625rem;
+	text-indent: -1em;
+}
+
+.p-hospitalFlow__inner.l-inner {
+	margin: 0 auto;
+	max-width: 37.5rem;
+	padding: 0 0.9375rem;
+	width: 100%;
+}
+
+/* ラッパ：左の縦ラインと先端矢印を描画 */
+
+.p-hospitalFlow__step {
+	margin-top: 1.25rem;
+	position: relative;
+}
+
+.p-hospitalFlow__item + .p-hospitalFlow__item {
+	margin-top: 1.875rem;
+}
+
+.p-hospitalFlow__item-wrap {
+	position: relative;
+}
+
+.p-hospitalFlow__item-wrap::after {
+	background-image: url(../images/common/arrow_down_pink.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	height: 5rem;
+	left: 3%;
+	position: absolute;
+	top: 55%;
+	width: 1.875rem;
+	z-index: 1;
+}
+
+.p-hospitalFlow__item-wrap.p-hospitalFlow__item-wrap--long::after {
+	background-image: url(../images/common/arrow_down_long01.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	height: 9.375rem;
+	left: 2%;
+	position: absolute;
+	top: 30%;
+	width: 1.875rem;
+}
+
+.p-hospitalFlow__item-wrap.p-hospitalFlow__item-wrap--last::after {
+	display: none;
+}
+
+.p-hospitalFlow__item-title {
+	border: 1px solid #ff649f;
+	border-radius: 30px;
+	color: #ff649f;
+	display: inline-block;
+	font-size: 1rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	line-height: 1;
+	padding: 1.125rem 1.375rem;
+	position: relative;
+	width: 100%;
+}
+
+.p-hospitalFlow__item-text-body {
+	margin-top: 1.4375rem;
+	position: relative;
+}
+
+.p-hospitalFlow__item-text {
+	color: #000000;
+	font-size: 0.9375rem;
+	line-height: 1.9;
+	margin-left: 2.5rem;
+}
+
+.p-hospitalFlow__item-text-pink {
+	color: #ff649f;
+}
+
+.p-hospitalFlow__item-text.p-hospitalFlow__item-text--list {
+	text-indent: -1em;
+}
+
+.p-hospitalFlow__item-text-contents {
+	margin-left: 0.625rem;
+}
+
+.p-hospitalization {
+	padding-top: 6.25rem;
+	position: relative;
+}
+
+.p-hospitalization__wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+
+/* ===== left ===== */
+
+.p-hospitalization__left {
+	margin-top: 2.5rem;
+	position: relative;
+}
+
+.p-hospitalization__headline {
+	align-items: center;
+	display: flex;
+	margin-bottom: 18px;
+}
+
+.p-hospitalization__title {
+	color: #ff649f;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.25rem;
+	font-weight: 700;
+	padding-left: 3.75rem;
+	position: relative;
+}
+
+.p-hospitalization__title::before {
+	background-image: url(../images/common/bed-icon.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	height: 3.125rem;
+	left: -4%;
+	position: absolute;
+	top: -40%;
+	width: 3.125rem;
+}
+
+.p-hospitalization__title::after {
+	background-color: #ff649f;
+	border-radius: 2px;
+	content: "";
+	height: 0.125rem;
+	margin-left: 1.25rem;
+	width: 8.75rem;
+}
+
+.p-hospitalization__nav {
+	margin-top: 1.875rem;
+	width: 100%;
+}
+
+.p-hospitalization__nav::before {
+	display: none;
+}
+
+.p-hospitalization__list {
+	display: flex;
+	flex-direction: column;
+	gap: 0.625rem;
+	width: 100%;
+}
+
+.p-hospitalization__item a {
+	align-items: center;
+	color: #000000;
+	display: flex;
+	font-size: 1.125rem;
+	gap: 14px;
+	justify-content: space-between;
+	padding: 0.75rem 0.625rem 0.75rem 0;
+	transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.p-hospitalization__item a:hover {
+	opacity: 0.7;
+}
+
+.p-hospitalization__item.p-hospitalization__item--orange a:hover {
+	opacity: 0.7;
+}
+
+.p-hospitalization__arr {
+	background-image: url(../images/common/arrow-right-pink.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 1.25rem;
+	width: 1.25rem;
+}
+
+.p-hospitalization__arr.p-hospitalization__arr--orange {
+	background-image: url(../images/common/arrow-right-orange.svg);
+}
+
+/* decorative leaves */
+
+.p-hospitalization__leaf {
+	opacity: 0.9;
+	position: absolute;
+}
+
+.p-hospitalization__leaf--lt {
+	bottom: -18px;
+	left: -6px;
+	width: 120px;
+}
+
+.p-hospitalization__leaf--cr {
+	right: 20%;
+	top: 56%;
+	transform: rotate(-18deg);
+	width: 110px;
+}
+
+/* ===== right / media ===== */
+
+.p-hospitalization__right {
+	width: 100%;
+}
+
+.p-hospitalization__image {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.p-hospitalization__image img {
+	-o-object-fit: cover;
+	aspect-ratio: 16/9;
+	border-radius: 20px;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.p-hours {
+	background-color: #f8fffd;
+}
+
+.p-hours__heading {
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
+	padding-top: 2.1875rem;
+}
+
+.p-hours__title {
+	color: #232e83;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.25rem;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	text-align: left;
+}
+
+.p-hours__wrapper {
+	background-color: #f8fffd;
+	margin-top: 1.125rem;
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
+}
+
+.p-hours__box {
+	background: #fff;
+	border: 2px solid #adadad;
+	border-radius: 1.25rem;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+	margin: 0 auto;
+	max-width: 37.5rem;
+	overflow: hidden;
+	padding: 0;
+	width: 100%;
+}
+
+.p-hours__table {
+	border-collapse: collapse;
+	font-size: 16px;
+	table-layout: fixed;
+	width: 100%;
+}
+
+.p-hours__headCell,
+.p-hours__label,
+.p-hours__cell {
+	background: #fff;
+	height: 4.25rem;
+	padding: 0.75rem 0.625rem;
+}
+
+.p-hours__headCell {
+	background: #fff;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.25rem;
+	font-weight: 500;
+	text-align: center;
+}
+
+.p-hours__label {
+	background: #fff;
+	font-weight: 500;
+	text-align: center;
+	white-space: nowrap;
+	width: 13.75rem;
+}
+
+.p-hours__label--blank {
+	background: #fff;
+	border: none;
+	width: 13.75rem;
+}
+
+.p-hours__table tr:first-child th:first-child {
+	border-left: none;
+}
+
+.p-hours__dot {
+	background: #232e83;
+	border-radius: 50%;
+	display: inline-block;
+	height: 1.25rem;
+	vertical-align: middle;
+	width: 1.25rem;
+}
+
+.p-hours__dash {
+	color: #000000;
+	display: inline-block;
+	font-size: 1.25rem;
+}
+
+.p-hours__note {
+	color: #707070;
+	font-size: 0.75rem;
+	text-align: left;
+}
+
+.p-hours__table--sp {
+	display: table;
+	font-size: 1rem;
+	table-layout: fixed;
+}
+
+.p-hours__headBlank {
+	background: #fff;
+	border-bottom: 1px solid #adadad;
+	border-right: 1px solid #adadad;
+	height: 3.125rem;
+	width: 15%;
+}
+
+.p-hours__head {
+	background: #fff;
+	border-bottom: 1px solid #adadad;
+	height: 3.125rem;
+	text-align: center;
+}
+
+.p-hours__head--am {
+	border-right: 1px solid #adadad;
+}
+
+.p-hours__headLine1 {
+	display: block;
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 1;
+	padding-top: 0.375rem;
+}
+
+.p-hours__headLine2 {
+	display: block;
+	font-size: 1rem;
+	font-weight: 500;
+	padding-top: 0.375rem;
+}
+
+.p-hours__day {
+	background: #fff;
+	border-right: 1px solid #adadad;
+	border-top: 1px solid #adadad;
+	font-weight: 500;
+	height: 1.875rem;
+	text-align: center;
+	width: 15%;
+}
+
+.p-hours__cell {
+	background: #fff;
+	border-left: 1px solid #adadad;
+	border-top: 1px solid #adadad;
+	height: 1.875rem;
+	text-align: center;
+}
+
+.p-hours__table--pc {
+	display: none;
+}
+
+.p-hours__note-wrapper {
+	margin: 0 auto;
+	max-width: 37.5rem;
+	padding-top: 0.5rem;
+	text-align: left;
+	width: 100%;
+}
+
+.p-info__inner.l-inner {
+	width: 100%;
+}
+
+.p-info__list {
+	grid-gap: 0.625rem;
+	display: grid;
+	gap: 0.625rem;
+	grid-template-columns: repeat(1, 1fr);
+}
+
+.p-info__item {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.p-info__item a {
+	align-items: center;
+	background-color: #fff;
+	border: 1px solid #232e83;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 1.375rem;
+	height: 100%;
+	justify-content: center;
+	letter-spacing: 0.1em;
+	line-height: 1.4;
+	max-width: 16.5690625rem;
+	padding: 1.625rem 0.75rem;
+	position: relative;
+	width: 100%;
+}
+
+.p-info__btn-text {
+	padding-right: 1.25rem;
+	transition: color 0.3s ease-in-out;
+}
+
+.p-info__btn-arrow {
+	align-items: center;
+	background-color: #232e83;
+	border-color: #232e83;
+	border-style: solid;
+	border-width: 0.2rem;
+	bottom: 0;
+	display: flex;
+	flex-wrap: wrap;
+	height: 4.4375rem;
+	justify-content: center;
+	position: absolute;
+	right: 0;
+	width: 1.9840625rem;
+}
+
+.p-info__btn-arrow::after {
+	background-image: url(../images/common/arrow-down-right.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 0.75rem;
+	position: absolute;
+	transition: transform 0.3s ease-in-out;
+	width: 0.75rem;
+}
+
+.p-info__btn-text {
+	color: #232e83;
+	font-size: 1.15625rem;
+	line-height: 1;
+	transition: color 0.3s ease-in-out;
+}
+
+.p-initialVisit__inner.l-inner {
+	width: 100%;
+}
+
+.p-initialVisit__body {
+	color: #000000;
+	font-family: "I-OTFゴシックオールドPro M";
+	font-size: 0.9375rem;
+	letter-spacing: 0.02em;
+	margin-top: 1.125rem;
+}
+
+.p-lead {
+	background-image: url(../images/common/bg_lead.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	position: relative;
+	width: 100%;
+	z-index: 0;
+}
+
+.p-lead__wrapper {
+	padding-top: 1.875rem;
+}
+
+.p-lead__text {
+	font-size: 1rem;
+	line-height: 1.8;
+}
+
+.p-lead__wrapper::before {
+	display: none;
+}
+
+.p-line {
+	background-color: #13b979;
+	height: 1.25rem;
+	width: 100%;
+}
+
+/* --- ローディングの白幕だけフェードさせる：MVは触らない --- */
+
+.p-loading {
+	align-items: center;
+	background: #fff;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	left: 0;
+	opacity: 1;
+	overflow: hidden;
+	position: fixed;
+	right: 0;
+	top: 0;
+	transition: opacity 900ms ease; /* ← ふわっと時間 */
+	z-index: 9999;
+}
+
+.p-loading.is-hide {
+	opacity: 0; /* ← これだけで白幕が消え、下のMVが自然に見えてくる */
+	pointer-events: none;
+}
+
+/* ロゴは出しっぱなし、切替時は白幕と一緒に薄くなる */
+
+.p-loading__logo {
+	transition: opacity 900ms ease;
+}
+
+.p-loading.is-hide .p-loading__logo {
+	opacity: 0;
+}
+
+/* 2回目以降（no-loading）はローディングを表示しない */
+
+html.no-loading .p-loading {
+	display: none;
+}
+
+/* 鳥アニメーション */
+
+.p-loading__bird {
+	animation: bird-fly 6.5s linear forwards;
+	left: 0;
+	pointer-events: none;
+	position: absolute;
+	top: 68%;
+	width: 150px;
+	z-index: 10;
+}
+
+.p-loading__bird img {
+	animation: bird-bob 2.6s ease-in-out infinite;
+	display: block;
+	height: auto;
+	width: 100%;
+}
+
+/* 鳥の移動 */
+
+/* 鳥の上下動 */
+
+/* フェード中に停止 */
+
+.p-loading.is-hide .p-loading__bird,
+.p-loading.is-hide .p-loading__bird img {
+	animation-play-state: paused;
+	transform: translateY(0);
+}
+
+.p-medicalDock__inner.l-inner {
+	max-width: 67.5rem;
+}
+
+.p-medicalDock__wrapper {
+	margin-top: 0.9375rem;
+}
+
+.p-medicalDock__body {
+	width: 100%;
+}
+
+.p-medicalDock__text {
+	font-size: 1rem;
+	letter-spacing: 0.05em;
+	line-height: 1.9;
+}
+
+.p-medicalDock__contents {
+	margin: 0 auto;
+	max-width: 42rem;
+	width: 100%;
+}
+
+.p-medicalDock__heading {
+	margin-top: 1.875rem;
+}
+
+.p-medicalDock__headingTitle {
+	background: #fff;
+	border: 1px solid #232e83;
+	border-radius: 20px;
+	color: #232e83;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1rem;
+	font-weight: 700;
+	max-width: 9.375rem;
+	padding: 0.3125rem 1.875rem;
+	text-align: center;
+	width: 100%;
+}
+
+.p-medicalDock__headingTitle.p-medicalDock__headingTitle--middle {
+	max-width: 12.5rem;
+}
+
+.p-medicalDock__tableWrap {
+	margin-top: 0.9375rem;
+	overflow-x: auto;
+}
+
+.p-medicalDock__tableInner {
+	width: 100%;
+}
+
+.p-medicalDock__table {
+	border: 1px solid #adadad;
+	border-collapse: collapse;
+	font-size: 0.875rem;
+	width: 100%;
+}
+
+.p-medicalDock__table th,
+.p-medicalDock__table td {
+	border: 1px solid #adadad;
+	padding: 0.625rem 0.75rem;
+	vertical-align: top;
+}
+
+.p-medicalDock__table thead th {
+	background: #f4f4f4;
+	font-size: 0.875rem;
+	font-weight: 700;
+	text-align: center;
+}
+
+.p-medicalDock__table tbody th {
+	background: rgba(35, 46, 131, 0.07);
+	font-size: 0.875rem;
+	font-weight: 700;
+	text-align: center;
+	width: 16%;
+}
+
+.p-medicalDock__table td {
+	font-size: 0.875rem;
+	line-height: 1.8;
+}
+
+.p-medicalDock__table--option tbody th {
+	padding-left: 14px;
+	text-align: left;
+}
+
+.p-medicalDock__priceCol {
+	font-weight: 700;
+	text-align: right;
+	white-space: nowrap;
+}
+
+.p-medicalDock__priceCardWrapper {
+	margin-top: 1rem;
+}
+
+.p-medicalDock__priceCard {
+	background: #fff;
+	width: 100%;
+}
+
+.p-medicalDock__priceRow {
+	align-items: center;
+	border: 1px solid #adadad;
+	display: grid;
+	grid-template-columns: 11.25rem 1fr;
+}
+
+.p-medicalDock__priceCard + .p-medicalDock__priceCard {
+	margin-top: 0.625rem;
+}
+
+.p-medicalDock__priceRow > span {
+	border-right: 1px solid #adadad;
+	padding: 0.875rem 0.625rem;
+}
+
+.p-medicalDock__priceRow > span:last-child {
+	border-right: 0;
+	font-weight: 700;
+	text-align: center;
+}
+
+.p-medicalDock__priceLabel {
+	background: rgba(35, 46, 131, 0.07);
+	font-size: 0.875rem;
+	font-weight: 700;
+	height: 100%;
+	padding: 0.875rem 0.625rem;
+	text-align: center;
+}
+
+.p-medicalDock__priceValue {
+	font-size: 0.875rem;
+	font-weight: 700;
+	padding: 0.875rem 0.625rem;
+	text-align: center;
+}
+
+.p-medicalDock__priceValue small {
+	font-size: 0.5625rem;
+}
+
+.p-medicalDock__price {
+	align-items: center;
+	background: #fff;
+	border: 1px solid #adadad;
+	display: grid;
+	grid-template-columns: 11.25rem 1fr;
+}
+
+.p-medicalDock__price + .p-medicalDock__price {
+	border-bottom: 0;
+}
+
+.p-medicalDock__price:first-child {
+	border-bottom: 0;
+}
+
+.p-medicalDock__price:last-child {
+	border-bottom: 1px solid #adadad;
+}
+
+.p-medicalDock__price > span {
+	border-right: 1px solid #adadad;
+	padding: 0.875rem 0.625rem;
+}
+
+.p-medicalDock__price > span:last-child {
+	align-items: center;
+	border-right: 0;
+	display: flex;
+	font-size: 1.0625rem;
+	font-weight: 700;
+	justify-content: center;
+	text-align: center;
+}
+
+.p-medicalDock__tableWrap {
+	-webkit-overflow-scrolling: touch;
+	margin-left: -1rem;
+	margin-right: -1rem;
+	overflow-x: auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.p-medicalDock__tableInner {
+	min-width: 45rem; /* スクロール発生のための最小幅 */
+}
+
+.p-medicalDock__note {
+	font-size: 0.71875rem;
+	margin-top: 0.625rem;
+}
+
+.p-medicalDock__optionHeading {
+	font-size: 1rem;
+	font-weight: 700;
+	margin-top: 1.5625rem;
+	padding-left: 1.25rem;
+}
+
+.p-medicalDock__optionDot {
+	position: relative;
+}
+
+.p-medicalDock__optionDot::before {
+	background: #1346b9;
+	border-radius: 50%;
+	content: "";
+	display: inline-block;
+	height: 0.9375rem;
+	left: -22px;
+	position: absolute;
+	top: 1px;
+	width: 0.9375rem;
+}
+
+.p-menu-link__inner.l-inner {
+	max-width: 37.5rem;
+	width: 100%;
+}
+
+.p-menu-link__items {
+	grid-gap: 1.875rem;
+	display: grid;
+	gap: 1.875rem;
+	grid-template-columns: repeat(3, 1fr);
+	margin: 0 auto;
+	max-width: 67.5rem;
+}
+
+.p-menu-link__btn {
+	align-items: center;
+	background-color: #fff;
+	border: 1px solid #13acb9;
+	border-radius: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 1.375rem;
+	height: 100%;
+	justify-content: center;
+	line-height: 1.4;
+	padding: 2.8125rem 0.75rem 3rem;
+	position: relative;
+	width: 100%;
+}
+
+.p-menu-link__btn::before {
+	background-image: url(../images/common/medical-questionnaire-icon.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 4.8125rem;
+	left: 11%;
+	position: absolute;
+	top: 23%;
+	transition: transform 0.3s ease-in-out;
+	width: 3.5rem;
+}
+
+.p-menu-link__btn-arrow {
+	align-items: center;
+	background-color: #13acb9;
+	border-color: #13acb9;
+	border-radius: 20px 0 20px 0;
+	border-style: solid;
+	border-width: 0.2rem;
+	bottom: -1px;
+	display: flex;
+	flex-wrap: wrap;
+	height: 2.75rem;
+	justify-content: center;
+	position: relative;
+	position: absolute;
+	right: -1px;
+	transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+	width: 3.375rem;
+}
+
+.p-menu-link__btn-arrow::after {
+	background-image: url(../images/common/arrow-down-right.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 1.25rem;
+	position: absolute;
+	transition: transform 0.3s ease-in-out;
+	width: 1.25rem;
+}
+
+.p-menu-link__btn-text {
+	color: #13acb9;
+	font-size: 1.375rem;
+	letter-spacing: 0.1em;
+	line-height: 1.4;
+	padding-left: 5rem;
+	text-align: center;
+	transition: color 0.3s ease-in-out;
+}
+
+.p-menu-link__btn.p-menu-link__btn--green {
+	align-items: center;
+	background-color: #fff;
+	border: 1px solid #13b979;
+	border-radius: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 1.375rem;
+	height: 100%;
+	justify-content: center;
+	line-height: 1.4;
+	padding: 1.5625rem 0.75rem;
+	position: relative;
+	width: 100%;
+}
+
+.p-menu-link__btn.p-menu-link__btn--green::before {
+	background-image: url(../images/common/stethoscope-icon.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 4.25rem;
+	left: 8%;
+	position: absolute;
+	top: 25%;
+	transition: transform 0.3s ease-in-out;
+	width: 4.375rem;
+}
+
+.p-menu-link__btn-arrow.p-menu-link__btn-arrow--green {
+	align-items: center;
+	background-color: #13b979;
+	border-color: #13b979;
+	border-radius: 20px 0 20px 0;
+	border-style: solid;
+	border-width: 0.2rem;
+	bottom: -1px;
+	display: flex;
+	flex-wrap: wrap;
+	height: 2.75rem;
+	justify-content: center;
+	position: relative;
+	position: absolute;
+	right: -1px;
+	transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+	width: 3.375rem;
+}
+
+.p-menu-link__btn-text.p-menu-link__btn-text--green {
+	color: #13b979;
+}
+
+.p-menu-link__btn.p-menu-link__btn--blue {
+	align-items: center;
+	background-color: #fff;
+	border: 1px solid #1346b9;
+	border-radius: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 1.375rem;
+	height: 100%;
+	justify-content: center;
+	line-height: 1.4;
+	padding: 1.5625rem 0.75rem;
+	position: relative;
+	width: 100%;
+}
+
+.p-menu-link__btn.p-menu-link__btn--blue::before {
+	background-image: url(../images/common/recruit-icon.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 3.375rem;
+	left: 11%;
+	position: absolute;
+	top: 29%;
+	transition: transform 0.3s ease-in-out;
+	width: 4.75rem;
+}
+
+.p-menu-link__btn-arrow.p-menu-link__btn-arrow--blue {
+	align-items: center;
+	background-color: #1346b9;
+	border-color: #1346b9;
+	border-radius: 20px 0 20px 0;
+	border-style: solid;
+	border-width: 0.2rem;
+	bottom: -1px;
+	display: flex;
+	flex-wrap: wrap;
+	height: 2.75rem;
+	justify-content: center;
+	position: relative;
+	position: absolute;
+	right: -1px;
+	transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+	width: 3.375rem;
+}
+
+.p-menu-link__btn-text.p-menu-link__btn-text--blue {
+	color: #1346b9;
+}
+
+.p-menu-link__btn.p-menu-link__btn--pink {
+	align-items: center;
+	background-color: #fff;
+	border: 1px solid #ff649f;
+	border-radius: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 1.375rem;
+	height: 100%;
+	justify-content: center;
+	line-height: 1.4;
+	padding: 3.5625rem 0.75rem;
+	position: relative;
+	width: 100%;
+}
+
+.p-menu-link__btn.p-menu-link__btn--pink::before {
+	background-image: url(../images/common/bed-icon.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 3.375rem;
+	left: 11%;
+	position: absolute;
+	top: 29%;
+	transition: transform 0.3s ease-in-out;
+	width: 4.75rem;
+}
+
+.p-menu-link__btn-arrow.p-menu-link__btn-arrow--pink {
+	align-items: center;
+	background-color: #ff649f;
+	border-color: #ff649f;
+	border-radius: 20px 0 20px 0;
+	border-style: solid;
+	border-width: 0.2rem;
+	bottom: -1px;
+	display: flex;
+	flex-wrap: wrap;
+	height: 2.75rem;
+	justify-content: center;
+	position: relative;
+	position: absolute;
+	right: -1px;
+	transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+	width: 3.375rem;
+}
+
+.p-menu-link__btn-text.p-menu-link__btn-text--pink {
+	color: #ff649f;
+}
+
+.p-menu-link__btn.p-menu-link__btn--orange {
+	align-items: center;
+	background-color: #fff;
+	border: 1px solid #ffa934;
+	border-radius: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 1.375rem;
+	height: 100%;
+	justify-content: center;
+	line-height: 1.4;
+	padding: 3.5625rem 0.75rem;
+	position: relative;
+	width: 100%;
+}
+
+.p-menu-link__btn.p-menu-link__btn--orange::before {
+	background-image: url(../images/common/human-icon.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	height: 3.375rem;
+	left: 11%;
+	position: absolute;
+	top: 34%;
+	transition: transform 0.3s ease-in-out;
+	width: 4.6875rem;
+}
+
+.p-menu-link__btn-arrow.p-menu-link__btn-arrow--orange {
+	align-items: center;
+	background-color: #ffa934;
+	border-color: #ffa934;
+	border-radius: 20px 0 20px 0;
+	border-style: solid;
+	border-width: 0.2rem;
+	bottom: -1px;
+	display: flex;
+	flex-wrap: wrap;
+	height: 2.75rem;
+	justify-content: center;
+	position: relative;
+	position: absolute;
+	right: -1px;
+	transition: transform 0.3s ease-in-out;
+	width: 3.375rem;
+}
+
+.p-menu-link__btn.p-menu-link__btn--orange .p-menu-link__btn-arrow::after {
+	background-image: url(../images/common/arrow-down-right.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 1.25rem;
+	position: absolute;
+	width: 1.25rem;
+}
+
+.p-menu-link__btn-text.p-menu-link__btn-text--orange {
+	color: #ffa934;
+	transition: color 0.3s ease-in-out;
+}
+
+.p-menu-link__btn-text.p-menu-link__btn-text--orange {
+	color: #ffa934;
+	transition: transform 0.3s ease-in-out;
+}
+
+.p-menu-link__btn.p-menu-link__btn--navy {
+	align-items: center;
+	background-color: #fff;
+	border: 1px solid #232e83;
+	border-radius: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 1.375rem;
+	height: 100%;
+	justify-content: center;
+	line-height: 1.4;
+	padding: 3.5625rem 0.75rem;
+	position: relative;
+	width: 100%;
+}
+
+.p-menu-link__btn.p-menu-link__btn--navy .p-menu-link__btn-text {
+	color: #232e83;
+}
+
+.p-menu-link__btn.p-menu-link__btn--navy::before {
+	background-image: url(../images/common/heart-icon.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	height: 3.375rem;
+	left: 11%;
+	position: absolute;
+	top: 29%;
+	transition: transform 0.3s ease-in-out;
+	width: 4.6875rem;
+}
+
+.p-menu-link__btn-arrow.p-menu-link__btn-arrow--navy {
+	align-items: center;
+	background-color: #232e83;
+	border-color: #232e83;
+	border-radius: 20px 0 20px 0;
+	border-style: solid;
+	border-width: 0.2rem;
+	bottom: -1px;
+	display: flex;
+	flex-wrap: wrap;
+	height: 2.75rem;
+	justify-content: center;
+	position: relative;
+	position: absolute;
+	right: -1px;
+	transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+	width: 3.375rem;
+}
+
+.p-menu-link__btn-text.p-menu-link__btn-text--navy {
+	color: #232e83;
+	transition: color 0.3s ease-in-out;
+}
+
+.p-menu-link__btn.p-menu-link__btn--navy .p-menu-link__btn-arrow::after {
+	background-image: url(../images/common/arrow-down-right.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 1.25rem;
+	position: absolute;
+	width: 1.25rem;
+}
+
+.p-message {
+	background: #f6f8fc;
+	line-height: 2;
+	position: relative;
+	text-align: center;
+}
+
+.p-message__block {
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	padding-bottom: 1.5625rem;
+	padding-top: 1.5625rem;
+}
+
+.p-message__sub {
+	color: #1346b9;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 0.75rem;
+	letter-spacing: 0.15em;
+	line-height: 1;
+}
+
+.p-message__title {
+	color: #1346b9;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 1.25rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	line-height: 1;
+	padding-top: 0.625rem;
+	text-transform: uppercase;
+}
+
+.p-message__catch-wrap {
+	margin-top: 1.875rem;
+}
+
+.p-message__catch {
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 1.25rem;
+	font-weight: 700;
+	letter-spacing: 0.07em;
+	line-height: 1.8;
+}
+
+.p-message__text-body {
+	margin-top: 1.25rem;
+}
+
+.p-message__text {
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 0.8125rem;
+	line-height: 2.5;
+}
+
+.p-message__leaf {
+	height: auto;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 6.25rem;
+}
+
+.p-mission__inner.l-inner {
+	max-width: 37.5rem;
+}
+
+.p-mission__content {
+	margin-top: 0.9375rem;
+	width: 100%;
+}
+
+.p-mission__text {
+	font-size: 1rem;
+	letter-spacing: 0.05em;
+	line-height: 1.9;
+}
+
+.p-mv {
+	height: 100vh;
+	min-height: 25rem;
+	position: relative;
+	z-index: 0;
+}
+
+.p-mv__inner {
+	height: inherit;
+	min-height: inherit;
+}
+
+.p-mv::before {
+	background-image: url(../images/common/bg_sp.svg);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	bottom: -0.0625rem;
+	content: "";
+	height: 8.125rem;
+	position: absolute;
+	right: 0;
+	width: 100%;
+	z-index: 2;
+}
+
+.p-mv::after {
+	background-image: url(../images/common/bard_sp.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	bottom: 8.5%;
+	content: "";
+	height: 4.375rem;
+	left: 20%;
+	position: absolute;
+	width: 4.375rem;
+	z-index: 2;
+}
+
+.p-mv__img picture,
+.p-mv__img img {
+	height: inherit;
+	min-height: inherit;
+}
+
+.p-mv__swiper .swiper-img img,
+.p-mv__swiper .swiper-img picture img {
+	-o-object-fit: cover;
+	height: inherit;
+	object-fit: cover;
+	width: 100%;
+}
+
+.p-mv__heading {
+	color: #fff;
+	left: 5%;
+	position: absolute;
+	text-align: left;
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	top: 19%;
+	z-index: 2;
+}
+
+.p-mv__heading.p-mv__heading--sp {
+	color: #707070;
+	left: 5%;
+	text-shadow: none;
+	top: 19%;
+}
+
+.p-mv__title {
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.25rem;
+}
+
+.p-mv__btn {
+	bottom: 1.875rem;
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+	width: 100%;
+	z-index: 2;
+}
+
+.p-mv__btn-list {
+	grid-gap: 1.25rem;
+	display: grid;
+	gap: 1.25rem;
+	grid-template-columns: repeat(1, 1fr);
+}
+
+.p-mv__btn-link {
+	align-items: center;
+	background-color: #fff;
+	border: 1px solid #13acb9;
+	border-radius: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 1.375rem;
+	height: 100%;
+	justify-content: center;
+	line-height: 1.4;
+	padding: 1.5625rem 0.75rem;
+	position: relative;
+	width: 100%;
+}
+
+.p-mv__btn-link::before {
+	background-image: url(../images/common/medical-questionnaire-icon.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 4.8125rem;
+	left: 10%;
+	position: absolute;
+	top: 15%;
+	transition: transform 0.3s ease-in-out;
+	width: 3.5rem;
+}
+
+.p-mv__btn-arrow {
+	align-items: center;
+	background-color: #13acb9;
+	border: 1px solid #13acb9;
+	border-radius: 20px 0 20px 0;
+	border-style: solid;
+	border-width: 0.2rem;
+	bottom: -0.05rem;
+	display: flex;
+	flex-wrap: wrap;
+	height: 2.75rem;
+	justify-content: center;
+	position: relative;
+	position: absolute;
+	right: 0;
+	transition: background-color 0.3s color 0.3s;
+	width: 3.375rem;
+}
+
+.p-mv__btn-arrow::after {
+	background-image: url(../images/common/arrow-down-right.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 1.25rem;
+	position: absolute;
+	transition: transform 0.3s ease-in-out;
+	width: 1.25rem;
+}
+
+.p-mv__btn-text {
+	color: #13acb9;
+	transition: color 0.3s ease;
+}
+
+.p-mv__btn-link.p-mv__btn-link--green {
+	align-items: center;
+	background-color: #fff;
+	border: 1px solid #13b979;
+	border-radius: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 1.375rem;
+	height: 100%;
+	justify-content: center;
+	line-height: 1.4;
+	padding: 1.5625rem 0.75rem;
+	position: relative;
+	width: 100%;
+}
+
+.p-mv__btn-link.p-mv__btn-link--green::before {
+	background-image: url(../images/common/stethoscope-icon.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 4.25rem;
+	left: 8%;
+	position: absolute;
+	top: 20%;
+	transition: transform 0.3s ease-in-out;
+	width: 4.375rem;
+}
+
+.p-mv__btn-arrow.p-mv__btn-arrow--green {
+	align-items: center;
+	background-color: #13b979;
+	border-color: #13b979;
+	border-radius: 20px 0 20px 0;
+	border-style: solid;
+	border-width: 0.2rem;
+	bottom: -0.05rem;
+	display: flex;
+	flex-wrap: wrap;
+	height: 2.75rem;
+	justify-content: center;
+	position: relative;
+	position: absolute;
+	right: 0;
+	transition: background-color 0.3s ease;
+	width: 3.375rem;
+}
+
+.p-mv__btn-text.p-mv__btn-text--green {
+	color: #13b979;
+	transition: color 0.3s;
+}
+
+.p-mv__btn-link.p-mv__btn-link--blue {
+	align-items: center;
+	background-color: #fff;
+	border: 1px solid #1346b9;
+	border-radius: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 1.375rem;
+	height: 100%;
+	justify-content: center;
+	line-height: 1.4;
+	padding: 1.5625rem 0.75rem;
+	position: relative;
+	width: 100%;
+}
+
+.p-mv__btn-link.p-mv__btn-link--blue::before {
+	background-image: url(../images/common/recruit-icon.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 3.375rem;
+	left: 10%;
+	position: absolute;
+	top: 25%;
+	width: 4.75rem;
+}
+
+.p-mv__btn-arrow.p-mv__btn-arrow--blue {
+	align-items: center;
+	background-color: #1346b9;
+	border-color: #1346b9;
+	border-radius: 20px 0 20px 0;
+	border-style: solid;
+	border-width: 0.2rem;
+	bottom: -0.05rem;
+	display: flex;
+	flex-wrap: wrap;
+	height: 2.75rem;
+	justify-content: center;
+	position: relative;
+	position: absolute;
+	right: 0;
+	transition: background-color 0.3s color 0.3s;
+	width: 3.375rem;
+}
+
+.p-mv__btn-text {
+	padding-left: 1.875rem;
+}
+
+.p-mv__btn-text.p-mv__btn-text--blue {
+	color: #1346b9;
+	transition: color 0.3s ease;
+}
+
+.p-news__items {
+	margin-top: 2rem;
+}
+
+.p-news__item + .p-news__item {
+	margin-top: 2.5rem;
+}
+
+.p-news-content__meta {
+	align-items: center;
+	display: flex;
+}
+
+.p-news-content__date {
+	color: #000000;
+	font-size: 0.9375rem;
+	letter-spacing: 0.1em;
+}
+
+.p-news-content__category {
+	background-color: #e8e8e8;
+	border-radius: 50px;
+	flex-shrink: 0;
+	font-size: 0.6875rem;
+	letter-spacing: 0.05em;
+	line-height: 1;
+	margin-left: 0.9375rem;
+	padding: 0.25rem 1.125rem;
+}
+
+.p-news-content__text {
+	font-size: 0.875rem;
+}
+
+/* ヘッダー帯 */
+
+.p-news-detail__heading {
+	border-bottom: 1px solid #232e83;
+	padding-top: 0.625rem;
+	position: relative;
+}
+
+.p-news-detail__title {
+	color: #232e83;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.375rem;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+	line-height: 1.6;
+}
+
+/* 本文（中央寄せ・読みやすい行間） */
+
+.p-news-detail__article {
+	width: 100%;
+}
+
+.p-news-detail__content {
+	color: #000000;
+	font-size: 0.9375rem;
+	letter-spacing: 0.02em;
+	line-height: 1.8;
+}
+
+/* 戻るボタン */
+
+.p-news-detail__back {
+	margin-top: 3.5rem;
+	text-align: center;
+}
+
+.p-news-detail__back-link {
+	align-items: center;
+	background: #232e83;
+	border: 1px solid transparent;
+	border-radius: 999px;
+	box-shadow: 0 0.375rem 1rem rgba(17, 32, 96, 0.18);
+	color: #fff;
+	display: inline-flex;
+	font-size: 1.125rem;
+	font-weight: 600;
+	gap: 0.625rem;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 32.5rem;
+	padding: 1.125rem 2rem;
+	transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+	transition: background-color 0.3s ease-in-out;
+	transition: color 0.3s ease-in-out;
+	transition: border-color 0.3s ease-in-out;
+	width: 100%;
+}
+
+.p-news-detail__back-link:hover {
+	background: #fff;
+	border: 1px solid #232e83;
+	box-shadow: 0 0.625rem 1.375rem rgba(17, 32, 96, 0.24);
+	color: #232e83;
+}
+
+.p-news-detail__back-link-icon {
+	background-image: url(../images/common/news-arrow-left.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 1.25rem;
+	margin-right: 0.625rem;
+	position: relative;
+	width: 1.25rem;
+}
+
+.p-news-detail__back-link-icon::before {
+	background-image: url(../images/common/news-arrow-left.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 1.25rem;
+	left: 0;
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	transition: opacity 0.3s ease-in-out;
+	width: 1.25rem;
+}
+
+.p-news-detail__back-link-icon::after {
+	background-image: url(../images/common/news-arrow-left.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 1.25rem;
+	left: 0;
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	transition: opacity 0.3s ease-in-out;
+	width: 1.25rem;
+}
+
+.p-news-detail__back-link:hover .p-news-detail__back-link-icon::before {
+	background-image: url(../images/common/news-arrow-left-hover.svg);
+	opacity: 0;
+}
+
+.p-news-detail__back-link:hover .p-news-detail__back-link-icon::after {
+	background-image: url(../images/common/arrow-left-hover.svg);
+	opacity: 1;
+}
+
+.p-news-detail__back-link-text {
+	font-size: 1.125rem;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+}
+
+/* 変更前の absolute をやめる */
+
+.p-news-detail__date {
+	color: #6b7280;
+	display: block;
+	font-size: 12px;
+	margin-top: 8px; /* 線との間に少し余白 */
+	position: static; /* ← absolute をやめる */
+	text-align: right; /* 右寄せ */
+}
+
+.p-news__inner.l-inner {
+	max-width: 37.5rem;
+	width: 100%;
+}
+
+.p-news__wrapper {
+	background-color: #fff;
+	border: 1px solid #232e83;
+	border-radius: 1.25rem;
+	padding: 0.625rem 1.25rem 0.3125rem;
+}
+
+.p-news__wrapper::before {
+	display: none;
+}
+
+.p-news__list {
+	width: 100%;
+}
+
+.p-news__list a {
+	display: block;
+	padding: 0.625rem 0 0.3125rem;
+}
+
+.p-news__list a:hover:after {
+	right: 1.4rem;
+}
+
+.p-news__heading {
+	width: 100%;
+}
+
+.p-news__meta {
+	align-items: center;
+	color: #232e83;
+	display: flex;
+}
+
+.p-news__date {
+	color: #232e83;
+	font-size: 0.875rem;
+	line-height: 1;
+}
+
+.p-news__title {
+	color: #232e83;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.125rem;
+	font-weight: 500;
+	letter-spacing: 0.2em;
+	line-height: 1.5;
+}
+
+.p-news__list-title {
+	color: #232e83;
+	font-size: 1rem;
+	line-height: 1.5;
+	margin-left: 0.625rem;
+}
+
+.p-not-found {
+	position: relative;
+	z-index: 1;
+}
+
+.p-not-found__content {
+	color: #232e83;
+	text-align: center;
+}
+
+.p-not-found__title {
+	font-size: 5rem;
+	font-weight: 400;
+	letter-spacing: 0.5em;
+	line-height: 1.2;
+	text-indent: 0.5em;
+}
+
+.p-not-found__text {
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.9;
+}
+
+.p-not-found__button {
+	margin-top: 1.25rem;
+}
+
+.p-not-found__button a {
+	background: #fff;
+	border: 1px solid #232e83;
+	border-radius: 50px;
+	color: #232e83;
+	display: inline-block;
+	font-size: 1.25rem;
+	font-weight: 400;
+	line-height: 1;
+	padding: 1.0625rem 3.0625rem;
+	position: relative;
+	transition: background 0.3s, color 0.3s;
+	width: 17.125rem;
+}
+
+.p-not-found__button a::after {
+	background-image: url(../images/common/arrow-navy.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	bottom: 0;
+	content: "";
+	height: 1.5625rem;
+	margin: auto;
+	position: absolute;
+	right: 1.875rem;
+	top: 0;
+	transition: background-image 0.3s;
+	width: 1.5625rem;
+}
+
+.p-not-found__button a:hover::after {
+	background-image: url(../images/common/arrow-white.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.p-nursing__inner {
+	margin: 0 auto;
+	padding: 0 0.9375rem;
+	width: 100%;
+}
+
+/* タイトル */
+
+.p-nursing__title {
+	align-items: center;
+	color: #000000;
+	display: flex;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.25rem;
+	font-weight: 700;
+	gap: 0.625rem;
+	margin-bottom: 1.5rem;
+}
+
+/* 医師選択ボタン */
+
+.p-nursing__list {
+	grid-gap: 1.0625rem;
+	display: grid;
+	gap: 1.0625rem;
+	grid-template-columns: repeat(1, 1fr);
+	margin-bottom: 2.5rem;
+}
+
+.p-nursing__item {
+	width: 100%;
+}
+
+.p-nursing__btn {
+	background: #fff;
+	border: 1.5px solid #1346b9;
+	border-radius: 50px;
+	color: #1346b9;
+	cursor: pointer;
+	font-size: 1rem;
+	font-weight: 600;
+	padding: 0.9375rem 2.5rem;
+	transition: all 0.3s ease;
+	width: 100%;
+}
+
+.p-nursing__btn.is-active,
+.p-nursing__btn:hover {
+	background: #1346b9;
+	color: #fff;
+}
+
+/* プロフィール全体 */
+
+.p-nursing__profile {
+	display: flex;
+	flex-direction: column-reverse;
+	gap: 1.25rem;
+}
+
+/* 左側テキスト部分 */
+
+.p-nursing__label {
+	font-size: 0.9375rem;
+	margin-bottom: 0.25rem;
+}
+
+.p-nursing__name {
+	font-size: 1.125rem;
+	font-weight: 700;
+	margin: 0;
+}
+
+.p-nursing__kana {
+	color: #777;
+	font-size: 0.8125rem;
+	margin-bottom: 1.5rem;
+}
+
+/* 右側画像部分 */
+
+.p-nursing__img {
+	width: 100%;
+}
+
+.p-nursing__img img {
+	-o-object-fit: cover;
+	aspect-ratio: 1/1;
+	border-radius: 1.25rem;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.p-nursing__content {
+	border-bottom: 1px solid #adadad;
+	padding-bottom: 2.5rem;
+}
+
+.p-nursing__message {
+	margin-top: 1.25rem;
+}
+
+.p-nursing__message-title {
+	border-bottom: 1px solid #1346b9;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.125rem;
+	font-weight: 700;
+	padding-bottom: 0.375rem;
+}
+
+.p-nursing__message-text {
+	font-size: 1rem;
+	line-height: 1.9;
+}
+
+.p-office-staff__inner {
+	margin: 0 auto;
+	padding: 0 0.9375rem;
+	width: 100%;
+}
+
+/* タイトル */
+
+.p-office-staff__title {
+	align-items: center;
+	color: #000000;
+	display: flex;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.25rem;
+	font-weight: 700;
+	gap: 0.625rem;
+	margin-bottom: 1.5rem;
+}
+
+/* 医師選択ボタン */
+
+.p-office-staff__list {
+	grid-gap: 1.0625rem;
+	display: grid;
+	gap: 1.0625rem;
+	grid-template-columns: repeat(1, 1fr);
+	margin-bottom: 2.5rem;
+}
+
+.p-office-staff__item {
+	width: 100%;
+}
+
+.p-office-staff__btn {
+	background: #fff;
+	border: 1.5px solid #1346b9;
+	border-radius: 50px;
+	color: #1346b9;
+	cursor: pointer;
+	font-size: 1rem;
+	font-weight: 600;
+	padding: 0.9375rem 2.5rem;
+	transition: all 0.3s ease;
+	width: 100%;
+}
+
+.p-office-staff__btn.is-active,
+.p-office-staff__btn:hover {
+	background: #1346b9;
+	color: #fff;
+}
+
+/* プロフィール全体 */
+
+.p-office-staff__profile {
+	display: flex;
+	flex-direction: column-reverse;
+	gap: 1.25rem;
+}
+
+/* 左側テキスト部分 */
+
+.p-office-staff__label {
+	font-size: 0.9375rem;
+	margin-bottom: 0.25rem;
+}
+
+.p-office-staff__name {
+	font-size: 1.125rem;
+	font-weight: 700;
+	margin: 0;
+}
+
+.p-office-staff__kana {
+	color: #777;
+	font-size: 0.8125rem;
+	margin-bottom: 1.5rem;
+}
+
+/* 右側画像部分 */
+
+.p-office-staff__img {
+	width: 100%;
+}
+
+.p-office-staff__img img {
+	-o-object-fit: cover;
+	aspect-ratio: 1/1;
+	border-radius: 1.25rem;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.p-office-staff__content {
+	border-bottom: 1px solid #adadad;
+	padding-bottom: 2.5rem;
+}
+
+.p-office-staff__message {
+	margin-top: 1.25rem;
+}
+
+.p-office-staff__message-title {
+	border-bottom: 1px solid #1346b9;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.125rem;
+	font-weight: 700;
+	padding-bottom: 0.375rem;
+}
+
+.p-office-staff__message-text {
+	font-size: 1rem;
+	line-height: 1.9;
+}
+
+.p-outpatient-service {
+	position: relative;
+}
+
+.p-outpatient-service__inner {
+	margin: 0 auto;
+	padding: 0 0.9375rem;
+	width: 100%;
+}
+
+.p-outpatient-service__image {
+	-webkit-overflow-scrolling: touch;
+	overflow-x: auto;
+	overscroll-behavior-x: contain;
+	white-space: nowrap;
+}
+
+.p-outpatient-service__image img {
+	display: block;
+	height: auto;
+	max-width: none;
+	width: 50rem;
+}
+
+.p-outpatient-service__wrapper {
+	margin-top: 1rem;
+}
+
+.p-outpatient-service__box {
+	background: #fff;
+	border: 1px solid #adadad;
+	position: relative;
+}
+
+.p-outpatient-service__head {
+	background: #f4f4f4;
+	font-size: 0.9375rem;
+	font-weight: 700;
+	letter-spacing: 0.35em;
+	padding: 0.75rem 0.5rem;
+	text-align: center;
+}
+
+.p-outpatient-service__content {
+	display: grid;
+	grid-template-columns: 8.125rem 1fr;
+}
+
+.p-outpatient-service__cell {
+	border: 0;
+	border-left: 1px solid #adadad;
+	border-top: 1px solid #adadad;
+	font-size: 1rem;
+	font-weight: 700;
+	padding: 1rem 0.75rem;
+	text-align: center;
+}
+
+.p-outpatient-service__content > .p-outpatient-service__cell:nth-child(4n+1) {
+	border-left: 0;
+}
+
+.p-outpatient-service__content > .p-outpatient-service__cell:nth-child(3) {
+	border-left: 0;
+}
+
+.p-outpatient-service__label {
+	background: #fff;
+	font-size: 1rem;
+	font-weight: 700;
+	letter-spacing: 0.25em;
+}
+
+.p-outpatient-service__time {
+	font-size: 1rem;
+	font-weight: 800;
+}
+
+.p-outpatient {
+	padding-top: 6.25rem;
+	position: relative;
+}
+
+.p-outpatient__wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+
+.p-outpatient__left {
+	margin-top: 2.5rem;
+	position: relative;
+}
+
+.p-outpatient__headline {
+	align-items: center;
+	display: flex;
+	margin-bottom: 18px;
+}
+
+.p-outpatient__title {
+	color: #13acb9;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.25rem;
+	font-weight: 700;
+	padding-left: 3.75rem;
+	position: relative;
+}
+
+.p-outpatient__title::before {
+	background-image: url(../images/common/medical-questionnaire-icon.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 3.75rem;
+	left: 0;
+	position: absolute;
+	top: -0.9375rem;
+	width: 2.75rem;
+}
+
+.p-outpatient__nav {
+	margin-top: 1.875rem;
+	width: 100%;
+}
+
+.p-outpatient__nav::before {
+	display: none;
+}
+
+.p-outpatient__wrapper::after {
+	display: none;
+}
+
+.p-outpatient__list {
+	display: flex;
+	flex-direction: column;
+	gap: 0.625rem;
+	width: 100%;
+}
+
+.p-outpatient__item a {
+	align-items: center;
+	color: #000000;
+	display: flex;
+	font-size: 1rem;
+	gap: 14px;
+	justify-content: space-between;
+	padding: 0.75rem 0.625rem 0.75rem 0;
+	transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.p-outpatient__item a:hover {
+	color: #13acb9;
+}
+
+.p-outpatient__arr {
+	background-image: url(../images/common/cyan-arrow-right.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 1.25rem;
+	width: 1.25rem;
+}
+
+/* decorative leaves */
+
+.p-outpatient__leaf {
+	opacity: 0.9;
+	position: absolute;
+}
+
+.p-outpatient__leaf--lt {
+	bottom: -18px;
+	left: -6px;
+	width: 120px;
+}
+
+.p-outpatient__leaf--cr {
+	right: 20%;
+	top: 56%;
+	transform: rotate(-18deg);
+	width: 110px;
+}
+
+/* ===== right / media ===== */
+
+.p-outpatient__right {
+	width: 100%;
+}
+
+.p-outpatient__image {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.p-outpatient__image img {
+	-o-object-fit: cover;
+	aspect-ratio: 16/9;
+	border-radius: 20px;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.p-partner__title {
+	color: #232e83;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.25rem;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	text-align: left;
+}
+
+.p-partner__wrapper {
+	margin-top: 1.125rem;
+}
+
+.p-partner__list {
+	grid-gap: 1.25rem;
+	display: grid;
+	gap: 1.25rem;
+	grid-template-columns: repeat(1, 1fr);
+}
+
+.p-partner__item {
+	max-width: 12.5rem;
+	width: 100%;
+}
+
+.p-partner__item:hover {
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+	transform: translateY(-1px);
+}
+
+.p-partner__item img {
+	-o-object-fit: contain;
+	height: 100%;
+	object-fit: contain;
+	width: 100%;
+}
+
+.p-privacy-policy__inner.l-inner {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 33.125rem;
+	width: 100%;
+}
+
+.p-privacy-policy__title {
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.5rem;
+	font-weight: 500;
+	line-height: 1.4583333333;
+}
+
+.p-privacy-policy__contents ol:first-of-type {
+	margin-top: 2rem;
+}
+
+.p-privacy-policy__contents p {
+	font-size: 1rem;
+	line-height: 2;
+	margin-top: 2.5rem;
+}
+
+.p-privacy-policy__contents ol {
+	list-style: decimal;
+}
+
+.p-privacy-policy__contents li {
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 2;
+	margin-left: 0.8125rem;
+}
+
+.p-privacy-policy__contents ul {
+	list-style: none;
+}
+
+.p-privacy-policy__contents ul li ul li {
+	list-style: disc;
+}
+
+.p-recruit-contact {
+	position: relative;
+}
+
+.p-recruit-contact::before {
+	background: url(../images/common/recruit_bg.svg) no-repeat center top/cover;
+	bottom: 0;
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+}
+
+.p-recruit-contact::after {
+	background: url(../images/common/recruit_bg_icon.svg) no-repeat center/contain;
+	bottom: -7%;
+	content: "";
+	height: 12.5rem;
+	left: calc(50% - min(45vw, 18.75rem));
+	position: absolute;
+	width: 12.5rem;
+	z-index: -1;
+}
+
+.p-recruit-contact__inner {
+	margin: 0 auto;
+	padding: 0 0.9375rem;
+	width: 100%;
+}
+
+.p-recruit-contact__head {
+	padding-bottom: 0.9375rem;
+	text-align: center;
+}
+
+.p-recruit-contact__sub {
+	color: #1346b9;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 0.75rem;
+	letter-spacing: 0.15em;
+	line-height: 1;
+}
+
+.p-recruit-contact__title {
+	color: #1346b9;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 1.5625rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	line-height: 1;
+	padding-top: 0.625rem;
+	text-transform: uppercase;
+}
+
+.p-recruit-contact__body {
+	border: 2px solid #1346b9;
+	border-radius: 60px;
+	color: #000000;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	line-height: 1.8;
+	margin: 0 auto;
+	max-width: 31.25rem;
+	padding: 2.25rem 1.25rem;
+	text-align: center;
+	width: 100%;
+}
+
+.p-recruit-contact__lead {
+	color: #1346b9;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 1.125rem;
+	font-weight: 500;
+	line-height: 1;
+}
+
+.p-recruit-contact__tel {
+	margin-top: 0.625rem;
+}
+
+.p-recruit-contact__tel a {
+	-webkit-text-decoration: underline;
+	color: #1346b9;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 1;
+	text-decoration: underline;
+	transition: opacity 0.3s;
+}
+
+.p-recruit-contact__time {
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 0.75rem;
+	line-height: 1.9;
+	margin-top: 0.625rem;
+}
+
+.p-recruit-flow__inner {
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 980px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: center;
+}
+
+.p-recruit-flow__sub {
+	color: #1346b9;
+	font-size: 0.75rem;
+	letter-spacing: 0.15em;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.p-recruit-flow__title {
+	color: #1346b9;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 1.25rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	line-height: 1;
+	padding-top: 0.625rem;
+}
+
+.p-recruit-flow__content {
+	margin-top: 2.5rem;
+}
+
+.p-recruit-flow__list {
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	height: inherit;
+}
+
+.p-recruit-flow__item {
+	height: inherit;
+	position: relative;
+	width: 100%;
+}
+
+.p-recruit-flow__item + .p-recruit-flow__item {
+	padding-top: 1.25rem;
+}
+
+.p-recruit-flow__row {
+	grid-gap: 0.625rem;
+	align-items: flex-start;
+	border-bottom: 1px solid #707070;
+	display: grid;
+	gap: 0.625rem;
+	grid-template-columns: 4.375rem 1fr;
+	padding-bottom: 1.25rem;
+	text-align: left;
+}
+
+.p-recruit-flow__numWrap {
+	align-items: center;
+	display: flex;
+	gap: 0.625rem;
+	justify-content: right;
+}
+
+.p-recruit-flow__num {
+	font-feature-settings: "tnum";
+	color: #1346b9;
+	font-size: 1.25rem;
+	font-variant-numeric: tabular-nums;
+	font-weight: 700;
+}
+
+.p-recruit-flow__body {
+	display: flex;
+	flex-direction: column;
+	margin-top: 0.5rem;
+}
+
+.p-recruit-flow__slash {
+	color: #1346b9;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 1.25rem;
+	margin-top: 0.25rem;
+}
+
+.p-recruit-flow__step {
+	color: #1346b9;
+	font-size: 1rem;
+	font-weight: 700;
+	letter-spacing: 0.3em;
+}
+
+.p-recruit-flow__desc {
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 0.75rem;
+	line-height: 1.9;
+	margin: 0;
+	margin-top: 0.625rem;
+}
+
+.p-recruit-info__inner.l-inner {
+	width: 100%;
+}
+
+.p-recruit-info__head {
+	border-bottom: 1px solid #adadad;
+	padding-bottom: 1.25rem;
+}
+
+.p-recruit-info__title {
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 1.5rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	line-height: 1;
+}
+
+.p-recruit-info__list {
+	height: inherit;
+}
+
+.p-recruit-info__item {
+	border-bottom: 1px solid #adadad;
+	height: inherit;
+	width: 100%;
+}
+
+.p-recruit-info__item-title {
+	cursor: pointer;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 1rem;
+	font-weight: 500;
+	letter-spacing: 0.1em;
+	line-height: 1.5;
+	padding: 1.125rem 1.25rem 1.125rem 0;
+	position: relative;
+	text-align: left;
+	width: 100%;
+}
+
+.p-recruit-info__item-title {
+	cursor: pointer;
+	position: relative;
+	transition: color 0.3s ease;
+}
+
+.p-recruit-info__item-title::after {
+	background: url("../images/common/arrow-gray.svg") no-repeat center/contain;
+	content: "";
+	height: 20px;
+	position: absolute;
+	right: 5px;
+	top: 50%;
+	transform: translateY(-50%) rotate(0deg); /* 初期：右向き */
+	transition: transform 0.3s ease;
+	width: 20px;
+}
+
+/* 開いたとき：下向き */
+
+.p-recruit-info__item-title.is-open::after {
+	transform: translateY(-50%) rotate(90deg);
+}
+
+.p-recruit-info__item-content.is-open {
+	display: block;
+}
+
+.p-recruit-info__item-body {
+	margin: 1.5rem auto;
+	max-width: 47.5rem;
+}
+
+.p-recruit-info__item-table {
+	border: 1px solid #adadad;
+	border-collapse: separate;
+	border-radius: 20px;
+	border-spacing: 0;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 1rem;
+	line-height: 1.9;
+	table-layout: fixed;
+	width: 100%;
+}
+
+/* 上端行だけ上線なし／以降の行は水平罫線 */
+
+.p-recruit-info__item-table tr + tr th,
+.p-recruit-info__item-table tr + tr td {
+	border-top: 1px solid #adadad;
+}
+
+.p-recruit-info__item-table th {
+	border-right: 1px solid #adadad;
+	color: #000000;
+	font-weight: 700;
+	padding: 1.25rem 1.125rem;
+	text-align: center;
+	vertical-align: middle;
+	width: 9.5em;
+	word-break: keep-all;
+}
+
+.p-recruit-info__item-table td {
+	color: #000000;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	padding: 1.25rem 1.375rem;
+	vertical-align: middle;
+}
+
+.p-recruit-info__no-detail,
+.p-recruit-info__no-job {
+	color: #555;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 1rem;
+	padding: 0.625rem 0;
+	text-align: center;
+}
+
+.p-recruit-info__item-table {
+	border: 1px solid #adadad;
+	border-radius: 20px;
+	border-spacing: 0;
+	display: block;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 1rem;
+	line-height: 1.9;
+	min-width: 33.125rem; /* 最低幅を指定（調整OK） */
+	table-layout: fixed;
+	width: 100%;
+}
+
+.p-recruit-info__item-body {
+	-webkit-overflow-scrolling: touch; /* スムーズスクロール */
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	overflow-x: auto;
+}
+
+/* 見た目補正：スクロールバー位置の余白 */
+
+.p-recruit-info__item-body::-webkit-scrollbar {
+	height: 6px;
+}
+
+.p-recruit-info__item-body {
+	overflow-x: auto;
+}
+
+.p-recruit-info__item-body::-webkit-scrollbar {
+	height: 6px;
+}
+
+.p-recruit-info__item-body::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+}
+
+.p-recruit-fv {
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	height: 100vh;
+	min-height: 25rem;
+	position: relative;
+	z-index: 1;
+}
+
+.p-recruit-fv__title {
+	color: #fff;
+	font-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+	font-size: 1.875rem;
+	line-height: 1;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+}
+
+.p-recruit-fv__image {
+	height: inherit;
+}
+
+.p-recruit-fv__image picture {
+	height: inherit;
+}
+
+.p-recruit-fv__image img {
+	-o-object-fit: cover;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.p-schedule__inner {
+	margin: 0 auto;
+	padding: 0 0.9375rem;
+	width: 100%;
+}
+
+.p-schedule__tableWrap {
+	-webkit-overflow-scrolling: touch;
+	margin-top: 0.9375rem;
+	overflow-x: auto;
+}
+
+.p-schedule__table {
+	background: #fff;
+	border: 1px solid #adadad;
+	border-collapse: separate;
+	border-spacing: 0;
+	min-width: 48.75rem;
+	table-layout: fixed;
+	text-align: center;
+	width: 100%;
+}
+
+/* ヘッダー */
+
+.p-schedule__th {
+	background: #f4f4f4;
+	border-bottom: 1px solid #adadad;
+	border-right: 1px solid #adadad;
+	font-weight: 700;
+	padding: 0.75rem 0.5rem;
+}
+
+.p-schedule__th:last-child {
+	border-right: 0;
+}
+
+.p-schedule__th--blank {
+	width: 5.75rem;
+}
+
+.p-schedule__rowLabel {
+	background: #f4f4f4;
+	border-bottom: 1px solid #adadad;
+	border-right: 1px solid #adadad;
+	font-weight: 700;
+	letter-spacing: 0.25em;
+	padding: 0.875rem 0.375rem;
+	width: 5.75rem;
+}
+
+.p-schedule__cell {
+	border-bottom: 1px solid #adadad;
+	border-right: 1px solid #adadad;
+	font-size: 0.9375rem;
+	font-size: 1rem;
+	padding: 0.875rem 0.375rem;
+	vertical-align: baseline;
+}
+
+.p-schedule__cell:last-child {
+	border-right: 0;
+}
+
+.c-chip {
+	align-items: center;
+	border-radius: 20px;
+	display: inline-flex;
+	font-size: 0.8125rem;
+	font-weight: 700;
+	height: 1.625rem;
+	height: 1.75rem;
+	justify-content: center;
+	line-height: 1;
+	min-width: 3.25rem;
+	min-width: 56px;
+	padding: 0 0.75rem;
+	white-space: nowrap;
+}
+
+.c-chip--green {
+	background: #13b979;
+	color: #fff;
+}
+
+.u-note {
+	color: #707070;
+	display: block;
+	font-size: 0.625rem;
+	margin-top: 0.375rem;
+}
+
+.p-sitemap__inner {
+	margin: 0 auto;
+	padding: 0 0.9375rem;
+	width: 100%;
+}
+
+.p-sitemap__content {
+	grid-gap: 1.875rem;
+	display: grid;
+	gap: 1.875rem;
+	grid-template-columns: repeat(1, 1fr);
+	justify-content: center;
+	margin: 0 auto;
+}
+
+.p-sitemap__column {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.p-sitemap__section {
+	margin-bottom: 0.5rem;
+}
+
+.p-sitemap__heading {
+	align-items: center;
+	color: #000000;
+	display: inline-block;
+	display: flex;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.125rem;
+	font-weight: 700;
+	gap: 0.5rem;
+	margin-bottom: 0.625rem;
+	padding-bottom: 0.25rem;
+}
+
+.p-sitemap__heading-dot {
+	background-color: #232e83;
+	border-radius: 50%;
+	flex-shrink: 0;
+	height: 0.9375rem;
+	width: 0.9375rem;
+}
+
+.p-sitemap__list {
+	list-style: none;
+	padding-left: 0.9375rem;
+}
+
+.p-sitemap__list li {
+	margin-bottom: 0.25rem;
+}
+
+.p-sitemap__list a {
+	-webkit-text-decoration: none;
+	color: #000000;
+	font-size: 0.9375rem;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.p-staff-link__inner.l-inner {
+	height: 68.75rem;
+	margin: 0 auto;
+	padding: 0 0.9375rem;
+	width: 100%;
+}
+
+.p-staff__inner.l-inner {
+	max-width: 37.5rem;
+}
+
+.p-staff__nav {
+	height: 81.25rem;
+	margin-top: 1.25rem;
+	position: relative;
+}
+
+.p-staff__nav-inner {
+	width: 100%;
+}
+
+.p-staff__list {
+	grid-gap: 5%;
+	display: grid;
+	gap: 5%;
+	grid-template-columns: repeat(1, 1fr);
+}
+
+.p-staff__item a {
+	-webkit-text-decoration: none;
+	align-items: center;
+	background-color: #fff;
+	border: 1px solid #1346b9;
+	border-radius: 1.5625rem;
+	color: #000000;
+	display: flex;
+	font-size: 1.25rem;
+	justify-content: space-between;
+	padding: 0.75rem 1.25rem;
+	text-decoration: none;
+	transition: background-color 0.3s ease-in-out;
+	transition: color 0.3s ease-in-out;
+	transition: border-color 0.3s ease-in-out;
+	transition: transform 0.3s ease-in-out;
+}
+
+.p-staff__arr {
+	background-image: url(../images/common/arrow-blue.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 1.25rem;
+	position: relative;
+	width: 1.25rem;
+}
+
+.p-staff__arr::before,
+.p-staff__arr::after {
+	background-repeat: no-repeat;
+	background-size: cover;
+	bottom: 0;
+	content: "";
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.p-staff__arr::before {
+	background-image: url(../images/common/arrow-blue.svg);
+	opacity: 1;
+}
+
+.p-staff__arr::after {
+	background-image: url(../images/common/arrow-white.svg);
+	opacity: 0;
+}
+
+.p-visit__inner.l-inner {
+	margin: 0 auto;
+	max-width: 37.5rem;
+	padding: 0 0.9375rem;
+	width: 100%;
+}
+
+/* タイトル */
+
+.p-visit__title {
+	align-items: center;
+	color: #000000;
+	display: flex;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.25rem;
+	font-weight: 700;
+	gap: 0.75rem;
+}
+
+.p-visit__dot {
+	background: #ffa934;
+	border-radius: 50%;
+	height: 1rem;
+	width: 1rem;
+}
+
+.p-visit__tableWrap {
+	margin-top: 0.875rem;
+}
+
+.p-visit__table-inner {
+	width: 100%;
+}
+
+.p-visit__table {
+	background: #fff;
+	border: 1px solid #adadad;
+	border-collapse: separate;
+	border-spacing: 0;
+	text-align: center;
+	width: 100%;
+}
+
+.p-visit__thead {
+	background: #f4f4f4;
+	border-bottom: 1px solid #adadad;
+	font-family: "I-OTFゴシックオールドPro M";
+	font-weight: 400;
+	letter-spacing: 0.35em;
+	padding: 0.75rem 0.5rem;
+}
+
+.p-visit__label {
+	background: #fafafa;
+	border-bottom: 1px solid #adadad;
+	border-right: 1px solid #adadad;
+	font-family: "I-OTFゴシックオールドPro M";
+	font-size: 0.875rem;
+	font-weight: 500;
+	padding: 0.875rem 0.5rem;
+	text-align: center;
+	width: 36%;
+}
+
+.p-visit__time {
+	border-bottom: 1px solid #adadad;
+	font-size: 0.875rem;
+	padding: 0.875rem 0.5rem;
+	text-align: center;
+}
+
+.p-visit__table tbody tr:last-child .p-visit__label,
+.p-visit__table tbody tr:last-child .p-visit__time {
+	border-bottom: 0;
+}
+
+.p-visit__note {
+	color: #707070;
+	font-size: 0.6875rem;
+	margin-top: 0.5rem;
+}
+
+/* ===== card ===== */
+
+.p-visit__card {
+	margin-top: 1.75rem;
+}
+
+.p-visit__card-wrapper {
+	width: 100%;
+}
+
+.p-visit__card-content {
+	border: 3px solid #ffa934;
+	border-radius: 18px;
+	padding: 1.25rem 0.9375rem;
+}
+
+.p-visit__lead {
+	color: #ffa934;
+	font-family: "I-OTFゴシックオールドPro D";
+	font-size: 1.0625rem;
+	font-weight: 500;
+	text-align: left;
+}
+
+.p-visit__lead.p-visit__lead--center {
+	margin-top: 2.0625rem;
+}
+
+.p-visit__text {
+	color: #000000;
+	font-size: 0.875rem;
+	line-height: 1.9;
+	margin-top: 1.3125rem;
+}
+
+.p-visit__text-last {
+	margin-top: 1.125rem;
+}
+
+/* ===== caution ===== */
+
+.p-visit__caution {
+	margin-top: 0.5rem;
+}
+
+.p-visit__cautionTtl {
+	color: #707070;
+	font-size: 0.9375rem;
+	font-weight: 700;
+	margin: 0.875rem 0 0.5rem;
+}
+
+.p-visit__list {
+	color: #707070;
+	font-size: 0.875rem;
+	line-height: 1.9;
+	margin-left: 0.625rem;
+	text-indent: -1em;
+}
+
+.p-visit__list li {
+	margin: 0.25rem 0;
+}
+
+.p-visit__caution-wrapper {
+	width: 100%;
+}
+
+.swiper {
+	height: inherit;
+	min-height: inherit;
+}
+
+.swiper-wrapper {
+	height: inherit;
+	min-height: inherit;
+}
+
+.swiper-slide {
+	height: inherit;
+	min-height: inherit;
+}
+
+.swiper-img {
+	height: inherit;
+	min-height: inherit;
+}
+
+.swiper-img img,
+.swiper-img picture img {
+	-o-object-fit: cover;
+	object-fit: cover;
+	width: 100%;
+}
+
+.swiper-img picture {
+	height: inherit;
+	min-height: inherit;
+	width: 100%;
+}
+
+.wp-pagenavi {
+	align-items: center;
+	clear: both;
+	display: flex;
+	justify-content: center;
+}
+
+.wp-pagenavi a,
+.wp-pagenavi span {
+	align-items: center;
+	background-color: #fff;
+	border: 0.0625rem solid #232e83;
+	border-radius: 50%;
+	color: #232e83;
+	display: inline-flex;
+	font-size: 1rem;
+	font-weight: 700;
+	height: 2.375rem;
+	justify-content: center;
+	margin: 0 0.125rem;
+	padding: 0.375rem 0.75rem;
+	transition: background-color 0.6s, color 0.6s ease;
+	width: 2.375rem;
+}
+
+.wp-pagenavi span.current {
+	background-color: #232e83;
+	color: #fff;
+}
+
+.wp-pagenavi .previouspostslink:hover::after {
+	background-color: #232e83;
+	border-left: 0.0625rem solid #fff;
+	border-top: 0.0625rem solid #fff;
+	opacity: 1;
+	transition: background-color 0.6s, color 0.6s ease;
+}
+
+.wp-pagenavi .nextpostslink:hover::after {
+	background-color: #232e83;
+	border-bottom: 0.0625rem solid #fff;
+	border-right: 0.0625rem solid #fff;
+	opacity: 1;
+	transition: background-color 0.6s, color 0.6s ease;
+}
+
+.wp-pagenavi a:hover,
+.wp-pagenavi span:hover {
+	background-color: #232e83;
+	color: #fff;
+	opacity: 1;
+	transition: background-color 0.6s, color 0.6s ease;
+}
+
+.wp-pagenavi .previouspostslink {
+	margin-left: 0;
+	margin-right: max(1.875rem, min(2.291vw, 2.5rem));
+	position: relative;
+}
+
+.wp-pagenavi .previouspostslink::after {
+	border-left: 0.0625rem solid #232e83;
+	border-top: 0.0625rem solid #232e83;
+	content: "";
+	height: 0.625rem;
+	position: absolute;
+	right: 0.625rem;
+	top: 50%;
+	transform: translateY(-50%) rotate(-45deg);
+	width: 0.625rem;
+}
+
+.wp-pagenavi .nextpostslink {
+	margin-left: max(1.875rem, min(2.291vw, 2.5rem));
+	margin-right: 0;
+	position: relative;
+}
+
+.wp-pagenavi .nextpostslink::after {
+	border-bottom: 0.0625rem solid #232e83;
+	border-right: 0.0625rem solid #232e83;
+	content: "";
+	height: 0.625rem;
+	left: 32%;
+	position: absolute;
+	right: 0.625rem;
+	top: 50%;
+	transform: translateY(-50%) rotate(-45deg);
+	width: 0.625rem;
+}
+
+@media screen and (min-width: 768px) {
+
+.u-desktop {
+	display: block;
+}
+
+.u-mobile {
+	display: none;
+}
+
+html {
+	font-size: 1.4414414414vw;
+}
+
+a[href^="tel:"] {
+	pointer-events: none;
+}
+
+a:hover {
+	opacity: 0.8;
+}
+
+.l-access {
+	margin-top: 5.9375rem;
+}
+
+.l-affiliation {
+	margin-top: 6.25rem;
+	padding-bottom: 6.25rem;
+}
+
+.l-basicPolicy {
+	margin-top: 5rem;
+}
+
+.l-bring {
+	margin-top: 7.5rem;
+}
+
+.l-brainDock {
+	margin-top: 5rem;
+}
+
+.l-company {
+	margin-top: 2.5rem;
+}
+
+.l-consultation-hours {
+	margin-top: 4rem;
+}
+
+.l-contact {
+	margin-top: 3.75rem;
+	padding-bottom: 3.75rem;
+}
+
+.l-department-link {
+	padding-bottom: 3.125rem;
+	padding-top: 3.125rem;
+}
+
+.l-department-service {
+	margin-top: 9.375rem;
+}
+
+.l-department {
+	padding-bottom: 5rem;
+	padding-top: 12.5rem;
+}
+
+.l-director {
+	margin-top: 5rem;
+}
+
+.l-disease {
+	margin-top: 5rem;
+}
+
+.l-doctorIntro {
+	margin-top: 5rem;
+}
+
+.l-environment {
+	margin-top: 6.25rem;
+}
+
+.l-facility {
+	margin-top: 5rem;
+}
+
+.l-faqContact {
+	padding-top: 18.75rem;
+}
+
+.l-faq {
+	margin-top: 9.375rem;
+	padding-bottom: 12.5rem;
+}
+
+.l-flow {
+	margin-top: 7.5rem;
+}
+
+.l-footer {
+	padding-bottom: 1.25rem;
+	padding-top: 3.75rem;
+}
+
+.l-generalCheckup {
+	padding-top: 7.5rem;
+}
+
+.l-general-medicine {
+	padding-bottom: 3.375rem;
+	padding-top: 11.25rem;
+}
+
+.l-greeting {
+	padding-top: 10.5625rem;
+}
+
+.l-homeNews {
+	padding-bottom: 6.25rem;
+	padding-top: 15.625rem;
+}
+
+.l-hospital-caution {
+	margin-top: 5rem;
+}
+
+.l-hospital-cost {
+	margin-top: 5rem;
+}
+
+.l-hospital-discharge {
+	margin-top: 5rem;
+}
+
+.l-hospitalFlow {
+	margin-top: 9.375rem;
+}
+
+.l-hours {
+	padding-top: 6.4375rem;
+}
+
+.l-info {
+	padding-top: 3.5625rem;
+}
+
+.l-initialVisit {
+	margin-top: 5.8125rem;
+}
+
+.l-inner {
+	max-width: 1150px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.l-lead {
+	padding-bottom: 6.25rem;
+	padding-top: 5.5rem;
+}
+
+.l-medicalDock {
+	margin-top: 5rem;
+	padding-bottom: 2.5rem;
+}
+
+.l-menu-link {
+	padding-top: 3rem;
+}
+
+.l-message {
+	padding-bottom: 6.25rem;
+	padding-top: 6.25rem;
+}
+
+.l-mission {
+	margin-top: 5rem;
+}
+
+.l-news-detail {
+	padding-bottom: 12.5rem;
+	padding-top: 15.625rem;
+}
+
+.l-news {
+	padding-top: 3.75rem;
+}
+
+.l-not-found {
+	padding-bottom: 11.25rem;
+	padding-top: 11.25rem;
+}
+
+.l-nursing {
+	padding-top: 18.75rem;
+}
+
+.l-office-staff {
+	margin-top: 9.375rem;
+}
+
+.l-partner {
+	margin-top: 6.875rem;
+	padding-bottom: 6.25rem;
+}
+
+.l-privacy-policy {
+	padding-bottom: 6.25rem;
+	padding-top: 12.5rem;
+}
+
+.l-recruit-contact {
+	padding-bottom: 18.75rem;
+	padding-top: 18.75rem;
+}
+
+.l-recruit-flow {
+	margin-top: 7.5rem;
+}
+
+.l-recruit-info {
+	margin-top: 7.5rem;
+}
+
+.l-schedule {
+	margin-top: 5rem;
+}
+
+.l-sitemap {
+	padding-bottom: 18.75rem;
+	padding-top: 18.75rem;
+}
+
+.l-staff-link {
+	height: 100%;
+	padding-bottom: 6.25rem;
+	padding-top: 3.125rem;
+}
+
+.l-staff {
+	margin-top: 8.6875rem;
+}
+
+.l-visit {
+	padding-bottom: 6.25rem;
+	padding-top: 6.25rem;
+}
+
+.c-bird-bg::before {
+	background: url(../images/common/bird_02.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	display: block;
+	height: 6.25rem;
+	left: calc(50% - min(50vw, 37.5rem));
+	position: absolute;
+	top: -50%;
+	width: 6.25rem;
+	z-index: -1;
+}
+
+.c-card {
+	padding: 2rem 1.5rem;
+}
+
+.c-circle-chart {
+	height: 10.625rem;
+	width: 10.625rem;
+}
+
+.c-circle-chart__ratio {
+	font-size: 2.5rem;
+}
+
+.c-circle-chart__ratio-num {
+	font-size: 2.5rem;
+}
+
+.c-circle-chart__ratio-separator {
+	font-size: 1rem;
+}
+
+.c-circle-chart__label {
+	font-size: 0.75rem;
+	margin-top: 0.5rem;
+}
+
+.c-donut-chart {
+	height: 10.625rem;
+	width: 10.625rem;
+}
+
+.c-donut-chart__value {
+	font-size: 2.5rem;
+}
+
+.c-overtime__value--large {
+	font-size: 4.25rem;
+}
+
+.c-page-top a {
+	height: 5rem;
+	width: 5rem;
+}
+
+.c-stat-value {
+	font-size: 4.25rem;
+}
+
+.p-about {
+	padding-top: 9.375rem;
+}
+
+.p-about__wrapper {
+	align-items: center;
+	flex-direction: row;
+	gap: 2.5rem;
+	justify-content: center;
+}
+
+.p-about__left {
+	margin-top: 3.75rem;
+	width: 40%;
+}
+
+.p-about__title {
+	align-items: center;
+	display: flex;
+	font-size: 1.5625rem;
+	justify-content: center;
+}
+
+.p-about__nav {
+	margin-top: 3.75rem;
+	position: relative;
+	width: 60%;
+}
+
+.p-about__nav::before {
+	background-image: url(../images/common/leaves.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	bottom: 6%;
+	content: "";
+	display: block;
+	height: 7.75rem;
+	position: absolute;
+	right: calc(50% - min(49vw, 19.5rem));
+	width: 7.5rem;
+}
+
+.p-about__list {
+	margin-left: 3.125rem;
+}
+
+.p-about__item a {
+	font-size: 1.25rem;
+	transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.p-about__item a:hover {
+	color: #232e83;
+}
+
+.p-about__right {
+	position: relative;
+	width: 60%;
+}
+
+.p-about__right::before {
+	background-image: url(../images/common/about_tree_bg.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 12.5rem;
+	position: absolute;
+	right: calc(50% - min(29.5vw, 25rem));
+	top: 5%;
+	width: 12.5rem;
+}
+
+.p-about__image img {
+	aspect-ratio: 642/600;
+}
+
+.p-access__inner.l-inner {
+	max-width: 63.75rem;
+}
+
+.p-access__title {
+	font-size: 1.375rem;
+	letter-spacing: 0.3em;
+	text-align: center;
+}
+
+.p-access__wrapper {
+	margin-top: 2.4375rem;
+}
+
+.p-access__contents {
+	align-items: start;
+	display: flex;
+	gap: 3.125rem;
+	margin: 0 auto;
+	max-width: 67.5rem;
+}
+
+.p-access__map {
+	width: 60%;
+}
+
+.p-access__text {
+	margin-top: 2.5rem;
+	width: 40%;
+}
+
+.p-access__map iframe {
+	height: 28.75rem;
+}
+
+.p-access__addr {
+	font-size: 1.0625rem;
+}
+
+.p-access__addr::before {
+	height: 10.1875rem;
+	right: -3%;
+	top: -107%;
+	width: 8.9375rem;
+}
+
+.p-access__list {
+	margin-top: 2.8125rem;
+}
+
+.p-access__item {
+	gap: 0.625rem;
+}
+
+.p-access__bullet {
+	margin-top: 0.25rem;
+}
+
+.p-access__item span {
+	font-size: max(0.875rem, min(3vw, 1.0625rem));
+	letter-spacing: 0.05em;
+}
+
+.p-access__tel-wrapper {
+	margin-top: 3.3125rem;
+}
+
+.p-access__telLabel {
+	font-size: 1.0625rem;
+}
+
+.p-access__tel a {
+	font-size: 2.1875rem;
+}
+
+.p-affiliation__inner.l-inner {
+	max-width: 63.75rem;
+}
+
+.p-affiliation__content {
+	margin-top: 1.875rem;
+}
+
+.p-affiliation__table-wrap {
+	margin: 0 auto;
+	max-width: 56.25rem;
+}
+
+.p-affiliation__table {
+	font-size: 1.0625rem;
+}
+
+.p-affiliation__table th,
+.p-affiliation__table td {
+	padding: 1.6875rem 0.625rem;
+	width: 2%;
+}
+
+.p-basicPolicy::before {
+	height: 12.9375rem;
+	right: calc(50% - min(49vw, 31.25rem));
+	top: -17%;
+	width: 6.25rem;
+	z-index: 1;
+}
+
+.p-basicPolicy__inner.l-inner {
+	max-width: 63.75rem;
+}
+
+.p-basicPolicy__content {
+	margin: 0 auto;
+	margin-top: 1.875rem;
+	max-width: 56.25rem;
+}
+
+.p-basicPolicy__item::before {
+	font-size: 1.5rem;
+	width: 5rem;
+}
+
+.p-basicPolicy__box {
+	padding: 2.20625rem 2.1875rem;
+}
+
+.p-basicPolicy__head {
+	font-size: 1.5625rem;
+}
+
+.p-basicPolicy__desc {
+	font-size: 1.125rem;
+	margin-top: 1.25rem;
+}
+
+.p-brainDock__wrapper {
+	margin-top: 1.875rem;
+}
+
+.p-brainDock__body {
+	margin: 0 auto;
+	max-width: 60rem;
+}
+
+.p-brainDock__text {
+	font-size: 1.125rem;
+}
+
+.p-brainDock__contents {
+	max-width: 60rem;
+}
+
+.p-brainDock__heading {
+	margin-top: 3.75rem;
+}
+
+.p-brainDock__headingTitle {
+	font-size: 1.0625rem;
+}
+
+.p-brainDock__tableWrap {
+	margin-top: 1.875rem;
+}
+
+.p-brainDock__tableInner {
+	margin: 0 auto;
+	max-width: 55rem;
+}
+
+.p-brainDock__table thead th {
+	font-size: 1rem;
+}
+
+.p-brainDock__table thead th {
+	font-size: 1rem;
+}
+
+.p-brainDock__table tbody th {
+	font-size: 1rem;
+}
+
+.p-brainDock__table td {
+	font-size: 1rem;
+}
+
+.p-brainDock__priceCardWrapper {
+	margin-top: 1.875rem;
+}
+
+.p-brainDock__priceCard {
+	margin: 0 auto;
+	max-width: 55rem;
+}
+
+.p-brainDock__priceRow {
+	grid-template-columns: 11.25rem 1fr;
+}
+
+.p-brainDock__priceCard + .p-brainDock__priceCard {
+	margin-top: 1.25rem;
+}
+
+.p-brainDock__priceLabel {
+	font-size: 1rem;
+}
+
+.p-brainDock__note {
+	font-size: 1rem;
+	margin-left: 2.5rem;
+}
+
+.p-brainDock__alertWrapper {
+	margin-top: 3rem;
+}
+
+.p-brainDock__alertWrapperInner {
+	margin: 0 auto;
+	max-width: 55rem;
+}
+
+.p-brainDock__alert {
+	margin-bottom: 1.75rem;
+	padding: 3.5625rem 3.6875rem;
+}
+
+.p-brainDock__alertTitle {
+	font-size: 1.25rem;
+	text-align: left;
+}
+
+.p-brainDock__alertText {
+	font-size: 1rem;
+	letter-spacing: 0.05em;
+	margin-top: 1.875rem;
+}
+
+.p-brainDock__alertList {
+	font-size: 1rem;
+	padding-left: 0;
+	text-indent: 0em;
+}
+
+.p-brainDock__alertItem {
+	margin-bottom: 0.5rem;
+}
+
+.p-brainDock__leadWrapper {
+	margin-top: 0.9375rem;
+}
+
+.p-brainDock__lead2 {
+	font-size: 1rem;
+	margin-left: 1.25rem;
+}
+
+.p-brainDock__flow-wrapper {
+	margin-top: 0.9375rem;
+}
+
+.p-brainDock__flow-inner {
+	margin: 0 auto;
+	max-width: 55rem;
+}
+
+.p-brainDock__flow-text {
+	font-size: 1.125rem;
+}
+
+.p-brainDock__flow-list {
+	margin-top: 0.9375rem;
+}
+
+.p-brainDock__flow-list li {
+	font-size: 1rem;
+}
+
+.p-brainDock__flow-list li::before {
+	top: 0.375rem;
+}
+
+.p-bring__inner.l-inner {
+	max-width: 67.5rem;
+}
+
+.p-bring__box {
+	margin-top: 1.875rem;
+}
+
+.p-bring__list-wrapper {
+	align-items: first baseline;
+	flex-direction: row;
+	gap: 3%;
+	justify-content: space-between;
+	margin: 0 auto;
+	max-width: 61.25rem;
+	padding: 2.1875rem 2.5rem;
+}
+
+.p-bring__list-left {
+	width: 50%;
+}
+
+.p-bring__list-center {
+	width: 25%;
+}
+
+.p-bring__list-right {
+	width: 25%;
+}
+
+.p-bring__item {
+	font-size: 1.125rem;
+	letter-spacing: 0.05em;
+}
+
+.p-bring__item + .p-bring__item {
+	margin-top: 0.9375rem;
+}
+
+.p-bring__desc {
+	margin: 0 auto;
+	max-width: 60rem;
+	padding-top: 1.5rem;
+}
+
+.p-checkup {
+	padding-top: 9.375rem;
+}
+
+.p-checkup__wrapper {
+	align-items: flex-start;
+	flex-direction: row;
+	gap: 2.5rem;
+	justify-content: center;
+}
+
+.p-checkup__left {
+	margin-top: 3.75rem;
+	width: 40%;
+}
+
+.p-checkup__title {
+	align-items: center;
+	display: flex;
+	font-size: 1.5625rem;
+	justify-content: center;
+}
+
+.p-checkup__title::before {
+	height: 3.125rem;
+	left: -0.625rem;
+	top: -0.625rem;
+	width: 3.625rem;
+}
+
+.p-checkup__nav {
+	margin-top: 3.75rem;
+	width: 50%;
+}
+
+.p-checkup__list {
+	margin-left: 1.25rem;
+}
+
+.p-checkup__item a {
+	font-size: 1.25rem;
+	transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.p-checkup__item a:hover {
+	color: #232e83;
+}
+
+.p-checkup__right {
+	width: 60%;
+}
+
+.p-checkup__image img {
+	aspect-ratio: 642/600;
+}
+
+.p-consultation-hours__inner.l-inner {
+	max-width: 67.5rem;
+}
+
+.p-consultation-hours__wrapper {
+	margin-top: 1.25rem;
+}
+
+.p-consultation-hours__contents {
+	align-items: flex-end;
+	display: flex;
+	gap: 40px;
+	justify-content: space-between;
+	margin: 0 auto;
+	max-width: 62.5rem;
+	width: 100%;
+}
+
+.p-consultation-hours__image img {
+	width: 100%;
+}
+
+.p-consultation-hours__aside {
+	margin-top: 0;
+	width: 40%;
+}
+
+.p-consultation-hours__info-item dt {
+	font-size: 1rem;
+}
+
+.p-consultation-hours__info-item dd {
+	font-size: 1rem;
+}
+
+.p-consultation-hours__urgent {
+	font-size: 1rem;
+}
+
+.p-consultation-hours__note-wrapper {
+	margin-top: 1.875rem;
+}
+
+.p-consultation-hours__note {
+	font-size: 1rem;
+}
+
+.p-contact__inner.l-inner {
+	max-width: 67.5rem;
+}
+
+.p-contact__inner.p-contact__inner--green.l-inner {
+	max-width: 56.25rem;
+}
+
+.p-contact__box {
+	max-width: 50rem;
+}
+
+.p-contact__tel {
+	font-size: 2.0625rem;
+	margin-left: 1.25rem;
+}
+
+.p-contact__text {
+	font-size: 1.125rem;
+	margin-bottom: 1.875rem;
+}
+
+.p-contact__tel:hover {
+	opacity: 0.8;
+}
+
+.p-contact__desc {
+	font-size: 1rem;
+	line-height: 1.9;
+}
+
+.p-department-link {
+	height: 100%;
+}
+
+.p-department {
+	height: 100%;
+}
+
+.p-department::after {
+	background: url(../images/common/leaves.svg);
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	display: block;
+	height: 6.875rem;
+	position: absolute;
+	right: calc(50% - min(50vw, 40rem));
+	top: 28%;
+	width: 7.5rem;
+	z-index: 1;
+}
+
+.p-department__title {
+	font-size: 1.875rem;
+}
+
+.p-department__nav {
+	margin-top: 3.75rem;
+}
+
+.p-department__nav-inner {
+	margin: 0 auto;
+	max-width: 62.5rem;
+}
+
+.p-department__list {
+	-moz-column-gap: 2.5rem;
+	column-gap: 2.5rem;
+	grid-template-columns: repeat(3, 1fr);
+	row-gap: 1.25rem;
+}
+
+.p-department__item a:hover {
+	background-color: #13b979;
+	border-color: #13b979;
+	color: #fff;
+}
+
+.p-department__item a:hover .p-department__arr::before {
+	opacity: 0;
+}
+
+.p-department__item a:hover .p-department__arr::after {
+	opacity: 1;
+}
+
+.p-director__inner.l-inner {
+	max-width: 63.75rem;
+}
+
+.p-director__wrapper {
+	align-items: flex-start;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0 auto;
+	max-width: 65rem;
+}
+
+.p-director__body {
+	font-size: 1.0625rem;
+	letter-spacing: 0.02em;
+	line-height: 1.87;
+	padding-top: 1.8125rem;
+}
+
+.p-director__pill-text {
+	font-size: 1.0625rem;
+	margin-top: 1.25rem;
+}
+
+.p-director__content {
+	margin: 0 auto;
+	margin-top: 2.8125rem;
+	max-width: 57.5rem;
+}
+
+.p-director__pill {
+	width: 6.25rem;
+}
+
+.p-director__text {
+	font-size: 1.0625rem;
+	margin-left: 1.75rem;
+}
+
+.p-director__image-wrapper {
+	margin-top: 0;
+	width: 30%;
+}
+
+.p-disease__inner {
+	max-width: 56.25rem;
+	padding: 0 1.5625rem;
+}
+
+.p-disease__title {
+	font-size: 1.375rem;
+}
+
+.p-disease__body {
+	margin: 0 auto;
+	max-width: 48.75rem;
+}
+
+.p-doctorIntro__inner {
+	max-width: 56.25rem;
+	padding: 0 1.5625rem;
+}
+
+.p-doctorIntro__list {
+	gap: 1.25rem;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.p-doctorIntro__btn {
+	font-size: 1.25rem;
+	max-width: 15.625rem;
+	padding: 0.875rem 2.5rem;
+}
+
+.p-doctorIntro__profile {
+	align-items: flex-start;
+	flex-direction: row;
+	gap: 40px;
+	justify-content: space-between;
+}
+
+.p-doctorIntro__info {
+	width: 60%;
+}
+
+.p-doctorIntro__label {
+	font-size: 1.125rem;
+}
+
+.p-doctorIntro__name {
+	font-size: 1.875rem;
+}
+
+.p-doctorIntro__kana {
+	font-size: 0.9375rem;
+}
+
+.p-doctorIntro__data {
+	margin-top: 3.4375rem;
+}
+
+.p-doctorIntro__data dt {
+	font-size: 1.125rem;
+}
+
+.p-doctorIntro__data dd {
+	font-size: 1.25rem;
+	margin-top: 0.8125rem;
+}
+
+.p-doctorIntro__data p {
+	font-size: 1.0625rem;
+}
+
+.p-doctorIntro__img {
+	width: 40%;
+}
+
+.p-doctorIntro__img img {
+	aspect-ratio: 1/1;
+}
+
+.p-doctorIntro__content {
+	padding-bottom: 3.75rem;
+}
+
+.p-doctorIntro__message {
+	margin-top: 2.5rem;
+}
+
+.p-doctorIntro__message-text {
+	font-size: 1.125rem;
+	margin-top: 1.5rem;
+}
+
+.p-environment__block {
+	padding-bottom: 3.125rem;
+	padding-top: 3.125rem;
+}
+
+.p-environment__sub {
+	font-size: 0.875rem;
+}
+
+.p-environment__title {
+	font-size: 1.875rem;
+}
+
+.p-environment__lead {
+	font-size: 1rem;
+	letter-spacing: 0.05em;
+	margin-top: 1.25rem;
+}
+
+.p-environment__catch {
+	font-size: 2.375rem;
+}
+
+.p-environment__text-body {
+	margin-top: 2.5rem;
+}
+
+.p-environment__text {
+	font-size: 1rem;
+}
+
+.p-environment__leaf {
+	height: auto;
+	right: 15%;
+	top: 23%;
+	width: 9.375rem;
+}
+
+.p-environment__container {
+	grid-gap: 24px;
+	display: grid;
+	gap: 24px;
+	grid-template-columns: repeat(4, 1fr);
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.p-environment__voices {
+	padding: 3.125rem 2.5rem;
+}
+
+.p-environment__voices-title {
+	font-size: 1.25rem;
+}
+
+.p-environment__voices-grid {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.p-environment__voice {
+	padding: 1.875rem;
+}
+
+.p-environment__voice-text {
+	margin-top: 1.875rem;
+}
+
+.p-environment__voice-meta {
+	margin-top: 1.5625rem;
+}
+
+.p-facility__inner.l-inner {
+	max-width: 63.75rem;
+}
+
+.p-facility__gallery {
+	margin: 0 auto;
+	margin-top: 1.875rem;
+	max-width: 56.25rem;
+}
+
+.p-facility__list {
+	gap: 1.25rem;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.p-facility__item-text {
+	font-size: 1.125rem;
+}
+
+.p-faqContact__inner.l-inner {
+	max-width: 53.75rem;
+	padding: 0 1.5625rem;
+}
+
+.p-faqContact__box {
+	max-width: 50rem;
+}
+
+.p-faqContact__label {
+	display: inline-block;
+}
+
+.p-faqContact__tel {
+	padding-left: 1.25rem;
+}
+
+.p-faqContact__note {
+	font-size: 1rem;
+	line-height: 1.9;
+	margin-top: 1.25rem;
+}
+
+.p-faq__title {
+	font-size: 1.5625rem;
+}
+
+.p-faq__title::before,
+.p-faq__title::after {
+	height: 0.125rem;
+	width: 8.75rem;
+}
+
+.p-faq__title::before {
+	right: calc(50% + 8.75rem);
+}
+
+.p-faq__title::after {
+	left: calc(50% + 8.75rem);
+}
+
+.p-faq__wrapper {
+	margin-top: 3.125rem;
+}
+
+.p-faq__list {
+	margin: 0 auto;
+	max-width: 56.25rem;
+}
+
+.p-faq__item {
+	padding-bottom: 5rem;
+}
+
+.p-faq__item + .p-faq__item {
+	margin-top: 5rem;
+}
+
+.p-faq__item-question {
+	font-size: 1.5625rem;
+}
+
+.p-faq__item-answer {
+	margin: 0 auto;
+	max-width: 52.5rem;
+	padding-left: 0;
+	padding-top: 1.25rem;
+}
+
+.p-faq__item-answer-text {
+	font-size: 1.125rem;
+}
+
+.p-faq__btn a:hover {
+	background-color: #1346b9;
+	border-color: #1346b9;
+	color: #fff;
+}
+
+.p-faq__btn a:hover .p-faq__arr {
+	background-image: url(../images/common/arrow-white.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 0.9375rem;
+	transition: background-image 0.3s;
+	width: 0.9375rem;
+}
+
+.p-staff__item a:hover .p-staff__arr {
+	background-image: url(../images/common/arrow-white.svg);
+}
+
+.p-flow-list__item::before {
+	font-size: 1.5rem;
+	width: 5.3125rem;
+}
+
+.p-flow-list__item-wrap {
+	padding: 0.875rem 1.5rem;
+}
+
+.p-flow-list__item-title {
+	font-size: 1.125rem;
+	text-align: left;
+	text-align: initial;
+	width: 25%;
+}
+
+.p-flow-list__item-text {
+	font-size: 1.125rem;
+	padding-left: 1.25rem;
+}
+
+.p-flow__inner.l-inner {
+	max-width: 67.5rem;
+}
+
+.p-flow__body {
+	margin-top: 1.875rem;
+}
+
+.p-flow__list {
+	margin: 0 auto;
+	max-width: 60rem;
+}
+
+.p-footer__top {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	padding: 2.25rem 0 1.375rem;
+}
+
+.p-footer__logo img {
+	max-width: 28.375rem;
+}
+
+.p-footer__tel a {
+	font-size: 1.875rem;
+	transition: opacity 0.3s;
+}
+
+.p-footer__tel a:hover {
+	opacity: 0.8;
+}
+
+.p-footer__subLinks {
+	margin-top: 3.75rem;
+	width: 100%;
+}
+
+.p-footer__subLink {
+	margin-left: 4.5rem;
+}
+
+.p-footer__subLink a {
+	font-size: 1.125rem;
+	padding-left: 2.5rem;
+	transition: opacity 0.3s;
+}
+
+.p-footer__subLink a:hover {
+	opacity: 0.8;
+}
+
+.p-footer__nav {
+	align-items: flex-end;
+	display: flex;
+	gap: 1.875rem;
+	gap: 0.75rem;
+	justify-content: space-between;
+	width: 50%;
+}
+
+.p-footer__nav-wrap {
+	align-items: flex-start;
+	width: 100%;
+}
+
+.p-footer__link {
+	gap: 0.75rem;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.p-footer__item a {
+	font-size: 1.125rem;
+	transition: color 0.3s ease-in-out;
+}
+
+.p-footer__item a:hover {
+	color: #232e83;
+}
+
+.p-footer__circle::before,
+.p-footer__circle::after {
+	top: -11px;
+	transition: transform 0.3s ease-in-out;
+}
+
+.p-footer__item a:hover .p-footer__circle::before {
+	opacity: 0;
+}
+
+.p-footer__item a:hover .p-footer__circle::after {
+	background-image: url(../images/common/arrow-right-navy.svg);
+	opacity: 1;
+}
+
+.p-footer__privacy {
+	align-self: flex-end;
+	margin: 0;
+	width: 100%;
+}
+
+.p-footer__privacy a {
+	font-size: 1.125rem;
+	transition: color 0.3s ease-in-out;
+}
+
+.p-footer__privacy a:hover {
+	color: #232e83;
+}
+
+.p-footer__privacy a:hover .p-footer__circle-gray::before {
+	background-image: url(../images/common/arrow-right-navy.svg);
+}
+
+.p-footer__sitemap a {
+	font-size: 1.25rem;
+	transition: opacity 0.3s;
+}
+
+.p-footer__sitemap a:hover {
+	opacity: 0.8;
+}
+
+.p-footer__copyright {
+	margin-top: 0;
+}
+
+.p-footer__copy {
+	font-size: 0.9375rem;
+}
+
+.p-general-medicine__heading {
+	border-radius: 30px;
+	padding: 1rem 3.75rem;
+}
+
+.p-general-medicine__title {
+	font-size: 1.5625rem;
+}
+
+.p-general-medicine__content {
+	margin: 0 auto;
+	margin-top: 3.125rem;
+	max-width: 56.25rem;
+}
+
+.p-general-medicine__text {
+	font-size: 1.125rem;
+}
+
+.p-generalCheckup__wrapper {
+	margin-top: 1.625rem;
+}
+
+.p-generalCheckup__lead {
+	margin: 0 auto;
+	max-width: 60rem;
+}
+
+.p-generalCheckup__leadText {
+	font-size: 1.125rem;
+}
+
+.p-generalCheckup__contents {
+	max-width: 60rem;
+}
+
+.p-generalCheckup__heading {
+	margin-top: 1.875rem;
+}
+
+.p-generalCheckup__heading.p-generalCheckup__heading--table {
+	margin-top: 3.75rem;
+}
+
+.p-generalCheckup__headingTitle {
+	font-size: 1.0625rem;
+}
+
+.p-generalCheckup__bulletsWrapper {
+	margin-top: 1.625rem;
+}
+
+.p-generalCheckup__bullets {
+	margin: 0 auto;
+	max-width: 60rem;
+	padding-left: 2.25rem;
+}
+
+.p-generalCheckup__bullet {
+	font-size: 1.125rem;
+}
+
+.p-generalCheckup__bullet + .p-generalCheckup__bullet {
+	margin-top: 1rem;
+}
+
+.p-generalCheckup__bulletText {
+	font-size: 1.125rem;
+}
+
+.p-generalCheckup__tableWrap {
+	margin-top: 2.3125rem;
+}
+
+.p-generalCheckup__tableInner {
+	margin: 0 auto;
+	max-width: 55rem;
+}
+
+.p-generalCheckup__table thead th {
+	font-size: 1rem;
+}
+
+.p-generalCheckup__table tbody th {
+	font-size: 1rem;
+}
+
+.p-generalCheckup__table td {
+	font-size: 1rem;
+}
+
+.p-generalCheckup__priceCardWrapper {
+	margin-top: 1.875rem;
+}
+
+.p-generalCheckup__priceCard {
+	margin: 0 auto;
+	max-width: 55rem;
+}
+
+.p-generalCheckup__priceRow {
+	align-items: center;
+	grid-template-columns: 15.625rem 1fr;
+}
+
+.p-generalCheckup__note {
+	font-size: 1rem;
+	margin-left: 2.5rem;
+}
+
+.p-greeting__inner.l-inner {
+	max-width: 63.75rem;
+}
+
+.p-greeting__wrapper {
+	flex-direction: row;
+}
+
+.p-greeting__wrapper::before {
+	background-image: url(../images/common/greeting_bard.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 6.25rem;
+	left: 14%;
+	position: absolute;
+	top: -17%;
+	width: 6.25rem;
+	z-index: 1;
+}
+
+.p-greeting__contents {
+	padding-top: 0;
+	width: 60%;
+}
+
+.p-greeting__title {
+	letter-spacing: 0.3em;
+	padding-bottom: 0.15rem;
+	padding-bottom: 0.5rem;
+}
+
+.p-greeting__text {
+	font-size: 1.0625rem;
+	padding-left: 1rem;
+	padding-top: 1.875rem;
+}
+
+.p-greeting__image-contents {
+	padding-top: 0;
+	width: 35%;
+}
+
+.p-greeting__image img {
+	aspect-ratio: 323/351;
+}
+
+.p-greeting__director {
+	font-size: 1rem;
+}
+
+.p-greeting__name {
+	font-size: 1.125rem;
+}
+
+.p-header-bg::before {
+	height: 18.75rem;
+}
+
+.p-header {
+	height: 9.375rem;
+}
+
+.p-header__inner {
+	padding-left: 2.5rem;
+	padding-right: 1.875rem;
+}
+
+.p-header__logo {
+	max-width: 21.875rem;
+}
+
+.p-header__nav {
+	align-items: flex-end;
+	display: block;
+	display: flex;
+	flex-direction: column;
+	height: inherit;
+	justify-content: center;
+	max-width: 46.875rem;
+	width: 100%;
+}
+
+.p-header__nav-item a:hover {
+	color: #232e83;
+}
+
+.p-header__nav-item.p-header__nav-item--qa a:hover {
+	color: #fff;
+	opacity: 0.8;
+}
+
+.p-header__hamburger {
+	display: none;
+}
+
+.p-homeNews__inner.l-inner {
+	max-width: 62.5rem;
+}
+
+.p-homeNews__heading {
+	padding-bottom: 0.625rem;
+}
+
+.p-homeNews__wrapper {
+	margin-top: 2.5rem;
+}
+
+.p-homeNews__item + .p-homeNews__item {
+	margin-top: 5rem;
+}
+
+.p-homeNews__article {
+	max-width: 56.25rem;
+}
+
+.p-homeNews__title {
+	font-size: 1.375rem;
+}
+
+.p-homeNews__date {
+	font-size: 0.875rem;
+	margin-top: 1.25rem;
+}
+
+.p-homeNews__excerpt {
+	font-size: 1rem;
+	margin-top: 1.25rem;
+}
+
+.p-homeNews__more {
+	margin-top: 1.75rem;
+}
+
+.p-homeNews__moreLink {
+	font-size: 1rem;
+}
+
+.p-homeNews__pagenavi {
+	margin-top: 3.75rem;
+}
+
+.p-hospital-caution__inner.l-inner {
+	max-width: 67.5rem;
+	padding: 0 1.25rem;
+}
+
+.p-hospital-caution__content {
+	margin: 0 auto;
+	margin-top: 1.5625rem;
+	max-width: 67.5rem;
+}
+
+.p-hospital-caution__list {
+	margin-left: 4rem;
+}
+
+.p-hospital-caution__text {
+	font-size: 1.125rem;
+}
+
+.p-hospital-caution__text.p-hospital-caution__text--list {
+	margin-left: 0;
+	text-indent: none;
+}
+
+.p-hospital-cost__inner.l-inner {
+	max-width: 67.5rem;
+	padding: 0 1.25rem;
+}
+
+.p-hospital-cost__content {
+	margin: 0 auto;
+	margin-top: 1.5625rem;
+	max-width: 67.5rem;
+}
+
+.p-hospital-cost__list {
+	margin-left: 4rem;
+}
+
+.p-hospital-cost__text {
+	font-size: 1.125rem;
+}
+
+.p-hospital-cost__text.p-hospital-cost__text--list {
+	margin-left: 0;
+	text-indent: none;
+}
+
+.p-hospital-discharge__inner.l-inner {
+	max-width: 67.5rem;
+	padding: 0 1.25rem;
+}
+
+.p-hospital-discharge__content {
+	margin: 0 auto;
+	margin-top: 1.5625rem;
+	max-width: 67.5rem;
+}
+
+.p-hospital-discharge__list {
+	margin-left: 4rem;
+}
+
+.p-hospital-discharge__text {
+	font-size: 1.125rem;
+}
+
+.p-hospital-discharge__text.p-hospital-discharge__text--list {
+	margin-left: 0;
+	text-indent: none;
+}
+
+.p-hospitalFlow__inner.l-inner {
+	max-width: 67.5rem;
+	padding: 0 1.25rem;
+}
+
+.p-hospitalFlow__step {
+	margin-top: 2.5rem;
+}
+
+.p-hospitalFlow__list {
+	margin-left: 2rem;
+}
+
+.p-hospitalFlow__item + .p-hospitalFlow__item {
+	margin-top: 2rem;
+}
+
+.p-hospitalFlow__item-wrap::after {
+	background-image: url(../images/common/arrow_down_pink.svg);
+	height: 4.375rem;
+	width: 0.625rem;
+}
+
+.p-hospitalFlow__item-wrap.p-hospitalFlow__item-wrap--long::after {
+	background-image: url(../images/common/arrow_down_long.svg);
+	height: 6.25rem;
+	left: 3%;
+	top: 42%;
+}
+
+.p-hospitalFlow__item-title {
+	font-size: 1.25rem;
+	max-width: 17.125rem;
+	text-align: center;
+}
+
+.p-hospitalFlow__item-title.p-hospitalFlow__item-title--long {
+	max-width: 21.25rem;
+}
+
+.p-hospitalFlow__item-text-body {
+	margin-top: 1.875rem;
+}
+
+.p-hospitalFlow__item-text {
+	font-size: 1.0625rem;
+	margin-left: 5rem;
+}
+
+.p-hospitalFlow__item-text.p-hospitalFlow__item-text--list {
+	text-indent: 0em;
+}
+
+.p-hospitalFlow__item-text.p-hospitalFlow__item-text--last {
+	text-indent: 1em;
+}
+
+.p-hospitalFlow__item-text-contents {
+	margin-left: 0;
+}
+
+.p-hospitalization {
+	padding-top: 9.375rem;
+}
+
+.p-hospitalization__wrapper {
+	align-items: center;
+	flex-direction: row;
+	gap: 2.5rem;
+	justify-content: center;
+}
+
+.p-hospitalization__left {
+	margin-top: 3.75rem;
+	width: 40%;
+}
+
+.p-hospitalization__title {
+	align-items: center;
+	display: flex;
+	font-size: 1.5625rem;
+	justify-content: center;
+}
+
+.p-hospitalization__title::before {
+	background-size: cover;
+	height: 4.0625rem;
+	left: -5%;
+	top: -1.4375rem;
+	width: 4.375rem;
+}
+
+.p-hospitalization__nav {
+	margin-top: 3.75rem;
+	position: relative;
+	width: 60%;
+}
+
+.p-hospitalization__nav::before {
+	background-image: url(../images/common/leaf_02.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	bottom: -15%;
+	content: "";
+	display: block;
+	height: 8.125rem;
+	position: absolute;
+	right: calc(50% - min(49vw, 17.5rem));
+	width: 3.75rem;
+}
+
+.p-hospitalization__list {
+	margin-left: 2.5rem;
+}
+
+.p-hospitalization__item a {
+	font-size: 1.25rem;
+}
+
+.p-hospitalization__item a:hover {
+	color: #ff649f;
+}
+
+.p-hospitalization__item.p-hospitalization__item--orange a:hover {
+	color: #ffa934;
+}
+
+.p-hospitalization__right {
+	width: 60%;
+}
+
+.p-hospitalization__image img {
+	aspect-ratio: 642/600;
+}
+
+.p-hours {
+	background-color: transparent;
+}
+
+.p-hours__heading {
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0;
+}
+
+.p-hours__title {
+	font-size: 1.375rem;
+	letter-spacing: 0.3em;
+	text-align: center;
+}
+
+.p-hours__wrapper {
+	margin-top: 1.3125rem;
+	padding-bottom: 3.625rem;
+	padding-left: 1.5625rem;
+	padding-right: 1.5625rem;
+	padding-top: 3.625rem;
+}
+
+.p-hours__box {
+	border-radius: 1.5625rem;
+	max-width: 58.75rem;
+}
+
+.p-hours__headCell,
+.p-hours__label,
+.p-hours__cell {
+	height: 4.5625rem;
+}
+
+.p-hours__headCell {
+	border-left: 1px solid #adadad;
+	font-size: 1.25rem;
+}
+
+.p-hours__headCell:first-child {
+	border-left: 1px solid #adadad;
+}
+
+.p-hours__label {
+	font-size: 1.25rem;
+	width: 15.625rem;
+}
+
+.p-hours__label--blank {
+	width: 16.5rem;
+}
+
+.p-hours__label--last {
+	border-top: 1px solid #adadad;
+}
+
+.p-hours__dot {
+	height: 1.875rem;
+	width: 1.875rem;
+}
+
+.p-hours__note {
+	font-size: 1rem;
+	text-align: right;
+}
+
+.p-hours__table--sp {
+	display: none;
+}
+
+.p-hours__table--pc {
+	display: table;
+}
+
+.p-hours__note-wrapper {
+	max-width: 58.75rem;
+	padding-top: 0.875rem;
+	text-align: right;
+}
+
+.p-info__inner.l-inner {
+	max-width: 63.75rem;
+}
+
+.p-info__list {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.p-info__item a {
+	gap: 1.25rem;
+	max-width: 18.75rem;
+	transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.p-info__item a:hover {
+	background-color: #232e83;
+	color: #fff;
+}
+
+.p-info__item a:hover .p-info__btn-arrow {
+	background-color: #fff;
+	color: #fff;
+}
+
+.p-info__item a:hover .p-info__btn-arrow::after {
+	background-image: url(../images/common/arrow-down-right-hover.svg);
+}
+
+.p-info__btn-arrow {
+	height: 2.1875rem;
+	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.p-info__item a:hover .p-info__btn-arrow::after {
+	background-image: url(../images/common/arrow-navy-hover.svg);
+}
+
+.p-info__item a:hover .p-info__btn-text {
+	color: #fff;
+}
+
+.p-initialVisit__inner.l-inner {
+	max-width: 67.5rem;
+}
+
+.p-initialVisit__body {
+	font-size: 1.0625rem;
+	line-height: 2;
+	margin-top: 2.4375rem;
+	padding-left: 1.875rem;
+}
+
+.p-lead__wrapper {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	padding-top: 0;
+	position: relative;
+	text-align: center;
+}
+
+.p-lead__text {
+	font-size: 1.25rem;
+}
+
+.p-lead__wrapper::before {
+	background-image: url(../images/common/tree_bg.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	display: block;
+	height: 15.625rem;
+	left: calc(50% - min(50vw, 44.8rem));
+	position: absolute;
+	top: -84%;
+	width: 16.25rem;
+	z-index: 1;
+}
+
+.p-medicalDock__wrapper {
+	margin-top: 1.875rem;
+}
+
+.p-medicalDock__body {
+	margin: 0 auto;
+	max-width: 60rem;
+}
+
+.p-medicalDock__text {
+	font-size: 1.125rem;
+}
+
+.p-medicalDock__contents {
+	max-width: 60rem;
+}
+
+.p-medicalDock__heading {
+	margin-top: 3.75rem;
+}
+
+.p-medicalDock__headingTitle {
+	font-size: 1.0625rem;
+}
+
+.p-medicalDock__tableWrap {
+	margin-top: 1.875rem;
+}
+
+.p-medicalDock__tableInner {
+	margin: 0 auto;
+	max-width: 55rem;
+}
+
+.p-medicalDock__table thead th {
+	font-size: 1rem;
+}
+
+.p-medicalDock__table tbody th {
+	font-size: 1rem;
+}
+
+.p-medicalDock__table td {
+	font-size: 1rem;
+}
+
+.p-medicalDock__priceCardWrapper {
+	margin-top: 1.375rem;
+}
+
+.p-medicalDock__priceCard {
+	margin: 0 auto;
+	max-width: 55rem;
+}
+
+.p-medicalDock__priceRow {
+	grid-template-columns: 11.25rem 1fr;
+}
+
+.p-medicalDock__priceCard + .p-medicalDock__priceCard {
+	margin-top: 1.25rem;
+}
+
+.p-medicalDock__priceLabel {
+	font-size: 1.0625rem;
+}
+
+.p-medicalDock__priceValue {
+	font-size: 1.375rem;
+}
+
+.p-medicalDock__priceValue small {
+	font-size: 1.0625rem;
+	font-weight: 400;
+}
+
+.p-medicalDock__price {
+	grid-template-columns: 18.75rem 1fr;
+}
+
+.p-medicalDock__price > span:last-child {
+	font-size: 1.375rem;
+}
+
+.p-medicalDock__note {
+	font-size: 1rem;
+	margin-left: 2.5rem;
+}
+
+.p-medicalDock__optionHeading {
+	font-size: 1.125rem;
+	margin: 2.1875rem auto 0;
+	max-width: 55rem;
+}
+
+.p-menu-link__inner.l-inner {
+	max-width: 63.75rem;
+}
+
+.p-menu-link__btn {
+	gap: 1.25rem;
+	max-width: 20rem;
+	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.p-menu-link__btn:hover {
+	background-color: #13acb9;
+	color: #fff;
+}
+
+.p-menu-link__btn:hover::before {
+	background-image: url(../images/common/medical-questionnaire-icon-hover.svg);
+}
+
+.p-menu-link__btn:hover .p-menu-link__btn-arrow {
+	background-color: #fff;
+	color: #fff;
+	transition: transform 0.3s ease-in-out;
+}
+
+.p-menu-link__btn:hover .p-menu-link__btn-arrow::after {
+	background-image: url(../images/common/arrow-down-right-hover.svg);
+}
+
+.p-menu-link__btn:hover .p-menu-link__btn-text {
+	color: #fff;
+}
+
+.p-menu-link__btn.p-menu-link__btn--green {
+	gap: 1.25rem;
+	max-width: 20rem;
+	transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.p-menu-link__btn.p-menu-link__btn--green:hover {
+	background-color: #13b979;
+	color: #fff;
+}
+
+.p-menu-link__btn.p-menu-link__btn--green:hover::before {
+	background-image: url(../images/common/stethoscope-icon-hover.svg);
+}
+
+.p-menu-link__btn.p-menu-link__btn--green:hover .p-menu-link__btn-arrow {
+	background-color: #fff;
+	color: #fff;
+}
+
+.p-menu-link__btn.p-menu-link__btn--green:hover .p-menu-link__btn-arrow::after {
+	background-image: url(../images/common/arrow-green-hover.svg);
+}
+
+.p-menu-link__btn.p-menu-link__btn--blue {
+	gap: 1.25rem;
+	max-width: 20rem;
+	transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.p-menu-link__btn.p-menu-link__btn--blue:hover {
+	background-color: #1346b9;
+	color: #fff;
+}
+
+.p-menu-link__btn.p-menu-link__btn--blue:hover::before {
+	background-image: url(../images/common/recruit-icon-hover.svg);
+}
+
+.p-menu-link__btn.p-menu-link__btn--blue:hover .p-menu-link__btn-arrow {
+	background-color: #fff;
+	color: #fff;
+}
+
+.p-menu-link__btn.p-menu-link__btn--blue:hover .p-menu-link__btn-arrow::after {
+	background-image: url(../images/common/arrow-blue-hover.svg);
+}
+
+.p-menu-link__btn.p-menu-link__btn--pink {
+	gap: 1.25rem;
+	max-width: 20rem;
+	transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.p-menu-link__btn.p-menu-link__btn--pink:hover {
+	background-color: #ff649f;
+	color: #fff;
+}
+
+.p-menu-link__btn.p-menu-link__btn--pink:hover::before {
+	background-image: url(../images/common/bed-icon-hover.svg);
+}
+
+.p-menu-link__btn.p-menu-link__btn--pink:hover .p-menu-link__btn-arrow {
+	background-color: #fff;
+	color: #fff;
+}
+
+.p-menu-link__btn.p-menu-link__btn--pink:hover .p-menu-link__btn-arrow::after {
+	background-image: url(../images/common/arrow-pink-hover.svg);
+}
+
+.p-menu-link__btn.p-menu-link__btn--orange {
+	gap: 1.25rem;
+	max-width: 20rem;
+	transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.p-menu-link__btn.p-menu-link__btn--orange:hover {
+	background-color: #ffa934;
+	color: #fff;
+}
+
+.p-menu-link__btn.p-menu-link__btn--orange:hover::before {
+	background-image: url(../images/common/human-icon-hover.svg);
+}
+
+.p-menu-link__btn.p-menu-link__btn--orange:hover .p-menu-link__btn-arrow {
+	background-color: #fff;
+	color: #fff;
+}
+
+.p-menu-link__btn.p-menu-link__btn--orange:hover .p-menu-link__btn-arrow {
+	background-color: #fff;
+	color: #fff;
+}
+
+.p-menu-link__btn.p-menu-link__btn--orange:hover .p-menu-link__btn-arrow::after {
+	background-image: url(../images/common/arrow-orange-hover.svg);
+	transition: transform 0.3s ease-in-out;
+}
+
+.p-menu-link__btn.p-menu-link__btn--navy {
+	gap: 1.25rem;
+	max-width: 20rem;
+	transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.p-menu-link__btn.p-menu-link__btn--navy:hover {
+	background-color: #232e83;
+	color: #fff;
+}
+
+.p-menu-link__btn.p-menu-link__btn--navy:hover .p-menu-link__btn-text {
+	color: #fff;
+}
+
+.p-menu-link__btn.p-menu-link__btn--navy:hover::before {
+	background-image: url(../images/common/heart-icon-hover.svg);
+}
+
+.p-menu-link__btn.p-menu-link__btn--navy:hover .p-menu-link__btn-arrow {
+	background-color: #fff;
+	color: #fff;
+}
+
+.p-menu-link__btn.p-menu-link__btn--navy:hover .p-menu-link__btn-arrow::after {
+	background-image: url(../images/common/arrow-navy-hover.svg);
+}
+
+.p-menu-link__btn.p-menu-link__btn--navy:hover .p-menu-link__btn-text {
+	color: #fff;
+}
+
+.p-message__block {
+	padding-bottom: 3.125rem;
+	padding-top: 3.125rem;
+}
+
+.p-message__sub {
+	font-size: 0.875rem;
+}
+
+.p-message__title {
+	font-size: 1.875rem;
+}
+
+.p-message__catch-wrap {
+	margin-top: 3.75rem;
+}
+
+.p-message__catch {
+	font-size: 2.375rem;
+}
+
+.p-message__text-body {
+	margin-top: 2.5rem;
+}
+
+.p-message__text {
+	font-size: 1rem;
+	letter-spacing: 0.05em;
+}
+
+.p-message__leaf {
+	height: auto;
+	right: 15%;
+	top: 23%;
+	width: 9.375rem;
+}
+
+.p-mission__inner.l-inner {
+	max-width: 63.75rem;
+}
+
+.p-mission__content {
+	margin: 0 auto;
+	margin-top: 1.8125rem;
+	max-width: 56.25rem;
+}
+
+.p-mission__text {
+	font-size: 1.0625rem;
+}
+
+.p-mv::before {
+	background-image: url(../images/common/mv_wave_pc.png);
+	background-position: center center;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	bottom: -0.1875rem;
+	content: "";
+	height: 23.125rem;
+	position: absolute;
+	right: 0;
+	width: 100%;
+}
+
+.p-mv::after {
+	background-image: url(../images/common/mv_bard.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	bottom: 26%;
+	height: 5.4375rem;
+	left: 20%;
+	width: 5rem;
+	z-index: 2;
+}
+
+.p-mv__heading {
+	left: 48%;
+	top: 20%;
+	width: auto;
+	width: initial;
+}
+
+.p-mv__heading.p-mv__heading--sp {
+	color: #fff;
+	left: 10%;
+	right: 0;
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	top: 15%;
+	width: 100%;
+}
+
+.p-mv__title {
+	font-size: 2.5rem;
+}
+
+.p-mv__btn-list {
+	gap: 1.25rem;
+	grid-template-columns: repeat(3, 1fr);
+	margin: 0 auto;
+	max-width: 68.75rem;
+	position: relative;
+}
+
+.p-mv__btn-link {
+	gap: 1.25rem;
+	max-width: 25rem;
+	transition: background-color 0.3s;
+}
+
+.p-mv__btn-link:hover::before {
+	background-image: url(../images/common/medical-questionnaire-icon-hover.svg);
+}
+
+.p-mv__btn-link:hover {
+	background-color: #13acb9;
+	color: #fff;
+}
+
+.p-mv__btn-link:hover .p-mv__btn-arrow {
+	background-color: #fff;
+	color: #fff;
+}
+
+.p-mv__btn-link:hover .p-mv__btn-arrow::after {
+	background-image: url(../images/common/arrow-down-right-hover.svg);
+}
+
+.p-mv__btn-link:hover .p-mv__btn-text {
+	color: #fff;
+}
+
+.p-mv__btn-link.p-mv__btn-link--green {
+	gap: 1.25rem;
+	max-width: 25rem;
+	transition: background-color 0.3s color 0.3s;
+}
+
+.p-mv__btn-link.p-mv__btn-link--green:hover {
+	background-color: #13b979;
+	color: #fff;
+}
+
+.p-mv__btn-link.p-mv__btn-link--green:hover::before {
+	background-image: url(../images/common/stethoscope-icon-hover.svg);
+}
+
+.p-mv__btn-link.p-mv__btn-link--green:hover .p-mv__btn-arrow {
+	background-color: #fff;
+	color: #fff;
+}
+
+.p-mv__btn-link.p-mv__btn-link--green:hover .p-mv__btn-arrow::after {
+	background-image: url(../images/common/arrow-green-hover.svg);
+}
+
+.p-mv__btn-link.p-mv__btn-link--green:hover .p-mv__btn-text {
+	color: #fff;
+}
+
+.p-mv__btn-link.p-mv__btn-link--blue {
+	gap: 1.25rem;
+	max-width: 25rem;
+	transition: background-color 0.3s color 0.3s;
+}
+
+.p-mv__btn-link.p-mv__btn-link--blue:hover {
+	background-color: #1346b9;
+	color: #fff;
+}
+
+.p-mv__btn-link.p-mv__btn-link--blue:hover::before {
+	background-image: url(../images/common/recruit-icon-hover.svg);
+}
+
+.p-mv__btn-link.p-mv__btn-link--blue:hover .p-mv__btn-arrow {
+	background-color: #fff;
+	color: #fff;
+}
+
+.p-mv__btn-link.p-mv__btn-link--blue:hover .p-mv__btn-arrow::after {
+	background-image: url(../images/common/arrow-blue-hover.svg);
+}
+
+.p-mv__btn-link.p-mv__btn-link--blue:hover .p-mv__btn-text {
+	color: #fff;
+}
+
+.p-news__inner {
+	display: flex;
+	justify-content: center;
+}
+
+.p-news-content {
+	display: flex;
+}
+
+.p-news__items {
+	margin-left: 3.125rem;
+	margin-top: 0;
+}
+
+.p-news__item + .p-news__item {
+	margin-top: 0.9375rem;
+}
+
+.p-news-content__link {
+	margin-left: 1.25rem;
+	max-width: 43.75rem;
+}
+
+.p-news-detail__heading {
+	padding-bottom: 0.75rem;
+}
+
+.p-news-detail__article {
+	margin: 0 auto;
+	max-width: 56.25rem;
+}
+
+.p-news-detail__back {
+	margin-top: 6.25rem;
+}
+
+.p-news-detail__back-link {
+	max-width: 20rem;
+}
+
+.p-news__inner.l-inner {
+	max-width: 63.75rem;
+}
+
+.p-news__wrapper {
+	align-items: center;
+	border-radius: 3.125rem;
+	display: flex;
+	justify-content: left;
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+
+.p-news__list {
+	position: relative;
+	width: 80%;
+}
+
+.p-news__list a {
+	display: flex;
+	padding: 1.25rem 0;
+	position: relative;
+}
+
+.p-news__list a::after {
+	background-image: url(../images/common/news-arrow-right.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 1.25rem;
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: right 0.3s;
+	width: 1.25rem;
+}
+
+.p-news__heading {
+	padding-left: 1.25rem;
+	text-align: center;
+	width: 19%;
+}
+
+.p-news__meta {
+	border-left: 1px solid #232e83;
+	padding-left: 1.8125rem;
+}
+
+.p-news__date {
+	letter-spacing: 0.1em;
+}
+
+.p-news__title {
+	font-size: 1.25rem;
+}
+
+.p-news__list-title {
+	font-size: 1.25rem;
+}
+
+.p-not-found__title {
+	font-size: 10rem;
+	line-height: 1.2;
+}
+
+.p-not-found__text {
+	margin-top: 1.75rem;
+}
+
+.p-not-found__button {
+	margin-top: 2.5rem;
+}
+
+.p-not-found__button a:hover {
+	background: #232e83;
+	color: #fff;
+}
+
+.p-nursing__inner {
+	max-width: 56.25rem;
+	padding: 0 1.5625rem;
+}
+
+.p-nursing__list {
+	gap: 1.25rem;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.p-nursing__btn {
+	font-size: 1.25rem;
+	max-width: 15.625rem;
+	padding: 0.875rem 2.5rem;
+}
+
+.p-nursing__profile {
+	align-items: flex-start;
+	flex-direction: row;
+	gap: 40px;
+	justify-content: space-between;
+}
+
+.p-nursing__info {
+	width: 60%;
+}
+
+.p-nursing__label {
+	font-size: 1.125rem;
+}
+
+.p-nursing__name {
+	font-size: 1.875rem;
+}
+
+.p-nursing__kana {
+	font-size: 0.9375rem;
+}
+
+.p-nursing__img {
+	width: 40%;
+}
+
+.p-nursing__img img {
+	aspect-ratio: 1/1;
+}
+
+.p-nursing__message {
+	margin-top: 2.5rem;
+}
+
+.p-nursing__message-text {
+	font-size: 1.125rem;
+}
+
+.p-office-staff__inner {
+	max-width: 56.25rem;
+	padding: 0 1.5625rem;
+}
+
+.p-office-staff__list {
+	gap: 1.25rem;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.p-office-staff__btn {
+	font-size: 1.25rem;
+	max-width: 15.625rem;
+	padding: 0.875rem 2.5rem;
+}
+
+.p-office-staff__profile {
+	align-items: flex-start;
+	flex-direction: row;
+	gap: 40px;
+	justify-content: space-between;
+}
+
+.p-office-staff__info {
+	width: 60%;
+}
+
+.p-office-staff__label {
+	font-size: 1.125rem;
+}
+
+.p-office-staff__name {
+	font-size: 1.875rem;
+}
+
+.p-office-staff__kana {
+	font-size: 0.9375rem;
+}
+
+.p-office-staff__img {
+	width: 40%;
+}
+
+.p-office-staff__img img {
+	aspect-ratio: 1/1;
+}
+
+.p-office-staff__message {
+	margin-top: 2.5rem;
+}
+
+.p-office-staff__message-text {
+	font-size: 1.125rem;
+}
+
+.p-outpatient-service__inner {
+	max-width: 56.25rem;
+	padding: 0 1.5625rem;
+}
+
+.p-outpatient-service__image img {
+	width: 100%;
+}
+
+.p-outpatient-service__wrapper {
+	margin-top: 1.875rem;
+}
+
+.p-outpatient-service__head {
+	border-bottom: 1px solid #adadad;
+	font-size: 1.25rem;
+}
+
+.p-outpatient-service__content {
+	grid-template-columns: 9.375rem 1fr 9.375rem 1fr;
+}
+
+.p-outpatient-service__cell {
+	font-size: 1.25rem;
+}
+
+.p-outpatient-service__content > .p-outpatient-service__cell:nth-child(-n+4) {
+	border-top: 0;
+}
+
+.p-outpatient-service__content > .p-outpatient-service__cell:nth-child(3) {
+	border-left: 1px solid #adadad;
+}
+
+.p-outpatient-service__label {
+	font-size: 1.25rem;
+}
+
+.p-outpatient-service__time {
+	font-size: 1.375rem;
+}
+
+.p-outpatient {
+	padding-top: 9.375rem;
+}
+
+.p-outpatient__wrapper {
+	align-items: center;
+	flex-direction: row;
+	gap: 2.5rem;
+	justify-content: center;
+	position: relative;
+}
+
+.p-outpatient__left {
+	margin-top: 3.75rem;
+	width: 40%;
+}
+
+.p-outpatient__title {
+	font-size: 1.5625rem;
+}
+
+.p-outpatient__nav {
+	margin-top: 3.75rem;
+	position: relative;
+	width: 60%;
+}
+
+.p-outpatient__nav::before {
+	background-image: url(../images/common/leaves.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	bottom: -10%;
+	content: "";
+	display: block;
+	height: 7.75rem;
+	position: absolute;
+	right: calc(50% - min(49vw, 17.5rem));
+	width: 7.5rem;
+}
+
+.p-outpatient__wrapper::after {
+	background-image: url(../images/common/leaf.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	bottom: -10%;
+	content: "";
+	display: block;
+	height: 6.25rem;
+	left: calc(50% - min(50vw, 43.75rem));
+	position: absolute;
+	width: 6.25rem;
+}
+
+.p-outpatient__list {
+	margin-left: 3.125rem;
+}
+
+.p-outpatient__item a {
+	font-size: 1.25rem;
+}
+
+.p-outpatient__right {
+	width: 60%;
+}
+
+.p-outpatient__image img {
+	aspect-ratio: 642/600;
+}
+
+.p-partner__title {
+	font-size: 1.25rem;
+	letter-spacing: 0.3em;
+	text-align: center;
+}
+
+.p-partner__wrapper {
+	margin-top: 2.8125rem;
+}
+
+.p-partner__list {
+	align-items: center;
+	gap: 2.5rem;
+	grid-template-columns: repeat(5, 1fr);
+	justify-items: center;
+	margin: 0 auto;
+}
+
+.p-partner__item {
+	max-width: 15.625rem;
+}
+
+.p-partner__item img {
+	height: auto;
+	width: 12.5rem;
+}
+
+.p-privacy-policy__inner.l-inner {
+	max-width: 53.125rem;
+}
+
+.p-privacy-policy__title {
+	font-size: 2rem;
+	line-height: 1.4375;
+}
+
+.p-recruit-contact::after {
+	bottom: -8%;
+	height: 21.875rem;
+	left: calc(50% - min(50vw, 38.75rem));
+	width: 21.875rem;
+}
+
+.p-recruit-contact__inner {
+	margin: 0 auto;
+	max-width: 53.75rem;
+	padding: 0 1.5625rem;
+}
+
+.p-recruit-contact__head {
+	padding-bottom: 1.25rem;
+}
+
+.p-recruit-contact__sub {
+	font-size: 0.875rem;
+}
+
+.p-recruit-contact__title {
+	font-size: 1.875rem;
+}
+
+.p-recruit-contact__body {
+	max-width: 50rem;
+}
+
+.p-recruit-contact__lead {
+	font-size: 1.5rem;
+}
+
+.p-recruit-contact__tel {
+	margin-top: 1.875rem;
+}
+
+.p-recruit-contact__tel a {
+	font-size: 2.5rem;
+}
+
+.p-recruit-contact__tel a:hover {
+	opacity: 0.8;
+}
+
+.p-recruit-contact__time {
+	font-size: 1rem;
+	margin-top: 1.875rem;
+}
+
+.p-recruit-flow__sub {
+	font-size: 0.875rem;
+}
+
+.p-recruit-flow__title {
+	font-size: 1.875rem;
+}
+
+.p-recruit-flow__content {
+	margin-top: 5rem;
+}
+
+.p-recruit-flow__item + .p-recruit-flow__item {
+	padding-top: 3.125rem;
+}
+
+.p-recruit-flow__row {
+	grid-template-columns: 21.875rem 1fr;
+	padding-bottom: 2.5rem;
+}
+
+.p-recruit-flow__num {
+	font-size: 2.5rem;
+}
+
+.p-recruit-flow__body {
+	margin-top: 1.25rem;
+}
+
+.p-recruit-flow__slash {
+	font-size: 1.625rem;
+}
+
+.p-recruit-flow__step {
+	font-size: 1.5625rem;
+	letter-spacing: 0.07em;
+	line-height: 1;
+}
+
+.p-recruit-flow__desc {
+	font-size: 1rem;
+}
+
+.p-recruit-info__inner.l-inner {
+	margin: 0 auto;
+	max-width: 56.25rem;
+}
+
+.p-recruit-info__head {
+	padding-bottom: 1.875rem;
+}
+
+.p-recruit-info__title {
+	font-size: 1.875rem;
+}
+
+.p-recruit-info__item {
+	margin: 0 auto;
+}
+
+.p-recruit-info__item-title {
+	font-size: 1.375rem;
+	padding: 2.6875rem 1.25rem 2.6875rem 2.25rem;
+}
+
+.p-recruit-info__item-table {
+	display: table; /* 通常の表レイアウトに戻す */
+	min-width: auto;
+	width: 100%;
+}
+
+.p-recruit-info__item-body {
+	overflow-x: visible;
+}
+
+.p-recruit-fv::before {
+	background: url(../images/common/bird_02.svg) no-repeat center bottom/contain;
+	content: "";
+	height: 9.375rem;
+	position: absolute;
+	right: 25%;
+	top: 15%;
+	width: 9.375rem;
+}
+
+.p-recruit-fv__title {
+	font-size: 2.1875rem;
+	right: 5%;
+	text-align: right;
+}
+
+.p-schedule__inner {
+	max-width: 56.25rem;
+	padding: 0 1.5625rem;
+}
+
+.p-schedule__tableWrap {
+	margin-top: 1.875rem;
+}
+
+.p-schedule__th--blank {
+	width: 6.875rem;
+}
+
+.p-schedule__rowLabel {
+	padding: 1.125rem 0.5rem;
+	width: 6.875rem;
+}
+
+.p-schedule__cell {
+	font-size: 1.125rem;
+	padding: 1rem 0.375rem;
+}
+
+.c-chip {
+	font-size: 1rem;
+}
+
+.p-sitemap__inner {
+	max-width: 67.5rem;
+	padding: 0 1.5625rem;
+}
+
+.p-sitemap__content {
+	gap: 1.25rem;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.p-sitemap__list a:hover {
+	color: #232e83;
+}
+
+.p-staff-link__inner.l-inner {
+	height: 100%;
+	max-width: 62.5rem;
+	padding: 0 1.5625rem;
+}
+
+.p-staff__inner.l-inner {
+	max-width: 63.75rem;
+}
+
+.p-staff__nav {
+	height: 100%;
+	margin-top: 2.9375rem;
+	width: 100%;
+}
+
+.p-staff__nav-inner {
+	margin: 0 auto;
+	max-width: 56.25rem;
+}
+
+.p-staff__list {
+	-moz-column-gap: 2.5rem;
+	column-gap: 2.5rem;
+	grid-template-columns: repeat(3, 1fr);
+	row-gap: 1.25rem;
+}
+
+.p-staff__item a:hover {
+	background-color: #1346b9;
+	border-color: #1346b9;
+	color: #fff;
+}
+
+.p-staff__item a:hover .p-staff__arr::before {
+	opacity: 0;
+}
+
+.p-staff__item a:hover .p-staff__arr::after {
+	opacity: 1;
+}
+
+.p-visit__inner.l-inner {
+	max-width: 67.5rem;
+	padding: 0 1.25rem;
+}
+
+.p-visit__tableWrap {
+	margin-top: 1.75rem;
+}
+
+.p-visit__table-inner {
+	margin: 0 auto;
+	max-width: 60rem;
+}
+
+.p-visit__thead {
+	font-size: 1.125rem;
+}
+
+.p-visit__label {
+	font-size: 1.125rem;
+	width: 30%;
+}
+
+.p-visit__time {
+	font-size: 1.375rem;
+}
+
+.p-visit__note {
+	font-size: 0.8125rem;
+	margin-top: 0.75rem;
+}
+
+.p-visit__card {
+	margin-top: 3rem;
+}
+
+.p-visit__card-wrapper {
+	margin: 0 auto;
+	max-width: 50rem;
+}
+
+.p-visit__card-content {
+	padding: 1.25rem 0.9375rem;
+}
+
+.p-visit__lead {
+	font-size: 1.25rem;
+	text-align: center;
+}
+
+.p-visit__lead.p-visit__lead--center {
+	margin-top: 1.8125rem;
+}
+
+.p-visit__text {
+	font-size: 1rem;
+	margin-top: 1.8125rem;
+	text-align: center;
+}
+
+.p-visit__text-last {
+	margin-top: 1.8125rem;
+}
+
+.p-visit__caution {
+	margin-top: 0.9375rem;
+}
+
+.p-visit__list {
+	margin-left: 0.9375rem;
+	text-indent: -1em;
+}
+
+.p-visit__caution-wrapper {
+	margin: 0 auto;
+	max-width: 53.75rem;
+	padding: 0 0.625rem;
+}
+
+.wp-pagenavi a,
+.wp-pagenavi span {
+	margin: 0 0.25rem;
+}
+
+}
+
+@media screen and (min-width: 768px) and (min-width: 1800px) {
+
+.p-mv::before {
+	background-image: url(../images/common/mv_wave_pc.png);
+	height: 31.25rem;
+}
+
+.p-mv::after {
+	bottom: 17%;
+}
+
+}
+
+@media (min-width: 1110px) {
+
+html {
+	font-size: 16px;
+}
+
+}
+
+@media screen and (min-width: 1440px) {
+
+.p-header__logo {
+	max-width: 32.0625rem;
+}
+
+.p-mv__btn-list::before {
+	background-image: url(../images/common/tree.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	bottom: 0;
+	content: "";
+	height: 10.5625rem;
+	position: absolute;
+	right: calc(50% - min(49vw, 41.75rem));
+	width: 5.125rem;
+}
+
+.p-news__wrapper::before {
+	background-image: url(../images/common/leaves.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	display: block;
+	height: 10.1875rem;
+	position: absolute;
+	right: calc(50% - min(49vw, 42.625rem));
+	top: -66%;
+	width: 10.1875rem;
+}
+
+}
+
+@media (max-width: 640px) {
+
+.p-disease__title {
+	font-size: 1.25rem;
+	margin-bottom: 0.75rem;
+}
+
+.p-disease__body {
+	font-size: 0.9375rem;
+	line-height: 1.9;
+}
+
+.p-homeNews__title {
+	font-size: 15px;
+	line-height: 1.7;
+}
+
+.p-homeNews__excerpt {
+	-webkit-line-clamp: 4;
+}
+
+/* SPは4行に少し伸ばすと読みやすい */
+
+}
+
+@media (max-width: 375px) {
+
+html {
+	font-size: 4.2666666667vw;
+}
+
+}
+
+@keyframes fadeInUp {
+
+to {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+}
+
+@keyframes progress {
+
+0% {
+	stroke-dasharray: 0 100;
+}
+
+}
+
+@keyframes bird-fly {
+
+0% {
+	opacity: 0;
+	transform: translateX(95vw);
+}
+
+8% {
+	opacity: 1;
+}
+
+85% {
+	opacity: 1;
+	transform: translateX(8vw);
+}
+
+100% {
+	opacity: 0;
+	transform: translateX(4vw);
+}
+
+}
+
+@keyframes bird-bob {
+
+0%,100% {
+	transform: translateY(0);
+}
+
+25% {
+	transform: translateY(-10px);
+}
+
+50% {
+	transform: translateY(0);
+}
+
+75% {
+	transform: translateY(10px);
+}
+
+}
+
+
+/*# sourceMappingURL=styles.css.map */

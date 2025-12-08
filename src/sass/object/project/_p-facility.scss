@@ -1,0 +1,52 @@
+@use "global" as *;
+
+.p-facility__inner.l-inner {
+  max-width: rem(600);
+  @include mq("md") {
+    max-width: rem(1020);
+  }
+}
+
+.p-facility__gallery {
+  margin-top: rem(20);
+  width: 100%;
+  @include mq("md") {
+    margin-top: rem(30);
+    max-width: rem(900);
+    margin: 0 auto;
+  }
+}
+
+.p-facility__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: rem(12);
+  @include mq("md") {
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(20);
+  }
+}
+.p-facility__item {
+  width: 100%;
+}
+
+.p-facility__item img {
+  width: 100%;
+  /* NG: height: 100%;  ←削除 */
+  height: auto; /* ←追加 */
+  object-fit: cover;
+  aspect-ratio: 288 / 236; /* この比率で高さが自動算出される */
+  display: block;
+}
+
+.p-facility__item-text {
+  font-size: rem(16);
+  font-weight: $normal;
+  color: $color-blue;
+  text-align: center;
+  margin-top: rem(10);
+  letter-spacing: 0.1em;
+  @include mq("md") {
+    font-size: rem(18);
+  }
+}

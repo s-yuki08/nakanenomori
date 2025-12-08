@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.p-flow__inner.l-inner {
+  width: 100%;
+  @include mq(md) {
+    max-width: rem(1080);
+  }
+}
+
+.p-flow__body {
+  margin-top: rem(20);
+  @include mq(md) {
+    margin-top: rem(30);
+  }
+}
+.p-flow__list {
+  width: 100%;
+  @include mq(md) {
+    max-width: rem(960);
+    margin: 0 auto;
+  }
+}

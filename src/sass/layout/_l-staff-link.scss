@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.l-staff-link {
+  height: rem(1300);
+  padding-top: rem(40);
+  padding-bottom: rem(40);
+  @include mq(md) {
+    padding-top: rem(50);
+    padding-bottom: rem(100);
+    height: 100%;
+  }
+}

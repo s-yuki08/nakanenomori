@@ -1,0 +1,84 @@
+@use "global" as *;
+
+.p-not-found {
+  position: relative;
+  z-index: 1;
+}
+
+.p-not-found__content {
+  color: $color-navy;
+  text-align: center;
+
+  @include mq("md") {
+  }
+}
+
+.p-not-found__title {
+  font-weight: $normal;
+  font-size: rem(80);
+  line-height: calc(96 / 80);
+  letter-spacing: 0.5em;
+  text-indent: 0.5em;
+  @include mq("md") {
+    font-size: rem(160);
+    line-height: calc(192 / 160);
+  }
+}
+
+.p-not-found__text {
+  line-height: 1.9;
+  font-weight: $normal;
+  font-size: rem(16);
+  @include mq("md") {
+    margin-top: rem(28);
+  }
+}
+
+.p-not-found__button {
+  margin-top: rem(20);
+  @include mq("md") {
+    margin-top: rem(40);
+  }
+}
+.p-not-found__button a {
+  position: relative;
+  display: inline-block;
+  font-size: rem(20);
+  font-weight: $normal;
+  color: $color-navy;
+  width: rem(274);
+  background: $color-white;
+  border-radius: 50px;
+  line-height: 1;
+  padding: rem(17) rem(49);
+  border: 1px solid $color-navy;
+  transition: background 0.3s, color 0.3s;
+}
+
+.p-not-found__button a::after {
+  background-image: url(../images/common/arrow-navy.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: 0;
+  content: "";
+  height: rem(25);
+  margin: auto;
+  position: absolute;
+  right: rem(30);
+  top: 0;
+  width: rem(25);
+  transition: background-image 0.3s;
+}
+
+.p-not-found__button a:hover {
+  @include mq("md") {
+    background: $color-navy;
+    color: $color-white;
+  }
+}
+
+.p-not-found__button a:hover::after {
+  background-image: url(../images/common/arrow-white.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}

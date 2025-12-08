@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.l-generalCheckup {
+  padding-top: rem(100);
+  @include mq("md") {
+    padding-top: rem(120);
+  }
+}

@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.l-menu-link {
+  padding-top: rem(32);
+  @include mq(md) {
+    padding-top: rem(48);
+  }
+}

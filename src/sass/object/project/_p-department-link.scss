@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.p-department-link {
+  height: rem(1100);
+  position: relative;
+  @include mq(md) {
+    height: 100%;
+  }
+}

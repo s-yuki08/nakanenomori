@@ -1,0 +1,176 @@
+@use "global" as *;
+
+.p-outpatient {
+  position: relative;
+  padding-top: rem(100);
+  @include mq("md") {
+    padding-top: rem(150);
+  }
+}
+
+.p-outpatient__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: rem(20);
+  @include mq("md") {
+    flex-direction: row;
+    gap: rem(40);
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+}
+
+.p-outpatient__left {
+  position: relative;
+  margin-top: rem(40);
+  @include mq("md") {
+    width: 40%;
+    margin-top: rem(60);
+  }
+}
+.p-outpatient__headline {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.p-outpatient__title {
+  font-size: rem(20);
+  color: $color-cyan;
+  font-weight: $bold;
+  position: relative;
+  padding-left: rem(60);
+  font-family: $heading-family;
+  @include mq("md") {
+    font-size: rem(25);
+  }
+}
+.p-outpatient__title::before {
+  content: "";
+  background-image: url(../images/common/medical-questionnaire-icon.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: rem(44);
+  height: rem(60);
+  position: absolute;
+  left: 0;
+  top: rem(-15);
+}
+
+.p-outpatient__nav {
+  margin-top: rem(30);
+  width: 100%;
+  @include mq("md") {
+    margin-top: rem(60);
+    width: 60%;
+    position: relative;
+  }
+}
+
+.p-outpatient__nav::before {
+  display: none;
+  @include mq("md") {
+    display: block;
+    content: "";
+    background-image: url(../images/common/leaves.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: rem(120);
+    height: rem(124);
+    position: absolute;
+    right: calc(50% - min(49vw, rem(280)));
+    bottom: -10%;
+  }
+}
+
+.p-outpatient__wrapper::after {
+  display: none;
+  @include mq("md") {
+    display: block;
+    content: "";
+    background-image: url(../images/common/leaf.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: rem(100);
+    height: rem(100);
+    position: absolute;
+    left: calc(50% - min(50vw, rem(700)));
+    bottom: -10%;
+  }
+}
+
+.p-outpatient__list {
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
+  width: 100%;
+  @include mq("md") {
+    margin-left: rem(50);
+  }
+}
+.p-outpatient__item a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: rem(12) rem(10) rem(12) 0;
+  color: $color-black;
+  font-size: rem(16);
+  transition: color 0.15s ease, border-color 0.15s ease;
+  @include mq("md") {
+    font-size: rem(20);
+  }
+}
+.p-outpatient__item a:hover {
+  color: $color-cyan;
+}
+.p-outpatient__arr {
+  background-image: url(../images/common/cyan-arrow-right.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: rem(20);
+  height: rem(20);
+}
+
+/* decorative leaves */
+.p-outpatient__leaf {
+  position: absolute;
+  opacity: 0.9;
+}
+.p-outpatient__leaf--lt {
+  left: -6px;
+  bottom: -18px;
+  width: 120px;
+}
+.p-outpatient__leaf--cr {
+  right: 20%;
+  top: 56%;
+  width: 110px;
+  transform: rotate(-18deg);
+}
+
+/* ===== right / media ===== */
+.p-outpatient__right {
+  width: 100%;
+  @include mq("md") {
+    width: 60%;
+  }
+}
+
+.p-outpatient__image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.p-outpatient__image img {
+  aspect-ratio: 16/9;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  @include mq("md") {
+    aspect-ratio: 642/600;
+  }
+}

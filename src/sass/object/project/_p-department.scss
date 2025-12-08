@@ -1,0 +1,145 @@
+@use "global" as *;
+
+.p-department {
+  position: relative;
+  height: rem(1200);
+  @include mq("md") {
+    height: 100%;
+  }
+}
+.p-department::after {
+  display: none;
+  @include mq("md") {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 28%;
+    right: calc(50% - min(50vw, rem(640)));
+    background: url(../images/common/leaves.svg);
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    width: rem(120);
+    height: rem(110);
+    z-index: 1;
+  }
+}
+
+.p-department__inner.l-inner {
+  height: inherit;
+}
+
+.p-department__heading {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.p-department__title {
+  font-size: rem(24);
+  font-weight: $bold;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  color: $color-green;
+  font-family: $heading-family;
+  @include mq(md) {
+    font-size: rem(30);
+  }
+}
+
+.p-department__heading::after {
+  background-color: $color-green;
+  border-radius: 2px;
+  content: "";
+  flex-grow: 1;
+  height: 2px;
+  margin-left: rem(15);
+}
+
+.p-department__nav {
+  margin-top: rem(20);
+  height: 100%;
+  position: relative;
+  @include mq("md") {
+    margin-top: rem(60);
+  }
+}
+
+.p-department__nav-inner {
+  @include mq("md") {
+    max-width: rem(1000);
+    margin: 0 auto;
+  }
+}
+
+.p-department__list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 5%;
+  @include mq("md") {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: rem(40);
+    row-gap: rem(20);
+  }
+}
+
+.p-department__item a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid $color-green;
+  border-radius: rem(25);
+  padding: rem(12) rem(20);
+  font-size: rem(22);
+  color: $color-black;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.p-department__item a:hover {
+  @include mq(md) {
+    background-color: $color-green;
+    color: $color-white;
+    border-color: $color-green;
+  }
+}
+
+.p-department__arr {
+  position: relative;
+  width: rem(20);
+  height: rem(20);
+}
+
+.p-department__arr::before,
+.p-department__arr::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.p-department__arr::before {
+  background-image: url(../images/common/arrow-right.svg);
+  opacity: 1;
+}
+
+.p-department__arr::after {
+  background-image: url(../images/common/arrow-white.svg);
+  opacity: 0;
+}
+
+.p-department__item a:hover .p-department__arr::before {
+  @include mq(md) {
+    opacity: 0;
+  }
+}
+
+.p-department__item a:hover .p-department__arr::after {
+  @include mq(md) {
+    opacity: 1;
+  }
+}

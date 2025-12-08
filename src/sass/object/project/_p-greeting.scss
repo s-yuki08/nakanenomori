@@ -1,0 +1,105 @@
+@use "global" as *;
+
+.p-greeting__inner.l-inner {
+  max-width: rem(600);
+  @include mq("md") {
+    max-width: rem(1020);
+  }
+}
+
+.p-greeting__wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  @include mq("md") {
+    flex-direction: row;
+  }
+}
+
+.p-greeting__wrapper::before {
+  @include mq(md) {
+    content: "";
+    background-image: url(../images/common/greeting_bard.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: rem(100);
+    height: rem(100);
+    position: absolute;
+    top: -17%;
+    left: 14%;
+    z-index: 1;
+  }
+}
+
+.p-greeting__contents {
+  padding-top: rem(36);
+  @include mq("md") {
+    padding-top: 0;
+    width: 60%;
+  }
+}
+
+.p-greeting__title {
+  padding-bottom: rem(8);
+  border-bottom: 2px solid $color-navy;
+  color: $color-navy;
+  letter-spacing: 0.05em;
+  font-family: $heading-family;
+  font-size: rem(22);
+  @include mq("md") {
+    padding-bottom: rem(2.4);
+    padding-bottom: rem(8);
+    letter-spacing: 0.3em;
+  }
+}
+
+.p-greeting__text {
+  padding-top: rem(18);
+  font-size: rem(16);
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  @include mq("md") {
+    font-size: rem(17);
+    padding-top: rem(30);
+    padding-left: rem(16);
+  }
+}
+
+.p-greeting__image-contents {
+  padding-top: rem(37);
+  @include mq("md") {
+    padding-top: 0;
+    width: 35%;
+  }
+}
+
+.p-greeting__image {
+  width: 100%;
+}
+.p-greeting__image img {
+  aspect-ratio: 672/530;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: rem(20);
+  @include mq("md") {
+    aspect-ratio: 323/351;
+  }
+}
+
+.p-greeting__director {
+  margin-top: rem(11.5);
+  font-size: rem(15);
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  @include mq("md") {
+    font-size: rem(16);
+  }
+}
+
+.p-greeting__name {
+  font-size: rem(16);
+  @include mq("md") {
+    font-size: rem(18);
+  }
+}

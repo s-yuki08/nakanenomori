@@ -1,0 +1,111 @@
+@use "global" as *;
+
+.p-consultation-hours__inner.l-inner {
+  width: 100%;
+  @include mq(md) {
+    max-width: rem(1080);
+  }
+}
+
+.p-consultation-hours__wrapper {
+  margin-top: rem(10);
+  @include mq("md") {
+    margin-top: rem(20);
+  }
+}
+
+.p-consultation-hours__contents {
+  width: 100%;
+  @include mq("md") {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+    max-width: rem(1000);
+    margin: 0 auto;
+  }
+}
+
+.p-consultation-hours__image {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  white-space: nowrap;
+}
+
+.p-consultation-hours__image img {
+  display: block;
+  height: auto;
+  max-width: none;
+  width: rem(800);
+  @include mq("md") {
+    width: 100%;
+  }
+}
+
+.p-consultation-hours__aside {
+  width: 100%;
+  margin-top: rem(16);
+  @include mq("md") {
+    margin-top: 0;
+    width: 40%;
+  }
+}
+
+.p-consultation-hours__info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.p-consultation-hours__info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: rem(10);
+}
+
+.p-consultation-hours__info-item:last-child {
+  margin-top: rem(10);
+}
+
+.p-consultation-hours__info-item dt {
+  font-weight: $bold;
+  letter-spacing: 0.05em;
+  font-size: rem(15);
+  width: 20%;
+  @include mq("md") {
+    font-size: rem(16);
+  }
+}
+
+.p-consultation-hours__info-item dd {
+  font-size: rem(15);
+  width: 80%;
+  @include mq("md") {
+    font-size: rem(16);
+  }
+}
+
+.p-consultation-hours__urgent {
+  font-size: rem(15);
+  letter-spacing: 0.05em;
+  line-height: 1.8;
+  margin-top: rem(10);
+  @include mq("md") {
+    font-size: rem(16);
+  }
+}
+
+.p-consultation-hours__note-wrapper {
+  margin-top: rem(15);
+  @include mq("md") {
+    margin-top: rem(30);
+  }
+}
+.p-consultation-hours__note {
+  font-size: rem(15);
+  @include mq("md") {
+    font-size: rem(16);
+  }
+}

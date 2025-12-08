@@ -1,0 +1,222 @@
+@use "global" as *;
+
+.p-accordion-sp-heading {
+  width: 100%;
+  border: 2px solid $color-navy;
+  border-radius: 20px;
+  background: $color-white;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.p-accordion-sp__trigger {
+  -webkit-tap-highlight-color: transparent;
+  width: 100%;
+  padding: rem(11.5) rem(24);
+  border: 0;
+  border-radius: 24px;
+  background: $color-white;
+  color: $color-navy;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-weight: $medium;
+  font-size: clamp(18px, 4vw, 26px);
+  letter-spacing: 0.12em;
+  position: relative;
+}
+
+.p-accordion-sp__title {
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+  font-family: $heading-family;
+  font-size: rem(20);
+  letter-spacing: 0.3em;
+  font-weight: $bold;
+}
+.p-accordion-sp__chev {
+  width: rem(28);
+  height: rem(28);
+  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.p-accordion-sp.is-open .p-accordion-sp__chev {
+  transform: rotate(180deg);
+}
+
+.p-accordion-sp__panel {
+  overflow: hidden;
+  height: 0;
+  padding: 0 rem(12);
+  transition: padding 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.p-accordion-sp.is-open .p-accordion-sp__panel {
+  padding: rem(6) rem(12) rem(20);
+}
+
+.p-accordion-sp__list {
+  list-style: none;
+  margin: rem(10) rem(8) rem(14);
+  padding: 0;
+  display: grid;
+  gap: rem(14);
+}
+.p-accordion-sp__item {
+  position: relative;
+}
+
+.p-accordion-sp__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: rem(18) rem(10);
+  border: 2px solid $color-cyan;
+  border-radius: 16px;
+  background: $color-white;
+  color: $color-cyan;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+.p-accordion-sp__link::before {
+  content: "";
+  background-image: url(../images/common/medical-questionnaire-icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: rem(34);
+  height: rem(50);
+  position: absolute;
+  left: 5%;
+  top: 10%;
+}
+.p-accordion-sp__link.p-accordion-sp__link--green {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: rem(18) rem(20);
+  border: 2px solid $color-green;
+  border-radius: 16px;
+  background: $color-white;
+  color: $color-green;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+.p-accordion-sp__link.p-accordion-sp__link--green::before {
+  content: "";
+  background-image: url(../images/common/stethoscope-icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: rem(40);
+  height: rem(40);
+  left: 5%;
+  top: 20%;
+  position: absolute;
+}
+
+.p-accordion-sp__link.p-accordion-sp__link--blue {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: rem(18) rem(20);
+  border: 2px solid $color-blue;
+  border-radius: 16px;
+  background: $color-white;
+  color: $color-blue;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+.p-accordion-sp__link.p-accordion-sp__link--blue::before {
+  content: "";
+  background-image: url(../images/common/recruit-icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: rem(40);
+  height: rem(30);
+  left: 5%;
+  top: 27%;
+  position: absolute;
+}
+
+.p-accordion-sp__link.p-accordion-sp__link--pink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: rem(18) rem(20);
+  border: 2px solid $color-pink;
+  border-radius: 16px;
+  background: $color-white;
+  color: $color-pink;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+.p-accordion-sp__link.p-accordion-sp__link--pink::before {
+  content: "";
+  background-image: url(../images/common/bed-icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: rem(40);
+  height: rem(40);
+  left: 5%;
+  top: 15%;
+  position: absolute;
+}
+
+.p-accordion-sp__link.p-accordion-sp__link--orange {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: rem(18) rem(20);
+  border: 2px solid $color-orange;
+  border-radius: 16px;
+  background: $color-white;
+  color: $color-orange;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+.p-accordion-sp__link.p-accordion-sp__link--orange::before {
+  content: "";
+  background-image: url(../images/common/human-icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: rem(40);
+  height: rem(30);
+  left: 5%;
+  top: 35%;
+  position: absolute;
+}
+
+.p-accordion-sp__link.p-accordion-sp__link--navy {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: rem(18) rem(20);
+  border: 2px solid $color-navy;
+  border-radius: 16px;
+  background: $color-white;
+  color: $color-navy;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+.p-accordion-sp__link.p-accordion-sp__link--navy::before {
+  content: "";
+  background-image: url(../images/common/heart-icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: rem(40);
+  height: rem(40);
+  left: 5%;
+  top: 25%;
+  position: absolute;
+}
+
+.p-accordion-sp__text {
+  font-size: rem(18);
+  font-weight: $bold;
+  letter-spacing: 0.06em;
+  padding-left: rem(50);
+}
+.p-accordion-sp__arrow {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  flex: 0 0 auto;
+}

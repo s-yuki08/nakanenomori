@@ -1,0 +1,352 @@
+@use "global" as *;
+
+.p-brainDock__inner.l-inner {
+  max-width: rem(1080);
+}
+
+.p-brainDock__wrapper {
+  margin-top: rem(15);
+  @include mq("md") {
+    margin-top: rem(30);
+  }
+}
+
+.p-brainDock__body {
+  width: 100%;
+  @include mq("md") {
+    max-width: rem(960);
+    margin: 0 auto;
+  }
+}
+.p-brainDock__text {
+  font-size: rem(16);
+  line-height: 1.9;
+  letter-spacing: 0.05em;
+  @include mq("md") {
+    font-size: rem(18);
+  }
+}
+
+.p-brainDock__contents {
+  width: 100%;
+  max-width: rem(672);
+  margin: 0 auto;
+  @include mq("md") {
+    max-width: rem(960);
+  }
+}
+
+.p-brainDock__heading {
+  margin-top: rem(30);
+  @include mq("md") {
+    margin-top: rem(60);
+  }
+}
+
+.p-brainDock__headingTitle {
+  border: 1px solid $color-navy;
+  border-radius: 20px;
+  padding: rem(5) rem(30);
+  background: $color-white;
+  font-size: rem(16);
+  font-weight: $bold;
+  color: $color-navy;
+  text-align: center;
+  width: 100%;
+  max-width: rem(150);
+  font-family: $heading-family;
+  @include mq("md") {
+    font-size: rem(17);
+  }
+}
+.p-brainDock__headingTitle.p-brainDock__headingTitle--middle {
+  max-width: rem(200);
+}
+.p-brainDock__tableWrap {
+  overflow-x: auto;
+  margin-top: rem(15);
+  @include mq("md") {
+    margin-top: rem(30);
+  }
+}
+
+.p-brainDock__tableInner {
+  width: 100%;
+  @include mq("md") {
+    max-width: rem(880);
+    margin: 0 auto;
+  }
+}
+
+.p-brainDock__table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid $color-gray-light;
+  font-size: rem(14);
+}
+.p-brainDock__table th,
+.p-brainDock__table td {
+  border: 1px solid $color-gray-light;
+  padding: rem(10) rem(12);
+  vertical-align: top;
+}
+.p-brainDock__table thead th {
+  background: $color-gray-light-2;
+  text-align: center;
+  font-weight: 700;
+  font-size: rem(14);
+  @include mq("md") {
+    font-size: rem(16);
+  }
+}
+.p-brainDock__table thead th {
+  background: $color-gray-light-2;
+  text-align: center;
+  font-weight: 700;
+  font-size: rem(14);
+  @include mq("md") {
+    font-size: rem(16);
+  }
+}
+.p-brainDock__table tbody th {
+  width: 16%;
+  background: rgba($color: $color-navy, $alpha: 0.07);
+  text-align: center;
+  font-weight: $bold;
+  font-size: rem(14);
+  @include mq("md") {
+    font-size: rem(16);
+  }
+}
+.p-brainDock__table td {
+  line-height: 1.9;
+  font-size: rem(14);
+  @include mq("md") {
+    font-size: rem(16);
+  }
+}
+
+.p-brainDock__priceCardWrapper {
+  margin-top: rem(15);
+  @include mq("md") {
+    margin-top: rem(30);
+  }
+}
+
+.p-brainDock__priceCard {
+  border: 1px solid $color-gray-light;
+  background: $color-white;
+  width: 100%;
+  @include mq("md") {
+    max-width: rem(880);
+    margin: 0 auto;
+  }
+}
+.p-brainDock__priceRow {
+  display: grid;
+  grid-template-columns: rem(150) 1fr;
+  align-items: center;
+  @include mq("md") {
+    grid-template-columns: rem(180) 1fr;
+  }
+}
+
+.p-brainDock__priceCard + .p-brainDock__priceCard {
+  margin-top: rem(10);
+  @include mq("md") {
+    margin-top: rem(20);
+  }
+}
+
+.p-brainDock__priceRow > span {
+  padding: rem(14) rem(18);
+  border-right: 1px solid $color-gray-light;
+}
+.p-brainDock__priceRow > span:last-child {
+  border-right: 0;
+  text-align: center;
+  font-weight: 700;
+}
+.p-brainDock__priceLabel {
+  background: rgba($color: $color-navy, $alpha: 0.07);
+  padding: rem(14) rem(18);
+  text-align: center;
+  font-size: rem(14);
+  @include mq("md") {
+    font-size: rem(16);
+  }
+}
+.p-brainDock__priceValue {
+  padding: rem(14) rem(18);
+  text-align: center;
+  font-weight: 700;
+  font-size: rem(16);
+}
+.p-brainDock__priceValue small {
+  font-weight: 400;
+  font-size: rem(9);
+}
+.p-brainDock__note {
+  font-size: rem(11.5);
+  margin-top: rem(10);
+  @include mq("md") {
+    font-size: rem(16);
+    margin-left: rem(40);
+  }
+}
+
+.p-brainDock__alertWrapper {
+  margin-top: rem(15);
+  @include mq("md") {
+    margin-top: rem(48);
+  }
+}
+.p-brainDock__alertWrapperInner {
+  width: 100%;
+  @include mq("md") {
+    max-width: rem(880);
+    margin: 0 auto;
+  }
+}
+.p-brainDock__alert {
+  background: #eff0f7;
+  border-radius: 50px;
+  padding: rem(28) rem(18);
+  @include mq("md") {
+    margin-bottom: rem(28);
+    padding: rem(57) rem(59);
+  }
+}
+.p-brainDock__alertTitle {
+  font-weight: 700;
+  color: $color-blue;
+  margin-bottom: rem(10);
+  font-size: rem(15);
+  text-align: center;
+  @include mq("md") {
+    text-align: left;
+    font-size: rem(20);
+  }
+}
+
+.p-brainDock__alertText {
+  font-size: rem(14);
+  line-height: 1.8;
+  margin-top: rem(10);
+  @include mq("md") {
+    font-size: rem(16);
+    margin-top: rem(30);
+    letter-spacing: 0.05em;
+  }
+}
+
+.p-brainDock__alertList {
+  line-height: 1.8;
+  font-size: rem(14);
+  text-indent: -1em;
+  padding-left: rem(20);
+  @include mq("md") {
+    font-size: rem(16);
+    padding-left: 0;
+    text-indent: 0em;
+  }
+}
+.p-brainDock__alertItem {
+  margin-bottom: rem(4);
+  @include mq("md") {
+    margin-bottom: rem(8);
+  }
+}
+
+.p-brainDock__leadWrapper {
+  margin-top: rem(10);
+  @include mq("md") {
+    margin-top: rem(15);
+  }
+}
+
+.p-brainDock__lead2 {
+  font-size: rem(14.5);
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  @include mq("md") {
+    font-size: rem(16);
+    margin-left: rem(20);
+  }
+}
+
+.p-brainDock__flow-wrapper {
+  margin-top: rem(10);
+  @include mq("md") {
+    margin-top: rem(15);
+  }
+}
+.p-brainDock__flow-inner {
+  width: 100%;
+  @include mq("md") {
+    max-width: rem(880);
+    margin: 0 auto;
+  }
+}
+
+.p-brainDock__flow-text {
+  font-size: rem(15);
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  @include mq("md") {
+    font-size: rem(18);
+  }
+}
+
+.p-brainDock__flow-list {
+  counter-reset: num;
+  margin-top: rem(10);
+  @include mq("md") {
+    margin-top: rem(15);
+  }
+}
+.p-brainDock__flow-list li {
+  counter-increment: num;
+  position: relative;
+  padding-left: 2em;
+  margin-top: rem(12);
+  line-height: 1.9;
+  font-size: rem(14.5);
+  @include mq("md") {
+    font-size: rem(16);
+  }
+}
+.p-brainDock__flow-list li::before {
+  content: counter(num);
+  display: inline-grid;
+  place-items: center;
+  position: absolute;
+  left: 0;
+  top: rem(3);
+  width: 1.4em;
+  height: 1.4em;
+  font-size: rem(13);
+  border-radius: 50%;
+  background-color: $color-blue;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1;
+  @include mq("md") {
+    top: rem(6);
+  }
+}
+
+.p-brainDock__headingTitle.p-brainDock__headingTitle--long {
+  max-width: rem(250);
+}
+
+.p-brainDock__tableWrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-inline: rem(-16);
+  padding-inline: rem(16);
+}
+
+.p-brainDock__tableInner {
+  min-width: rem(720); /* スクロール発生のための最小幅 */
+}

@@ -1,0 +1,127 @@
+@use "global" as *;
+
+.p-recruit-flow__inner {
+  max-width: 980px;
+  margin-inline: auto;
+  padding-inline: 20px;
+  text-align: center;
+  font-family: $recruit-family;
+}
+
+.p-recruit-flow__sub {
+  font-size: rem(12);
+  color: $color-blue;
+  letter-spacing: 0.15em;
+  line-height: 1;
+  text-transform: uppercase;
+  @include mq(md) {
+    font-size: rem(14);
+  }
+}
+.p-recruit-flow__title {
+  color: $color-blue;
+  font-size: rem(20);
+  font-weight: $bold;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  padding-top: rem(10);
+  font-family: $recruit-family;
+  @include mq(md) {
+    font-size: rem(30);
+  }
+}
+
+.p-recruit-flow__content {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}
+
+.p-recruit-flow__list {
+  height: inherit;
+  font-family: $recruit-family;
+}
+
+.p-recruit-flow__item {
+  position: relative;
+  height: inherit;
+  width: 100%;
+}
+
+.p-recruit-flow__item + .p-recruit-flow__item {
+  padding-top: rem(20);
+  @include mq(md) {
+    padding-top: rem(50);
+  }
+}
+
+.p-recruit-flow__row {
+  display: grid;
+  gap: rem(10);
+  grid-template-columns: rem(70) 1fr;
+  align-items: flex-start;
+  text-align: left;
+  padding-bottom: rem(20);
+  border-bottom: 1px solid $color-gray;
+  @include mq(md) {
+    grid-template-columns: rem(350) 1fr;
+    padding-bottom: rem(40);
+  }
+}
+.p-recruit-flow__numWrap {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: rem(10);
+}
+.p-recruit-flow__num {
+  font-size: rem(20);
+  font-weight: $bold;
+  font-variant-numeric: tabular-nums;
+  color: $color-blue;
+  @include mq(md) {
+    font-size: rem(40);
+  }
+}
+
+.p-recruit-flow__body {
+  display: flex;
+  flex-direction: column;
+  margin-top: rem(8);
+  @include mq(md) {
+    margin-top: rem(20);
+  }
+}
+
+.p-recruit-flow__slash {
+  font-size: rem(20);
+  color: $color-blue;
+  margin-top: rem(4);
+  font-family: $recruit-family;
+  @include mq(md) {
+    font-size: rem(26);
+  }
+}
+
+.p-recruit-flow__step {
+  font-size: rem(16);
+  letter-spacing: 0.3em;
+  color: $color-blue;
+  font-weight: $bold;
+  @include mq(md) {
+    font-size: rem(25);
+    letter-spacing: 0.07em;
+    line-height: 1;
+  }
+}
+.p-recruit-flow__desc {
+  margin: 0;
+  font-size: rem(12);
+  font-family: $recruit-family;
+  line-height: 1.9;
+  margin-top: rem(10);
+  @include mq(md) {
+    font-size: rem(16);
+  }
+}

@@ -1,0 +1,167 @@
+@use "global" as *;
+
+.p-access__inner.l-inner {
+  max-width: rem(600);
+  @include mq("md") {
+    max-width: rem(1020);
+  }
+}
+
+.p-access__title {
+  font-weight: $bold;
+  font-size: rem(20);
+  color: $color-navy;
+  letter-spacing: 0.05em;
+  text-align: left;
+  font-family: $heading-family;
+  @include mq("md") {
+    font-size: rem(22);
+    text-align: center;
+    letter-spacing: 0.3em;
+  }
+}
+
+.p-access__wrapper {
+  margin-top: rem(30);
+  @include mq("md") {
+    margin-top: rem(39);
+  }
+}
+
+.p-access__contents {
+  width: 100%;
+  @include mq("md") {
+    display: flex;
+    gap: rem(50);
+    align-items: start;
+    max-width: rem(1080);
+    margin: 0 auto;
+  }
+}
+.p-access__map {
+  width: 100%;
+  @include mq("md") {
+    width: 60%;
+  }
+}
+.p-access__text {
+  width: 100%;
+  position: relative;
+  margin-top: rem(26);
+  @include mq("md") {
+    width: 40%;
+    margin-top: rem(40);
+  }
+}
+.p-access__map iframe {
+  width: 100%;
+  height: rem(230);
+  border-radius: 16px;
+  @include mq("md") {
+    height: rem(460);
+  }
+}
+
+.p-access__addr {
+  position: relative;
+  font-style: normal;
+  font-size: rem(16);
+  line-height: 1.8;
+  font-weight: $medium;
+  color: $color-black;
+  letter-spacing: 0.1em;
+  @include mq("md") {
+    font-size: rem(17);
+  }
+}
+
+.p-access__addr::before {
+  content: "";
+  background-image: url(../images/common/tree_icon_2.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: rem(72);
+  height: rem(81);
+  top: 5%;
+  right: 3%;
+  position: absolute;
+  z-index: 1;
+  @include mq("md") {
+    width: rem(143);
+    height: rem(163);
+    top: -107%;
+    right: -3%;
+  }
+}
+
+.p-access__list {
+  margin-top: rem(26);
+  @include mq("md") {
+    margin-top: rem(45);
+  }
+}
+.p-access__item {
+  display: flex;
+  align-items: flex-start;
+  gap: rem(8);
+  line-height: 1.7;
+  @include mq("md") {
+    gap: rem(10);
+  }
+}
+
+.p-access__item + .p-access__item {
+  margin-top: rem(24);
+}
+.p-access__bullet {
+  background-image: url(../images/common/arrow_icon_circle.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: rem(20);
+  height: rem(20);
+  display: block;
+  margin-top: rem(1);
+  @include mq("md") {
+    margin-top: rem(4);
+  }
+}
+
+.p-access__item span {
+  font-size: rem(16);
+  letter-spacing: 0.1em;
+  line-height: 1.6;
+  @include mq("md") {
+    font-size: clamp(rem(14), 3vw, rem(17));
+    letter-spacing: 0.05em;
+  }
+}
+
+.p-access__tel-wrapper {
+  margin-top: rem(40);
+  @include mq("md") {
+    margin-top: rem(53);
+  }
+}
+
+.p-access__telLabel {
+  font-weight: $medium;
+  font-size: rem(14);
+  color: $color-black;
+  @include mq("md") {
+    font-size: rem(17);
+  }
+}
+.p-access__tel {
+  margin-top: rem(10);
+}
+.p-access__tel a {
+  color: $color-navy;
+  font-size: rem(30);
+  font-weight: $bold;
+  @include mq("md") {
+    font-size: rem(35);
+  }
+}
+.p-access__tel a:hover {
+  opacity: 0.8;
+}

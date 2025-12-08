@@ -1,0 +1,86 @@
+@use "global" as *;
+
+.p-bring__inner.l-inner {
+  width: 100%;
+  @include mq(md) {
+    max-width: rem(1080);
+  }
+}
+
+.p-bring__box {
+  margin-top: rem(20);
+  @include mq(md) {
+    margin-top: rem(30);
+  }
+}
+
+.p-bring__list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
+  border: 2px solid $color-cyan;
+  border-radius: rem(20);
+  padding: rem(10) rem(14);
+  width: 100%;
+  @include mq(md) {
+    justify-content: space-between;
+    align-items: first baseline;
+    flex-direction: row;
+    gap: 3%;
+    padding: rem(35) rem(40);
+    max-width: rem(980);
+    margin: 0 auto;
+  }
+}
+
+.p-bring__list-left {
+  width: 100%;
+  @include mq(md) {
+    width: 50%;
+  }
+}
+.p-bring__list-center {
+  width: 100%;
+  @include mq(md) {
+    width: 25%;
+  }
+}
+.p-bring__list-right {
+  width: 100%;
+  @include mq(md) {
+    width: 25%;
+  }
+}
+
+.p-bring__item {
+  font-size: rem(15);
+  line-height: 1.8;
+  @include mq(md) {
+    font-size: rem(18);
+    letter-spacing: 0.05em;
+  }
+}
+
+.p-bring__item + .p-bring__item {
+  margin-top: rem(10);
+  @include mq(md) {
+    margin-top: rem(15);
+  }
+}
+
+.p-bring__desc {
+  margin-top: rem(14);
+  width: 100%;
+  @include mq(md) {
+    max-width: rem(960);
+    margin: 0 auto;
+    padding-top: rem(24);
+  }
+}
+
+.p-bring__desc-text {
+  color: $color-black;
+  font-size: rem(16);
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+}

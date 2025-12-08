@@ -1,0 +1,76 @@
+@use "global" as *;
+
+.p-sitemap__inner {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 rem(15);
+  @include mq("md") {
+    max-width: rem(1080);
+    padding: 0 rem(25);
+  }
+}
+
+.p-sitemap__content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  gap: rem(30);
+  margin: 0 auto;
+  @include mq("md") {
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(20);
+  }
+}
+
+.p-sitemap__column {
+  display: flex;
+  flex-direction: column;
+  gap: rem(32);
+}
+
+.p-sitemap__section {
+  margin-bottom: rem(8);
+}
+
+.p-sitemap__heading {
+  font-size: rem(18);
+  font-weight: 700;
+  color: $color-black;
+  margin-bottom: rem(10);
+  display: inline-block;
+  padding-bottom: rem(4);
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+  font-family: $heading-family;
+}
+
+.p-sitemap__heading-dot {
+  width: rem(15);
+  height: rem(15);
+  background-color: $color-navy;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.p-sitemap__list {
+  list-style: none;
+  padding-left: rem(15);
+}
+
+.p-sitemap__list li {
+  margin-bottom: rem(4);
+}
+
+.p-sitemap__list a {
+  font-size: rem(15);
+  color: $color-black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.p-sitemap__list a:hover {
+  @include mq("md") {
+    color: $color-navy;
+  }
+}

@@ -1,0 +1,32 @@
+@use "global" as *;
+
+// 既存のボタンスタイル
+.c-button a {
+  position: relative;
+
+  display: inline-block;
+  font-size: rem(20);
+  font-weight: $normal;
+  color: $color-black;
+  width: rem(274);
+  background: $color-white;
+  border-radius: 50px;
+  line-height: 1;
+  padding: rem(17) rem(49);
+  border: 1px solid $color-green;
+}
+
+.c-button a::after {
+  background-image: url(../images/common/arrow-right.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: 0;
+  content: "";
+  height: rem(25);
+  margin: auto;
+  position: absolute;
+  right: rem(30);
+  top: 0;
+  width: rem(25);
+  transition: right 0.3s;
+}

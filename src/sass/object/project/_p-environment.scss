@@ -1,0 +1,196 @@
+@use "global" as *;
+
+.p-environment {
+  text-align: center;
+  line-height: 2;
+  position: relative;
+}
+
+.p-environment__block {
+  padding-top: rem(25);
+  padding-bottom: rem(25);
+  @include mq(md) {
+    padding-top: rem(50);
+    padding-bottom: rem(50);
+  }
+}
+
+.p-environment__sub {
+  font-size: rem(12);
+  color: $color-blue;
+  letter-spacing: 0.15em;
+  line-height: 1;
+  font-family: $recruit-family;
+  @include mq(md) {
+    font-size: rem(14);
+  }
+}
+.p-environment__title {
+  color: $color-blue;
+  font-size: rem(25);
+  font-weight: $bold;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  padding-top: rem(10);
+  text-transform: uppercase;
+  font-family: $recruit-family;
+  @include mq(md) {
+    font-size: rem(30);
+  }
+}
+
+.p-environment__lead {
+  margin-top: rem(16);
+  font-size: rem(14);
+  line-height: 1.9;
+  font-family: $recruit-family;
+  @include mq(md) {
+    letter-spacing: 0.05em;
+    margin-top: rem(20);
+    font-size: rem(16);
+  }
+}
+
+.p-environment__catch {
+  font-size: rem(28);
+  line-height: 1.8;
+  font-weight: $bold;
+  letter-spacing: 0.07em;
+  font-family: $recruit-family;
+  @include mq(md) {
+    font-size: rem(38);
+  }
+}
+
+.p-environment__text-body {
+  margin-top: rem(20);
+  font-family: $recruit-family;
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.p-environment__text {
+  font-size: rem(14);
+  line-height: 2.5;
+  letter-spacing: 0.05em;
+  font-family: $recruit-family;
+  @include mq(md) {
+    font-size: rem(16);
+  }
+}
+
+.p-environment__leaf {
+  position: absolute;
+  @include mq(md) {
+    right: 15%;
+    top: 23%;
+    width: rem(150);
+    height: auto;
+  }
+}
+
+.p-environment__container {
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2%;
+  @include mq(md) {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+}
+
+/* voices */
+.p-environment__voices {
+  border-radius: rem(12);
+  padding: rem(50) rem(20);
+  background: $color-blue-gray;
+  @include mq(md) {
+    padding: rem(50) rem(40);
+  }
+}
+.p-environment__voices-title {
+  font-size: rem(16);
+  text-align: center;
+  font-weight: $bold;
+  margin-bottom: rem(40);
+  color: $color-black;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  position: relative;
+  font-family: $recruit-family;
+  @include mq(md) {
+    font-size: rem(20);
+  }
+}
+
+.p-environment__voices-title::before {
+  content: "";
+  position: absolute;
+  bottom: -65%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: rem(26);
+  height: 1px;
+  background: $color-blue;
+}
+
+.p-environment__voices-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: rem(24);
+  @include mq(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.p-environment__voice {
+  background: $color-white;
+  border-radius: rem(10);
+  padding: rem(28);
+  box-shadow: 0 rem(3) rem(10) rgba(0, 0, 0, 0.04);
+  @include mq(md) {
+    padding: rem(30);
+  }
+}
+.p-environment__voice-title {
+  color: $color-blue;
+  font-weight: $bold;
+  margin-bottom: rem(10);
+  line-height: 1.7;
+  font-size: rem(16);
+  text-align: center;
+  font-family: $recruit-family;
+}
+.p-environment__voice-text {
+  line-height: 1.8;
+  font-size: rem(13);
+  color: $color-black;
+  text-align: left;
+  margin-top: rem(10);
+  font-family: $recruit-family;
+  @include mq(md) {
+    margin-top: rem(30);
+  }
+}
+.p-environment__voice-meta {
+  text-align: center;
+  font-size: rem(13);
+  color: $color-gray;
+  margin-top: rem(10);
+  font-family: $recruit-family;
+  @include mq(md) {
+    margin-top: rem(25);
+  }
+}
+
+/* anim */
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}

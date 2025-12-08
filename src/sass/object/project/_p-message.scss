@@ -1,0 +1,91 @@
+@use "global" as *;
+
+.p-message {
+  text-align: center;
+  line-height: 2;
+  position: relative;
+  background: #f6f8fc;
+}
+
+.p-message__block {
+  padding-top: rem(25);
+  padding-bottom: rem(25);
+  font-family: $recruit-family;
+  @include mq(md) {
+    padding-top: rem(50);
+    padding-bottom: rem(50);
+  }
+}
+
+.p-message__sub {
+  font-size: rem(12);
+  color: $color-blue;
+  letter-spacing: 0.15em;
+  line-height: 1;
+  font-family: $recruit-family;
+  @include mq(md) {
+    font-size: rem(14);
+  }
+}
+.p-message__title {
+  color: $color-blue;
+  font-size: rem(20);
+  font-weight: $bold;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  padding-top: rem(10);
+  text-transform: uppercase;
+  font-family: $recruit-family;
+  @include mq(md) {
+    font-size: rem(30);
+  }
+}
+
+.p-message__catch-wrap {
+  margin-top: rem(30);
+  @include mq(md) {
+    margin-top: rem(60);
+  }
+}
+
+.p-message__catch {
+  font-size: rem(20);
+  line-height: 1.8;
+  font-weight: $bold;
+  letter-spacing: 0.07em;
+  font-family: $recruit-family;
+  @include mq(md) {
+    font-size: rem(38);
+  }
+}
+
+.p-message__text-body {
+  margin-top: rem(20);
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.p-message__text {
+  font-size: rem(13);
+  line-height: 2.5;
+  font-family: $recruit-family;
+  @include mq(md) {
+    font-size: rem(16);
+    letter-spacing: 0.05em;
+  }
+}
+
+.p-message__leaf {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: rem(100);
+  height: auto;
+  @include mq(md) {
+    right: 15%;
+    top: 23%;
+    width: rem(150);
+    height: auto;
+  }
+}

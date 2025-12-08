@@ -1,0 +1,94 @@
+@use "global" as *;
+
+.p-faqContact__inner.l-inner {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 rem(15);
+  @include mq(md) {
+    max-width: rem(860);
+    padding: 0 rem(25);
+  }
+}
+.p-faqContact__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem(10);
+  font-size: rem(22);
+  font-weight: 700;
+  color: $color-blue;
+  margin-bottom: rem(28);
+  font-family: $heading-family;
+}
+.p-faqContact__dot {
+  width: 16px;
+  height: 16px;
+  background-color: $color-blue;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* box */
+.p-faqContact__box {
+  border: 2px solid $color-blue;
+  border-radius: 20px;
+  padding: rem(36) rem(20);
+  text-align: center;
+  font-family: $base-font-family;
+  line-height: 1.8;
+  color: $color-black;
+  width: 100%;
+  max-width: rem(500);
+  margin: 0 auto;
+  @include mq(md) {
+    max-width: rem(800);
+  }
+}
+
+.p-faqContact__box.p-faqContact__box--green {
+  border-color: $color-green;
+}
+
+.p-faqContact__label {
+  font-size: rem(18);
+  font-weight: 500;
+  display: block;
+  @include mq(md) {
+    display: inline-block;
+  }
+}
+
+.p-faqContact__tel {
+  font-size: rem(24);
+  font-weight: 700;
+  color: $color-blue;
+  text-decoration: underline;
+  transition: color 0.2s;
+  transition: opacity 0.3s;
+  @include mq(md) {
+    padding-left: rem(20);
+  }
+}
+
+.p-faqContact__tel.p-faqContact__tel--green {
+  color: $color-green;
+}
+
+.p-faqContact__tel:hover {
+  color: $color-navy;
+}
+
+.p-faqContact__tel.p-faqContact__tel--green:hover {
+  opacity: 0.8;
+}
+
+.p-faqContact__note {
+  font-size: rem(12);
+  line-height: 1.9;
+  margin-top: rem(10);
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: 1.9;
+    margin-top: rem(20);
+  }
+}

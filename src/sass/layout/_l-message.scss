@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.l-message {
+  padding-top: rem(35);
+  padding-bottom: rem(50);
+  @include mq(md) {
+    padding-top: rem(100);
+    padding-bottom: rem(100);
+  }
+}

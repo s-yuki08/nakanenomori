@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.l-privacy-policy {
+  padding-top: rem(120);
+  padding-bottom: rem(120);
+  @include mq(md) {
+    padding-top: rem(200);
+    padding-bottom: rem(100);
+  }
+}

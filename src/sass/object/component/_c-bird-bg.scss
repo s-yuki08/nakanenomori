@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.c-bird-bg {
+  position: relative;
+}
+
+.c-bird-bg::before {
+  display: none;
+  @include mq("md") {
+    display: block;
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: calc(50% - min(50vw, rem(600)));
+    background: url(../images/common/bird_02.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: rem(100);
+    height: rem(100);
+    z-index: -1;
+  }
+}

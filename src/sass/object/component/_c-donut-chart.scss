@@ -1,0 +1,64 @@
+@use "global" as *;
+
+/* ============================================
+ Component - Donut Chart (有給取得率)
+ ============================================ */
+.c-donut-chart {
+  width: rem(130);
+  position: relative;
+  height: rem(130);
+  @include mq(md) {
+    width: rem(170);
+    height: rem(170);
+  }
+}
+
+.c-donut-chart__svg {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.c-donut-chart__bg {
+  fill: none;
+  stroke: #ebebeb;
+  stroke-width: 12;
+}
+
+.c-donut-chart__progress {
+  fill: none;
+  stroke: #6494d3;
+  stroke-width: 12;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.c-donut-chart__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  font-family: $recruit-family;
+}
+
+.c-donut-chart__value {
+  font-size: rem(28);
+  font-weight: 700;
+  color: #6494d3;
+  line-height: 1;
+  font-feature-settings: "tnum";
+  font-family: $recruit-family;
+  @include mq(md) {
+    font-size: rem(40);
+  }
+}
+
+.c-donut-chart__percent {
+  font-size: rem(11);
+  font-weight: 600;
+  color: #6494d3;
+  font-family: $recruit-family;
+}

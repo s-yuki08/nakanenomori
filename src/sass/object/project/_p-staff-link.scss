@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.p-staff-link__inner.l-inner {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 rem(15);
+  height: rem(1100);
+  @include mq("md") {
+    padding: 0 rem(25);
+    max-width: rem(1000);
+    height: 100%;
+  }
+}

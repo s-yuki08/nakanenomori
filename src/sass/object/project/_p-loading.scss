@@ -1,0 +1,95 @@
+@use "global" as *;
+
+/* --- ローディングの白幕だけフェードさせる：MVは触らない --- */
+.p-loading {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  opacity: 1;
+  transition: opacity 900ms ease; /* ← ふわっと時間 */
+}
+
+.p-loading.is-hide {
+  opacity: 0; /* ← これだけで白幕が消え、下のMVが自然に見えてくる */
+  pointer-events: none;
+}
+
+/* ロゴは出しっぱなし、切替時は白幕と一緒に薄くなる */
+.p-loading__logo {
+  transition: opacity 900ms ease;
+}
+.p-loading.is-hide .p-loading__logo {
+  opacity: 0;
+}
+
+/* 2回目以降（no-loading）はローディングを表示しない */
+html.no-loading .p-loading {
+  display: none;
+}
+
+/* 鳥アニメーション */
+.p-loading__bird {
+  position: absolute;
+  top: 68%;
+  left: 0;
+  width: 150px;
+  z-index: 10;
+  pointer-events: none;
+  animation: bird-fly 6.5s linear forwards;
+}
+
+.p-loading__bird img {
+  width: 100%;
+  height: auto;
+  display: block;
+  animation: bird-bob 2.6s ease-in-out infinite;
+}
+
+/* 鳥の移動 */
+@keyframes bird-fly {
+  0% {
+    transform: translateX(95vw);
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  85% {
+    transform: translateX(8vw);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(4vw);
+    opacity: 0;
+  }
+}
+
+/* 鳥の上下動 */
+@keyframes bird-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+}
+
+/* フェード中に停止 */
+.p-loading.is-hide .p-loading__bird,
+.p-loading.is-hide .p-loading__bird img {
+  animation-play-state: paused;
+  transform: translateY(0);
+}

@@ -1,0 +1,601 @@
+@use "global" as *;
+
+.p-menu-link__inner.l-inner {
+  width: 100%;
+  max-width: rem(600);
+  @include mq(md) {
+    max-width: rem(1020);
+  }
+}
+
+.p-menu-link__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: rem(30);
+  max-width: rem(1080);
+  margin: 0 auto;
+}
+
+// cyan
+.p-menu-link__btn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: rem(45) rem(12) rem(48);
+  font-size: rem(22);
+  line-height: 1.4;
+  background-color: $color-white;
+  border-radius: 20px;
+  border: 1px solid $color-cyan;
+  width: 100%;
+  height: 100%;
+  @include mq(md) {
+    gap: rem(20);
+    max-width: rem(320);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+}
+
+.p-menu-link__btn:hover {
+  @include mq(md) {
+    background-color: $color-cyan;
+    color: $color-white;
+  }
+}
+
+.p-menu-link__btn:hover::before {
+  @include mq(md) {
+    background-image: url(../images/common/medical-questionnaire-icon-hover.svg);
+  }
+}
+
+.p-menu-link__btn::before {
+  content: "";
+  background-image: url(../images/common/medical-questionnaire-icon.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: rem(56);
+  height: rem(77);
+  position: absolute;
+  left: 11%;
+  top: 23%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.p-menu-link__btn-arrow {
+  background-color: $color-cyan;
+  border-color: $color-cyan;
+  position: relative;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: rem(54);
+  height: rem(44);
+  border-width: 0.2rem;
+  border-style: solid;
+  border-radius: 20px 0 20px 0;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.p-menu-link__btn:hover .p-menu-link__btn-arrow {
+  @include mq(md) {
+    background-color: $color-white;
+    color: $color-white;
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+.p-menu-link__btn-arrow::after {
+  content: "";
+  background-image: url(../images/common/arrow-down-right.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: rem(20);
+  height: rem(20);
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+}
+.p-menu-link__btn:hover .p-menu-link__btn-arrow::after {
+  @include mq(md) {
+    background-image: url(../images/common/arrow-down-right-hover.svg);
+  }
+}
+
+.p-menu-link__btn-text {
+  padding-left: rem(80);
+  text-align: center;
+  font-size: rem(22);
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  color: $color-cyan;
+  transition: color 0.3s ease-in-out;
+}
+.p-menu-link__btn:hover .p-menu-link__btn-text {
+  @include mq(md) {
+    color: $color-white;
+  }
+}
+
+// green
+
+.p-menu-link__btn.p-menu-link__btn--green {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: rem(25) rem(12);
+  font-size: rem(22);
+  line-height: 1.4;
+  background-color: $color-white;
+  border-radius: 20px;
+  border: 1px solid $color-green;
+  width: 100%;
+  height: 100%;
+  @include mq(md) {
+    gap: rem(20);
+    max-width: rem(320);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+}
+
+.p-menu-link__btn.p-menu-link__btn--green:hover {
+  @include mq(md) {
+    background-color: $color-green;
+    color: $color-white;
+  }
+}
+
+.p-menu-link__btn.p-menu-link__btn--green:hover::before {
+  @include mq(md) {
+    background-image: url(../images/common/stethoscope-icon-hover.svg);
+  }
+}
+
+.p-menu-link__btn.p-menu-link__btn--green::before {
+  content: "";
+  background-image: url(../images/common/stethoscope-icon.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: rem(70);
+  height: rem(68);
+  position: absolute;
+  left: 8%;
+  top: 25%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.p-menu-link__btn-arrow.p-menu-link__btn-arrow--green {
+  background-color: $color-green;
+  border-color: $color-green;
+  position: relative;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: rem(54);
+  height: rem(44);
+  border-width: 0.2rem;
+  border-style: solid;
+  border-radius: 20px 0 20px 0;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.p-menu-link__btn.p-menu-link__btn--green:hover .p-menu-link__btn-arrow {
+  @include mq(md) {
+    background-color: $color-white;
+    color: $color-white;
+  }
+}
+
+.p-menu-link__btn.p-menu-link__btn--green:hover .p-menu-link__btn-arrow::after {
+  @include mq(md) {
+    background-image: url(../images/common/arrow-green-hover.svg);
+  }
+}
+
+.p-menu-link__btn-text.p-menu-link__btn-text--green {
+  color: $color-green;
+}
+
+// blue
+
+.p-menu-link__btn.p-menu-link__btn--blue {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: rem(25) rem(12);
+  font-size: rem(22);
+  line-height: 1.4;
+  background-color: $color-white;
+  border-radius: 20px;
+  border: 1px solid $color-blue;
+  width: 100%;
+  height: 100%;
+  @include mq(md) {
+    gap: rem(20);
+    max-width: rem(320);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+}
+
+.p-menu-link__btn.p-menu-link__btn--blue::before {
+  content: "";
+  background-image: url(../images/common/recruit-icon.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: rem(76);
+  height: rem(54);
+  position: absolute;
+  left: 11%;
+  top: 29%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.p-menu-link__btn.p-menu-link__btn--blue:hover {
+  @include mq(md) {
+    background-color: $color-blue;
+    color: $color-white;
+  }
+}
+
+.p-menu-link__btn.p-menu-link__btn--blue:hover::before {
+  @include mq(md) {
+    background-image: url(../images/common/recruit-icon-hover.svg);
+  }
+}
+
+.p-menu-link__btn-arrow.p-menu-link__btn-arrow--blue {
+  background-color: $color-blue;
+  border-color: $color-blue;
+  position: relative;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: rem(54);
+  height: rem(44);
+  border-width: 0.2rem;
+  border-style: solid;
+  border-radius: 20px 0 20px 0;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.p-menu-link__btn-text.p-menu-link__btn-text--blue {
+  color: $color-blue;
+}
+
+.p-menu-link__btn.p-menu-link__btn--blue:hover .p-menu-link__btn-arrow {
+  @include mq(md) {
+    background-color: $color-white;
+    color: $color-white;
+  }
+}
+
+.p-menu-link__btn.p-menu-link__btn--blue:hover .p-menu-link__btn-arrow::after {
+  @include mq(md) {
+    background-image: url(../images/common/arrow-blue-hover.svg);
+  }
+}
+
+// pink
+
+.p-menu-link__btn.p-menu-link__btn--pink {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: rem(57) rem(12);
+  font-size: rem(22);
+  line-height: 1.4;
+  background-color: $color-white;
+  border-radius: 20px;
+  border: 1px solid $color-pink;
+  width: 100%;
+  height: 100%;
+  @include mq(md) {
+    gap: rem(20);
+    max-width: rem(320);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+}
+
+.p-menu-link__btn.p-menu-link__btn--pink::before {
+  content: "";
+  background-image: url(../images/common/bed-icon.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: rem(76);
+  height: rem(54);
+  position: absolute;
+  left: 11%;
+  top: 29%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.p-menu-link__btn.p-menu-link__btn--pink:hover {
+  @include mq(md) {
+    background-color: $color-pink;
+    color: $color-white;
+  }
+}
+
+.p-menu-link__btn.p-menu-link__btn--pink:hover::before {
+  @include mq(md) {
+    background-image: url(../images/common/bed-icon-hover.svg);
+  }
+}
+
+.p-menu-link__btn-arrow.p-menu-link__btn-arrow--pink {
+  background-color: $color-pink;
+  border-color: $color-pink;
+  position: relative;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: rem(54);
+  height: rem(44);
+  border-width: 0.2rem;
+  border-style: solid;
+  border-radius: 20px 0 20px 0;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.p-menu-link__btn-text.p-menu-link__btn-text--pink {
+  color: $color-pink;
+}
+
+.p-menu-link__btn.p-menu-link__btn--pink:hover .p-menu-link__btn-arrow {
+  @include mq(md) {
+    background-color: $color-white;
+    color: $color-white;
+  }
+}
+
+.p-menu-link__btn.p-menu-link__btn--pink:hover .p-menu-link__btn-arrow::after {
+  @include mq(md) {
+    background-image: url(../images/common/arrow-pink-hover.svg);
+  }
+}
+
+// orange
+
+.p-menu-link__btn.p-menu-link__btn--orange {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: rem(57) rem(12);
+  font-size: rem(22);
+  line-height: 1.4;
+  background-color: $color-white;
+  border-radius: 20px;
+  border: 1px solid $color-orange;
+  width: 100%;
+  height: 100%;
+  @include mq(md) {
+    gap: rem(20);
+    max-width: rem(320);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+}
+
+.p-menu-link__btn.p-menu-link__btn--orange:hover {
+  @include mq(md) {
+    background-color: $color-orange;
+    color: $color-white;
+  }
+}
+
+.p-menu-link__btn.p-menu-link__btn--orange::before {
+  content: "";
+  background-image: url(../images/common/human-icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: rem(75);
+  height: rem(54);
+  position: absolute;
+  left: 11%;
+  top: 34%;
+  transition: transform 0.3s ease-in-out;
+}
+.p-menu-link__btn.p-menu-link__btn--orange:hover::before {
+  @include mq(md) {
+    background-image: url(../images/common/human-icon-hover.svg);
+  }
+}
+
+.p-menu-link__btn.p-menu-link__btn--orange:hover .p-menu-link__btn-arrow {
+  @include mq(md) {
+    background-color: $color-white;
+    color: $color-white;
+  }
+}
+
+.p-menu-link__btn-arrow.p-menu-link__btn-arrow--orange {
+  background-color: $color-orange;
+  border-color: $color-orange;
+  position: relative;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: rem(54);
+  height: rem(44);
+  border-width: 0.2rem;
+  border-style: solid;
+  border-radius: 20px 0 20px 0;
+  transition: transform 0.3s ease-in-out;
+}
+.p-menu-link__btn.p-menu-link__btn--orange .p-menu-link__btn-arrow::after {
+  content: "";
+  background-image: url(../images/common/arrow-down-right.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: rem(20);
+  height: rem(20);
+  position: absolute;
+}
+
+.p-menu-link__btn-text.p-menu-link__btn-text--orange {
+  color: $color-orange;
+  transition: color 0.3s ease-in-out;
+}
+.p-menu-link__btn-text.p-menu-link__btn-text--orange {
+  color: $color-orange;
+  transition: transform 0.3s ease-in-out;
+}
+.p-menu-link__btn.p-menu-link__btn--orange:hover .p-menu-link__btn-arrow {
+  @include mq(md) {
+    background-color: $color-white;
+    color: $color-white;
+  }
+}
+
+.p-menu-link__btn.p-menu-link__btn--orange:hover .p-menu-link__btn-arrow::after {
+  @include mq(md) {
+    background-image: url(../images/common/arrow-orange-hover.svg);
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+// navy
+.p-menu-link__btn.p-menu-link__btn--navy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: rem(57) rem(12);
+  font-size: rem(22);
+  line-height: 1.4;
+  background-color: $color-white;
+  border-radius: 20px;
+  border: 1px solid $color-navy;
+  width: 100%;
+  height: 100%;
+  @include mq(md) {
+    gap: rem(20);
+    max-width: rem(320);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+}
+
+.p-menu-link__btn.p-menu-link__btn--navy:hover {
+  @include mq(md) {
+    background-color: $color-navy;
+    color: $color-white;
+  }
+}
+
+.p-menu-link__btn.p-menu-link__btn--navy .p-menu-link__btn-text {
+  color: $color-navy;
+}
+.p-menu-link__btn.p-menu-link__btn--navy:hover .p-menu-link__btn-text {
+  @include mq(md) {
+    color: $color-white;
+  }
+}
+.p-menu-link__btn.p-menu-link__btn--navy::before {
+  content: "";
+  background-image: url(../images/common/heart-icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: rem(75);
+  height: rem(54);
+  position: absolute;
+  left: 11%;
+  top: 29%;
+  transition: transform 0.3s ease-in-out;
+}
+.p-menu-link__btn.p-menu-link__btn--navy:hover::before {
+  @include mq(md) {
+    background-image: url(../images/common/heart-icon-hover.svg);
+  }
+}
+
+.p-menu-link__btn.p-menu-link__btn--navy:hover .p-menu-link__btn-arrow {
+  @include mq(md) {
+    background-color: $color-white;
+    color: $color-white;
+  }
+}
+
+.p-menu-link__btn.p-menu-link__btn--navy:hover .p-menu-link__btn-arrow::after {
+  @include mq(md) {
+    background-image: url(../images/common/arrow-navy-hover.svg);
+  }
+}
+
+.p-menu-link__btn-arrow.p-menu-link__btn-arrow--navy {
+  background-color: $color-navy;
+  border-color: $color-navy;
+  position: relative;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: rem(54);
+  height: rem(44);
+  border-width: 0.2rem;
+  border-style: solid;
+  border-radius: 20px 0 20px 0;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.p-menu-link__btn-text.p-menu-link__btn-text--navy {
+  color: $color-navy;
+  transition: color 0.3s ease-in-out;
+}
+.p-menu-link__btn.p-menu-link__btn--navy:hover .p-menu-link__btn-text {
+  @include mq(md) {
+    color: $color-white;
+  }
+}
+.p-menu-link__btn.p-menu-link__btn--navy .p-menu-link__btn-arrow::after {
+  content: "";
+  background-image: url(../images/common/arrow-down-right.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: rem(20);
+  height: rem(20);
+  position: absolute;
+}

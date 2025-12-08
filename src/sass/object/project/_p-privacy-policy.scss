@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.p-privacy-policy__inner.l-inner {
+  max-width: rem(530);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  @include mq("md") {
+    max-width: rem(850);
+  }
+}
+
+.p-privacy-policy__title {
+  font-size: rem(24);
+  line-height: calc(35 / 24);
+  font-weight: $medium;
+  font-family: $heading-family;
+  @include mq("md") {
+    font-size: rem(32);
+    line-height: calc(46 / 32);
+  }
+}
+
+.p-privacy-policy__contents ol:first-of-type {
+  margin-top: rem(32);
+}
+
+.p-privacy-policy__contents p {
+  margin-top: rem(40);
+  font-size: rem(16);
+  line-height: 2;
+}
+.p-privacy-policy__contents ol {
+  list-style: decimal;
+}
+
+.p-privacy-policy__contents li {
+  font-size: rem(16);
+  line-height: 2;
+  font-weight: $normal;
+  margin-left: rem(13);
+}
+
+.p-privacy-policy__contents ul {
+  list-style: none;
+}
+.p-privacy-policy__contents ul li ul li {
+  list-style: disc;
+}

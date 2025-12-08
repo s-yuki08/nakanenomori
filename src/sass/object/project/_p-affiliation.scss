@@ -1,0 +1,88 @@
+@use "global" as *;
+
+.p-affiliation__inner.l-inner {
+  max-width: rem(600);
+  @include mq("md") {
+    max-width: rem(1020);
+  }
+}
+
+.p-affiliation__content {
+  margin-top: rem(15);
+  @include mq(md) {
+    margin-top: rem(30);
+  }
+}
+
+.p-affiliation__table-wrap {
+  width: 100%;
+  @include mq(md) {
+    max-width: rem(900);
+    margin: 0 auto;
+  }
+}
+
+.p-affiliation__table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid $color-gray;
+  font-size: rem(15);
+  text-align: center;
+  @include mq(md) {
+    font-size: rem(17);
+  }
+}
+
+.p-affiliation__table th,
+.p-affiliation__table td {
+  border: 1px solid $color-gray;
+  padding: rem(12) rem(10);
+  vertical-align: middle;
+  @include mq(md) {
+    padding: rem(27) rem(10);
+    width: 2%;
+  }
+}
+.p-affiliation__table th {
+  background: $color-gray-light-2;
+  font-weight: 700;
+}
+.p-affiliation__table td a {
+  transition: opacity 0.3s;
+}
+.p-affiliation__table td a:hover {
+  opacity: 0.8;
+}
+
+.p-affiliation__icon {
+  position: relative;
+  display: inline-block;
+  width: rem(20);
+  height: rem(20);
+  vertical-align: middle;
+  margin-left: rem(20);
+}
+
+.p-affiliation__icon::before {
+  background-image: url(../images/common/link-icon.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: rem(20);
+  height: rem(20);
+  top: -15%;
+  right: 50%;
+  position: absolute;
+  content: "";
+  z-index: 1;
+}
+
+.p-affiliation__table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* スムーズスクロール（iOS） */
+}
+
+.p-affiliation__table {
+  min-width: 600px; /* テーブル幅を広げてスクロール余地を作る */
+  border-collapse: collapse;
+  white-space: nowrap; /* 折り返し防止 */
+}

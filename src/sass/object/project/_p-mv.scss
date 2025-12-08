@@ -1,0 +1,447 @@
+@use "global" as *;
+
+.p-mv {
+  position: relative;
+  z-index: 0;
+  height: 100vh;
+  min-height: rem(400);
+}
+
+.p-mv__inner {
+  height: inherit;
+  min-height: inherit;
+}
+
+.p-mv::before {
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-image: url(../images/common/bg_sp.svg);
+  width: 100%;
+  height: rem(130);
+  bottom: rem(-1);
+  right: 0;
+  z-index: 2;
+  @include mq(md) {
+    position: absolute;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: rem(370);
+    bottom: rem(-3);
+    right: 0;
+    background-image: url(../images/common/mv_wave_pc.png);
+    background-position: top center;
+    @include mq(xxl) {
+      background-image: url(../images/common/mv_wave_pc.png);
+      height: rem(500);
+    }
+  }
+}
+
+.p-mv::after {
+  background-image: url(../images/common/bard_sp.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: rem(70);
+  height: rem(70);
+  position: absolute;
+  bottom: 8.5%;
+  left: 20%;
+  z-index: 2;
+  content: "";
+  @include mq(md) {
+    background-image: url(../images/common/mv_bard.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: rem(80);
+    height: rem(87);
+    bottom: 26%;
+    left: 20%;
+    z-index: 2;
+    @include mq(xxl) {
+      bottom: 17%;
+    }
+  }
+}
+
+.p-mv__img picture,
+.p-mv__img img {
+  height: inherit;
+  min-height: inherit;
+}
+
+.p-mv__swiper .swiper-img img,
+.p-mv__swiper .swiper-img picture img {
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
+}
+
+.p-mv__heading {
+  position: absolute;
+  z-index: 2;
+  top: 19%;
+  left: 5%;
+  color: $color-white;
+  text-align: left;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  @include mq(md) {
+    left: 48%;
+    width: initial;
+    top: 20%;
+  }
+}
+
+.p-mv__heading.p-mv__heading--sp {
+  color: $color-gray;
+  top: 19%;
+  left: 5%;
+  text-shadow: none;
+  @include mq(md) {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    left: 10%;
+    right: 0;
+    width: 100%;
+    top: 15%;
+    color: $color-white;
+  }
+}
+
+.p-mv__title {
+  font-size: rem(20);
+  font-family: $heading-family;
+  @include mq(md) {
+    font-size: rem(40);
+  }
+}
+
+.p-mv__btn {
+  position: absolute;
+  z-index: 2;
+  bottom: rem(30);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.p-mv__btn-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: rem(20);
+  @include mq(md) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(20);
+    max-width: rem(1100);
+    margin: 0 auto;
+    position: relative;
+  }
+}
+
+.p-mv__btn-list::before {
+  @include mq(xl) {
+    content: "";
+    background-image: url(../images/common/tree.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: rem(82);
+    height: rem(169);
+    position: absolute;
+    right: calc(50% - min(49vw, rem(668)));
+    bottom: 0;
+  }
+}
+
+// cyan
+.p-mv__btn-link {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: rem(25) rem(12);
+  font-size: rem(22);
+  line-height: 1.4;
+  background-color: $color-white;
+  border-radius: 20px;
+  border: 1px solid $color-cyan;
+  width: 100%;
+  height: 100%;
+  @include mq(md) {
+    gap: rem(20);
+    max-width: rem(400);
+    transition: background-color 0.3s;
+  }
+}
+
+.p-mv__btn-link::before {
+  content: "";
+  background-image: url(../images/common/medical-questionnaire-icon.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: rem(56);
+  height: rem(77);
+  position: absolute;
+  left: 10%;
+  top: 15%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.p-mv__btn-link:hover::before {
+  @include mq(md) {
+    background-image: url(../images/common/medical-questionnaire-icon-hover.svg);
+  }
+}
+.p-mv__btn-arrow {
+  background-color: $color-cyan;
+  position: relative;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: -0.05rem;
+  right: 0;
+  width: rem(54);
+  height: rem(44);
+  border-width: 0.2rem;
+  border-style: solid;
+  border-radius: 20px 0 20px 0;
+  transition: background-color 0.3s color 0.3s;
+  border: 1px solid $color-cyan;
+}
+
+.p-mv__btn-arrow::after {
+  content: "";
+  background-image: url(../images/common/arrow-down-right.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: rem(20);
+  height: rem(20);
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+}
+
+.p-mv__btn-link:hover {
+  @include mq(md) {
+    background-color: $color-cyan;
+    color: $color-white;
+  }
+}
+
+.p-mv__btn-link:hover .p-mv__btn-arrow {
+  @include mq(md) {
+    background-color: $color-white;
+    color: $color-white;
+  }
+}
+
+.p-mv__btn-link:hover .p-mv__btn-arrow::after {
+  @include mq(md) {
+    background-image: url(../images/common/arrow-down-right-hover.svg);
+  }
+}
+
+.p-mv__btn-text {
+  color: $color-cyan;
+  transition: color 0.3s ease;
+}
+.p-mv__btn-link:hover .p-mv__btn-text {
+  @include mq(md) {
+    color: $color-white;
+  }
+}
+// green
+
+.p-mv__btn-link.p-mv__btn-link--green {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: rem(25) rem(12);
+  font-size: rem(22);
+  line-height: 1.4;
+  background-color: $color-white;
+  border-radius: 20px;
+  border: 1px solid $color-green;
+  width: 100%;
+  height: 100%;
+  @include mq(md) {
+    gap: rem(20);
+    max-width: rem(400);
+    transition: background-color 0.3s color 0.3s;
+  }
+}
+
+.p-mv__btn-link.p-mv__btn-link--green:hover {
+  @include mq(md) {
+    background-color: $color-green;
+    color: $color-white;
+  }
+}
+
+.p-mv__btn-link.p-mv__btn-link--green::before {
+  content: "";
+  background-image: url(../images/common/stethoscope-icon.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: rem(70);
+  height: rem(68);
+  position: absolute;
+  left: 8%;
+  top: 20%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.p-mv__btn-link.p-mv__btn-link--green:hover::before {
+  @include mq(md) {
+    background-image: url(../images/common/stethoscope-icon-hover.svg);
+  }
+}
+
+.p-mv__btn-arrow.p-mv__btn-arrow--green {
+  background-color: $color-green;
+  border-color: $color-green;
+  position: relative;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: -0.05rem;
+  right: 0;
+  width: rem(54);
+  height: rem(44);
+  border-width: 0.2rem;
+  border-style: solid;
+  border-radius: 20px 0 20px 0;
+  transition: background-color 0.3s ease;
+}
+
+.p-mv__btn-link.p-mv__btn-link--green:hover .p-mv__btn-arrow {
+  @include mq(md) {
+    background-color: $color-white;
+    color: $color-white;
+  }
+}
+
+.p-mv__btn-link.p-mv__btn-link--green:hover .p-mv__btn-arrow::after {
+  @include mq(md) {
+    background-image: url(../images/common/arrow-green-hover.svg);
+  }
+}
+
+.p-mv__btn-text.p-mv__btn-text--green {
+  color: $color-green;
+  transition: color 0.3s;
+}
+
+.p-mv__btn-link.p-mv__btn-link--green:hover .p-mv__btn-text {
+  @include mq(md) {
+    color: $color-white;
+  }
+}
+// blue
+.p-mv__btn-link.p-mv__btn-link--blue {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: rem(25) rem(12);
+  font-size: rem(22);
+  line-height: 1.4;
+  background-color: $color-white;
+  border-radius: 20px;
+  border: 1px solid $color-blue;
+  width: 100%;
+  height: 100%;
+  @include mq(md) {
+    gap: rem(20);
+    max-width: rem(400);
+    transition: background-color 0.3s color 0.3s;
+  }
+}
+
+.p-mv__btn-link.p-mv__btn-link--blue:hover {
+  @include mq(md) {
+    background-color: $color-blue;
+    color: $color-white;
+  }
+}
+
+.p-mv__btn-link.p-mv__btn-link--blue::before {
+  content: "";
+  background-image: url(../images/common/recruit-icon.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: rem(76);
+  height: rem(54);
+  position: absolute;
+  left: 10%;
+  top: 25%;
+}
+
+.p-mv__btn-link.p-mv__btn-link--blue:hover::before {
+  @include mq(md) {
+    background-image: url(../images/common/recruit-icon-hover.svg);
+  }
+}
+
+.p-mv__btn-arrow.p-mv__btn-arrow--blue {
+  background-color: $color-blue;
+  border-color: $color-blue;
+  position: relative;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: -0.05rem;
+  right: 0;
+  width: rem(54);
+  height: rem(44);
+  border-width: 0.2rem;
+  border-style: solid;
+  border-radius: 20px 0 20px 0;
+  transition: background-color 0.3s color 0.3s;
+}
+
+.p-mv__btn-link.p-mv__btn-link--blue:hover .p-mv__btn-arrow {
+  @include mq(md) {
+    background-color: $color-white;
+    color: $color-white;
+  }
+}
+
+.p-mv__btn-link.p-mv__btn-link--blue:hover .p-mv__btn-arrow::after {
+  @include mq(md) {
+    background-image: url(../images/common/arrow-blue-hover.svg);
+  }
+}
+
+.p-mv__btn-text {
+  padding-left: rem(30);
+}
+
+.p-mv__btn-text.p-mv__btn-text--blue {
+  color: $color-blue;
+  transition: color 0.3s ease;
+}
+
+.p-mv__btn-link.p-mv__btn-link--blue:hover .p-mv__btn-text {
+  @include mq(md) {
+    color: $color-white;
+  }
+}

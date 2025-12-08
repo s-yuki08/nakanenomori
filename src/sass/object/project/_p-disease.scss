@@ -1,0 +1,54 @@
+@use "global" as *;
+
+.p-disease__inner {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 rem(15);
+  @include mq("md") {
+    max-width: rem(900);
+    padding: 0 rem(25);
+  }
+}
+
+/* 見出し */
+.p-disease__title {
+  width: 100%;
+  font-size: rem(20);
+  display: flex;
+  align-items: center;
+  gap: rem(12);
+  font-weight: 700;
+  color: $color-black;
+  margin: 0 0 rem(14);
+  font-family: $heading-family;
+  @include mq("md") {
+    font-size: rem(22);
+  }
+}
+
+/* 本文 */
+.p-disease__body {
+  color: $color-black;
+  font-size: rem(16);
+  line-height: 2; /* 画像の行間に合わせて広めに */
+  letter-spacing: 0.02em;
+  @include mq("md") {
+    max-width: rem(780);
+    margin: 0 auto;
+  }
+}
+.p-disease__body p {
+  margin: 0;
+}
+
+/* SP調整 */
+@media (max-width: 640px) {
+  .p-disease__title {
+    font-size: rem(20);
+    margin-bottom: rem(12);
+  }
+  .p-disease__body {
+    font-size: rem(15);
+    line-height: 1.9;
+  }
+}

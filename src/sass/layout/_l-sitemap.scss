@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.l-sitemap {
+  padding-top: rem(100);
+  padding-bottom: rem(180);
+  @include mq("md") {
+    padding-top: rem(300);
+    padding-bottom: rem(300);
+  }
+}

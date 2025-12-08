@@ -1,0 +1,229 @@
+@use "global" as *;
+
+.p-hours {
+  background-color: #f8fffd;
+  @include mq("md") {
+    background-color: transparent;
+  }
+}
+
+.p-hours__heading {
+  padding-top: rem(35);
+  padding-left: rem(15);
+  padding-right: rem(15);
+  @include mq("md") {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.p-hours__title {
+  font-weight: $bold;
+  font-size: rem(20);
+  color: $color-navy;
+  letter-spacing: 0.05em;
+  text-align: left;
+  font-family: $heading-family;
+  @include mq("md") {
+    font-size: rem(22);
+    text-align: center;
+    letter-spacing: 0.3em;
+  }
+}
+
+.p-hours__wrapper {
+  margin-top: rem(18);
+  padding-left: rem(15);
+  padding-right: rem(15);
+  background-color: #f8fffd;
+  @include mq("md") {
+    margin-top: rem(21);
+    padding-left: rem(25);
+    padding-right: rem(25);
+    padding-top: rem(58);
+    padding-bottom: rem(58);
+  }
+}
+.p-hours__box {
+  border: 2px solid $color-gray-light;
+  background: $color-white;
+  padding: 0;
+  border-radius: rem(20);
+  overflow: hidden;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+  width: 100%;
+  max-width: rem(600);
+  margin: 0 auto;
+  @include mq("md") {
+    border-radius: rem(25);
+    max-width: rem(940);
+  }
+}
+
+.p-hours__table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 16px;
+}
+.p-hours__headCell,
+.p-hours__label,
+.p-hours__cell {
+  height: rem(68);
+  padding: rem(12) rem(10);
+  background: $color-white;
+  @include mq("md") {
+    height: rem(73);
+  }
+}
+.p-hours__headCell {
+  font-weight: $medium;
+  font-size: rem(20);
+  text-align: center;
+  background: $color-white;
+  font-family: $heading-family;
+  @include mq("md") {
+    border-left: 1px solid $color-gray-light;
+    font-size: rem(20);
+  }
+}
+
+.p-hours__headCell:first-child {
+  @include mq("md") {
+    border-left: 1px solid $color-gray-light;
+  }
+}
+
+.p-hours__label {
+  width: rem(220);
+  white-space: nowrap;
+  text-align: center;
+  background: $color-white;
+  font-weight: $medium;
+  @include mq("md") {
+    width: rem(250);
+    font-size: rem(20);
+  }
+}
+.p-hours__label--blank {
+  width: rem(220);
+  border: none;
+  background: $color-white;
+  @include mq("md") {
+    width: rem(264);
+  }
+}
+
+.p-hours__table tr:first-child th:first-child {
+  border-left: none;
+}
+
+.p-hours__label--last {
+  @include mq("md") {
+    border-top: 1px solid $color-gray-light;
+  }
+}
+
+.p-hours__dot {
+  width: rem(20);
+  height: rem(20);
+  display: inline-block;
+  border-radius: 50%;
+  background: $color-navy;
+  vertical-align: middle;
+  @include mq("md") {
+    width: rem(30);
+    height: rem(30);
+  }
+}
+
+.p-hours__dash {
+  display: inline-block;
+  font-size: rem(20);
+  color: $color-black;
+}
+
+.p-hours__note {
+  text-align: left;
+  color: $color-gray;
+  font-size: rem(12);
+  @include mq("md") {
+    text-align: right;
+    font-size: rem(16);
+  }
+}
+
+.p-hours__table--sp {
+  display: table;
+  table-layout: fixed;
+  font-size: rem(16);
+  @include mq("md") {
+    display: none;
+  }
+}
+.p-hours__headBlank {
+  width: 15%;
+  border-right: 1px solid $color-gray-light;
+  border-bottom: 1px solid $color-gray-light;
+  height: rem(50);
+  background: $color-white;
+}
+.p-hours__head {
+  text-align: center;
+  // border-left: 1px solid $color-gray-light;
+  border-bottom: 1px solid $color-gray-light;
+  height: rem(50);
+  background: $color-white;
+}
+.p-hours__head--am {
+  border-right: 1px solid $color-gray-light;
+}
+.p-hours__headLine1 {
+  display: block;
+  font-weight: $medium;
+  font-size: rem(16);
+  padding-top: rem(6);
+  line-height: 1;
+}
+.p-hours__headLine2 {
+  display: block;
+  padding-top: rem(6);
+  font-weight: $medium;
+  font-size: rem(16);
+}
+
+.p-hours__day {
+  text-align: center;
+  font-weight: $medium;
+  border-top: 1px solid $color-gray-light;
+  border-right: 1px solid $color-gray-light;
+  height: rem(30);
+  width: 15%;
+  background: $color-white;
+}
+.p-hours__cell {
+  text-align: center;
+  border-top: 1px solid $color-gray-light;
+  border-left: 1px solid $color-gray-light;
+  height: rem(30);
+  background: $color-white;
+}
+
+.p-hours__table--pc {
+  display: none;
+  @include mq("md") {
+    display: table;
+  }
+}
+.p-hours__note-wrapper {
+  width: 100%;
+  max-width: rem(600);
+  text-align: left;
+  margin: 0 auto;
+  padding-top: rem(8);
+  @include mq("md") {
+    max-width: rem(940);
+    text-align: right;
+    padding-top: rem(14);
+  }
+}

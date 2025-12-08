@@ -1,0 +1,191 @@
+@use "global" as *;
+
+.p-hospitalization {
+  position: relative;
+  padding-top: rem(100);
+  @include mq("md") {
+    padding-top: rem(150);
+  }
+}
+
+.p-hospitalization__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: rem(20);
+  @include mq("md") {
+    flex-direction: row;
+    gap: rem(40);
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* ===== left ===== */
+.p-hospitalization__left {
+  position: relative;
+  margin-top: rem(40);
+  @include mq("md") {
+    width: 40%;
+    margin-top: rem(60);
+  }
+}
+.p-hospitalization__headline {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.p-hospitalization__title {
+  font-size: rem(20);
+  color: $color-pink;
+  font-weight: $bold;
+  position: relative;
+  padding-left: rem(60);
+  font-family: $heading-family;
+  @include mq("md") {
+    font-size: rem(25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.p-hospitalization__title::before {
+  content: "";
+  background-image: url(../images/common/bed-icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: rem(50);
+  height: rem(50);
+  position: absolute;
+  left: -4%;
+  top: -40%;
+  @include mq("md") {
+    background-size: cover;
+    width: rem(70);
+    height: rem(65);
+    left: -5%;
+    top: rem(-23);
+  }
+}
+
+.p-hospitalization__title::after {
+  background-color: $color-pink;
+  border-radius: 2px;
+  content: "";
+  height: rem(2);
+  width: rem(140);
+  margin-left: rem(20);
+}
+
+.p-hospitalization__nav {
+  margin-top: rem(30);
+  width: 100%;
+  @include mq("md") {
+    margin-top: rem(60);
+    width: 60%;
+    position: relative;
+  }
+}
+
+.p-hospitalization__nav::before {
+  display: none;
+  @include mq("md") {
+    display: block;
+    content: "";
+    background-image: url(../images/common/leaf_02.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: rem(60);
+    height: rem(130);
+    position: absolute;
+    right: calc(50% - min(49vw, rem(280)));
+    bottom: -15%;
+  }
+}
+
+.p-hospitalization__list {
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
+  width: 100%;
+  @include mq("md") {
+    margin-left: rem(40);
+  }
+}
+.p-hospitalization__item a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: rem(12) rem(10) rem(12) 0;
+  color: $color-black;
+  font-size: rem(18);
+  transition: color 0.15s ease, border-color 0.15s ease;
+  @include mq("md") {
+    font-size: rem(20);
+  }
+}
+.p-hospitalization__item a:hover {
+  opacity: 0.7;
+  @include mq("md") {
+    color: $color-pink;
+  }
+}
+.p-hospitalization__item.p-hospitalization__item--orange a:hover {
+  opacity: 0.7;
+  @include mq("md") {
+    color: $color-orange;
+  }
+}
+.p-hospitalization__arr {
+  background-image: url(../images/common/arrow-right-pink.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: rem(20);
+  height: rem(20);
+}
+
+.p-hospitalization__arr.p-hospitalization__arr--orange {
+  background-image: url(../images/common/arrow-right-orange.svg);
+}
+/* decorative leaves */
+.p-hospitalization__leaf {
+  position: absolute;
+  opacity: 0.9;
+}
+.p-hospitalization__leaf--lt {
+  left: -6px;
+  bottom: -18px;
+  width: 120px;
+}
+.p-hospitalization__leaf--cr {
+  right: 20%;
+  top: 56%;
+  width: 110px;
+  transform: rotate(-18deg);
+}
+
+/* ===== right / media ===== */
+.p-hospitalization__right {
+  width: 100%;
+  @include mq("md") {
+    width: 60%;
+  }
+}
+
+.p-hospitalization__image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.p-hospitalization__image img {
+  aspect-ratio: 16/9;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  @include mq("md") {
+    aspect-ratio: 642/600;
+  }
+}

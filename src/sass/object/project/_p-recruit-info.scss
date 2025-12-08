@@ -1,0 +1,178 @@
+@use "global" as *;
+
+.p-recruit-info__inner.l-inner {
+  width: 100%;
+  @include mq(md) {
+    max-width: rem(900);
+    margin: 0 auto;
+  }
+}
+
+.p-recruit-info__head {
+  padding-bottom: rem(20);
+  border-bottom: 1px solid $color-gray-light;
+  @include mq(md) {
+    padding-bottom: rem(30);
+  }
+}
+
+.p-recruit-info__title {
+  font-size: rem(24);
+  font-weight: $bold;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  font-family: $recruit-family;
+  @include mq(md) {
+    font-size: rem(30);
+  }
+}
+
+.p-recruit-info__list {
+  height: inherit;
+}
+
+.p-recruit-info__item {
+  height: inherit;
+  width: 100%;
+  border-bottom: 1px solid $color-gray-light;
+  @include mq(md) {
+    // max-width: rem(760);
+    margin: 0 auto;
+  }
+}
+
+.p-recruit-info__item-title {
+  width: 100%;
+  text-align: left;
+  font-size: rem(16);
+  font-weight: $medium;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  padding: rem(18) rem(20) rem(18) 0;
+  cursor: pointer;
+  position: relative;
+  font-family: $recruit-family;
+  @include mq(md) {
+    font-size: rem(22);
+    padding: rem(43) rem(20) rem(43) rem(36);
+  }
+}
+
+.p-recruit-info__item-title {
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.p-recruit-info__item-title::after {
+  content: "";
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background: url("../images/common/arrow-gray.svg") no-repeat center/contain;
+  transform: translateY(-50%) rotate(0deg); /* 初期：右向き */
+  transition: transform 0.3s ease;
+}
+
+/* 開いたとき：下向き */
+.p-recruit-info__item-title.is-open::after {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.p-recruit-info__item-content.is-open {
+  display: block;
+}
+
+.p-recruit-info__item-body {
+  max-width: rem(760);
+  margin: rem(24) auto;
+}
+
+.p-recruit-info__item-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  font-size: rem(16);
+  line-height: 1.9;
+  border: 1px solid $color-gray-light;
+  border-radius: 20px;
+  font-family: $recruit-family;
+}
+
+/* 上端行だけ上線なし／以降の行は水平罫線 */
+.p-recruit-info__item-table tr + tr th,
+.p-recruit-info__item-table tr + tr td {
+  border-top: 1px solid $color-gray-light;
+}
+
+.p-recruit-info__item-table th {
+  width: 9.5em;
+  padding: rem(20) rem(18);
+  text-align: center;
+  vertical-align: middle;
+  font-weight: $bold;
+  color: $color-black;
+  border-right: 1px solid $color-gray-light;
+  word-break: keep-all;
+}
+
+.p-recruit-info__item-table td {
+  padding: rem(20) rem(22);
+  vertical-align: middle;
+  color: $color-black;
+  font-family: $recruit-family;
+}
+
+.p-recruit-info__no-detail,
+.p-recruit-info__no-job {
+  text-align: center;
+  font-size: rem(16);
+  padding: rem(10) 0;
+  color: #555;
+  font-family: $recruit-family;
+}
+
+.p-recruit-info__item-table {
+  display: block;
+  min-width: rem(530); /* 最低幅を指定（調整OK） */
+  width: 100%;
+  border-spacing: 0;
+  table-layout: fixed;
+  font-size: rem(16);
+  line-height: 1.9;
+  border: 1px solid $color-gray-light;
+  border-radius: 20px;
+  font-family: $recruit-family;
+  @include mq(md) {
+    display: table; /* 通常の表レイアウトに戻す */
+    width: 100%;
+    min-width: auto;
+  }
+}
+.p-recruit-info__item-body {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* スムーズスクロール */
+  font-family: $recruit-family;
+}
+
+/* 見た目補正：スクロールバー位置の余白 */
+.p-recruit-info__item-body::-webkit-scrollbar {
+  height: 6px;
+}
+
+.p-recruit-info__item-body {
+  overflow-x: auto;
+  @include mq(md) {
+    overflow-x: visible;
+  }
+}
+.p-recruit-info__item-body::-webkit-scrollbar {
+  height: 6px;
+}
+.p-recruit-info__item-body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}

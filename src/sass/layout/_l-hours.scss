@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.l-hours {
+  padding-top: rem(54);
+  padding-bottom: rem(28);
+  @include mq(md) {
+    padding-top: rem(103);
+  }
+}

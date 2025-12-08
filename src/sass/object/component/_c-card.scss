@@ -1,0 +1,73 @@
+@use "global" as *;
+
+/* ============================================
+ Component - Card
+ ============================================ */
+.c-card {
+  background: $color-blue-gray;
+  border-radius: rem(12);
+  padding: rem(10) rem(10);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: $recruit-family;
+  @include mq(md) {
+    padding: rem(32) rem(24);
+  }
+}
+
+.c-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.c-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.c-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.c-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.c-card__label {
+  font-size: 11px;
+  color: $color-gray;
+  margin-bottom: rem(24);
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  position: relative;
+  font-family: $recruit-family;
+}
+
+.c-card__label::before {
+  content: "";
+  position: absolute;
+  bottom: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: rem(26);
+  height: 1px;
+  background: $color-blue;
+}
+
+.c-card__date {
+  font-size: 10px;
+  color: #aaa;
+  font-weight: 400;
+  font-family: $recruit-family;
+  margin-top: rem(10);
+}

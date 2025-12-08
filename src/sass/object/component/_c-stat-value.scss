@@ -1,0 +1,24 @@
+@use "global" as *;
+
+/* ============================================
+ Component - Stat Value (平均年齢)
+ ============================================ */
+.c-stat-value {
+  font-size: rem(36);
+  font-weight: 700;
+  color: #6494d3;
+  line-height: 1;
+  margin-top: rem(32);
+  font-feature-settings: "tnum";
+  font-family: $recruit-family;
+  @include mq(md) {
+    font-size: rem(68);
+  }
+}
+
+.c-stat-value__unit {
+  font-size: rem(12);
+  color: #aaa;
+  font-weight: 400;
+  font-family: $recruit-family;
+}

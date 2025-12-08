@@ -1,0 +1,285 @@
+@use "global" as *;
+
+.p-medicalDock__inner.l-inner {
+  max-width: rem(1080);
+}
+
+.p-medicalDock__wrapper {
+  margin-top: rem(15);
+  @include mq("md") {
+    margin-top: rem(30);
+  }
+}
+
+.p-medicalDock__body {
+  width: 100%;
+  @include mq("md") {
+    max-width: rem(960);
+    margin: 0 auto;
+  }
+}
+
+.p-medicalDock__text {
+  font-size: rem(16);
+  line-height: 1.9;
+  letter-spacing: 0.05em;
+  @include mq("md") {
+    font-size: rem(18);
+  }
+}
+
+.p-medicalDock__contents {
+  width: 100%;
+  max-width: rem(672);
+  margin: 0 auto;
+  @include mq("md") {
+    max-width: rem(960);
+  }
+}
+
+.p-medicalDock__heading {
+  margin-top: rem(30);
+  @include mq("md") {
+    margin-top: rem(60);
+  }
+}
+
+.p-medicalDock__headingTitle {
+  border: 1px solid $color-navy;
+  border-radius: 20px;
+  padding: rem(5) rem(30);
+  background: $color-white;
+  font-size: rem(16);
+  font-weight: $bold;
+  color: $color-navy;
+  text-align: center;
+  width: 100%;
+  max-width: rem(150);
+  font-family: $heading-family;
+  @include mq("md") {
+    font-size: rem(17);
+  }
+}
+.p-medicalDock__headingTitle.p-medicalDock__headingTitle--middle {
+  max-width: rem(200);
+}
+.p-medicalDock__tableWrap {
+  overflow-x: auto;
+  margin-top: rem(15);
+  @include mq("md") {
+    margin-top: rem(30);
+  }
+}
+
+.p-medicalDock__tableInner {
+  width: 100%;
+  @include mq("md") {
+    max-width: rem(880);
+    margin: 0 auto;
+  }
+}
+
+.p-medicalDock__table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid $color-gray-light;
+  font-size: rem(14);
+}
+.p-medicalDock__table th,
+.p-medicalDock__table td {
+  border: 1px solid $color-gray-light;
+  padding: rem(10) rem(12);
+  vertical-align: top;
+}
+
+.p-medicalDock__table thead th {
+  background: $color-gray-light-2;
+  text-align: center;
+  font-weight: 700;
+  font-size: rem(14);
+  @include mq("md") {
+    font-size: rem(16);
+  }
+}
+
+.p-medicalDock__table tbody th {
+  width: 16%;
+  background: rgba($color: $color-navy, $alpha: 0.07);
+  text-align: center;
+  font-weight: 700;
+  font-size: rem(14);
+  @include mq("md") {
+    font-size: rem(16);
+  }
+}
+.p-medicalDock__table td {
+  line-height: 1.8;
+  font-size: rem(14);
+  @include mq("md") {
+    font-size: rem(16);
+  }
+}
+.p-medicalDock__table--option tbody th {
+  text-align: left;
+  padding-left: 14px;
+}
+.p-medicalDock__priceCol {
+  text-align: right;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.p-medicalDock__priceCardWrapper {
+  margin-top: rem(16);
+  @include mq("md") {
+    margin-top: rem(22);
+  }
+}
+
+.p-medicalDock__priceCard {
+  background: $color-white;
+  width: 100%;
+  @include mq("md") {
+    max-width: rem(880);
+    margin: 0 auto;
+  }
+}
+
+.p-medicalDock__priceRow {
+  display: grid;
+  grid-template-columns: rem(180) 1fr;
+  align-items: center;
+  border: 1px solid $color-gray-light;
+  @include mq("md") {
+    grid-template-columns: rem(180) 1fr;
+  }
+}
+
+.p-medicalDock__priceCard + .p-medicalDock__priceCard {
+  margin-top: rem(10);
+  @include mq("md") {
+    margin-top: rem(20);
+  }
+}
+
+.p-medicalDock__priceRow > span {
+  padding: rem(14) rem(10);
+  border-right: 1px solid $color-gray-light;
+}
+.p-medicalDock__priceRow > span:last-child {
+  border-right: 0;
+  text-align: center;
+  font-weight: 700;
+}
+.p-medicalDock__priceLabel {
+  background: rgba($color: $color-navy, $alpha: 0.07);
+  padding: rem(14) rem(10);
+  font-weight: $bold;
+  height: 100%;
+  text-align: center;
+  font-size: rem(14);
+  @include mq("md") {
+    font-size: rem(17);
+  }
+}
+.p-medicalDock__priceValue {
+  padding: rem(14) rem(10);
+  text-align: center;
+  font-weight: 700;
+  font-size: rem(14);
+  @include mq("md") {
+    font-size: rem(22);
+  }
+}
+.p-medicalDock__priceValue small {
+  font-size: rem(9);
+  @include mq("md") {
+    font-weight: 400;
+    font-size: rem(17);
+  }
+}
+
+.p-medicalDock__price {
+  display: grid;
+  grid-template-columns: rem(180) 1fr;
+  border: 1px solid $color-gray-light;
+  background: $color-white;
+  align-items: center;
+  @include mq("md") {
+    grid-template-columns: rem(300) 1fr;
+  }
+}
+
+.p-medicalDock__price + .p-medicalDock__price {
+  border-bottom: 0;
+}
+
+.p-medicalDock__price:first-child {
+  border-bottom: 0;
+}
+.p-medicalDock__price:last-child {
+  border-bottom: 1px solid $color-gray-light;
+}
+
+.p-medicalDock__price > span {
+  padding: rem(14) rem(10);
+  border-right: 1px solid $color-gray-light;
+}
+.p-medicalDock__price > span:last-child {
+  border-right: 0;
+  text-align: center;
+  font-weight: $bold;
+  font-size: rem(17);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include mq("md") {
+    font-size: rem(22);
+  }
+}
+
+.p-medicalDock__tableWrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-inline: rem(-16);
+  padding-inline: rem(16);
+}
+
+.p-medicalDock__tableInner {
+  min-width: rem(720); /* スクロール発生のための最小幅 */
+}
+
+.p-medicalDock__note {
+  font-size: rem(11.5);
+  margin-top: rem(10);
+  @include mq("md") {
+    font-size: rem(16);
+    margin-left: rem(40);
+  }
+}
+
+.p-medicalDock__optionHeading {
+  font-size: rem(16);
+  font-weight: 700;
+  margin-top: rem(25);
+  padding-left: rem(20);
+  @include mq("md") {
+    font-size: rem(18);
+    max-width: rem(880);
+    margin: rem(35) auto 0;
+  }
+}
+.p-medicalDock__optionDot {
+  position: relative;
+}
+.p-medicalDock__optionDot::before {
+  content: "";
+  display: inline-block;
+  width: rem(15);
+  height: rem(15);
+  border-radius: 50%;
+  background: $color-blue;
+  left: -22px;
+  top: 1px;
+  position: absolute;
+}

@@ -1,0 +1,7 @@
+@use "global" as *;
+
+.p-line {
+  width: 100%;
+  height: rem(20);
+  background-color: $color-green;
+}

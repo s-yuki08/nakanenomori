@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.l-visit {
+  padding-top: rem(40);
+  padding-bottom: rem(60);
+  @include mq(md) {
+    padding-top: rem(100);
+    padding-bottom: rem(100);
+  }
+}

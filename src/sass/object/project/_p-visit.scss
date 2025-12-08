@@ -1,0 +1,200 @@
+@use "global" as *;
+
+.p-visit__inner.l-inner {
+  padding: 0 rem(15);
+  margin: 0 auto;
+  max-width: rem(600);
+  width: 100%;
+  @include mq(md) {
+    max-width: rem(1080);
+    padding: 0 rem(20);
+  }
+}
+
+/* タイトル */
+.p-visit__title {
+  display: flex;
+  align-items: center;
+  gap: rem(12);
+  font-weight: 700;
+  font-size: rem(20);
+  color: $color-black;
+  font-family: $heading-family;
+}
+.p-visit__dot {
+  width: rem(16);
+  height: rem(16);
+  border-radius: 50%;
+  background: $color-orange;
+}
+
+.p-visit__tableWrap {
+  margin-top: rem(14);
+  @include mq(md) {
+    margin-top: rem(28);
+  }
+}
+
+.p-visit__table-inner {
+  width: 100%;
+  @include mq(md) {
+    max-width: rem(960);
+    margin: 0 auto;
+  }
+}
+.p-visit__table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid $color-gray-light;
+  background: $color-white;
+  text-align: center;
+}
+.p-visit__thead {
+  background: $color-gray-light-2;
+  padding: rem(12) rem(8);
+  border-bottom: 1px solid $color-gray-light;
+  font-weight: $normal;
+  letter-spacing: 0.35em;
+  font-family: $base-font-family;
+  @include mq(md) {
+    font-size: rem(18);
+  }
+}
+.p-visit__label {
+  width: 36%;
+  text-align: center;
+  background: #fafafa;
+  border-right: 1px solid $color-gray-light;
+  border-bottom: 1px solid $color-gray-light;
+  padding: rem(14) rem(8);
+  font-weight: $medium;
+  font-size: rem(14);
+  font-family: $base-font-family;
+  @include mq(md) {
+    width: 30%;
+    font-size: rem(18);
+  }
+}
+.p-visit__time {
+  text-align: center;
+  padding: rem(14) rem(8);
+  border-bottom: 1px solid $color-gray-light;
+  font-size: rem(14);
+  @include mq(md) {
+    font-size: rem(22);
+  }
+}
+.p-visit__table tbody tr:last-child .p-visit__label,
+.p-visit__table tbody tr:last-child .p-visit__time {
+  border-bottom: 0;
+}
+
+.p-visit__note {
+  color: $color-gray;
+  font-size: rem(11);
+  margin-top: rem(8);
+  @include mq(md) {
+    font-size: rem(13);
+    margin-top: rem(12);
+  }
+}
+
+/* ===== card ===== */
+.p-visit__card {
+  margin-top: rem(28);
+  @include mq(md) {
+    margin-top: rem(48);
+  }
+}
+
+.p-visit__card-wrapper {
+  width: 100%;
+  @include mq(md) {
+    max-width: rem(800);
+    margin: 0 auto;
+  }
+}
+
+.p-visit__card-content {
+  padding: rem(20) rem(15);
+  border: 3px solid $color-orange;
+  border-radius: 18px;
+  @include mq(md) {
+    padding: rem(20) rem(15);
+  }
+}
+
+.p-visit__lead {
+  color: $color-orange;
+  font-weight: $medium;
+  font-family: $heading-family;
+  font-size: rem(17);
+  text-align: left;
+  @include mq(md) {
+    text-align: center;
+    font-size: rem(20);
+  }
+}
+.p-visit__lead.p-visit__lead--center {
+  margin-top: rem(33);
+  @include mq(md) {
+    margin-top: rem(29);
+  }
+}
+.p-visit__text {
+  color: $color-black;
+  line-height: 1.9;
+  font-size: rem(14);
+  margin-top: rem(21);
+  @include mq(md) {
+    font-size: rem(16);
+    text-align: center;
+    margin-top: rem(29);
+  }
+}
+
+.p-visit__text-last {
+  margin-top: rem(18);
+  @include mq(md) {
+    margin-top: rem(29);
+  }
+}
+
+/* ===== caution ===== */
+.p-visit__caution {
+  margin-top: rem(8);
+  @include mq(md) {
+    margin-top: rem(15);
+  }
+}
+
+.p-visit__cautionTtl {
+  margin: rem(14) 0 rem(8);
+  font-weight: 700;
+  color: $color-gray;
+  font-size: rem(15);
+}
+.p-visit__list {
+  font-size: rem(14);
+  text-indent: -1em;
+  margin-left: rem(10);
+  color: $color-gray;
+  line-height: 1.9;
+  @include mq(md) {
+    text-indent: -1em;
+    margin-left: rem(15);
+  }
+}
+.p-visit__list li {
+  margin: rem(4) 0;
+}
+
+.p-visit__caution-wrapper {
+  width: 100%;
+  @include mq(md) {
+    max-width: rem(860);
+    margin: 0 auto;
+    padding: 0 rem(10);
+  }
+}

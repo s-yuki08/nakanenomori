@@ -1,0 +1,121 @@
+@use "sass:math";
+
+////////////////////
+// インナー幅設定
+////////////////////
+// コンテンツのインナー幅（最も共通の幅が多い部分）
+$inner: 1110px;
+// ※キャンパス幅ではなくインナーの幅を指す
+
+// 余白
+$padding-pc: 20px;
+$padding-sp: 15px;
+// ※PC時：デザインカンプの余白の幅ではない。PC時は通常25pxで大丈夫！
+
+////////////////////
+// フォント設定
+////////////////////
+$base-font-family: "I-OTFゴシックオールドPro M";
+$heading-family: "I-OTFゴシックオールドPro D";
+$recruit-family: "TsukuGoPr5-R-DINNextLTPro-Light";
+// ※検証ツールでしっかり反映されているか確認する
+
+body {
+  font-family: $base-font-family;
+}
+
+// フォントウェイト
+$normal: 400;
+$medium: 500;
+$bold: 700;
+
+////////////////////
+// 色の指定
+////////////////////
+
+//色指定（共通性のあるものは出来る限り指定すると良い）
+// ==============================
+// Color Variables
+// ==============================
+
+// Text Colors
+$color-green: #13b979;
+$color-blue: #1346b9;
+$color-cyan: #13acb9;
+$color-navy: #232e83;
+$color-periwinkle: #7990c4;
+$color-blue-gray: #f6f8fc;
+$color-black: #000000;
+$color-orange: #ffa934;
+$color-pink: #ff649f;
+$color-white: #fff;
+$color-gray: #707070;
+$color-gray-light: #adadad;
+$color-gray-light-2: #f4f4f4;
+
+// Background Colors
+$color-bg: #f4f4f4;
+
+////////////////////
+// メディアクエリとブレークポイントの設定
+////////////////////
+
+//ブレイクポイント
+$breakpoints: (
+  sm: 600,
+  md: 768,
+  lg: 1024,
+  xl: 1440,
+  xxl: 1800,
+);
+
+//メディアクエリー
+$mediaquerys: (
+  sm: "screen and (min-width: #{map-get($breakpoints,'sm')}px)",
+  md: "screen and (min-width: #{map-get($breakpoints,'md')}px)",
+  lg: "screen and (min-width: #{map-get($breakpoints,'lg')}px)",
+  xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
+  xxl: "screen and (min-width: #{map-get($breakpoints,'xxl')}px)",
+);
+
+// @include mq(){}で書くとブレークポイントが反映される（初期値はmd）
+@mixin mq($mediaquery: md) {
+  @media #{map-get($mediaquerys, $mediaquery)} {
+    @content;
+  }
+}
+
+// remへの計算式（16pxを基準としている。10pxを基準とする場合は16を10に変更する）
+@function rem($pixels) {
+  @return math.div($pixels, 16) * 1rem;
+}
+
+////////////////////
+// 非表示設定
+////////////////////
+
+//768px以上を表示
+.u-desktop {
+  display: none;
+  @include mq("md") {
+    display: block;
+  }
+}
+
+//モバイルのみ表示
+.u-mobile {
+  @include mq("md") {
+    display: none;
+  }
+}
+
+/* ============================================
+ Utility
+ ============================================ */
+.u-text-primary {
+  color: #6494d3;
+}
+
+.u-text-secondary {
+  color: #aaa;
+}

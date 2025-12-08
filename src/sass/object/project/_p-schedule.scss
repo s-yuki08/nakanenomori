@@ -1,0 +1,111 @@
+@use "global" as *;
+
+.p-schedule__inner {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 rem(15);
+  @include mq("md") {
+    padding: 0 rem(25);
+    max-width: rem(900);
+  }
+}
+.p-schedule__tableWrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: rem(15);
+  @include mq("md") {
+    margin-top: rem(30);
+  }
+}
+.p-schedule__table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid $color-gray-light;
+  background: $color-white;
+  text-align: center;
+  // Safari安定化
+  table-layout: fixed; // ← 幅計算を安定させる
+  min-width: rem(780); // ← SP時の横スクロール前提の最小幅
+}
+/* ヘッダー */
+.p-schedule__th {
+  background: $color-gray-light-2;
+  border-right: 1px solid $color-gray-light;
+  border-bottom: 1px solid $color-gray-light;
+  padding: rem(12) rem(8);
+  font-weight: 700;
+}
+.p-schedule__th:last-child {
+  border-right: 0;
+}
+
+.p-schedule__th--blank {
+  width: rem(92);
+  @include mq("md") {
+    width: rem(110);
+  }
+}
+
+.p-schedule__rowLabel {
+  width: rem(92);
+  padding: rem(14) rem(6);
+  background: $color-gray-light-2;
+  border-right: 1px solid $color-gray-light;
+  border-bottom: 1px solid $color-gray-light;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  @include mq("md") {
+    padding: rem(18) rem(8);
+    width: rem(110);
+  }
+}
+
+.p-schedule__cell {
+  font-size: rem(15);
+  padding: rem(14) rem(6);
+  border-right: 1px solid $color-gray-light;
+  border-bottom: 1px solid $color-gray-light;
+  vertical-align: baseline;
+  font-size: rem(16);
+  // width: 12%;
+  @include mq("md") {
+    padding: rem(16) rem(6);
+    font-size: rem(18);
+  }
+}
+
+.p-schedule__cell:last-child {
+  border-right: 0;
+}
+
+.c-chip {
+  height: rem(26);
+  min-width: rem(52);
+  font-size: rem(13);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  // gap: rem(6);
+  min-width: 56px;
+  height: rem(28);
+  padding: 0 rem(12);
+  border-radius: 20px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  @include mq("md") {
+    font-size: rem(16);
+  }
+}
+.c-chip--green {
+  background: $color-green;
+  color: $color-white;
+}
+
+.u-note {
+  display: block;
+  margin-top: rem(6);
+  font-size: rem(10);
+  color: $color-gray;
+}

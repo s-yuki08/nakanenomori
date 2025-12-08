@@ -1,0 +1,67 @@
+@use "global" as *;
+
+.p-flow-list {
+  counter-reset: number;
+}
+
+.p-flow-list__item {
+  display: flex;
+}
+
+.p-flow-list__item + .p-flow-list__item {
+  margin-top: rem(20);
+}
+
+.p-flow-list__item::before {
+  content: counter(number);
+  counter-increment: number;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: rem(40);
+  font-size: rem(18);
+  line-height: 1;
+  color: $color-white;
+  background-color: $color-cyan;
+  @include mq(md) {
+    width: rem(85);
+    font-size: rem(24);
+  }
+}
+
+.p-flow-list__item-wrap {
+  padding: rem(10) rem(20) rem(10) 0;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  border: rem(2) solid $color-cyan;
+  @include mq(md) {
+    padding: rem(14) rem(24);
+  }
+}
+
+.p-flow-list__item-title {
+  width: 40%;
+  flex-shrink: 0;
+  font-size: rem(14);
+  line-height: 1;
+  font-weight: 700;
+  text-align: center;
+  @include mq(md) {
+    width: 25%;
+    font-size: rem(18);
+    text-align: initial;
+  }
+}
+
+.p-flow-list__item-text {
+  padding-left: rem(16);
+  font-size: rem(14);
+  line-height: 1.3;
+  border-left: rem(2) solid $color-cyan;
+  @include mq(md) {
+    padding-left: rem(20);
+    font-size: rem(18);
+  }
+}

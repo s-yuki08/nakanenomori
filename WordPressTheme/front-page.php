@@ -1,17 +1,17 @@
 <?php get_header(); ?>
 
 <?php
-$home = esc_url( home_url( '/' ) );
-$department = esc_url( home_url( '/department/' ) );
-$outpatient = esc_url( home_url( '/outpatient/' ) );
-$faq_contact = esc_url( home_url( '/faq-contact/' ) );
-$hospitalization = esc_url( home_url( '/hospitalization/' ) );
-$recruit = esc_url( home_url( '/recruit/' ) );
-$about = esc_url( home_url( '/about/' ) );
-$staff = esc_url( home_url( '/staff/' ) );
-$checkup = esc_url( home_url( '/checkup/' ) );
-$news = esc_url( home_url( '/news/' ) );
-$visit = esc_url( home_url( '/hospitalization/#visit' ) );
+$home = esc_url(home_url('/'));
+$department = esc_url(home_url('/department/'));
+$outpatient = esc_url(home_url('/outpatient/'));
+$faq_contact = esc_url(home_url('/faq-contact/'));
+$hospitalization = esc_url(home_url('/hospitalization/'));
+$recruit = esc_url(home_url('/recruit/'));
+$about = esc_url(home_url('/about/'));
+$staff = esc_url(home_url('/staff/'));
+$checkup = esc_url(home_url('/checkup/'));
+$news = esc_url(home_url('/news/'));
+$visit = esc_url(home_url('/hospitalization/#visit'));
 ?>
 <!-- mv -->
 <div class="p-mv js-header-height">
@@ -49,21 +49,21 @@ $visit = esc_url( home_url( '/hospitalization/#visit' ) );
         <ul class="p-mv__btn-list">
           <li class="p-mv__btn-item">
             <a href="<?php echo $outpatient; ?>" class="p-mv__btn-link">
-              <span class="p-mv__btn-text">はじめて<br>来院される方へ</span>
+              <span class="p-mv__btn-text">外来のご案内</span>
               <span class="p-mv__btn-arrow">
               </span>
             </a>
           </li>
           <li class="p-mv__btn-item">
             <a href="<?php echo $department; ?>" class="p-mv__btn-link p-mv__btn-link--green">
-              <span class="p-mv__btn-text p-mv__btn-text--green">診療科のご案内</span>
+              <span class="p-mv__btn-text p-mv__btn-text--green">診療科・部門紹介</span>
               <span class="p-mv__btn-arrow p-mv__btn-arrow--green">
               </span>
             </a>
           </li>
           <li class="p-mv__btn-item">
             <a href="<?php echo $recruit; ?>" class="p-mv__btn-link p-mv__btn-link--blue">
-              <span class="p-mv__btn-text p-mv__btn-text--blue">求人情報</span>
+              <span class="p-mv__btn-text p-mv__btn-text--blue">検診のご案内</span>
               <span class="p-mv__btn-arrow p-mv__btn-arrow--blue">
               </span>
             </a>
@@ -125,11 +125,10 @@ $visit = esc_url( home_url( '/hospitalization/#visit' ) );
     </div>
     <div class="p-lead__wrapper">
       <p class="p-lead__text">
-        こころとからだに寄り添い、<br class="u-mobile">笑顔あふれる毎日を共に育む。<br>
+        こころとからだに寄り添い、笑顔あふれる毎日をともに育む。<br>
         私たちは、地域の皆さまの安心と健康を大切にし、あたたかな医療を提供します。<br>
-        「この症状は何科？」と迷われたら、<br class="u-mobile">まず「総合診療科」を受診してください。<br>
-        幅広い知識と診療の経験を持つ医師が、<br>
-        今のあなたに必要な医療をご案内いたします。
+        何科を受診すればいい？迷ったり困ったりしたときは、<br class="u-desktop">
+        お気軽に内科・総合診療科へご相談ください。
       </p>
     </div>
   </div>
@@ -147,23 +146,23 @@ $visit = esc_url( home_url( '/hospitalization/#visit' ) );
             'posts_per_page' => 1,
             'no_found_rows'  => true
           ]);
-          if ( $latest_news->have_posts() ) :
-            while ( $latest_news->have_posts() ) : $latest_news->the_post();
+          if ($latest_news->have_posts()) :
+            while ($latest_news->have_posts()) : $latest_news->the_post();
           ?>
-          <a href="<?php the_permalink(); ?>" class="p-news__item">
-            <div class="p-news__meta">
-              <time class="p-news__date" datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>">
-                <?php echo esc_html( get_the_date( 'Y.m.d' ) ); ?>
-              </time>
-              <p class="p-news__list-title"><?php the_title(); ?></p>
-            </div>
-          </a>
-          <?php
+              <a href="<?php the_permalink(); ?>" class="p-news__item">
+                <div class="p-news__meta">
+                  <time class="p-news__date" datetime="<?php echo esc_attr(get_the_date('c')); ?>">
+                    <?php echo esc_html(get_the_date('Y.m.d')); ?>
+                  </time>
+                  <p class="p-news__list-title"><?php the_title(); ?></p>
+                </div>
+              </a>
+            <?php
             endwhile;
             wp_reset_postdata();
           else :
-          ?>
-          <p class="p-news__none">現在、お知らせはありません。</p>
+            ?>
+            <p class="p-news__none">現在、お知らせはありません。</p>
           <?php endif; ?>
         </div>
       </div>
@@ -243,40 +242,6 @@ $visit = esc_url( home_url( '/hospitalization/#visit' ) );
     </div>
   </div>
 
-  <!-- info -->
-  <div class="p-info l-info">
-    <div class="p-info__inner l-inner">
-      <div class="p-info__wrapper">
-        <ul class="p-info__list">
-          <li class="p-info__item">
-            <a href="<?php echo esc_url( home_url('/about/#vision') ); ?>">
-              <span class="p-info__btn-text">病院の理念</span>
-              <span class="p-info__btn-arrow"></span>
-            </a>
-          </li>
-          <li class="p-info__item">
-            <a href="<?php echo esc_url( home_url('/about/#mission') ); ?>">
-              <span class="p-info__btn-text">私たちの使命</span>
-              <span class="p-info__btn-arrow"></span>
-            </a>
-          </li>
-          <li class="p-info__item">
-            <a href="<?php echo esc_url( home_url('/about/#basicPolicy') ); ?>">
-              <span class="p-info__btn-text">基本方針</span>
-              <span class="p-info__btn-arrow"></span>
-            </a>
-          </li>
-          <li class="p-info__item">
-            <a href="<?php echo esc_url( home_url('/about/#facility') ); ?>">
-              <span class="p-info__btn-text">院内・施設のご紹介</span>
-              <span class="p-info__btn-arrow"></span>
-            </a>
-          </li>
-
-        </ul>
-      </div>
-    </div>
-  </div>
 </section>
 
 <!-- hours -->

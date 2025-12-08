@@ -12,7 +12,7 @@
           <ul class="p-outpatient__list">
             <li class="p-outpatient__item">
               <a href="#initial-visit">
-                <span>初診について</span>
+                <span>はじめて受診される方へ</span>
                 <span class="p-outpatient__arr"></span>
               </a>
             </li>

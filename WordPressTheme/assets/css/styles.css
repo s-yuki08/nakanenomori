@@ -4166,79 +4166,6 @@ select::-ms-expand {
 	width: 100%;
 }
 
-.p-info__inner.l-inner {
-	width: 100%;
-}
-
-.p-info__list {
-	grid-gap: 0.625rem;
-	display: grid;
-	gap: 0.625rem;
-	grid-template-columns: repeat(1, 1fr);
-}
-
-.p-info__item {
-	align-items: center;
-	display: flex;
-	justify-content: center;
-}
-
-.p-info__item a {
-	align-items: center;
-	background-color: #fff;
-	border: 1px solid #232e83;
-	display: flex;
-	flex-wrap: wrap;
-	font-size: 1.375rem;
-	height: 100%;
-	justify-content: center;
-	letter-spacing: 0.1em;
-	line-height: 1.4;
-	max-width: 16.5690625rem;
-	padding: 1.625rem 0.75rem;
-	position: relative;
-	width: 100%;
-}
-
-.p-info__btn-text {
-	padding-right: 1.25rem;
-	transition: color 0.3s ease-in-out;
-}
-
-.p-info__btn-arrow {
-	align-items: center;
-	background-color: #232e83;
-	border-color: #232e83;
-	border-style: solid;
-	border-width: 0.2rem;
-	bottom: 0;
-	display: flex;
-	flex-wrap: wrap;
-	height: 4.4375rem;
-	justify-content: center;
-	position: absolute;
-	right: 0;
-	width: 1.9840625rem;
-}
-
-.p-info__btn-arrow::after {
-	background-image: url(../images/common/arrow-down-right.svg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	content: "";
-	height: 0.75rem;
-	position: absolute;
-	transition: transform 0.3s ease-in-out;
-	width: 0.75rem;
-}
-
-.p-info__btn-text {
-	color: #232e83;
-	font-size: 1.15625rem;
-	line-height: 1;
-	transition: color 0.3s ease-in-out;
-}
-
 .p-initialVisit__inner.l-inner {
 	width: 100%;
 }
@@ -5141,12 +5068,12 @@ html.no-loading .p-loading {
 	background-repeat: no-repeat;
 	background-size: cover;
 	content: "";
-	height: 4.8125rem;
-	left: 10%;
+	height: 3.625rem;
+	left: 15%;
 	position: absolute;
-	top: 15%;
+	top: 20%;
 	transition: transform 0.3s ease-in-out;
-	width: 3.5rem;
+	width: 2.625rem;
 }
 
 .p-mv__btn-arrow {
@@ -8914,47 +8841,6 @@ a:hover {
 	text-align: right;
 }
 
-.p-info__inner.l-inner {
-	max-width: 63.75rem;
-}
-
-.p-info__list {
-	grid-template-columns: repeat(4, 1fr);
-}
-
-.p-info__item a {
-	gap: 1.25rem;
-	max-width: 18.75rem;
-	transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.p-info__item a:hover {
-	background-color: #232e83;
-	color: #fff;
-}
-
-.p-info__item a:hover .p-info__btn-arrow {
-	background-color: #fff;
-	color: #fff;
-}
-
-.p-info__item a:hover .p-info__btn-arrow::after {
-	background-image: url(../images/common/arrow-down-right-hover.svg);
-}
-
-.p-info__btn-arrow {
-	height: 2.1875rem;
-	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.p-info__item a:hover .p-info__btn-arrow::after {
-	background-image: url(../images/common/arrow-navy-hover.svg);
-}
-
-.p-info__item a:hover .p-info__btn-text {
-	color: #fff;
-}
-
 .p-initialVisit__inner.l-inner {
 	max-width: 67.5rem;
 }
@@ -9362,6 +9248,7 @@ a:hover {
 .p-mv__btn-link {
 	gap: 1.25rem;
 	max-width: 25rem;
+	min-height: 6.25rem;
 	transition: background-color 0.3s;
 }
 

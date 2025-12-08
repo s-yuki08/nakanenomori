@@ -143,7 +143,7 @@ $visit = esc_url(home_url('/hospitalization/#visit'));
           // 最新投稿を1件取得
           $latest_news = new WP_Query([
             'post_type'      => 'post',     // カスタム投稿なら 'news'
-            'posts_per_page' => 1,
+            'posts_per_page' => 5,
             'no_found_rows'  => true
           ]);
           if ($latest_news->have_posts()) :
@@ -174,27 +174,27 @@ $visit = esc_url(home_url('/hospitalization/#visit'));
         <ul class="p-menu-link__items">
           <li class="p-menu-link__item">
             <a href="<?php echo $outpatient; ?>" class="p-menu-link__btn">
-              <span class="p-menu-link__btn-text">はじめて<br>来院される方へ</span>
+              <span class="p-menu-link__btn-text">外来のご案内</span>
               <span class="p-menu-link__btn-arrow"></span>
             </a>
           </li>
           <li class="p-menu-link__item">
             <a href="<?php echo $department; ?>" class="p-menu-link__btn p-menu-link__btn--green">
-              <span class="p-menu-link__btn-text p-menu-link__btn-text--green">診療科のご案内</span>
+              <span class="p-menu-link__btn-text p-menu-link__btn-text--green">診療科・部門の<br>ご案内</span>
               <span class="p-menu-link__btn-arrow p-menu-link__btn-arrow--green">
               </span>
             </a>
           </li>
           <li class="p-menu-link__item">
-            <a href="<?php echo $recruit; ?>" class="p-menu-link__btn p-menu-link__btn--blue">
-              <span class="p-menu-link__btn-text p-menu-link__btn-text--blue">求人情報</span>
-              <span class="p-menu-link__btn-arrow p-menu-link__btn-arrow--blue">
+            <a href="<?php echo $checkup; ?>" class="p-menu-link__btn p-menu-link__btn--navy">
+              <span class="p-menu-link__btn-text p-menu-link__btn-text--navy">検診のご案内</span>
+              <span class="p-menu-link__btn-arrow p-menu-link__btn-arrow--navy">
               </span>
             </a>
           </li>
           <li class="p-menu-link__item">
             <a href="<?php echo $hospitalization; ?>" class="p-menu-link__btn p-menu-link__btn--pink">
-              <span class="p-menu-link__btn-text p-menu-link__btn-text--pink">入院の方</span>
+              <span class="p-menu-link__btn-text p-menu-link__btn-text--pink">入院・面会の<br>ご案内</span>
               <span class="p-menu-link__btn-arrow p-menu-link__btn-arrow--pink"></span>
             </a>
           </li>
@@ -206,9 +206,9 @@ $visit = esc_url(home_url('/hospitalization/#visit'));
             </a>
           </li>
           <li class="p-menu-link__item">
-            <a href="<?php echo $checkup; ?>" class="p-menu-link__btn p-menu-link__btn--navy">
-              <span class="p-menu-link__btn-text p-menu-link__btn-text--navy">検診のご案内</span>
-              <span class="p-menu-link__btn-arrow p-menu-link__btn-arrow--navy">
+            <a href="<?php echo $recruit; ?>" class="p-menu-link__btn p-menu-link__btn--blue">
+              <span class="p-menu-link__btn-text p-menu-link__btn-text--blue">求人情報</span>
+              <span class="p-menu-link__btn-arrow p-menu-link__btn-arrow--blue">
               </span>
             </a>
           </li>

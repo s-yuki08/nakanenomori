@@ -2,23 +2,23 @@
 <html <?php language_attributes(); ?>>
 
 <head>
-  <meta charset="<?php bloginfo( 'charset' ); ?>" />
+  <meta charset="<?php bloginfo('charset'); ?>" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no" />
   <?php wp_head(); ?>
 </head>
 
 <?php
-$home = esc_url( home_url( '/' ) );
-$department = esc_url( home_url( '/department/' ) );
-$outpatient = esc_url( home_url( '/outpatient/' ) );
-$faq_contact = esc_url( home_url( '/faq-contact/' ) );
-$hospitalization = esc_url( home_url( '/hospitalization/' ) );
-$policy = esc_url( home_url( '/privacy-policy/' ) );
-$recruit = esc_url( home_url( '/recruit/' ) );
-$about = esc_url( home_url( '/about/' ) );
-$checkup = esc_url( home_url( '/checkup/' ) );
-$news = esc_url( home_url( '/news/' ) );
+$home = esc_url(home_url('/'));
+$department = esc_url(home_url('/department/'));
+$outpatient = esc_url(home_url('/outpatient/'));
+$faq_contact = esc_url(home_url('/faq-contact/'));
+$hospitalization = esc_url(home_url('/hospitalization/'));
+$policy = esc_url(home_url('/privacy-policy/'));
+$recruit = esc_url(home_url('/recruit/'));
+$about = esc_url(home_url('/about/'));
+$checkup = esc_url(home_url('/checkup/'));
+$news = esc_url(home_url('/news/'));
 ?>
 
 <body <?php body_class(); ?>>
@@ -54,14 +54,13 @@ $news = esc_url( home_url( '/news/' ) );
           </ul>
           <ul class="p-header__nav-list p-header__nav-list--bottom">
             <li class="p-header__nav-item">
-              <a href="<?php echo $outpatient; ?>">外来
-              </a>
+              <a href="<?php echo $outpatient; ?>">外来</a>
             </li>
             <li class="p-header__nav-item">
-              <a href="<?php echo $department; ?>">診療科</a>
+              <a href="<?php echo $department; ?>">診療科・部門</a>
             </li>
             <li class="p-header__nav-item">
-              <a href="<?php echo $hospitalization; ?>">入院</a>
+              <a href="<?php echo $hospitalization; ?>">入院・面会</a>
             </li>
             <li class="p-header__nav-item">
               <a href="<?php echo $about; ?>">当院について</a>

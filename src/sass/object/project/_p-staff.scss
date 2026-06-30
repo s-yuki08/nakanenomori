@@ -7,6 +7,14 @@
   }
 }
 
+// p-department__navをstaffセクション内で使用する場合
+.p-staff .p-department__nav {
+  margin-top: rem(20);
+  @include mq("md") {
+    margin-top: rem(40);
+  }
+}
+
 .p-staff__nav {
   margin-top: rem(20);
   height: rem(1300);

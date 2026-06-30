@@ -1,32 +1,22 @@
 <?php /* Template Name: 求人情報 */ get_header();
 ?>
 
-<section id="recruit-fv" class="p-recruit-fv js-header-height">
-  <div class="p-recruit-fv__image">
-    <picture>
-      <source media="(min-width: 768px)"
-        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/recruit_mv_01.png" />
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/recruit_mv_sp.png" alt="採用情報" />
-    </picture>
-  </div>
+<?php get_template_part('parts/header-bg'); ?>
 
-</section>
-
-
-<section id="message" class="p-message l-message">
+<section id="message" class="p-message l-message js-header-height">
   <div class="p-message__inner l-inner">
     <div class="p-message__block">
       <div class="p-message__head">
         <p class="p-message__sub">メッセージ</p>
-        <h2 class="p-message__title">message</h2>
+        <h1 class="p-message__title">message</h1>
       </div>
 
       <div class="p-message__content">
         <div class="p-message__catch-wrap">
-          <h3 class="p-message__catch">
+          <div class="p-message__catch">
             断らない医療<br>
             地域に根ざした医療の提供
-          </h3>
+          </div>
         </div>
         <div class="p-message__text-body">
           <p class="p-message__text">
@@ -38,8 +28,6 @@
             育成に努めて参ります。<br class="u-desktop">
           </p>
         </div>
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/leaf_recruit.svg" alt="葉のイラスト"
-          class="p-message__leaf" />
       </div>
     </div>
 
@@ -72,7 +60,7 @@
         <?php
         $has_any_job = false; // タイトルが1つでもあるか
 
-        for ($i = 1; $i <= 7; $i++):
+        for ($i = 1; $i <= 13; $i++):
           $title     = get_field("job_title_{$i}");
           $time      = get_field("job_time_{$i}");
           $salary    = get_field("job_salary_{$i}");
@@ -83,57 +71,57 @@
             $has_any_job = true;
             $has_details = ($time || $salary || $holiday || $transport);
         ?>
-        <li class="p-recruit-info__item">
-          <h3 class="p-recruit-info__item-title js-job-title">
-            <?php echo esc_html($title); ?>
-          </h3>
+            <li class="p-recruit-info__item">
+              <h3 class="p-recruit-info__item-title js-job-title">
+                <?php echo esc_html($title); ?>
+              </h3>
 
-          <div class="p-recruit-info__item-body">
-            <?php if ($has_details): ?>
-            <table class="p-recruit-info__item-table">
-              <tbody>
-                <?php if ($time): ?>
-                <tr>
-                  <th>勤務時間</th>
-                  <td><?php echo nl2br(esc_html($time)); ?></td>
-                </tr>
+              <div class="p-recruit-info__item-body">
+                <?php if ($has_details): ?>
+                  <table class="p-recruit-info__item-table">
+                    <tbody>
+                      <?php if ($time): ?>
+                        <tr>
+                          <th>勤務時間</th>
+                          <td><?php echo nl2br(esc_html($time)); ?></td>
+                        </tr>
+                      <?php endif; ?>
+                      <?php if ($salary): ?>
+                        <tr>
+                          <th>給与</th>
+                          <td><?php echo nl2br(esc_html($salary)); ?></td>
+                        </tr>
+                      <?php endif; ?>
+                      <?php if ($holiday): ?>
+                        <tr>
+                          <th>休日休暇</th>
+                          <td><?php echo nl2br(esc_html($holiday)); ?></td>
+                        </tr>
+                      <?php endif; ?>
+                      <?php if ($transport): ?>
+                        <tr>
+                          <th>交通費</th>
+                          <td><?php echo nl2br(esc_html($transport)); ?></td>
+                        </tr>
+                      <?php endif; ?>
+                    </tbody>
+                  </table>
+                <?php else: ?>
+                  <!-- 職種タイトルはあるが詳細が未入力の場合の表示 -->
+                  <p class="p-recruit-info__no-detail">現在募集しておりません。</p>
                 <?php endif; ?>
-                <?php if ($salary): ?>
-                <tr>
-                  <th>給与</th>
-                  <td><?php echo nl2br(esc_html($salary)); ?></td>
-                </tr>
-                <?php endif; ?>
-                <?php if ($holiday): ?>
-                <tr>
-                  <th>休日休暇</th>
-                  <td><?php echo nl2br(esc_html($holiday)); ?></td>
-                </tr>
-                <?php endif; ?>
-                <?php if ($transport): ?>
-                <tr>
-                  <th>交通費</th>
-                  <td><?php echo nl2br(esc_html($transport)); ?></td>
-                </tr>
-                <?php endif; ?>
-              </tbody>
-            </table>
-            <?php else: ?>
-            <!-- 職種タイトルはあるが詳細が未入力の場合の表示 -->
-            <p class="p-recruit-info__no-detail">現在募集しておりません。</p>
-            <?php endif; ?>
-          </div>
-        </li>
-        <?php
+              </div>
+            </li>
+          <?php
           endif; // $title
         endfor;
 
         // タイトル自体が1件も無いとき（=全枠未設定）は一覧にまとめて表示
         if (! $has_any_job):
-        ?>
-        <li class="p-recruit-info__item">
-          <p class="p-recruit-info__no-job">現在募集しておりません。</p>
-        </li>
+          ?>
+          <li class="p-recruit-info__item">
+            <p class="p-recruit-info__no-job">現在募集しておりません。</p>
+          </li>
         <?php endif; ?>
       </ul>
     </div>
@@ -141,6 +129,7 @@
 </section>
 
 
+<?php /* コメントアウト: environment セクション
 <section id="environment" class="p-environment l-environment">
   <div class="p-environment__inner l-inner">
     <div class="p-environment__block">
@@ -155,7 +144,6 @@
     </div>
 
     <div class="p-environment__container">
-      <!-- スタッフ構成比 -->
       <div class="p-environment__card c-card">
         <div class="c-card__label">スタッフ構成比</div>
         <div class="c-circle-chart">
@@ -181,7 +169,6 @@
         </div>
       </div>
 
-      <!-- 平均年齢 -->
       <div class="c-card">
         <div class="c-card__label">平均年齢</div>
         <div class="c-stat-value"><span id="avgAge" class="c-stat-value__value">0.0</span><span
@@ -189,7 +176,6 @@
         <div class="c-card__date">(2025.11.01現在)</div>
       </div>
 
-      <!-- 残業時間 -->
       <div class="c-card">
         <div class="c-card__label">残業時間</div>
         <div class="c-overtime">
@@ -201,7 +187,6 @@
         <div class="c-card__date">(2025.11.10現在)</div>
       </div>
 
-      <!-- 有給取得率 -->
       <div class="c-card">
         <div class="c-card__label">有給取得率</div>
         <div class="c-donut-chart">
@@ -244,6 +229,7 @@
     </div>
   </div>
 </section>
+*/ ?>
 
 <section id="recruit-flow" class="p-recruit-flow l-recruit-flow">
   <div class="p-recruit-flow__inner l-inner">

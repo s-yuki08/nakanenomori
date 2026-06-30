@@ -139,6 +139,7 @@
 .p-footer__item a:hover {
   @include mq("md") {
     color: $color-navy;
+    opacity: 1;
   }
 }
 
@@ -159,30 +160,27 @@
   z-index: 1;
   @include mq("md") {
     top: -11px;
-    transition: transform 0.3s ease-in-out;
   }
 }
 
 .p-footer__circle::before {
   background-image: url(../images/common/arrow-right-circle.svg);
   opacity: 1;
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
-.p-footer__item a:hover .p-footer__circle::before {
-  @include mq("md") {
-    opacity: 0;
-  }
-}
 .p-footer__circle::after {
   background-image: url(../images/common/arrow-right-navy.svg);
   opacity: 0;
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
-.p-footer__item a:hover .p-footer__circle::after {
-  @include mq("md") {
-    background-image: url(../images/common/arrow-right-navy.svg);
+@media (any-hover: hover) {
+  .p-footer__item a:hover .p-footer__circle::before {
+    opacity: 0;
+  }
+
+  .p-footer__item a:hover .p-footer__circle::after {
     opacity: 1;
   }
 }
@@ -215,15 +213,16 @@
 .p-footer__privacy a:hover {
   @include mq("md") {
     color: $color-navy;
+    opacity: 1;
   }
 }
 
 .p-footer__circle-gray {
   position: relative;
 }
-.p-footer__circle-gray::before {
+.p-footer__circle-gray::before,
+.p-footer__circle-gray::after {
   content: "";
-  background-image: url(../images/common/arrow-right-circle-gray.svg);
   background-repeat: no-repeat;
   background-size: cover;
   width: rem(22);
@@ -232,12 +231,27 @@
   top: -12px;
   left: -29px;
   z-index: 1;
-  transition: transform 0.3s ease-in-out;
 }
 
-.p-footer__privacy a:hover .p-footer__circle-gray::before {
-  @include mq("md") {
-    background-image: url(../images/common/arrow-right-navy.svg);
+.p-footer__circle-gray::before {
+  background-image: url(../images/common/arrow-right-circle-gray.svg);
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.p-footer__circle-gray::after {
+  background-image: url(../images/common/arrow-right-navy.svg);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+@media (any-hover: hover) {
+  .p-footer__privacy a:hover .p-footer__circle-gray::before {
+    opacity: 0;
+  }
+
+  .p-footer__privacy a:hover .p-footer__circle-gray::after {
+    opacity: 1;
   }
 }
 

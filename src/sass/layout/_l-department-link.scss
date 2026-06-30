@@ -8,3 +8,13 @@
     padding-bottom: rem(50);
   }
 }
+
+// 単一ボタン用（nephrology専用）
+.l-department-link--single {
+  padding-top: rem(80);
+  padding-bottom: rem(80);
+  @include mq(md) {
+    padding-top: rem(120);
+    padding-bottom: rem(120);
+  }
+}

@@ -1,16 +1,11 @@
 @use "global" as *;
 
 .p-header {
-  height: rem(60);
+  height: rem(76);
   background-color: transparent;
-  transition: background-color 0.3s;
   @include mq("md") {
     height: rem(150);
   }
-}
-
-.p-header.is-color {
-  background-color: rgba($color: $color-white, $alpha: 0.68);
 }
 
 .p-header__inner {
@@ -89,12 +84,14 @@
   display: flex;
   align-items: center;
   font-size: rem(19);
-  font-weight: 500;
+  font-weight: $bold;
   line-height: 1;
   color: $color-black;
   letter-spacing: 0.1em;
-  transition: color 0.3s, transform 0.3s;
+  transition: color 0.3s, transform 0.3s, text-shadow 0.3s;
   position: relative;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 1),
+    0 0 20px rgba(255, 255, 255, 0.8);
 
   @include mq("md") {
     padding-inline: rem(10);
@@ -103,10 +100,27 @@
   @media screen and (min-width: 1300px) {
     padding-inline: rem(25);
   }
+}
 
+.p-header__nav-item a::after {
+  content: "";
+  position: absolute;
+  bottom: rem(20);
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: calc(100% - clamp(rem(32), 2.738vw, rem(50)));
+  height: 2px;
+  background-color: $color-navy;
+  transition: transform 0.3s ease;
+}
+
+@media (any-hover: hover) {
   .p-header__nav-item a:hover {
-    @include mq("md") {
-      color: $color-navy;
+    color: $color-navy;
+    opacity: 1;
+
+    &::after {
+      transform: translateX(-50%) scaleX(1);
     }
   }
 }
@@ -117,13 +131,21 @@
   border-radius: rem(20);
   font-size: rem(15);
   padding-top: rem(8) rem(10);
-  transition: opacity 0.3s color 0.3s;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  text-shadow: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border: 1px solid $color-blue;
+
+  &::after {
+    display: none;
+  }
 }
 
-.p-header__nav-item.p-header__nav-item--qa a:hover {
-  @include mq("md") {
-    opacity: 0.8;
-    color: $color-white;
+@media (any-hover: hover) {
+  .p-header__nav-item.p-header__nav-item--qa a:hover {
+    background-color: $color-white;
+    color: $color-blue;
+    opacity: 1;
   }
 }
 
@@ -134,6 +156,7 @@
   color: $color-navy;
   padding-left: rem(10);
   letter-spacing: 0.01em;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.9);
 }
 
 .p-header__hamburger {
@@ -206,7 +229,7 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background: url(../images/common/drawer_bg.png);
+  background: url(../images/common/drawer_bg.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;

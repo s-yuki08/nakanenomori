@@ -6,7 +6,7 @@
     <div class="p-outpatient__wrapper">
       <div class="p-outpatient__left">
         <div class="p-outpatient__headline">
-          <h2 class="p-outpatient__title">外来受診される方へ</h2>
+          <h1 class="p-outpatient__title">外来受診される方へ</h1>
         </div>
         <nav class="p-outpatient__nav">
           <ul class="p-outpatient__list">
@@ -45,18 +45,19 @@
       </div>
       <div class="p-outpatient__right">
         <div class="p-outpatient__image">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/sub_top.png" alt="外来診療受付時間">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/sub_top.webp" alt="外来診療受付時間">
         </div>
       </div>
     </div>
+  </div>
 </section>
 
 <section id="initial-visit" class="p-initialVisit l-initialVisit">
-  <div class="p-initialVisit__inner l-inner">
-    <h3 class="p-initialVisit__title c-section-title">
+  <div class="p-initialVisit__inner l-inner-outpatient">
+    <h2 class="p-initialVisit__title c-section-title">
       <span class="c-section-title__dot"></span>
       はじめて受診される方へ
-    </h3>
+    </h2>
 
     <div class="p-initialVisit__body">
       <p class="p-initialVisit__text">
@@ -67,77 +68,144 @@
   </div>
 </section>
 
-<section id="consultation-hours" class="p-consultation-hours l-consultation-hours">
-  <div class="p-consultation-hours__inner l-inner">
-    <h3 class="p-consultation-hours__title c-section-title">
+<section id="consultation-hours" class="p-outpatient-service l-outpatient-service">
+  <div class="p-outpatient-service__inner l-inner-outpatient">
+    <h2 class="p-outpatient-service__title c-section-title">
       <span class="c-section-title__dot"></span>
       外来診療受付時間
-    </h3>
-    <div class="p-consultation-hours__wrapper">
-      <div class="p-consultation-hours__contents">
-        <div class="p-consultation-hours__image">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/eigyoujikenn.png" alt="外来診療受付時間">
-        </div>
-        <div class="p-consultation-hours__aside">
-          <dl class="p-consultation-hourst__info">
-            <div class="p-consultation-hours__info-item">
-              <dt>受付時間</dt>
-              <dd>午前 8:45〜11:45<br>午後 13:45〜16:45</dd>
-            </div>
-            <div class="p-consultation-hours__info-item">
-              <dt>診療時間</dt>
-              <dd>午前 9:00〜12:00<br>午後 14:00〜17:00</dd>
-            </div>
-          </dl>
-          <p class="p-consultation-hours__urgent">※急患は随時受け付けています。</p>
-          <div class="p-consultation-hours__note-wrapper">
-            <p class="p-consultation-hours__note">上記以外でもご対応可能ですのでご相談ください。</p>
-            <p class="p-consultation-hours__tel">TEL:03-6421-3724</p>
-            <p class="p-consultation-hours__fex">FAX:03-6421-3725</p>
+    </h2>
+    <div class="p-outpatient-service__wrapper">
+      <div class="p-outpatient-service__table-wrap">
+        <table class="p-outpatient-service__table">
+          <thead>
+            <tr>
+              <th class="p-outpatient-service__th-dept"></th>
+              <th class="p-outpatient-service__th-time-header"></th>
+              <th class="p-outpatient-service__th-day">月</th>
+              <th class="p-outpatient-service__th-day">火</th>
+              <th class="p-outpatient-service__th-day">水</th>
+              <th class="p-outpatient-service__th-day">木</th>
+              <th class="p-outpatient-service__th-day">金</th>
+              <th class="p-outpatient-service__th-day">土</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php
+            $schedule_data = [
+              [
+                'name' => '内科・総合診療科',
+                'slug' => 'general-medicine',
+                'am' => [1, 1, 1, 1, 1, 1],
+                'pm' => [1, 1, 1, 1, 1, 0],
+              ],
+              [
+                'name' => '外　科',
+                'slug' => 'surgery',
+                'am' => [0, 0, 1, 0, 0, 0],
+                'pm' => [0, 0, 0, 0, 0, 0],
+              ],
+              [
+                'name' => '整形外科',
+                'slug' => 'orthopedics',
+                'am' => [0, 0, 0, 1, 0, 1],
+                'pm' => [0, 0, 0, 1, 0, 0],
+              ],
+              [
+                'name' => '心療内科',
+                'slug' => 'psychosomatic',
+                'am' => [1, 1, 0, 0, 0, 0],
+                'pm' => [0, 0, 0, 0, 0, 0],
+              ],
+              [
+                'name' => '腎臓内科/透析',
+                'slug' => 'nephrology',
+                'am' => [0, 0, 0, 0, 0, 0],
+                'pm' => [0, 1, 0, 1, 0, 0],
+              ],
+            ];
+
+            foreach ($schedule_data as $dept):
+              $post = get_page_by_path($dept['slug'], OBJECT, 'department');
+              $url = $post ? get_permalink($post) : '#';
+            ?>
+              <tr class="p-outpatient-service__tr-am">
+                <th class="p-outpatient-service__th-name" rowspan="2">
+                  <div class="p-outpatient-service__th-name-inner">
+                    <span><?php echo esc_html($dept['name']); ?></span>
+                    <a href="<?php echo esc_url($url); ?>" class="p-outpatient-service__detail-link">
+                      <span>詳細はこちら</span>
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/cyan-arrow-right.svg" alt="" class="p-outpatient-service__detail-arrow">
+                    </a>
+                  </div>
+                </th>
+                <td class="p-outpatient-service__td-time">午前</td>
+                <?php foreach ($dept['am'] as $available): ?>
+                  <td class="p-outpatient-service__td-dot"><?php if ($available): ?><span class="p-outpatient-service__dot"></span><?php endif; ?></td>
+                <?php endforeach; ?>
+              </tr>
+              <tr class="p-outpatient-service__tr-pm">
+                <td class="p-outpatient-service__td-time">午後</td>
+                <?php foreach ($dept['pm'] as $available): ?>
+                  <td class="p-outpatient-service__td-dot"><?php if ($available): ?><span class="p-outpatient-service__dot"></span><?php endif; ?></td>
+                <?php endforeach; ?>
+              </tr>
+            <?php endforeach; ?>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="p-outpatient-service__info">
+        <div class="p-outpatient-service__info-rows">
+          <div class="p-outpatient-service__info-row">
+            <span class="p-outpatient-service__info-label p-outpatient-service__info-label--blue">受付時間</span>
+            <span class="p-outpatient-service__info-text">午前 8:45〜11:45 ／ 午後13:45〜16:45</span>
+          </div>
+          <div class="p-outpatient-service__info-row">
+            <span class="p-outpatient-service__info-label p-outpatient-service__info-label--blue">診療時間</span>
+            <span class="p-outpatient-service__info-text">午前 9:00〜12:00 ／ 午後14:00〜17:00</span>
+            <span class="p-outpatient-service__info-note">※急患は随時受け付けています。</span>
           </div>
         </div>
+        <p class="p-outpatient-service__caution">※緊急で受診を希望される方は、来院前に一度お電話でご相談下さい。</p>
+        <!-- <p class="p-outpatient-service__tel p-outpatient-service__tel--blue">
+          <a href="tel:0364213724">TEL:03-6421-3724</a>
+        </p> -->
       </div>
     </div>
+  </div>
 </section>
 
 <section id="bring" class="p-bring l-bring">
-  <div class="p-bring__inner l-inner">
-    <h3 class="p-bring__title c-section-title">
+  <div class="p-bring__inner l-inner-outpatient">
+    <h2 class="p-bring__title c-section-title">
       <span class="c-section-title__dot"></span>
       お持ちいただくもの
-    </h3>
+    </h2>
     <div class="p-bring__box">
-      <div class="p-bring__list-wrapper">
-        <ul class="p-bring__list-left">
-          <li class="p-bring__item">・マイナンバーカード（または健康保険証）</li>
-          <li class="p-bring__item">・後期高齢者医療被保険者証</li>
-        </ul>
-        <ul class="p-bring__list-center">
-          <li class="p-bring__item">・各種医療証</li>
-          <li class="p-bring__item">・他病院の紹介状</li>
-        </ul>
-        <ul class="p-bring__list-right">
-          <li class="p-bring__item">・おくすり手帳</li>
-        </ul>
+      <ul class="p-bring__list-wrapper">
+        <li class="p-bring__item">・マイナンバーカード（または健康保険証）</li>
+        <li class="p-bring__item">・後期高齢者医療被保険者証</li>
+        <li class="p-bring__item">・各種医療証</li>
+        <li class="p-bring__item">・他の医療機関からの紹介状</li>
+        <li class="p-bring__item">・おくすり手帳</li>
+      </ul>
+      <div class="p-bring__desc">
+        <p class="p-bring__desc-text">
+          他の医療機関へ通院されている方は、現在の治療内容が分かるもの（おくすり手帳や検査結果）をお持ちください。<br>
+          より的確な診療を進めるため、これまでの治療経過や処方内容がとても重要な情報となります。
+        </p>
       </div>
-    </div>
-
-    <div class="p-bring__desc">
-      <p class="p-bring__desc-text">
-        他の医療機関へ通院されている方は、現在の治療内容が分かるもの（おくすり手帳や検査結果）をお持ちください。<br>
-        より的確な診療を進めるため、これまでの治療経過や処方内容がとても重要な情報となります。
-      </p>
     </div>
   </div>
 </section>
 
 
 <section id="flow" class="p-flow l-flow">
-  <div class="p-flow__inner l-inner">
-    <h3 class="p-flow__title c-section-title">
+  <div class="p-flow__inner l-inner-outpatient">
+    <h2 class="p-flow__title c-section-title">
       <span class="c-section-title__dot"></span>
-      診療科の診察の流れ
-    </h3>
+      外来診察の流れ
+    </h2>
     <div class="p-flow__body">
       <ol class="p-flow__list p-flow-list">
         <li class="p-flow-list__item">
@@ -188,14 +256,15 @@
         </li>
       </ol>
     </div>
+  </div>
 </section>
 
 <section id="contact" class="p-contact l-contact">
-  <div class="p-contact__inner l-inner">
-    <h3 class="p-contact__title c-section-title">
+  <div class="p-contact__inner l-inner-outpatient">
+    <h2 class="p-contact__title c-section-title">
       <span class="c-section-title__dot"></span>
       お問い合わせ
-    </h3>
+    </h2>
 
     <div class="p-contact__box">
       <p class="p-contact__text">
@@ -204,7 +273,7 @@
       </p>
 
       <p class="p-contact__desc">
-        電話受付時間　午前 9:00～12:00 ／ 午後14:00～17:00
+        電話受付時間　<br class="u-mobile-500">午前 9:00～12:00 ／ 午後14:00～17:00
       </p>
     </div>
   </div>

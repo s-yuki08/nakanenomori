@@ -8,13 +8,13 @@ get_template_part('parts/header-bg');
     <div class="p-about__wrapper">
       <div class="p-about__left">
         <div class="p-about__headline">
-          <h2 class="p-about__title">当院について</h2>
+          <h1 class="p-about__title">当院について</h1>
         </div>
         <nav class="p-about__nav">
           <ul class="p-about__list">
             <li class="p-about__item">
-              <a href="#director">
-                <span>院長あいさつと理念</span>
+              <a href="#chairman">
+                <span>理事長・院長あいさつ</span>
                 <span class="p-about__arr"></span>
               </a>
             </li>
@@ -38,7 +38,7 @@ get_template_part('parts/header-bg');
             </li>
             <li class="p-about__item">
               <a href="#staff">
-                <span>スタッフ紹介</span>
+                <span>診療科・部門紹介</span>
                 <span class="p-about__arr"></span>
               </a>
             </li>
@@ -59,10 +59,47 @@ get_template_part('parts/header-bg');
       </div>
       <div class="p-about__right">
         <div class="p-about__image">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about_image.png" alt="当院について">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about_image.webp" alt="当院について">
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="chairman" class="p-director l-director">
+  <div class="p-director__inner l-inner">
+    <h2 class="p-director__title c-section-title">
+      <span class="c-section-title__dot c-section-title__dot--navy"></span>
+      理事長あいさつ
+    </h2>
+    <div class="p-director__wrapper">
+      <div class="p-director__body">
+        <p class="p-director__text">
+          このたびは、医療法人社団爽玄会 なかねの森病院のホームページをご覧いただき、ありがとうございます。<br>
+          理事長の奈良 大と申します。
+        </p>
+        <p class="p-director__text">&emsp;当院は2024年3月22日の開院以来、その名のとおり「森」のように、地域の皆さまにとって心とからだがそっと癒される存在でありたいと願い、スタッフ一同歩みを進めてまいりました。木々が季節ごとに姿を変えながらも、そこに集う人や生き物を静かに受けとめるように、私たちもまた、どのような不安や悩みも安心して託していただける場所でありたいと考えています。</p>
+        <p class="p-director__text">&emsp;医療は、検査や治療だけで完結するものではありません。病気の背景には、生活環境やお仕事、ご家族の状況など、さまざまな要素が複雑に絡み合っています。当院では、患者さんお一人おひとりの人生の物語に耳を傾けながら、医師・看護師・リハビリスタッフ・地域連携担当・事務職員がチームとなって支える「顔の見える医療」を大切にしています。</p>
+        <p class="p-director__text">&emsp;また、いつでも気軽に相談できる「かかりつけ医」「かかりつけ病院」としての役割を果たすことが、なかねの森病院の重要な使命です。体調がすぐれないときだけでなく、持病の管理や健康維持、介護や在宅療養に関するご相談など、日々の暮らしの中で気になることがあれば、まずは当院にご相談ください。必要に応じて、専門医療機関や地域の介護・福祉サービスとも連携しながら、切れ目のないサポートを行ってまいります。</p>
+      </div>
+    </div>
+    <div class="p-director__wrapper p-director__wrapper--bottom">
+      <div class="p-director__body">
+        <p class="p-director__text">&emsp;今後は、病気の「治療」にとどまらず、「予防」や「未病」の段階から健康づくりを支える活動にも、いっそう力を入れてまいります。地域の皆さまに向けた健康教室や勉強会の開催、多職種による相談窓口の充実などを通じて、病院に来られる方だけでなく、そのご家族や支えておられる方々も含めて支援できる体制を整えてまいります。</p>
+        <p class="p-director__text">&emsp;「ここに来るとほっとする」「この病院が地域にあってよかった」と思っていただけるよう、私たちは、患者さんとご家族の尊厳とお気持ちに寄り添いながら、安全で質の高い医療の提供に努めてまいります。そして、開院の原点である“癒しの森”という思いを大切に、地域に根差した病院として、一歩一歩着実に成長を続けていく所存です。</p>
+        <p class="p-director__text">&emsp;今後とも、なかねの森病院をどうぞよろしくお願い申し上げます。</p>
+      </div>
+      <div class="p-director__image-wrapper">
+        <div class="p-director__image">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about_chairman.webp" alt="理事長あいさつ">
+        </div>
+        <div class="p-director__cap">
+          <p class="p-director__cap-text">医療法人社団爽玄会 なかねの森病院</p>
+          <p class="p-director__name">奈良　大 <span class="p-director__kana">（なら だい）</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section id="director" class="p-director l-director">
@@ -74,8 +111,8 @@ get_template_part('parts/header-bg');
     <div class="p-director__wrapper">
       <div class="p-director__body">
         <p class="p-director__text">
-          私たちは、これまで目黒区内で地域住民に愛される医療を長年行ってきました。<br>
-          そこで得た想いを新たに、「中根の森に根ざすやさしさを、心と体に。<br class="u-desktop">
+          私たちは、これまで目黒区内で地域住民に愛される医療を<br class="u-desktop">長年行ってきました。<br>
+          そこで得た想いを新たに、<br class="u-desktop">「中根の森に根ざすやさしさを、心と体に。<br class="u-desktop">
           笑顔が育つ、地域の“かかりつけの森” 」をめざして、<br class="u-desktop">
           “なかねの森病院”を創設しました。<br>
           すべてを包み込み、見守る“森”となれるよう、<br class="u-desktop">
@@ -86,7 +123,7 @@ get_template_part('parts/header-bg');
       </div>
       <div class="p-director__image-wrapper">
         <div class="p-director__image">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about_doctor.png" alt="院長あいさつ">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about_doctor.webp" alt="院長あいさつ">
         </div>
         <div class="p-director__cap">
           <p>なかねの森病院　病院長</p>
@@ -103,6 +140,7 @@ get_template_part('parts/header-bg');
         私たちは、地域の皆さまの安心と健康を大切にし、あたたかな医療を提供します。
       </p>
     </div>
+  </div>
 </section>
 
 <section id="mission" class="p-mission l-mission">
@@ -168,6 +206,7 @@ get_template_part('parts/header-bg');
         </li>
       </ol>
     </div>
+  </div>
 </section>
 
 <section id="facility" class="p-facility l-facility">
@@ -185,7 +224,7 @@ get_template_part('parts/header-bg');
     // ACFで登録された画像を配列化（最大9枚、未入力はスキップ）
     $images = [];
     for ($i = 1; $i <= 12; $i++) {
-      $img = get_field('facility_img_' . $i, $post_id); // フィールド名は同じ形式で登録
+      $img = get_field('facility_img_' . $i, $post_id);
       if (empty($img)) continue;
 
       // 返り値の型（ID/配列/URL）に対応
@@ -220,21 +259,6 @@ get_template_part('parts/header-bg');
           <?php endforeach; ?>
         </ul>
       </div>
-    <?php else : ?>
-      <!-- 未入力時のフォールバック表示 -->
-      <div class="p-facility__gallery">
-        <ul class="p-facility__list">
-          <li class="p-facility__item">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/dummy_01.png" alt="受付・待合室">
-          </li>
-          <li class="p-facility__item">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/dummy_02.png" alt="受付・待合室">
-          </li>
-          <li class="p-facility__item">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/dummy_03.png" alt="受付・待合室">
-          </li>
-        </ul>
-      </div>
     <?php endif; ?>
   </div>
 </section>
@@ -244,58 +268,71 @@ get_template_part('parts/header-bg');
   <div class="p-staff__inner l-inner">
     <h2 class="p-staff__title c-section-title">
       <span class="c-section-title__dot c-section-title__dot--navy"></span>
-      スタッフ紹介
+      診療科・部門紹介
     </h2>
 
-    <div class="p-staff__nav">
-      <div class="p-staff__nav-inner">
-        <ul class="p-staff__list">
-          <?php
-          // 固定順（slugと診療科名）
-          $departments = [
-            ['slug' => 'general-medicine', 'label' => '総合診療科'],
-            ['slug' => 'rheumatology', 'label' => 'リウマチ・膠原病内科'],
-            ['slug' => 'rehabilitation', 'label' => 'リハビリテーション科'],
-            ['slug' => 'internal-medicine', 'label' => '内科'],
-            ['slug' => 'diabetology', 'label' => '糖尿病内科'],
-            ['slug' => 'radiology', 'label' => '放射線科'],
-            ['slug' => 'psychosomatic', 'label' => '心療内科'],
-            ['slug' => 'oncology', 'label' => '腫瘍内科'],
-            ['slug' => 'dialysis', 'label' => '透析'],
-            ['slug' => 'nephrology', 'label' => '腎臓内科'],
-            ['slug' => 'orthopedics', 'label' => '整形外科'],
-            // ↓この2つだけ別ページにリンク
-            ['slug' => 'nursing', 'label' => '看護部'],
-            ['slug' => 'office-staff', 'label' => '事務スタッフ'],
-          ];
+    <div class="p-department-link__inner l-single-department-inner">
+      <!-- 診療科セクション -->
+      <div class="p-department__nav p-department__nav--blue">
+        <div class="p-department__section-title p-department__section-title--blue">＜診療科＞</div>
+        <div class="p-department__nav-inner">
+          <ul class="p-department__list">
+            <?php
+            // 診療科の一覧
+            $departments = [
+              ['slug' => 'general-medicine', 'label' => '内科・総合診療科'],
+              ['slug' => 'orthopedics', 'label' => '整形外科'],
+              ['slug' => 'psychosomatic', 'label' => '心療内科'],
+              ['slug' => 'surgery', 'label' => '外科'],
+              ['slug' => 'nephrology', 'label' => '腎臓内科/透析'],
+            ];
 
-          foreach ($departments as $dept) {
-            // スタッフページ専用リンク
-            if ($dept['slug'] === 'nursing') {
-              $link = home_url('/staff/#nursing'); // スタッフページの看護部セクション
-            } elseif ($dept['slug'] === 'office-staff') {
-              $link = home_url('/staff/#office-staff'); // スタッフページの事務スタッフセクション
-            } else {
-              // 通常の診療科ページの医師紹介へ
-              $post = get_page_by_path($dept['slug'], OBJECT, 'department');
-              $link = ($post && $post->post_status === 'publish')
-                ? get_permalink($post) . '#doctorIntro-ttl'
-                : '';
-            }
+            foreach ($departments as $item) {
+              $post = get_page_by_path($item['slug'], OBJECT, 'department');
+              $url = $post ? get_permalink($post) : '#';
+              $title = ($post ? get_the_title($post) : '') ?: $item['label'];
 
-            if (!empty($link)) {
-              echo '<li class="p-staff__item"><a href="' . esc_url($link) . '">' .
-                esc_html($dept['label']) .
-                '<span class="p-staff__arr"></span></a></li>';
-            } else {
-              // 非公開などの場合は非リンク表示
-              echo '<li class="p-staff__item is-disabled"><span>' .
-                esc_html($dept['label']) .
-                '</span></li>';
+              echo '<li class="p-department__item">
+                <a href="' . esc_url($url) . '">' .
+                esc_html($title) .
+                '<span class="p-department__arr"></span>
+                </a>
+              </li>';
             }
-          }
-          ?>
-        </ul>
+            ?>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 各部門セクション -->
+      <div class="p-department__nav p-department__nav--blue">
+        <div class="p-department__section-title p-department__section-title--blue">＜各部門＞</div>
+        <div class="p-department__nav-inner">
+          <ul class="p-department__list">
+            <?php
+            // 各部門の一覧（each-departmentページへのアンカーリンク）
+            $each_department_url = home_url('/each-department');
+            $divisions = [
+              ['id' => 'nursing', 'label' => '看護部'],
+              ['id' => 'rehabilitation', 'label' => 'リハビリテーション科'],
+              ['id' => 'clinical-engineering', 'label' => '臨床工学部'],
+              ['id' => 'radiology', 'label' => '放射線部'],
+              ['id' => 'pharmacy', 'label' => '薬剤科'],
+              ['id' => 'nutrition', 'label' => '栄養科'],
+              ['id' => 'medical-affairs', 'label' => '医事課'],
+            ];
+
+            foreach ($divisions as $item) {
+              echo '<li class="p-department__item">
+                <a href="' . esc_url($each_department_url . '#' . $item['id']) . '">' .
+                esc_html($item['label']) .
+                '<span class="p-department__arr"></span>
+                </a>
+              </li>';
+            }
+            ?>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -350,70 +387,54 @@ get_template_part('parts/header-bg');
       <span class="c-section-title__dot c-section-title__dot--navy"></span>
       関連病院
     </h2>
-    <div class="p-affiliation__content">
-      <div class="p-affiliation__table-wrap">
-        <table class="p-affiliation__table">
-          <thead>
-            <tr>
-              <th>医師名</th>
-              <th>医院名</th>
-              <th>診療科</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>吉村 清</td>
-              <td>
-                <a href="https://www.showa-u.ac.jp/SUH/" target="_blank">昭和医科大学 <span
-                    class="p-affiliation__icon"></span></a>
-              </td>
-              <td>内科</td>
-            </tr>
-            <tr>
-              <td>氏名</td>
-              <td><a href="https://tkh.kkr.or.jp/index.html" target="_blank">東京共済病院 <span
-                    class="p-affiliation__icon"></span></a></td>
-              <td>内科</td>
-            </tr>
-            <tr>
-              <td>氏名</td>
-              <td><a href="https://hospinfo.tokyo-med.ac.jp/" target="_blank">東京医科大学病院 <span
-                    class="p-affiliation__icon"></span></a></td>
-              <td>内科</td>
-            </tr>
-            <tr>
-              <td>氏名</td>
-              <td><a href="https://hosp.juntendo.ac.jp/" target="_blank">順天堂大学医学部附属 順天堂医院 <span
-                    class="p-affiliation__icon"></span></a></td>
-              <td>内科</td>
-            </tr>
-            <tr>
-              <td>氏名</td>
-              <td><a href="https://www.tmhp.jp/ebara/index.html" target="_blank">東京都立荏原病院 <span
-                    class="p-affiliation__icon"></span></a></td>
-              <td>内科</td>
-            </tr>
-            <tr>
-              <td>氏名</td>
-              <td><a href="https://www.tmhp.jp/hiroo/index.html" target="_blank">東京都立広尾病院 <span
-                    class="p-affiliation__icon"></span></a></td>
-              <td>内科</td>
-            </tr>
-            <tr>
-              <td>氏名</td>
-              <td><a href="https://ike-naka.com/" target="_blank">池上仲通りクリニック <span
-                    class="p-affiliation__icon"></span></a></td>
-              <td>内科</td>
-            </tr>
-            <tr>
-              <td>氏名</td>
-              <td><a href="https://www.beni-dental.com/" target="_blank">紅デンタルクリニック <span
-                    class="p-affiliation__icon"></span></a></td>
-              <td>歯科</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <div class="p-partner__wrapper">
+      <ul class="p-partner__list">
+        <!-- 1段目 -->
+        <li class="p-partner__item">
+          <a href="https://www.showa-u.ac.jp/SUH/" target="_blank"><img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_01.webp" alt="昭和医科大学病院"></a>
+        </li>
+        <li class="p-partner__item">
+          <a href="https://tkh.kkr.or.jp/index.html" target="_blank"><img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_02.webp" alt="東京共済病院"></a>
+        </li>
+        <li class="p-partner__item">
+          <a href="https://hospinfo.tokyo-med.ac.jp/" target="_blank"><img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_03.webp" alt="東京医科大学病院"></a>
+        </li>
+        <li class="p-partner__item">
+          <a href="https://hosp.juntendo.ac.jp/" target="_blank"><img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_04.webp" alt="順天堂大学病院"></a>
+        </li>
+        <!-- 2段目 -->
+        <li class="p-partner__item">
+          <a href="https://himonya-hosp.com/" target="_blank"><img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_05.webp" alt="碑文谷病院"></a>
+        </li>
+        <li class="p-partner__item">
+          <a href="https://www.tmhp.jp/ebara/index.html" target="_blank"><img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_06.webp" alt="東京都立荏原病院"></a>
+        </li>
+        <li class="p-partner__item">
+          <a href="https://www.tmhp.jp/hiroo/index.html" target="_blank"><img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_07.webp" alt="東京都立広尾病院"></a>
+        </li>
+        <li class="p-partner__item">
+          <a href="https://ike-naka.com/" target="_blank"><img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_08.webp"
+              alt="池田仲通りクリニック"></a>
+        </li>
+        <li class="p-partner__item p-partner__item--small">
+          <a href="https://www.beni-dental.com/" target="_blank"><img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_09.webp"
+              alt="BENI DENTAL CLINIC"></a>
+        </li>
+        <li class="p-partner__item">
+          <a href="https://www.kyorin-u.ac.jp/hospital/suginami/" target="_blank"><img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_10.webp"
+              alt=""></a>
+        </li>
+      </ul>
     </div>
   </div>
 </section>

@@ -12,9 +12,9 @@
 .p-schedule__tableWrap {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  margin-top: rem(15);
+  margin-top: rem(12);
   @include mq("md") {
-    margin-top: rem(30);
+    margin-top: rem(18);
   }
 }
 .p-schedule__table {
@@ -66,7 +66,7 @@
   padding: rem(14) rem(6);
   border-right: 1px solid $color-gray-light;
   border-bottom: 1px solid $color-gray-light;
-  vertical-align: baseline;
+  vertical-align: middle;
   font-size: rem(16);
   // width: 12%;
   @include mq("md") {
@@ -98,6 +98,11 @@
     font-size: rem(16);
   }
 }
+
+// 縦並び時のチップ間の余白
+.p-schedule__cell .c-chip + br + .c-chip {
+  margin-top: rem(8);
+}
 .c-chip--green {
   background: $color-green;
   color: $color-white;
@@ -108,4 +113,44 @@
   margin-top: rem(6);
   font-size: rem(10);
   color: $color-gray;
+}
+
+// 診療時間の情報
+.p-schedule__info {
+  margin-top: rem(20);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: rem(15);
+  @include mq("md") {
+    margin-top: rem(24);
+    gap: rem(16);
+  }
+}
+
+.p-schedule__info-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: rem(100);
+  padding: rem(8) rem(56);
+  border-radius: rem(25);
+  background-color: $color-white;
+  border: 1px solid $color-green;
+  color: $color-green;
+  font-size: rem(14);
+  font-weight: $medium;
+  letter-spacing: 0.3em;
+  @include mq("md") {
+    min-width: rem(120);
+    font-size: rem(16);
+  }
+}
+
+.p-schedule__info-text {
+  font-size: rem(16);
+  font-weight: $medium;
+  @include mq("md") {
+    font-size: rem(16);
+  }
 }

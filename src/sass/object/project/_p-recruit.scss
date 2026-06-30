@@ -3,9 +3,12 @@
 .p-recruit-fv {
   position: relative;
   z-index: 1;
-  height: 100vh;
-  min-height: rem(400);
   font-family: $recruit-family;
+
+  @include mq("md") {
+    height: 100vh;
+    min-height: rem(400);
+  }
 }
 
 .p-recruit-fv::before {
@@ -16,7 +19,8 @@
     right: 25%;
     width: rem(150);
     height: rem(150);
-    background: url(../images/common/bird_02.svg) no-repeat center bottom/contain;
+    background: url(../images/common/bird_02.svg) no-repeat center
+      bottom/contain;
   }
 }
 

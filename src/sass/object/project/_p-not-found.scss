@@ -3,82 +3,98 @@
 .p-not-found {
   position: relative;
   z-index: 1;
+  padding: rem(100) 0 rem(60);
+
+  @include mq("md") {
+    padding: rem(150) 0 rem(100);
+  }
 }
 
 .p-not-found__content {
   color: $color-navy;
   text-align: center;
-
-  @include mq("md") {
-  }
 }
 
 .p-not-found__title {
-  font-weight: $normal;
-  font-size: rem(80);
-  line-height: calc(96 / 80);
-  letter-spacing: 0.5em;
-  text-indent: 0.5em;
+  font-family: $heading-family;
+  font-weight: $bold;
+  font-size: rem(32);
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+
   @include mq("md") {
-    font-size: rem(160);
-    line-height: calc(192 / 160);
+    font-size: rem(48);
   }
 }
 
 .p-not-found__text {
+  margin-top: rem(20);
   line-height: 1.9;
   font-weight: $normal;
-  font-size: rem(16);
+  font-size: rem(14);
+
   @include mq("md") {
-    margin-top: rem(28);
+    margin-top: rem(30);
+    font-size: rem(16);
   }
 }
 
 .p-not-found__button {
-  margin-top: rem(20);
+  margin-top: rem(30);
+
   @include mq("md") {
-    margin-top: rem(40);
+    margin-top: rem(50);
   }
 }
-.p-not-found__button a {
+
+.p-not-found__link {
   position: relative;
   display: inline-block;
-  font-size: rem(20);
+  font-size: rem(14);
   font-weight: $normal;
   color: $color-navy;
-  width: rem(274);
   background: $color-white;
   border-radius: 50px;
   line-height: 1;
-  padding: rem(17) rem(49);
+  padding: rem(16) rem(50) rem(16) rem(30);
   border: 1px solid $color-navy;
   transition: background 0.3s, color 0.3s;
-}
 
-.p-not-found__button a::after {
-  background-image: url(../images/common/arrow-navy.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  bottom: 0;
-  content: "";
-  height: rem(25);
-  margin: auto;
-  position: absolute;
-  right: rem(30);
-  top: 0;
-  width: rem(25);
-  transition: background-image 0.3s;
-}
-
-.p-not-found__button a:hover {
   @include mq("md") {
-    background: $color-navy;
-    color: $color-white;
+    font-size: rem(16);
+    padding: rem(18) rem(60) rem(18) rem(35);
   }
-}
 
-.p-not-found__button a:hover::after {
-  background-image: url(../images/common/arrow-white.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
+  &::after {
+    background-image: url(../images/common/arrow-navy.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 0;
+    content: "";
+    height: rem(20);
+    margin: auto;
+    position: absolute;
+    right: rem(20);
+    top: 0;
+    width: rem(20);
+    transition: background-image 0.3s;
+
+    @include mq("md") {
+      height: rem(25);
+      right: rem(25);
+      width: rem(25);
+    }
+  }
+
+  @include mq("md") {
+    &:hover {
+      background: $color-navy;
+      color: $color-white;
+      opacity: 1;
+
+      &::after {
+        background-image: url(../images/common/arrow-white.svg);
+      }
+    }
+  }
 }

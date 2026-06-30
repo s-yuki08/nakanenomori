@@ -5,6 +5,7 @@
   z-index: 0;
   height: 100vh;
   min-height: rem(400);
+  overflow: hidden;
 }
 
 .p-mv__inner {
@@ -19,27 +20,121 @@
   background-size: cover;
   background-position: top;
   background-image: url(../images/common/bg_sp.svg);
-  width: 100%;
-  height: rem(130);
-  bottom: rem(-1);
-  right: 0;
+  width: 110%;
+  height: rem(150);
+  bottom: rem(-20);
+  right: -5%;
   z-index: 2;
+  transform-origin: center bottom;
+  transform: translateX(var(--wave-x, 0)) translateY(var(--wave-y, 0))
+    scaleY(var(--wave-scale, 1));
   @include mq(md) {
     position: absolute;
     content: "";
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    width: 100%;
-    height: rem(370);
-    bottom: rem(-3);
-    right: 0;
-    background-image: url(../images/common/mv_wave_pc.png);
+    width: 110%;
+    height: rem(350);
+    bottom: rem(-100);
+    right: -5%;
+    background-image: url(../images/common/mv_wave_pc.svg);
     background-position: top center;
-    @include mq(xxl) {
-      background-image: url(../images/common/mv_wave_pc.png);
-      height: rem(500);
+    // 縦幅が小さい時は波の高さを抑える
+    @media (max-height: 950px) {
+      height: rem(280);
     }
+    @include mq(xxl) {
+      height: rem(530);
+    }
+  }
+}
+
+@keyframes bird-fly {
+  // 右上から直線的に入場
+  0% {
+    left: 110%;
+    transform: translateY(-80px) scaleY(1) rotate(-5deg);
+    opacity: 1;
+  }
+  // 5% {
+  //   left: 80%;
+  //   transform: translateY(-55px) scaleY(0.85) rotate(-3deg);
+  //   opacity: 1;
+  // }
+  // 10% {
+  //   left: 60%;
+  //   transform: translateY(-35px) scaleY(1) rotate(-2deg);
+  // }
+  // 15% {
+  //   left: 45%;
+  //   transform: translateY(-20px) scaleY(0.85) rotate(0deg);
+  // }
+  // 20% {
+  //   left: 32%;
+  //   transform: translateY(-8px) scaleY(1) rotate(2deg);
+  // }
+  // 25% {
+  //   left: 24%;
+  //   transform: translateY(-2px) scaleY(0.85) rotate(0deg);
+  // }
+  30% {
+    left: 20%;
+    transform: translateY(0) scaleY(1) rotate(0deg);
+  }
+  // デフォルト位置で上下にゆらゆら
+  33% {
+    left: 20%;
+    transform: translateY(-3px) scaleY(0.85) rotate(2deg);
+  }
+  36% {
+    transform: translateY(-6px) scaleY(1) rotate(-2deg);
+  }
+  39% {
+    transform: translateY(-2px) scaleY(0.85) rotate(2deg);
+  }
+  42% {
+    transform: translateY(3px) scaleY(1) rotate(-2deg);
+  }
+  45% {
+    transform: translateY(5px) scaleY(0.85) rotate(2deg);
+  }
+  48% {
+    transform: translateY(2px) scaleY(1) rotate(-2deg);
+  }
+  51% {
+    transform: translateY(-4px) scaleY(0.85) rotate(2deg);
+  }
+  54% {
+    left: 20%;
+    transform: translateY(-7px) scaleY(1) rotate(-2deg);
+  }
+  57% {
+    transform: translateY(-3px) scaleY(0.85) rotate(2deg);
+  }
+  60% {
+    transform: translateY(2px) scaleY(1) rotate(-2deg);
+  }
+  63% {
+    transform: translateY(6px) scaleY(0.85) rotate(2deg);
+  }
+  66% {
+    transform: translateY(3px) scaleY(1) rotate(-2deg);
+  }
+  69% {
+    left: 20%;
+    transform: translateY(0) scaleY(0.85) rotate(0deg);
+  }
+  // 左上に直線的に退場
+  72% {
+    left: 20%;
+    transform: translateY(-8px) scaleY(1) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    left: -60%;
+    transform: translateY(-100px) scaleY(1) rotate(-5deg);
+    opacity: 1;
   }
 }
 
@@ -54,6 +149,7 @@
   left: 20%;
   z-index: 2;
   content: "";
+  animation: bird-fly 10s ease-in-out infinite;
   @include mq(md) {
     background-image: url(../images/common/mv_bard.svg);
     background-repeat: no-repeat;
@@ -99,15 +195,15 @@
 
 .p-mv__heading.p-mv__heading--sp {
   color: $color-gray;
-  top: 19%;
+  top: 40%;
   left: 5%;
   text-shadow: none;
   @include mq(md) {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     left: 10%;
     right: 0;
-    width: 100%;
-    top: 15%;
+    width: fit-content;
+    top: 26%;
     color: $color-white;
   }
 }
@@ -122,7 +218,7 @@
 
 .p-mv__btn {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   bottom: rem(30);
   left: 50%;
   transform: translateX(-50%);
@@ -135,9 +231,9 @@
   gap: rem(20);
   @include mq(md) {
     grid-template-columns: repeat(3, 1fr);
-    gap: rem(20);
-    max-width: rem(1100);
-    margin: 0 auto;
+    gap: rem(36);
+    max-width: rem(1070);
+    margin-inline: auto;
     position: relative;
   }
 }
@@ -164,11 +260,9 @@
   justify-content: center;
   position: relative;
   padding: rem(25) rem(12);
-  font-size: rem(22);
-  line-height: 1.4;
-  background-color: $color-white;
-  border-radius: 20px;
+  border-radius: rem(20);
   border: 1px solid $color-cyan;
+  background-color: $color-white;
   width: 100%;
   height: 100%;
   @include mq(md) {
@@ -181,20 +275,25 @@
 
 .p-mv__btn-link::before {
   content: "";
-  background-image: url(../images/common/medical-questionnaire-icon.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
   width: rem(42);
-  height: rem(58);
+  aspect-ratio: 42/58;
+  height: fit-content;
   position: absolute;
-  left: 15%;
+  left: 10%;
   top: 20%;
-  transition: transform 0.3s ease-in-out;
+  background-color: $color-cyan;
+  mask-image: url(../images/common/medical-questionnaire-icon.svg);
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  -webkit-mask-image: url(../images/common/medical-questionnaire-icon.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .p-mv__btn-link:hover::before {
   @include mq(md) {
-    background-image: url(../images/common/medical-questionnaire-icon-hover.svg);
+    background-color: $color-white;
   }
 }
 .p-mv__btn-arrow {
@@ -209,30 +308,35 @@
   position: absolute;
   bottom: -0.05rem;
   right: 0;
-  width: rem(54);
-  height: rem(44);
+  width: rem(46);
+  aspect-ratio: 46/37;
   border-width: 0.2rem;
   border-style: solid;
-  border-radius: 20px 0 20px 0;
-  transition: background-color 0.3s color 0.3s;
+  border-radius: rem(20) 0 rem(20) 0;
+  transition: background-color 0.3s ease-in-out;
   border: 1px solid $color-cyan;
 }
 
 .p-mv__btn-arrow::after {
   content: "";
-  background-image: url(../images/common/arrow-down-right.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: rem(20);
-  height: rem(20);
+  width: rem(19);
+  aspect-ratio: 19/18;
   position: absolute;
-  transition: transform 0.3s ease-in-out;
+  background-color: $color-white;
+  mask-image: url(../images/common/arrow-down-right.svg);
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  -webkit-mask-image: url(../images/common/arrow-down-right.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .p-mv__btn-link:hover {
   @include mq(md) {
     background-color: $color-cyan;
     color: $color-white;
+    opacity: 1;
   }
 }
 
@@ -245,19 +349,33 @@
 
 .p-mv__btn-link:hover .p-mv__btn-arrow::after {
   @include mq(md) {
-    background-image: url(../images/common/arrow-down-right-hover.svg);
+    background-color: $color-cyan;
   }
 }
 
 .p-mv__btn-text {
   color: $color-cyan;
   transition: color 0.3s ease;
+  padding-left: rem(36);
+  color: $color-cyan;
+  font-size: rem(20);
+  font-weight: $regular;
+  font-family: $base-font-family;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  transition: color 0.3s;
+  @include mq("md") {
+    font-size: rem(22);
+    line-height: 1.4;
+  }
 }
-.p-mv__btn-link:hover .p-mv__btn-text {
-  @include mq(md) {
+
+@media (any-hover: hover) {
+  .p-mv__btn-link:hover .p-mv__btn-text {
     color: $color-white;
   }
 }
+
 // green
 
 .p-mv__btn-link.p-mv__btn-link--green {
@@ -290,42 +408,30 @@
 
 .p-mv__btn-link.p-mv__btn-link--green::before {
   content: "";
-  background-image: url(../images/common/stethoscope-icon.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: rem(70);
-  height: rem(68);
+  width: rem(51);
+  aspect-ratio: 51/50;
   position: absolute;
-  left: 8%;
-  top: 20%;
-  transition: transform 0.3s ease-in-out;
+  left: 13%;
+  top: 25%;
+  background-color: $color-green;
+  mask-image: url(../images/common/stethoscope-icon.svg);
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  -webkit-mask-image: url(../images/common/stethoscope-icon.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .p-mv__btn-link.p-mv__btn-link--green:hover::before {
   @include mq(md) {
-    background-image: url(../images/common/stethoscope-icon-hover.svg);
+    background-color: $color-white;
   }
 }
 
 .p-mv__btn-arrow.p-mv__btn-arrow--green {
   background-color: $color-green;
   border-color: $color-green;
-  position: relative;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  position: absolute;
-  bottom: -0.05rem;
-  right: 0;
-  width: rem(54);
-  height: rem(44);
-  border-width: 0.2rem;
-  border-style: solid;
-  border-radius: 20px 0 20px 0;
-  transition: background-color 0.3s ease;
 }
 
 .p-mv__btn-link.p-mv__btn-link--green:hover .p-mv__btn-arrow {
@@ -337,13 +443,15 @@
 
 .p-mv__btn-link.p-mv__btn-link--green:hover .p-mv__btn-arrow::after {
   @include mq(md) {
-    background-image: url(../images/common/arrow-green-hover.svg);
+    background-color: $color-green;
   }
 }
 
 .p-mv__btn-text.p-mv__btn-text--green {
   color: $color-green;
   transition: color 0.3s;
+  letter-spacing: 0em;
+  margin-left: rem(16);
 }
 
 .p-mv__btn-link.p-mv__btn-link--green:hover .p-mv__btn-text {
@@ -382,41 +490,30 @@
 
 .p-mv__btn-link.p-mv__btn-link--blue::before {
   content: "";
-  background-image: url(../images/common/recruit-icon.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: rem(76);
-  height: rem(54);
+  width: rem(50.73);
+  aspect-ratio: 50.73/42.55;
   position: absolute;
-  left: 10%;
-  top: 25%;
+  left: 15%;
+  top: 32%;
+  background-color: $color-blue;
+  mask-image: url(../images/common/heart-icon.svg);
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  -webkit-mask-image: url(../images/common/heart-icon.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .p-mv__btn-link.p-mv__btn-link--blue:hover::before {
   @include mq(md) {
-    background-image: url(../images/common/recruit-icon-hover.svg);
+    background-color: $color-white;
   }
 }
 
 .p-mv__btn-arrow.p-mv__btn-arrow--blue {
   background-color: $color-blue;
   border-color: $color-blue;
-  position: relative;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  position: absolute;
-  bottom: -0.05rem;
-  right: 0;
-  width: rem(54);
-  height: rem(44);
-  border-width: 0.2rem;
-  border-style: solid;
-  border-radius: 20px 0 20px 0;
-  transition: background-color 0.3s color 0.3s;
 }
 
 .p-mv__btn-link.p-mv__btn-link--blue:hover .p-mv__btn-arrow {
@@ -428,12 +525,8 @@
 
 .p-mv__btn-link.p-mv__btn-link--blue:hover .p-mv__btn-arrow::after {
   @include mq(md) {
-    background-image: url(../images/common/arrow-blue-hover.svg);
+    background-color: $color-blue;
   }
-}
-
-.p-mv__btn-text {
-  padding-left: rem(30);
 }
 
 .p-mv__btn-text.p-mv__btn-text--blue {

@@ -4,7 +4,17 @@
   text-align: center;
   line-height: 2;
   position: relative;
+}
+
+.p-message::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: #f6f8fc;
+  z-index: -2;
 }
 
 .p-message__block {
@@ -76,16 +86,21 @@
   }
 }
 
-.p-message__leaf {
+.p-message__inner {
+  position: relative;
+}
+
+.p-message__inner::after {
+  content: "";
   position: absolute;
   right: 0;
-  top: 0;
+  top: rem(-16);
   width: rem(100);
-  height: auto;
+  aspect-ratio: 150 / 140;
+  background: url(../images/common/leaf_recruit.svg) no-repeat center / contain;
   @include mq(md) {
-    right: 15%;
-    top: 23%;
+    right: calc(50% - min(43.5vw, 33rem));
+    top: rem(160);
     width: rem(150);
-    height: auto;
   }
 }

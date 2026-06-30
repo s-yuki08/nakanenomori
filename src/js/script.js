@@ -1,74 +1,6 @@
 jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
 
-  (function () {
-    // ========================
-    // 1回のみローディング表示
-    // ========================
-
-    // 安全な localStorage チェック（Safariプライベートモード対応）
-    function safeStorage(kind) {
-      try {
-        const s = window[kind];
-        const k = "__test__";
-        s.setItem(k, "1");
-        s.removeItem(k);
-        return s;
-      } catch (e) {
-        return null;
-      }
-    }
-
-    const store = safeStorage("localStorage");
-    const KEY = "loadingShown"; // ← 保存するキー名
-    const $win = $(window);
-    const $loading = $(".js-loading");
-
-    // ======== 2回目以降はスキップ ========
-    try {
-      // ?reset-loading=1 を付けた時はリセットできるように
-      const sp = new URLSearchParams(location.search);
-      if (sp.get("reset-loading") === "1" && store) store.removeItem(KEY);
-
-      // すでにローディング済みならスキップ
-      if (store && store.getItem(KEY)) {
-        $loading.remove(); // ローディング要素を即削除
-        return; // 以降の処理をスキップ
-      }
-    } catch (e) {}
-
-    // ======== 初回のみ実行 ========
-    $win.on("load", function () {
-      const HOLD = 800; // ロゴを見せる時間
-      const FADE = 900; // フェード時間（CSSに合わせる）
-      let ended = false;
-
-      // フェード終了で削除
-      $loading.one("transitionend webkitTransitionEnd oTransitionEnd", function (e) {
-        if (e.target !== this || ended) return;
-        ended = true;
-        $loading.remove();
-        try {
-          if (store) store.setItem(KEY, "1");
-        } catch (e) {}
-      });
-
-      // 保険（transitionendが来ないとき）
-      setTimeout(function () {
-        if (ended) return;
-        ended = true;
-        $loading.remove();
-        try {
-          if (store) store.setItem(KEY, "1");
-        } catch (e) {}
-      }, HOLD + FADE + 200);
-
-      // 実際のフェードアウト開始
-      setTimeout(function () {
-        $loading.addClass("is-hide");
-      }, HOLD);
-    });
-  })();
   const pageTop = $(".js-page-top");
   pageTop.hide();
   $(window).scroll(function () {
@@ -89,20 +21,6 @@ jQuery(function ($) {
   });
 
   //  ヘッダークラス名付与
-  let header = $(".p-header");
-  let headerHeight = $(".p-header").height();
-  let height = $(".js-header-height").height();
-
-  console.log("ヘッダー高さ " + headerHeight);
-  console.log("mv高さ " + height);
-
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > height - headerHeight) {
-      header.addClass("is-color");
-    } else {
-      header.removeClass("is-color");
-    }
-  });
 
   //ドロワーメニュー
   $(function () {
@@ -205,10 +123,12 @@ jQuery(function ($) {
         return;
       }
       $panel.stop(true, true);
-      $panel.height($panel.outerHeight()).animate({ height: 0 }, 450, "swing", function () {
-        $wrap.removeClass("is-open");
-        $panel.height("");
-      });
+      $panel
+        .height($panel.outerHeight())
+        .animate({ height: 0 }, 450, "swing", function () {
+          $wrap.removeClass("is-open");
+          $panel.height("");
+        });
     }
     function toggle() {
       $btn.attr("aria-expanded") === "true" ? close() : open();
@@ -224,8 +144,16 @@ jQuery(function ($) {
 
   $(".js-accordion").on("click", function () {
     const parent = $(this).closest(".p-recruit__item");
-    parent.toggleClass("is-open").find(".p-recruit__body").stop().slideToggle(250);
-    parent.siblings(".p-recruit__item").removeClass("is-open").find(".p-recruit__body").slideUp(200);
+    parent
+      .toggleClass("is-open")
+      .find(".p-recruit__body")
+      .stop()
+      .slideToggle(250);
+    parent
+      .siblings(".p-recruit__item")
+      .removeClass("is-open")
+      .find(".p-recruit__body")
+      .slideUp(200);
   });
 
   function setupTabs(sectionSelector, btnSelector, panelSelector) {
@@ -273,7 +201,11 @@ jQuery(function ($) {
   }
 
   setupTabs("#nursing", ".p-nursing__btn", ".p-nursing__profile");
-  setupTabs("#office-staff", ".p-office-staff__btn", ".p-office-staff__profile");
+  setupTabs(
+    "#office-staff",
+    ".p-office-staff__btn",
+    ".p-office-staff__profile"
+  );
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -303,7 +235,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // アクセシビリティ配慮：動きを軽減設定のユーザーには即値反映
-const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const prefersReduced = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+).matches;
 
 // 監視対象
 const envSection = document.querySelector(".p-environment");
@@ -385,19 +319,106 @@ function startEnvironmentAnimations() {
     const donut = document.getElementById("donutProgress");
     const circumference = 2 * Math.PI * 59;
     const percentage = 81.5;
-    donut.style.strokeDashoffset = (circumference - (percentage / 100) * circumference).toFixed(2);
-    animateNumber(document.getElementById("vacationRate"), 0, percentage, 1200, 1, 0);
+    donut.style.strokeDashoffset = (
+      circumference -
+      (percentage / 100) * circumference
+    ).toFixed(2);
+    animateNumber(
+      document.getElementById("vacationRate"),
+      0,
+      percentage,
+      1200,
+      1,
+      0
+    );
   }, 600);
 }
 
 !(function () {
   var viewport = document.querySelector('meta[name="viewport"]');
   function switchViewport() {
-    var value = window.innerWidth > 375 ? "width=device-width,initial-scale=1" : "width=375";
+    var value =
+      window.innerWidth > 375
+        ? "width=device-width,initial-scale=1"
+        : "width=375";
     if (viewport.getAttribute("content") !== value) {
       viewport.setAttribute("content", value);
     }
   }
   window.addEventListener("resize", switchViewport, false);
   switchViewport();
+})();
+
+// ========================
+// greeting鳥アニメーション
+// ========================
+(function () {
+  const greetingSection = document.querySelector(".p-greeting");
+  if (!greetingSection) return;
+
+  // GSAPがあればGSAPを使用、なければIntersection Observer
+  if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.create({
+      trigger: ".p-greeting",
+      start: "top 85%",
+      once: true,
+      onEnter: () => {
+        greetingSection.classList.add("is-animated");
+      },
+    });
+  } else {
+    // フォールバック: Intersection Observer
+    const io = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            greetingSection.classList.add("is-animated");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px 0px -15% 0px",
+        threshold: 0,
+      }
+    );
+    io.observe(greetingSection);
+  }
+})();
+
+// ========================
+// 波のアニメーション
+// ========================
+(function () {
+  const mv = document.querySelector(".p-mv");
+  if (!mv) return;
+
+  let time = 0;
+
+  function animateWave() {
+    // 複数のsin波を組み合わせて不規則な動きを作る
+    const waveX =
+      Math.sin(time * 0.5) * 0.8 +
+      Math.sin(time * 0.8) * 0.5 +
+      Math.sin(time * 0.3) * 0.3;
+
+    const waveY =
+      Math.sin(time * 0.6) * 5 +
+      Math.sin(time * 0.9) * 3 +
+      Math.sin(time * 0.4) * 2;
+
+    const waveScale =
+      1 + Math.sin(time * 0.7) * 0.02 + Math.sin(time * 0.5) * 0.01;
+
+    mv.style.setProperty("--wave-x", `${waveX}%`);
+    mv.style.setProperty("--wave-y", `${waveY}px`);
+    mv.style.setProperty("--wave-scale", waveScale);
+
+    time += 0.03;
+    requestAnimationFrame(animateWave);
+  }
+
+  animateWave();
 })();

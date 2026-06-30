@@ -8,10 +8,10 @@
 }
 
 .p-mission__content {
-  margin-top: rem(15);
+  margin-top: rem(16);
   width: 100%;
   @include mq("md") {
-    margin-top: rem(29);
+    margin-top: rem(16);
     max-width: rem(900);
     margin: 0 auto;
   }

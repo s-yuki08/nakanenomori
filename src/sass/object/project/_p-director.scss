@@ -16,26 +16,41 @@
 }
 
 .p-director__wrapper {
+  margin-top: rem(10);
   display: flex;
   flex-direction: column;
-  width: 100%;
   @include mq("md") {
+    margin-top: rem(14);
     flex-direction: row;
-    margin: 0 auto;
+    gap: rem(70);
+    margin-inline: rem(34);
     align-items: flex-start;
     justify-content: space-between;
-    max-width: rem(1040);
+  }
+}
+
+.p-director__wrapper .p-director__body {
+  @include mq("md") {
+    margin-inline: 0;
+  }
+}
+
+.p-director__wrapper.p-director__wrapper--bottom {
+  margin-top: rem(20);
+
+  @include mq("md") {
+    gap: rem(70);
+    margin-inline: rem(30);
   }
 }
 
 .p-director__body {
   font-size: rem(15);
-  padding-top: rem(13);
   @include mq("md") {
     letter-spacing: 0.02em;
     line-height: 1.87;
     font-size: rem(17);
-    padding-top: rem(29);
+    margin-inline: rem(30);
   }
 }
 
@@ -45,7 +60,7 @@
   margin-top: rem(18);
   @include mq("md") {
     font-size: rem(17);
-    margin-top: rem(20);
+    margin-top: rem(12);
   }
 }
 
@@ -53,7 +68,7 @@
   margin-top: rem(40);
   width: 100%;
   @include mq("md") {
-    margin-top: rem(45);
+    margin-top: rem(36);
     max-width: rem(920);
     margin: 0 auto;
   }
@@ -76,11 +91,15 @@
 }
 
 .p-director__text {
+  color: $color-black;
   font-size: rem(16);
-  line-height: 1.87;
+  font-weight: $regular;
+  font-family: $base-font-family;
+  line-height: 2;
+  letter-spacing: 0em;
   @include mq("md") {
     font-size: rem(17);
-    margin-left: rem(28);
+    line-height: 2.05;
   }
 }
 
@@ -88,34 +107,67 @@
   width: 100%;
   margin-top: rem(30);
   @include mq("md") {
-    width: 30%;
+    max-width: rem(323);
     margin-top: 0;
   }
 }
 .p-director__image {
   width: 100%;
-  height: 100%;
+
+  @include mq("md") {
+    max-width: rem(323);
+    border-radius: rem(20);
+    overflow: hidden;
+  }
 }
 
 .p-director__image img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
   aspect-ratio: 323/320;
-  border-radius: 20px;
-  height: 100%;
 }
 
 .p-director__cap {
-  margin: 10px 0 0;
-  color: #4a4a4a;
-  font-size: 13.5px;
-  line-height: 1.6;
+  margin-top: rem(16);
 }
+
+.p-director__cap-text {
+  color: $color-black;
+  font-size: rem(15);
+  font-weight: $medium;
+  font-family: $base-font-family;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+}
+
 .p-director__name {
-  font-weight: 700;
-  margin: 0.2em 0 0;
+  color: $color-black;
+  font-size: rem(17);
+  font-weight: $medium;
+  font-family: $base-font-family;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
 }
 .p-director__kana {
-  font-weight: 400;
-  color: #6b6b6b;
+  font-size: rem(15);
+  font-weight: $regular;
+  font-family: $base-font-family;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.p-director__wrapper.p-director__wrapper--bottom .p-director__body {
+  @include mq("md") {
+    max-width: rem(528);
+    width: 100%;
+    margin-inline: 0;
+  }
+}
+
+.p-director__wrapper.p-director__wrapper--bottom .p-director__image-wrapper {
+  @include mq("md") {
+    max-width: rem(323);
+    width: 100%;
+  }
 }

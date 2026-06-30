@@ -13,7 +13,11 @@
   grid-template-columns: repeat(3, 1fr);
   gap: rem(30);
   max-width: rem(1080);
-  margin: 0 auto;
+  margin-inline: auto;
+
+  @include mq(md) {
+    gap: rem(18) rem(30);
+  }
 }
 
 // cyan
@@ -43,26 +47,28 @@
   @include mq(md) {
     background-color: $color-cyan;
     color: $color-white;
-  }
-}
-
-.p-menu-link__btn:hover::before {
-  @include mq(md) {
-    background-image: url(../images/common/medical-questionnaire-icon-hover.svg);
+    opacity: 1;
   }
 }
 
 .p-menu-link__btn::before {
   content: "";
-  background-image: url(../images/common/medical-questionnaire-icon.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  mask-image: url(../images/common/medical-questionnaire-icon.svg);
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  background-color: $color-cyan;
   width: rem(56);
   height: rem(77);
   position: absolute;
   left: 11%;
   top: 23%;
-  transition: transform 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.p-menu-link__btn:hover::before {
+  @include mq(md) {
+    background-color: $color-white;
+  }
 }
 
 .p-menu-link__btn-arrow {
@@ -91,23 +97,26 @@
   @include mq(md) {
     background-color: $color-white;
     color: $color-white;
-    transition: transform 0.3s ease-in-out;
   }
 }
 
 .p-menu-link__btn-arrow::after {
   content: "";
-  background-image: url(../images/common/arrow-down-right.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
   width: rem(20);
   height: rem(20);
   position: absolute;
-  transition: transform 0.3s ease-in-out;
+  background-color: $color-white;
+  mask-image: url(../images/common/arrow-down-right.svg);
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  -webkit-mask-image: url(../images/common/arrow-down-right.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  transition: background-color 0.4s ease-in-out;
 }
 .p-menu-link__btn:hover .p-menu-link__btn-arrow::after {
   @include mq(md) {
-    background-image: url(../images/common/arrow-down-right-hover.svg);
+    background-color: $color-cyan;
   }
 }
 
@@ -156,23 +165,24 @@
   }
 }
 
-.p-menu-link__btn.p-menu-link__btn--green:hover::before {
-  @include mq(md) {
-    background-image: url(../images/common/stethoscope-icon-hover.svg);
-  }
-}
-
 .p-menu-link__btn.p-menu-link__btn--green::before {
   content: "";
-  background-image: url(../images/common/stethoscope-icon.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  mask-image: url(../images/common/stethoscope-icon.svg);
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  background-color: $color-green;
   width: rem(70);
   height: rem(68);
   position: absolute;
   left: 8%;
   top: 25%;
-  transition: transform 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.p-menu-link__btn.p-menu-link__btn--green:hover::before {
+  @include mq(md) {
+    background-color: $color-white;
+  }
 }
 
 .p-menu-link__btn-arrow.p-menu-link__btn-arrow--green {
@@ -206,7 +216,7 @@
 
 .p-menu-link__btn.p-menu-link__btn--green:hover .p-menu-link__btn-arrow::after {
   @include mq(md) {
-    background-image: url(../images/common/arrow-green-hover.svg);
+    background-color: $color-green;
   }
 }
 
@@ -240,15 +250,16 @@
 
 .p-menu-link__btn.p-menu-link__btn--blue::before {
   content: "";
-  background-image: url(../images/common/recruit-icon.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  mask-image: url(../images/common/recruit-icon.svg);
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  background-color: $color-blue;
   width: rem(76);
   height: rem(54);
   position: absolute;
   left: 11%;
   top: 29%;
-  transition: transform 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .p-menu-link__btn.p-menu-link__btn--blue:hover {
@@ -260,7 +271,7 @@
 
 .p-menu-link__btn.p-menu-link__btn--blue:hover::before {
   @include mq(md) {
-    background-image: url(../images/common/recruit-icon-hover.svg);
+    background-color: $color-white;
   }
 }
 
@@ -299,7 +310,7 @@
 
 .p-menu-link__btn.p-menu-link__btn--blue:hover .p-menu-link__btn-arrow::after {
   @include mq(md) {
-    background-image: url(../images/common/arrow-blue-hover.svg);
+    background-color: $color-blue;
   }
 }
 
@@ -330,15 +341,16 @@
 
 .p-menu-link__btn.p-menu-link__btn--pink::before {
   content: "";
-  background-image: url(../images/common/bed-icon.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  mask-image: url(../images/common/bed-icon.svg);
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  background-color: $color-pink;
   width: rem(76);
   height: rem(54);
   position: absolute;
   left: 11%;
   top: 34%;
-  transition: transform 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .p-menu-link__btn.p-menu-link__btn--pink:hover {
@@ -350,7 +362,7 @@
 
 .p-menu-link__btn.p-menu-link__btn--pink:hover::before {
   @include mq(md) {
-    background-image: url(../images/common/bed-icon-hover.svg);
+    background-color: $color-white;
   }
 }
 
@@ -389,7 +401,7 @@
 
 .p-menu-link__btn.p-menu-link__btn--pink:hover .p-menu-link__btn-arrow::after {
   @include mq(md) {
-    background-image: url(../images/common/arrow-pink-hover.svg);
+    background-color: $color-pink;
   }
 }
 
@@ -406,7 +418,7 @@
   line-height: 1.4;
   background-color: $color-white;
   border-radius: 20px;
-  border: 1px solid $color-orange;
+  border: 1px solid #232e83;
   width: 100%;
   height: 100%;
   @include mq(md) {
@@ -419,39 +431,41 @@
 
 .p-menu-link__btn.p-menu-link__btn--orange:hover {
   @include mq(md) {
-    background-color: $color-orange;
-    color: $color-white;
+    background-color: #232e83;
+    color: #232e83;
   }
 }
 
 .p-menu-link__btn.p-menu-link__btn--orange::before {
   content: "";
-  background-image: url(../images/common/human-icon.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: rem(75);
-  height: rem(54);
+  mask-image: url(../images/common/human-icon.svg);
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  background-color: #232e83;
+  width: rem(46);
+  aspect-ratio: 46 / 59;
   position: absolute;
-  left: 11%;
-  top: 34%;
-  transition: transform 0.3s ease-in-out;
+  left: 16%;
+  top: 30%;
+  transition: background-color 0.3s ease-in-out;
 }
+
 .p-menu-link__btn.p-menu-link__btn--orange:hover::before {
   @include mq(md) {
-    background-image: url(../images/common/human-icon-hover.svg);
+    background-color: $color-white;
   }
 }
 
 .p-menu-link__btn.p-menu-link__btn--orange:hover .p-menu-link__btn-arrow {
   @include mq(md) {
     background-color: $color-white;
-    color: $color-white;
+    color: #232e83;
   }
 }
 
 .p-menu-link__btn-arrow.p-menu-link__btn-arrow--orange {
-  background-color: $color-orange;
-  border-color: $color-orange;
+  background-color: #232e83;
+  border-color: #232e83;
   position: relative;
   display: flex;
   -webkit-box-pack: center;
@@ -467,29 +481,27 @@
   border-width: 0.2rem;
   border-style: solid;
   border-radius: 20px 0 20px 0;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 .p-menu-link__btn.p-menu-link__btn--orange .p-menu-link__btn-arrow::after {
   content: "";
-  background-image: url(../images/common/arrow-down-right.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  mask-image: url(../images/common/arrow-down-right.svg);
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  background-color: $color-white;
   width: rem(20);
   height: rem(20);
   position: absolute;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .p-menu-link__btn-text.p-menu-link__btn-text--orange {
-  color: $color-orange;
+  color: #232e83;
   transition: color 0.3s ease-in-out;
 }
-.p-menu-link__btn-text.p-menu-link__btn-text--orange {
-  color: $color-orange;
-  transition: transform 0.3s ease-in-out;
-}
-.p-menu-link__btn.p-menu-link__btn--orange:hover .p-menu-link__btn-arrow {
+
+.p-menu-link__btn.p-menu-link__btn--orange:hover .p-menu-link__btn-text {
   @include mq(md) {
-    background-color: $color-white;
     color: $color-white;
   }
 }
@@ -497,8 +509,7 @@
 .p-menu-link__btn.p-menu-link__btn--orange:hover
   .p-menu-link__btn-arrow::after {
   @include mq(md) {
-    background-image: url(../images/common/arrow-orange-hover.svg);
-    transition: transform 0.3s ease-in-out;
+    background-color: #232e83;
   }
 }
 
@@ -542,19 +553,21 @@
 }
 .p-menu-link__btn.p-menu-link__btn--navy::before {
   content: "";
-  background-image: url(../images/common/heart-icon.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
+  mask-image: url(../images/common/heart-icon.svg);
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  background-color: $color-navy;
   width: rem(75);
   height: rem(54);
   position: absolute;
   left: 11%;
   top: 29%;
-  transition: transform 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
+
 .p-menu-link__btn.p-menu-link__btn--navy:hover::before {
   @include mq(md) {
-    background-image: url(../images/common/heart-icon-hover.svg);
+    background-color: $color-white;
   }
 }
 
@@ -567,7 +580,7 @@
 
 .p-menu-link__btn.p-menu-link__btn--navy:hover .p-menu-link__btn-arrow::after {
   @include mq(md) {
-    background-image: url(../images/common/arrow-navy-hover.svg);
+    background-color: $color-navy;
   }
 }
 
@@ -601,13 +614,4 @@
   @include mq(md) {
     color: $color-white;
   }
-}
-.p-menu-link__btn.p-menu-link__btn--navy .p-menu-link__btn-arrow::after {
-  content: "";
-  background-image: url(../images/common/arrow-down-right.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: rem(20);
-  height: rem(20);
-  position: absolute;
 }

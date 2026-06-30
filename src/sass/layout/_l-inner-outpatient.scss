@@ -1,0 +1,16 @@
+@use "global" as *;
+
+// 外来ページ用のインナー幅（PC時 max-width: 1025px）
+.l-inner-outpatient {
+  width: 100%;
+  max-width: rem(600);
+  padding-right: $padding-sp;
+  padding-left: $padding-sp;
+  margin-right: auto;
+  margin-left: auto;
+  @include mq("md") {
+    max-width: rem(1025);
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
+  }
+}

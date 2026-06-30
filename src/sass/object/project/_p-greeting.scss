@@ -1,5 +1,41 @@
 @use "global" as *;
 
+@keyframes bird-enter-float {
+  // 右から入場（画面外から）
+  0% {
+    left: 120%;
+    transform: translateY(0);
+  }
+  30% {
+    left: 14%;
+    transform: translateY(0);
+  }
+  // デフォルト位置で上下にゆらゆら
+  40% {
+    left: 14%;
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
+  70% {
+    transform: translateY(2px);
+  }
+  80% {
+    transform: translateY(-3px);
+  }
+  90% {
+    transform: translateY(2px);
+  }
+  100% {
+    left: 14%;
+    transform: translateY(0);
+  }
+}
+
 .p-greeting__inner.l-inner {
   max-width: rem(600);
   @include mq("md") {
@@ -17,7 +53,9 @@
 }
 
 .p-greeting__wrapper::before {
+  display: none;
   @include mq(md) {
+    display: block;
     content: "";
     background-image: url(../images/common/greeting_bard.svg);
     background-repeat: no-repeat;
@@ -26,8 +64,15 @@
     height: rem(100);
     position: absolute;
     top: -17%;
-    left: 14%;
+    left: 120%;
     z-index: 1;
+  }
+}
+
+// アニメーション発火用クラス
+.p-greeting.is-animated .p-greeting__wrapper::before {
+  @include mq(md) {
+    animation: bird-enter-float 6s ease-out forwards;
   }
 }
 
@@ -79,9 +124,10 @@
 .p-greeting__image img {
   aspect-ratio: 672/530;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   border-radius: rem(20);
+  aspect-ratio: 1/1;
   @include mq("md") {
     aspect-ratio: 323/351;
   }

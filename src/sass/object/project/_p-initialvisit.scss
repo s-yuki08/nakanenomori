@@ -1,11 +1,6 @@
 @use "global" as *;
 
-.p-initialVisit__inner.l-inner {
-  width: 100%;
-  @include mq(md) {
-    max-width: rem(1080);
-  }
-}
+// .l-inner-outpatient を使用して幅を管理
 
 .p-initialVisit__body {
   font-family: $base-font-family;
@@ -14,9 +9,9 @@
   letter-spacing: 0.02em;
   margin-top: rem(18);
   @include mq(md) {
-    margin-top: rem(39);
+    margin-top: rem(22);
     padding-left: rem(30);
-    line-height: 2;
+    line-height: 2.3;
     font-size: rem(17);
   }
 }

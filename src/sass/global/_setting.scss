@@ -1,4 +1,5 @@
 @use "sass:math";
+@use "sass:map";
 
 ////////////////////
 // インナー幅設定
@@ -26,6 +27,7 @@ body {
 
 // フォントウェイト
 $normal: 400;
+$regular: 500;
 $medium: 500;
 $bold: 700;
 
@@ -71,16 +73,16 @@ $breakpoints: (
 
 //メディアクエリー
 $mediaquerys: (
-  sm: "screen and (min-width: #{map-get($breakpoints,'sm')}px)",
-  md: "screen and (min-width: #{map-get($breakpoints,'md')}px)",
-  lg: "screen and (min-width: #{map-get($breakpoints,'lg')}px)",
-  xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
-  xxl: "screen and (min-width: #{map-get($breakpoints,'xxl')}px)",
+  sm: "screen and (min-width: #{map.get($breakpoints, 'sm')}px)",
+  md: "screen and (min-width: #{map.get($breakpoints, 'md')}px)",
+  lg: "screen and (min-width: #{map.get($breakpoints, 'lg')}px)",
+  xl: "screen and (min-width: #{map.get($breakpoints, 'xl')}px)",
+  xxl: "screen and (min-width: #{map.get($breakpoints, 'xxl')}px)",
 );
 
 // @include mq(){}で書くとブレークポイントが反映される（初期値はmd）
 @mixin mq($mediaquery: md) {
-  @media #{map-get($mediaquerys, $mediaquery)} {
+  @media #{map.get($mediaquerys, $mediaquery)} {
     @content;
   }
 }
@@ -105,6 +107,12 @@ $mediaquerys: (
 //モバイルのみ表示
 .u-mobile {
   @include mq("md") {
+    display: none;
+  }
+}
+
+.u-mobile-500 {
+  @media screen and (min-width: 500px) {
     display: none;
   }
 }

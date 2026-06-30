@@ -3,73 +3,6 @@
 jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
 
-  (function () {
-    // ========================
-    // 1回のみローディング表示
-    // ========================
-
-    // 安全な localStorage チェック（Safariプライベートモード対応）
-    function safeStorage(kind) {
-      try {
-        var s = window[kind];
-        var k = "__test__";
-        s.setItem(k, "1");
-        s.removeItem(k);
-        return s;
-      } catch (e) {
-        return null;
-      }
-    }
-    var store = safeStorage("localStorage");
-    var KEY = "loadingShown"; // ← 保存するキー名
-    var $win = $(window);
-    var $loading = $(".js-loading");
-
-    // ======== 2回目以降はスキップ ========
-    try {
-      // ?reset-loading=1 を付けた時はリセットできるように
-      var sp = new URLSearchParams(location.search);
-      if (sp.get("reset-loading") === "1" && store) store.removeItem(KEY);
-
-      // すでにローディング済みならスキップ
-      if (store && store.getItem(KEY)) {
-        $loading.remove(); // ローディング要素を即削除
-        return; // 以降の処理をスキップ
-      }
-    } catch (e) {}
-
-    // ======== 初回のみ実行 ========
-    $win.on("load", function () {
-      var HOLD = 800; // ロゴを見せる時間
-      var FADE = 900; // フェード時間（CSSに合わせる）
-      var ended = false;
-
-      // フェード終了で削除
-      $loading.one("transitionend webkitTransitionEnd oTransitionEnd", function (e) {
-        if (e.target !== this || ended) return;
-        ended = true;
-        $loading.remove();
-        try {
-          if (store) store.setItem(KEY, "1");
-        } catch (e) {}
-      });
-
-      // 保険（transitionendが来ないとき）
-      setTimeout(function () {
-        if (ended) return;
-        ended = true;
-        $loading.remove();
-        try {
-          if (store) store.setItem(KEY, "1");
-        } catch (e) {}
-      }, HOLD + FADE + 200);
-
-      // 実際のフェードアウト開始
-      setTimeout(function () {
-        $loading.addClass("is-hide");
-      }, HOLD);
-    });
-  })();
   var pageTop = $(".js-page-top");
   pageTop.hide();
   $(window).scroll(function () {
@@ -87,18 +20,6 @@ jQuery(function ($) {
   });
 
   //  ヘッダークラス名付与
-  var header = $(".p-header");
-  var headerHeight = $(".p-header").height();
-  var height = $(".js-header-height").height();
-  console.log("ヘッダー高さ " + headerHeight);
-  console.log("mv高さ " + height);
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > height - headerHeight) {
-      header.addClass("is-color");
-    } else {
-      header.removeClass("is-color");
-    }
-  });
 
   //ドロワーメニュー
   $(function () {
@@ -389,3 +310,60 @@ function startEnvironmentAnimations() {
   window.addEventListener("resize", switchViewport, false);
   switchViewport();
 }();
+
+// ========================
+// greeting鳥アニメーション
+// ========================
+(function () {
+  var greetingSection = document.querySelector(".p-greeting");
+  if (!greetingSection) return;
+
+  // GSAPがあればGSAPを使用、なければIntersection Observer
+  if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.create({
+      trigger: ".p-greeting",
+      start: "top 85%",
+      once: true,
+      onEnter: function onEnter() {
+        greetingSection.classList.add("is-animated");
+      }
+    });
+  } else {
+    // フォールバック: Intersection Observer
+    var _io = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          greetingSection.classList.add("is-animated");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: "0px 0px -15% 0px",
+      threshold: 0
+    });
+    _io.observe(greetingSection);
+  }
+})();
+
+// ========================
+// 波のアニメーション
+// ========================
+(function () {
+  var mv = document.querySelector(".p-mv");
+  if (!mv) return;
+  var time = 0;
+  function animateWave() {
+    // 複数のsin波を組み合わせて不規則な動きを作る
+    var waveX = Math.sin(time * 0.5) * 0.8 + Math.sin(time * 0.8) * 0.5 + Math.sin(time * 0.3) * 0.3;
+    var waveY = Math.sin(time * 0.6) * 5 + Math.sin(time * 0.9) * 3 + Math.sin(time * 0.4) * 2;
+    var waveScale = 1 + Math.sin(time * 0.7) * 0.02 + Math.sin(time * 0.5) * 0.01;
+    mv.style.setProperty("--wave-x", "".concat(waveX, "%"));
+    mv.style.setProperty("--wave-y", "".concat(waveY, "px"));
+    mv.style.setProperty("--wave-scale", waveScale);
+    time += 0.03;
+    requestAnimationFrame(animateWave);
+  }
+  animateWave();
+})();

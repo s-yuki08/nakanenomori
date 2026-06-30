@@ -5,20 +5,22 @@
 }
 
 .p-generalCheckup__inner.l-inner {
-  max-width: rem(1080);
+  @include mq("md") {
+    max-width: rem(1080);
+  }
 }
 
 .p-generalCheckup__wrapper {
   margin-top: rem(15);
   @include mq("md") {
-    margin-top: rem(26);
+    margin-top: rem(15);
   }
 }
 
 .p-generalCheckup__lead {
   width: 100%;
   @include mq("md") {
-    max-width: rem(960);
+    max-width: rem(970);
     margin: 0 auto;
   }
 }
@@ -27,24 +29,32 @@
   line-height: 1.9;
   letter-spacing: 0.05em;
   @include mq("md") {
-    font-size: rem(18);
+    font-size: rem(17);
+    line-height: 2;
+  }
+}
+
+.p-generalCheckup__leadText--note {
+  margin-top: rem(10);
+  padding-left: 1em;
+  text-indent: -1em;
+  @include mq("md") {
+    margin-top: rem(10);
   }
 }
 
 .p-generalCheckup__contents {
+  margin-top: rem(30);
   width: 100%;
   max-width: rem(672);
   margin: 0 auto;
   @include mq("md") {
+    margin-top: rem(82);
     max-width: rem(960);
   }
 }
 
 .p-generalCheckup__heading {
-  margin-top: rem(15);
-  @include mq("md") {
-    margin-top: rem(30);
-  }
 }
 
 .p-generalCheckup__heading.p-generalCheckup__heading--table {
@@ -74,7 +84,7 @@
 .p-generalCheckup__bulletsWrapper {
   margin-top: rem(15);
   @include mq("md") {
-    margin-top: rem(26);
+    margin-top: rem(20);
   }
 }
 
@@ -94,21 +104,21 @@
   letter-spacing: 0.05em;
   text-indent: -1em;
   @include mq("md") {
-    font-size: rem(18);
+    font-size: rem(17);
   }
 }
 
 .p-generalCheckup__bulletDot {
   display: inline-block;
-  width: rem(10);
-  height: rem(10);
+  width: rem(12.5);
+  height: rem(12.5);
   border-radius: 50%;
   background: $color-blue;
 }
 .p-generalCheckup__bullet + .p-generalCheckup__bullet {
   margin-top: rem(5);
   @include mq("md") {
-    margin-top: rem(16);
+    margin-top: rem(4);
   }
 }
 
@@ -123,6 +133,7 @@
 
 .p-generalCheckup__tableWrap {
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   margin-top: rem(15);
   @include mq("md") {
     margin-top: rem(37);
@@ -131,8 +142,9 @@
 
 .p-generalCheckup__tableInner {
   width: 100%;
+  min-width: rem(720);
   @include mq("md") {
-    max-width: rem(880);
+    max-width: rem(920);
     margin: 0 auto;
   }
 }
@@ -141,6 +153,7 @@
   border-collapse: collapse;
   border: 1px solid $color-gray-light;
   font-size: rem(14);
+  -webkit-text-size-adjust: 100%;
 }
 .p-generalCheckup__table th,
 .p-generalCheckup__table td {
@@ -154,7 +167,7 @@
   font-weight: 700;
   font-size: rem(14);
   @include mq("md") {
-    font-size: rem(16);
+    font-size: rem(17);
   }
 }
 .p-generalCheckup__table tbody th {
@@ -164,13 +177,13 @@
   font-weight: 700;
   font-size: rem(14);
   @include mq("md") {
-    font-size: rem(16);
+    font-size: rem(15);
   }
 }
 .p-generalCheckup__table td {
   font-size: rem(14);
   @include mq("md") {
-    font-size: rem(16);
+    font-size: rem(15);
   }
 }
 
@@ -189,16 +202,15 @@
   background: $color-white;
   width: 100%;
   @include mq("md") {
-    max-width: rem(880);
+    max-width: rem(920);
     margin: 0 auto;
   }
 }
 .p-generalCheckup__priceRow {
   display: grid;
-  grid-template-columns: rem(150) 1fr;
+  grid-template-columns: rem(120) 1fr;
   @include mq("md") {
     grid-template-columns: rem(250) 1fr;
-    align-items: center;
   }
 }
 .p-generalCheckup__priceRow > span {
@@ -211,20 +223,42 @@
   font-weight: 700;
 }
 .p-generalCheckup__priceLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: rgba($color: $color-navy, $alpha: 0.07);
   padding: rem(14) rem(18);
   text-align: center;
-  font-weight: 700;
+  font-weight: $regular;
+  font-size: rem(16);
+  @include mq("md") {
+    font-size: rem(18);
+  }
 }
 .p-generalCheckup__priceValue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: rem(14) rem(18);
   text-align: center;
-  font-weight: 700;
-  font-size: rem(16);
+  font-weight: $regular;
+  letter-spacing: 0.05em;
+  color: $color-black;
+  font-size: rem(18);
+
+  @include mq("md") {
+    font-size: rem(22);
+  }
 }
 .p-generalCheckup__priceValue small {
-  font-weight: 400;
-  font-size: rem(9);
+  font-weight: $regular;
+  letter-spacing: 0.05em;
+  color: $color-black;
+  font-size: rem(16);
+
+  @include mq("md") {
+    font-size: rem(17);
+  }
 }
 
 .p-generalCheckup__note {
@@ -236,13 +270,65 @@
   }
 }
 
-.p-generalCheckup__tableWrap {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  margin-inline: rem(-16);
-  padding-inline: rem(16);
+// 外部リンク
+.p-generalCheckup__link {
+  color: $color-blue;
+  text-decoration: underline;
+  word-break: break-all;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
-.p-generalCheckup__tableInner {
-  min-width: rem(720); /* スクロール発生のための最小幅 */
+// 番号付きリスト（目黒区セクション用）
+.p-generalCheckup__numberedList {
+  margin-top: rem(0);
+  padding-left: rem(20);
+  list-style: none;
+  @include mq("md") {
+    padding-left: rem(42);
+  }
+}
+
+.p-generalCheckup__numberedList li {
+  font-size: rem(16);
+  line-height: 1.9;
+  letter-spacing: 0.05em;
+  margin-top: rem(4);
+  text-indent: -1.5em;
+  padding-left: rem(24);
+  @include mq("md") {
+    font-size: rem(17);
+  }
+}
+
+.p-generalCheckup__num {
+  color: $color-blue;
+  margin-right: rem(4);
+}
+
+.p-generalCheckup__numIndent {
+  display: inline-block;
+  text-indent: 0;
+  padding-left: rem(4);
+}
+
+// 注意事項セクション
+.p-generalCheckup__noticeWrapper {
+  margin-top: rem(15);
+  @include mq("md") {
+    margin-top: rem(24);
+    max-width: rem(880);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.p-generalCheckup__noticeText {
+  font-size: rem(16);
+  line-height: 1.9;
+  letter-spacing: 0.05em;
+  @include mq("md") {
+    font-size: rem(18);
+  }
 }

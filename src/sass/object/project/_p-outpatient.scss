@@ -8,25 +8,48 @@
   }
 }
 
+.p-outpatient__inner.l-inner {
+  @include mq("md") {
+    max-width: rem(1200);
+    width: 100%;
+    margin-inline: auto;
+  }
+}
+
 .p-outpatient__wrapper {
   display: flex;
   flex-direction: column;
   gap: rem(20);
   @include mq("md") {
     flex-direction: row;
-    gap: rem(40);
-    align-items: center;
+    gap: rem(8);
     justify-content: center;
     position: relative;
   }
 }
 
+.p-outpatient__wrapper::after {
+  display: none;
+  @include mq("md") {
+    display: block;
+    content: "";
+    background-image: url(../images/common/leaf.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: rem(120);
+    aspect-ratio: 100/100;
+    position: absolute;
+    left: calc(50% - min(50vw, 37.75rem));
+    bottom: -3%;
+  }
+}
+
 .p-outpatient__left {
   position: relative;
-  margin-top: rem(40);
   @include mq("md") {
-    width: 40%;
-    margin-top: rem(60);
+    width: 46%;
+    margin-left: rem(30);
+    padding-top: rem(96);
   }
 }
 .p-outpatient__headline {
@@ -62,7 +85,7 @@
   margin-top: rem(30);
   width: 100%;
   @include mq("md") {
-    margin-top: rem(60);
+    margin-top: rem(52);
     width: 64%;
     position: relative;
   }
@@ -76,27 +99,11 @@
     background-image: url(../images/common/leaves.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: rem(120);
-    height: rem(124);
+    width: rem(146);
+    aspect-ratio: 120/124;
     position: absolute;
-    right: calc(50% - min(49vw, rem(280)));
-    bottom: -10%;
-  }
-}
-
-.p-outpatient__wrapper::after {
-  display: none;
-  @include mq("md") {
-    display: block;
-    content: "";
-    background-image: url(../images/common/leaf.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: rem(100);
-    height: rem(100);
-    position: absolute;
-    left: calc(50% - min(50vw, rem(700)));
-    bottom: -10%;
+    right: calc(50% - min(49vw, 20.5rem));
+    bottom: -21%;
   }
 }
 
@@ -106,7 +113,8 @@
   gap: rem(10);
   width: 100%;
   @include mq("md") {
-    margin-left: rem(50);
+    gap: rem(4);
+    margin-left: rem(60);
   }
 }
 .p-outpatient__item a {

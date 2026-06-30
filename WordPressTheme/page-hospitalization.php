@@ -5,7 +5,7 @@
     <div class="p-hospitalization__wrapper">
       <div class="p-hospitalization__left">
         <div class="p-hospitalization__headline">
-          <h2 class="p-hospitalization__title">入院のご案内</h2>
+          <h1 class="p-hospitalization__title">入院のご案内</h1>
         </div>
         <nav class="p-hospitalization__nav">
           <ul class="p-hospitalization__list">
@@ -37,7 +37,7 @@
             <li class="p-hospitalization__item p-hospitalization__item--orange">
               <a href="#visit">
                 <span>面会案内</span>
-                <span class="p-hospitalization__arr p-hospitalization__arr--orange"></span>
+                <span class="p-hospitalization__arr"></span>
               </a>
             </li>
           </ul>
@@ -45,101 +45,126 @@
       </div>
       <div class="p-hospitalization__right">
         <div class="p-hospitalization__image">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/hospital_fv.png" alt="外来診療受付時間">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/hospital_fv.webp" alt="外来診療受付時間">
         </div>
       </div>
     </div>
+  </div>
 </section>
 
 <section id="hospital-flow" class="p-hospitalFlow l-hospitalFlow">
-  <div class="p-hospitalFlow__inner l-inner">
-    <h3 class="p-hospitalFlow__title c-section-title">
+  <div class="p-hospitalFlow__inner l-hospitalization-inner">
+    <h2 class="p-hospitalFlow__title c-section-title">
       <span class="c-section-title__dot c-section-title__dot--pink"></span>
       入院までの流れ
-    </h3>
-    <div class="p-hospitalFlow__step">
-      <ol class="p-hospitalFlow__list">
-        <li class="p-hospitalFlow__item">
+    </h2>
+
+    <!-- 2カラムのフローチャート -->
+    <div class="p-hospitalFlow__columns">
+      <!-- 左カラム：転院希望の場合 -->
+      <div class="p-hospitalFlow__column p-hospitalFlow__column--left">
+        <div class="p-hospitalFlow__columnHeader">転院希望の場合</div>
+        <div class="p-hospitalFlow__columnBody">
+          <div class="p-hospitalFlow__item-wrap">
+            <p class="p-hospitalFlow__item-title">連携室から当院へ連絡</p>
+            <div class="p-hospitalFlow__item-text-body">
+              <p class="p-hospitalFlow__item-text">他医療機関に入院中の方で、<br>当院への転院を希望される場合、<br>入院中の医療機関の連携室から当院へ連絡。<br>※ご家族様からの直接の連絡はお控え下さい</p>
+            </div>
+          </div>
+          <div class="p-hospitalFlow__item-wrap">
+            <p class="p-hospitalFlow__item-title">入院の判断</p>
+            <div class="p-hospitalFlow__item-text-body">
+              <p class="p-hospitalFlow__item-text">診療情報提供から入院の受け入れを判断。<br>受け入れ可能の場合、連携室へ連絡。<br>ご家族へ病院見学や面談をお勧め。</p>
+            </div>
+          </div>
+          <div class="p-hospitalFlow__item-wrap p-hospitalFlow__item-wrap--last">
+            <p class="p-hospitalFlow__item-title">転入日を調整・連携室へ連絡</p>
+            <div class="p-hospitalFlow__item-text-body">
+              <p class="p-hospitalFlow__item-text">ベッドに空きが無い場合には待機。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-hospitalFlow__common u-mobile">
+        <div class="p-hospitalFlow__commonItem">
+          <p class="p-hospitalFlow__commonTitle">入院の準備</p>
+          <div class="p-hospitalFlow__commonBody">
+            <p class="p-hospitalFlow__commonText">入院される方は、入院当日までに<span class="p-hospitalFlow__item-text-pink">必要書類</span>と<span class="p-hospitalFlow__item-text-pink">入院生活で必要なもの</span>をご用意ください。</p>
+            <p class="p-hospitalFlow__commonText">＜入院生活で必要なもの＞<br>洗面・入浴用品／食事用品（コップ、ふきんなど）／日用品／お薬・飲み物／パジャマ、<br>下着など、履物（すべりにくい安全で音の静かなもの）</p>
+          </div>
+        </div>
+        <div class="p-hospitalFlow__commonItem p-hospitalFlow__commonItem--last">
+          <p class="p-hospitalFlow__commonTitle">入 院 当 日</p>
+          <div class="p-hospitalFlow__commonBody">
+            <p class="p-hospitalFlow__commonText">入院時には原則患者さまのご家族が同行してください。手続きには下記のものをご用意ください。</p>
+            <ul class="p-hospitalFlow__commonList">
+              <li>・健康保険証・老人医療受給証・印鑑</li>
+              <li>・入院証書(患者さま本人・保証人・連帯保証人それぞれが自署、捺印したもの)</li>
+              <li>・入院保証金(50,000円)<br><span class="p-hospitalFlow__commonNote">※入院保証金と引き換えに保証金預り証をお渡ししますので、退院時まで大切に保管してください。</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 右カラム：外来からの入院の場合 -->
+      <div class="p-hospitalFlow__column p-hospitalFlow__column--right">
+        <div class="p-hospitalFlow__columnHeader">外来からの入院の場合</div>
+        <div class="p-hospitalFlow__columnBody">
           <div class="p-hospitalFlow__item-wrap">
             <p class="p-hospitalFlow__item-title">外来で診察</p>
             <div class="p-hospitalFlow__item-text-body">
-              <p class="p-hospitalFlow__item-text">まず外来で診察を受けていただき、必要に応じて検査を受けていただきます。<br>お薬手帳は、診察の度にお持ちください。</p>
+              <p class="p-hospitalFlow__item-text">まず外来で診察を受けていただき、<br>必要に応じて検査を受けていただきます。<br>お薬手帳は、診察の度に持参してください。</p>
             </div>
           </div>
-        </li>
-        <li class="p-hospitalFlow__item">
-          <div class="p-hospitalFlow__item-wrap">
+          <div class="p-hospitalFlow__item-wrap p-hospitalFlow__item-wrap--last">
             <p class="p-hospitalFlow__item-title">入院の決定</p>
             <div class="p-hospitalFlow__item-text-body">
               <p class="p-hospitalFlow__item-text">検査の結果を見て、診察があります。<br>医師から入院の必要性について説明があります。</p>
             </div>
           </div>
-        </li>
-        <li class="p-hospitalFlow__item">
-          <div class="p-hospitalFlow__item-wrap p-hospitalFlow__item-wrap--long">
-            <p class="p-hospitalFlow__item-title">入院支援</p>
-            <div class="p-hospitalFlow__item-text-body">
-              <p class="p-hospitalFlow__item-text p-hospitalFlow__item-text--list">・入退院支援センターで入院に関する説明があります。
-              <p class="p-hospitalFlow__item-text p-hospitalFlow__item-text--list">・入院のための検査などを行うため、複数回来院していただく場合があります。
-              <p class="p-hospitalFlow__item-text p-hospitalFlow__item-text--list">・入院前から医療費や介護の相談を受けることもできます。
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="p-hospitalFlow__item">
-          <div class="p-hospitalFlow__item-wrap">
-            <p class="p-hospitalFlow__item-title p-hospitalFlow__item-title--long">入院日・来院時間のお知らせ</p>
-            <div class="p-hospitalFlow__item-text-body">
-              <p class="p-hospitalFlow__item-text">入院日時の変更や取り消しをされる場合は<span
-                  class="p-hospitalFlow__item-text-pink">お早めに診療科まで電話で</span>ご連絡ください。</p>
-            </div>
-          </div>
-        </li>
-        <li class="p-hospitalFlow__item">
-          <div class="p-hospitalFlow__item-wrap p-hospitalFlow__item-wrap--long">
-            <p class="p-hospitalFlow__item-title">入院の準備</p>
-            <div class="p-hospitalFlow__item-text-body">
-              <p class="p-hospitalFlow__item-text">入院される方は、入院当日までに<span
-                  class="p-hospitalFlow__item-text-pink">必要書類</span>と<span
-                  class="p-hospitalFlow__item-text-pink">入院生活で必要なもの</span>をご用意ください。</p>
-              <p class="p-hospitalFlow__item-text">＜入院生活で必要なもの＞
-              </p>
-              <p class="p-hospitalFlow__item-text">洗面・入浴用品／食事用品（コップ、ふきんなど）／日用品／お薬・飲み物／パジャマ、<br>
-                下着など、履物（すべりにくい安全で音の静かなもの）</p>
-            </div>
-          </div>
-        </li>
-        <li class="p-hospitalFlow__item">
-          <div class="p-hospitalFlow__item-wrap p-hospitalFlow__item-wrap--last">
-            <p class="p-hospitalFlow__item-title">入院当日</p>
-            <div class="p-hospitalFlow__item-text-body">
-              <p class="p-hospitalFlow__item-text">入院時には原則患者さまのご家族が同行してください。手続きには下記のものをご用意ください。</p>
-              <div class="p-hospitalFlow__item-text-contents">
-                <p class="p-hospitalFlow__item-text p-hospitalFlow__item-text--list">・健康保険証・老人医療受給証・印鑑
-                <p class="p-hospitalFlow__item-text p-hospitalFlow__item-text--list">
-                  ・入院証書(患者さま本人・保証人・連帯保証人それぞれが自署、捺印したもの)
+        </div>
+      </div>
+    </div>
 
-                <p class="p-hospitalFlow__item-text p-hospitalFlow__item-text--list"> ・入院保証金(50,000円)
+    <!-- 共通フロー -->
+    <div class="p-hospitalFlow__common">
+      <div class="p-hospitalFlow__commonItem">
+        <p class="p-hospitalFlow__commonTitle">入院の準備</p>
+        <div class="p-hospitalFlow__commonBody">
+          <p class="p-hospitalFlow__commonText">入院される方は、入院当日までに<span class="p-hospitalFlow__item-text-pink">必要書類</span>と<span class="p-hospitalFlow__item-text-pink">入院生活で必要なもの</span>をご用意ください。</p>
+          <p class="p-hospitalFlow__commonText">＜入院生活で必要なもの＞<br>洗面・入浴用品／食事用品（コップ、ふきんなど）／日用品／お薬・飲み物／パジャマ、<br>下着など、履物（すべりにくい安全で音の静かなもの）</p>
+        </div>
+      </div>
+      <div class="p-hospitalFlow__commonItem p-hospitalFlow__commonItem--last">
+        <p class="p-hospitalFlow__commonTitle">入 院 当 日</p>
+        <div class="p-hospitalFlow__commonBody">
+          <p class="p-hospitalFlow__commonText">入院時には原則患者さまのご家族が同行してください。手続きには下記のものをご用意ください。</p>
+          <ul class="p-hospitalFlow__commonList">
+            <li>・健康保険証・老人医療受給証・印鑑</li>
+            <li>・入院証書(患者さま本人・保証人・連帯保証人それぞれが自署、捺印したもの)</li>
+            <li>・入院保証金(50,000円)<br><span class="p-hospitalFlow__commonNote">※入院保証金と引き換えに保証金預り証をお渡ししますので、退院時まで大切に保管してください。</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-                </p>
-                <p class="p-hospitalFlow__item-text p-hospitalFlow__item-text--last">
-                  ※入院保証金と引き換えに保証金預り証をお渡ししますので、退院時まで大切に保管してください。</p>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ol>
+    <!-- 画像セクション -->
+    <div class="p-hospitalFlow__images">
+      <div class="p-hospitalFlow__imageItem">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/hospital_room.webp" alt="病室">
+      </div>
     </div>
   </div>
 </section>
 
 
 <section id="hospital-caution" class="p-hospital-caution l-hospital-caution">
-  <div class="p-hospital-caution__inner l-inner">
-    <h3 class="p-hospital-caution__title c-section-title">
+  <div class="p-hospital-caution__inner l-hospitalization-inner">
+    <h2 class="p-hospital-caution__title c-section-title">
       <span class="c-section-title__dot c-section-title__dot--pink"></span>
       入院中の注意事項
-    </h3>
+    </h2>
     <div class="p-hospital-caution__content">
       <ul class="p-hospital-caution__list">
         <li class="p-hospital-caution__item">
@@ -166,11 +191,11 @@
 </section>
 
 <section class="p-hospital-cost l-hospital-cost">
-  <div class="p-hospital-cost__inner l-inner">
-    <h3 class="p-hospital-cost__title c-section-title">
+  <div class="p-hospital-cost__inner l-hospitalization-inner">
+    <h2 class="p-hospital-cost__title c-section-title">
       <span class="c-section-title__dot c-section-title__dot--pink"></span>
       入院費用
-    </h3>
+    </h2>
     <div class="p-hospital-cost__content">
       <ul class="p-hospital-cost__list">
         <li class="p-hospital-cost__item">
@@ -186,11 +211,11 @@
 </section>
 
 <section id="hospital-discharge" class="p-hospital-discharge l-hospital-discharge">
-  <div class="p-hospital-discharge__inner l-inner">
-    <h3 class="p-hospital-discharge__title c-section-title">
+  <div class="p-hospital-discharge__inner l-hospitalization-inner">
+    <h2 class="p-hospital-discharge__title c-section-title">
       <span class="c-section-title__dot c-section-title__dot--pink"></span>
       退院手続
-    </h3>
+    </h2>
 
     <div class="p-hospital-discharge__content">
       <ul class="p-hospital-discharge__list">
@@ -215,11 +240,11 @@
 
 
 <section id="visit" class="p-visit l-visit">
-  <div class="p-visit__inner l-inner">
-    <h3 class="p-visit__title c-section-title">
-      <span class="c-section-title__dot c-section-title__dot--orange"></span>
+  <div class="p-visit__inner l-hospitalization-inner">
+    <h2 class="p-visit__title c-section-title">
+      <span class="c-section-title__dot c-section-title__dot--pink"></span>
       面会案内
-    </h3>
+    </h2>
 
     <!-- 面会時間テーブル -->
     <div class="p-visit__tableWrap">
@@ -274,7 +299,7 @@
       <div class="p-visit__caution">
         <div class="p-visit__caution-wrapper">
           <div class="p-visit__caution-content">
-            <h4 id="visit-caution-ttl" class="p-visit__cautionTtl">＜面会時のご注意事項＞</h4>
+            <h3 id="visit-caution-ttl" class="p-visit__cautionTtl">＜面会時のご注意事項＞</h3>
             <ul class="p-visit__list">
               <li>・感染防止のため、咳や発熱などの症状や体調の悪い方の面会はご遠慮ください。</li>
               <li>・ケアや処置など医療行為を優先するため、一時的に席を外していただく場合があります。</li>

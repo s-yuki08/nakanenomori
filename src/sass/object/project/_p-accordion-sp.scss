@@ -166,10 +166,10 @@
   align-items: center;
   justify-content: left;
   padding: rem(18) rem(20);
-  border: 2px solid $color-orange;
+  border: 2px solid #232e83;
   border-radius: 16px;
   background: $color-white;
-  color: $color-orange;
+  color: #232e83;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 .p-accordion-sp__link.p-accordion-sp__link--orange::before {
@@ -178,9 +178,9 @@
   background-repeat: no-repeat;
   background-size: contain;
   width: rem(40);
-  height: rem(30);
-  left: 5%;
-  top: 35%;
+  height: rem(36);
+  left: 6%;
+  top: 24%;
   position: absolute;
 }
 
@@ -212,7 +212,7 @@
   font-size: rem(18);
   font-weight: $bold;
   letter-spacing: 0.06em;
-  padding-left: rem(50);
+  padding-left: rem(60);
 }
 .p-accordion-sp__arrow {
   width: 24px;

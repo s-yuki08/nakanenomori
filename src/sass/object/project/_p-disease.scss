@@ -5,7 +5,7 @@
   margin: 0 auto;
   padding: 0 rem(15);
   @include mq("md") {
-    max-width: rem(900);
+    max-width: rem(920);
     padding: 0 rem(25);
   }
 }
@@ -19,7 +19,6 @@
   gap: rem(12);
   font-weight: 700;
   color: $color-black;
-  margin: 0 0 rem(14);
   font-family: $heading-family;
   @include mq("md") {
     font-size: rem(22);
@@ -28,24 +27,82 @@
 
 /* 本文 */
 .p-disease__body {
+  margin-top: rem(4);
   color: $color-black;
   font-size: rem(16);
-  line-height: 2; /* 画像の行間に合わせて広めに */
+  line-height: 2;
   letter-spacing: 0.02em;
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
   @include mq("md") {
-    max-width: rem(780);
-    margin: 0 auto;
+    gap: rem(14);
+    max-width: rem(800);
+    margin-inline: auto;
   }
 }
+
 .p-disease__body p {
   margin: 0;
+}
+
+/* サブタイトル（緑色） */
+.p-disease__subtitle {
+  color: $color-green;
+  font-size: rem(18);
+  font-weight: $regular;
+  line-height: 1.75;
+  @include mq("md") {
+    font-size: rem(20);
+  }
+}
+
+/* アイテムリスト */
+.p-disease__list {
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+  @include mq("md") {
+    gap: rem(32);
+  }
+}
+
+/* 各アイテム */
+.p-disease__item {
+  display: flex;
+  flex-direction: column;
+  @include mq("md") {
+  }
+}
+
+/* アイテムタイトル */
+.p-disease__item-title,
+.p-disease__item-text {
+  font-size: rem(16);
+  font-weight: $regular;
+  line-height: 1.5;
+  color: $color-black;
+  @include mq("md") {
+    font-size: rem(17);
+  }
+}
+
+// .p-disease__item-title {
+//   text-indent: -1em;
+//   padding-left: 1em;
+// }
+
+.p-disease__item-text {
+  padding-left: rem(16);
+  @include mq("md") {
+    padding-left: rem(16);
+  }
 }
 
 /* SP調整 */
 @media (max-width: 640px) {
   .p-disease__title {
     font-size: rem(20);
-    margin-bottom: rem(12);
   }
   .p-disease__body {
     font-size: rem(15);

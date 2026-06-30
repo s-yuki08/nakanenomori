@@ -133,35 +133,10 @@ function Change_menulabel() {
         'key' => 'field_intro_text',
         'label' => '導入文',
         'name' => 'intro_text',
-        'type' => 'wysiwyg',
-        'tabs' => 'all',
-        'toolbar' => 'full',
-        'media_upload' => 0,
-      ),
-      array(
-        'key' => 'field_disease_body',
-        'label' => '対象疾患・診療内容',
-        'name' => 'disease_body',
-        'type' => 'wysiwyg',
-        'tabs' => 'all',
-        'toolbar' => 'full',
-        'media_upload' => 0,
-      ),
-      array(
-        'key' => 'field_reception_morning',
-        'label' => '午前受付時間',
-        'name' => 'reception_morning',
-        'type' => 'text',
-        'placeholder' => '例）9:00〜11:00',
-        'wrapper' => array('width' => 50),
-      ),
-      array(
-        'key' => 'field_reception_afternoon',
-        'label' => '午後受付時間',
-        'name' => 'reception_afternoon',
-        'type' => 'text',
-        'placeholder' => '例）14:00〜15:00',
-        'wrapper' => array('width' => 50),
+        'type' => 'textarea',
+        'rows' => 6,
+        'new_lines' => '',
+        'instructions' => '空行で段落を分けられます',
       ),
     ),
     'location' => array(
@@ -169,6 +144,38 @@ function Change_menulabel() {
     ),
     'position' => 'normal',
     'menu_order' => 10,
+    'active' => true,
+  ));
+
+  /* -------------------------------
+   * 対象疾患・診療内容
+   * ----------------------------- */
+  acf_add_local_field_group(array(
+    'key' => 'group_disease_info',
+    'title' => '対象疾患・診療内容',
+    'fields' => array(
+      array(
+        'key' => 'field_disease_subtitle',
+        'label' => 'サブタイトル（緑色）',
+        'name' => 'disease_subtitle',
+        'type' => 'text',
+        'instructions' => '例）内科全般（総合内科専門医、糖尿病専門医が在籍）。改行したい場合は | または ｜ を入力してください。',
+      ),
+      array(
+        'key' => 'field_disease_items',
+        'label' => 'アイテム一覧',
+        'name' => 'disease_items',
+        'type' => 'textarea',
+        'rows' => 15,
+        'new_lines' => '',
+        'instructions' => '空行で区切り。各アイテムの1行目がタイトル、2行目以降が説明文。タイトル内で改行したい場合は | または ｜ を入力してください。',
+      ),
+    ),
+    'location' => array(
+      array( array('param'=>'post_type','operator'=>'==','value'=>'department') ),
+    ),
+    'position' => 'normal',
+    'menu_order' => 15,
     'active' => true,
   ));
 
@@ -184,7 +191,7 @@ function Change_menulabel() {
         'label' => '入力ルール',
         'name'  => '',
         'type'  => 'message',
-        'message' => '医師名のみ：奈良 ／ 注釈：氏名|非常勤（|の右側は小さく表示）／ 休診：- または空欄',
+        'message' => '各曜日に最大2名まで入力可能 ／ 休診：- または空欄',
       ),
       array(
         'key' => 'field_group_am',
@@ -192,15 +199,22 @@ function Change_menulabel() {
         'name' => 'group_am',
         'type' => 'group',
         'layout' => 'block',
-        'wrapper' => array('width' => 50),
+        'wrapper' => array('width' => 100),
         'sub_fields' => array(
-          array('key'=>'field_am_mon','label'=>'月','name'=>'am_mon','type'=>'text','wrapper'=>array('width'=>14)),
-          array('key'=>'field_am_tue','label'=>'火','name'=>'am_tue','type'=>'text','wrapper'=>array('width'=>14)),
-          array('key'=>'field_am_wed','label'=>'水','name'=>'am_wed','type'=>'text','wrapper'=>array('width'=>14)),
-          array('key'=>'field_am_thu','label'=>'木','name'=>'am_thu','type'=>'text','wrapper'=>array('width'=>14)),
-          array('key'=>'field_am_fri','label'=>'金','name'=>'am_fri','type'=>'text','wrapper'=>array('width'=>14)),
-          array('key'=>'field_am_sat','label'=>'土','name'=>'am_sat','type'=>'text','wrapper'=>array('width'=>14)),
-          array('key'=>'field_am_sun','label'=>'日','name'=>'am_sun','type'=>'text','wrapper'=>array('width'=>14)),
+          // ①行目
+          array('key'=>'field_am_mon_1','label'=>'月①','name'=>'am_mon_1','type'=>'text','wrapper'=>array('width'=>16)),
+          array('key'=>'field_am_tue_1','label'=>'火①','name'=>'am_tue_1','type'=>'text','wrapper'=>array('width'=>16)),
+          array('key'=>'field_am_wed_1','label'=>'水①','name'=>'am_wed_1','type'=>'text','wrapper'=>array('width'=>16)),
+          array('key'=>'field_am_thu_1','label'=>'木①','name'=>'am_thu_1','type'=>'text','wrapper'=>array('width'=>16)),
+          array('key'=>'field_am_fri_1','label'=>'金①','name'=>'am_fri_1','type'=>'text','wrapper'=>array('width'=>16)),
+          array('key'=>'field_am_sat_1','label'=>'土①','name'=>'am_sat_1','type'=>'text','wrapper'=>array('width'=>16)),
+          // ②行目
+          array('key'=>'field_am_mon_2','label'=>'月②','name'=>'am_mon_2','type'=>'text','wrapper'=>array('width'=>16)),
+          array('key'=>'field_am_tue_2','label'=>'火②','name'=>'am_tue_2','type'=>'text','wrapper'=>array('width'=>16)),
+          array('key'=>'field_am_wed_2','label'=>'水②','name'=>'am_wed_2','type'=>'text','wrapper'=>array('width'=>16)),
+          array('key'=>'field_am_thu_2','label'=>'木②','name'=>'am_thu_2','type'=>'text','wrapper'=>array('width'=>16)),
+          array('key'=>'field_am_fri_2','label'=>'金②','name'=>'am_fri_2','type'=>'text','wrapper'=>array('width'=>16)),
+          array('key'=>'field_am_sat_2','label'=>'土②','name'=>'am_sat_2','type'=>'text','wrapper'=>array('width'=>16)),
         ),
       ),
       array(
@@ -209,16 +223,31 @@ function Change_menulabel() {
         'name' => 'group_pm',
         'type' => 'group',
         'layout' => 'block',
-        'wrapper' => array('width' => 50),
+        'wrapper' => array('width' => 100),
         'sub_fields' => array(
-          array('key'=>'field_pm_mon','label'=>'月','name'=>'pm_mon','type'=>'text','wrapper'=>array('width'=>14)),
-          array('key'=>'field_pm_tue','label'=>'火','name'=>'pm_tue','type'=>'text','wrapper'=>array('width'=>14)),
-          array('key'=>'field_pm_wed','label'=>'水','name'=>'pm_wed','type'=>'text','wrapper'=>array('width'=>14)),
-          array('key'=>'field_pm_thu','label'=>'木','name'=>'pm_thu','type'=>'text','wrapper'=>array('width'=>14)),
-          array('key'=>'field_pm_fri','label'=>'金','name'=>'pm_fri','type'=>'text','wrapper'=>array('width'=>14)),
-          array('key'=>'field_pm_sat','label'=>'土','name'=>'pm_sat','type'=>'text','wrapper'=>array('width'=>14)),
-          array('key'=>'field_pm_sun','label'=>'日','name'=>'pm_sun','type'=>'text','wrapper'=>array('width'=>14)),
+          // ①行目
+          array('key'=>'field_pm_mon_1','label'=>'月①','name'=>'pm_mon_1','type'=>'text','wrapper'=>array('width'=>16)),
+          array('key'=>'field_pm_tue_1','label'=>'火①','name'=>'pm_tue_1','type'=>'text','wrapper'=>array('width'=>16)),
+          array('key'=>'field_pm_wed_1','label'=>'水①','name'=>'pm_wed_1','type'=>'text','wrapper'=>array('width'=>16)),
+          array('key'=>'field_pm_thu_1','label'=>'木①','name'=>'pm_thu_1','type'=>'text','wrapper'=>array('width'=>16)),
+          array('key'=>'field_pm_fri_1','label'=>'金①','name'=>'pm_fri_1','type'=>'text','wrapper'=>array('width'=>16)),
+          array('key'=>'field_pm_sat_1','label'=>'土①','name'=>'pm_sat_1','type'=>'text','wrapper'=>array('width'=>16)),
+          // ②行目
+          array('key'=>'field_pm_mon_2','label'=>'月②','name'=>'pm_mon_2','type'=>'text','wrapper'=>array('width'=>16)),
+          array('key'=>'field_pm_tue_2','label'=>'火②','name'=>'pm_tue_2','type'=>'text','wrapper'=>array('width'=>16)),
+          array('key'=>'field_pm_wed_2','label'=>'水②','name'=>'pm_wed_2','type'=>'text','wrapper'=>array('width'=>16)),
+          array('key'=>'field_pm_thu_2','label'=>'木②','name'=>'pm_thu_2','type'=>'text','wrapper'=>array('width'=>16)),
+          array('key'=>'field_pm_fri_2','label'=>'金②','name'=>'pm_fri_2','type'=>'text','wrapper'=>array('width'=>16)),
+          array('key'=>'field_pm_sat_2','label'=>'土②','name'=>'pm_sat_2','type'=>'text','wrapper'=>array('width'=>16)),
         ),
+      ),
+      array(
+        'key' => 'field_schedule_hours',
+        'label' => '診療時間',
+        'name' => 'schedule_hours',
+        'type' => 'text',
+        'instructions' => '例）午前 9:00〜12:00 ／ 午後14:00〜17:00',
+        'placeholder' => '午前 9:00〜12:00 ／ 午後14:00〜17:00',
       ),
     ),
     'location' => array(
@@ -252,9 +281,9 @@ function Change_menulabel() {
       array('key'=>'field_doctor1_name','label'=>'医師1_名前','name'=>'doctor1_name','type'=>'text','wrapper'=>array('width'=>35)),
       array('key'=>'field_doctor1_kana','label'=>'医師1_かな','name'=>'doctor1_kana','type'=>'text','wrapper'=>array('width'=>35)),
       array('key'=>'field_doctor1_specialty','label'=>'医師1_専門分野','name'=>'doctor1_specialty','type'=>'text','wrapper'=>array('width'=>100)),
-      array('key'=>'field_doctor1_qualification','label'=>'医師1_経歴・資格','name'=>'doctor1_qualification','type'=>'textarea','new_lines'=>'br','wrapper'=>array('width'=>100)),
+      array('key'=>'field_doctor1_qualification','label'=>'医師1_経歴・資格','name'=>'doctor1_qualification','type'=>'textarea','wrapper'=>array('width'=>100)),
       array('key'=>'field_doctor1_photo','label'=>'医師1_画像','name'=>'doctor1_photo','type'=>'image','return_format'=>'array','preview_size'=>'medium','wrapper'=>array('width'=>40)),
-      array('key'=>'field_doctor1_message','label'=>'医師1_メッセ本文','name'=>'doctor1_message','type'=>'wysiwyg','media_upload'=>0,'wrapper'=>array('width'=>100)),
+      array('key'=>'field_doctor1_message','label'=>'医師1_メッセ本文','name'=>'doctor1_message','type'=>'textarea','wrapper'=>array('width'=>100)),
 
       // 医師2
       array('key'=>'field_doctor2_heading','label'=>'医師2','name'=>'','type'=>'accordion','open'=>0),
@@ -262,9 +291,9 @@ function Change_menulabel() {
       array('key'=>'field_doctor2_name','label'=>'医師2_名前','name'=>'doctor2_name','type'=>'text','wrapper'=>array('width'=>35)),
       array('key'=>'field_doctor2_kana','label'=>'医師2_かな','name'=>'doctor2_kana','type'=>'text','wrapper'=>array('width'=>35)),
       array('key'=>'field_doctor2_specialty','label'=>'医師2_専門分野','name'=>'doctor2_specialty','type'=>'text','wrapper'=>array('width'=>100)),
-      array('key'=>'field_doctor2_qualification','label'=>'医師2_経歴・資格','name'=>'doctor2_qualification','type'=>'textarea','new_lines'=>'br','wrapper'=>array('width'=>100)),
+      array('key'=>'field_doctor2_qualification','label'=>'医師2_経歴・資格','name'=>'doctor2_qualification','type'=>'textarea','wrapper'=>array('width'=>100)),
       array('key'=>'field_doctor2_photo','label'=>'医師2_画像','name'=>'doctor2_photo','type'=>'image','return_format'=>'array','preview_size'=>'medium','wrapper'=>array('width'=>40)),
-      array('key'=>'field_doctor2_message','label'=>'医師2_メッセ本文','name'=>'doctor2_message','type'=>'wysiwyg','media_upload'=>0,'wrapper'=>array('width'=>100)),
+      array('key'=>'field_doctor2_message','label'=>'医師2_メッセ本文','name'=>'doctor2_message','type'=>'textarea','wrapper'=>array('width'=>100)),
 
       // 医師3
       array('key'=>'field_doctor3_heading','label'=>'医師3','name'=>'','type'=>'accordion','open'=>0),
@@ -272,9 +301,39 @@ function Change_menulabel() {
       array('key'=>'field_doctor3_name','label'=>'医師3_名前','name'=>'doctor3_name','type'=>'text','wrapper'=>array('width'=>35)),
       array('key'=>'field_doctor3_kana','label'=>'医師3_かな','name'=>'doctor3_kana','type'=>'text','wrapper'=>array('width'=>35)),
       array('key'=>'field_doctor3_specialty','label'=>'医師3_専門分野','name'=>'doctor3_specialty','type'=>'text','wrapper'=>array('width'=>100)),
-      array('key'=>'field_doctor3_qualification','label'=>'医師3_経歴・資格','name'=>'doctor3_qualification','type'=>'textarea','new_lines'=>'br','wrapper'=>array('width'=>100)),
+      array('key'=>'field_doctor3_qualification','label'=>'医師3_経歴・資格','name'=>'doctor3_qualification','type'=>'textarea','wrapper'=>array('width'=>100)),
       array('key'=>'field_doctor3_photo','label'=>'医師3_画像','name'=>'doctor3_photo','type'=>'image','return_format'=>'array','preview_size'=>'medium','wrapper'=>array('width'=>40)),
-      array('key'=>'field_doctor3_message','label'=>'医師3_メッセ本文','name'=>'doctor3_message','type'=>'wysiwyg','media_upload'=>0,'wrapper'=>array('width'=>100)),
+      array('key'=>'field_doctor3_message','label'=>'医師3_メッセ本文','name'=>'doctor3_message','type'=>'textarea','wrapper'=>array('width'=>100)),
+
+      // 医師4
+      array('key'=>'field_doctor4_heading','label'=>'医師4','name'=>'','type'=>'accordion','open'=>0),
+      array('key'=>'field_doctor4_label','label'=>'医師4_肩書','name'=>'doctor4_label','type'=>'text','default_value'=>'医師／','wrapper'=>array('width'=>30)),
+      array('key'=>'field_doctor4_name','label'=>'医師4_名前','name'=>'doctor4_name','type'=>'text','wrapper'=>array('width'=>35)),
+      array('key'=>'field_doctor4_kana','label'=>'医師4_かな','name'=>'doctor4_kana','type'=>'text','wrapper'=>array('width'=>35)),
+      array('key'=>'field_doctor4_specialty','label'=>'医師4_専門分野','name'=>'doctor4_specialty','type'=>'text','wrapper'=>array('width'=>100)),
+      array('key'=>'field_doctor4_qualification','label'=>'医師4_経歴・資格','name'=>'doctor4_qualification','type'=>'textarea','wrapper'=>array('width'=>100)),
+      array('key'=>'field_doctor4_photo','label'=>'医師4_画像','name'=>'doctor4_photo','type'=>'image','return_format'=>'array','preview_size'=>'medium','wrapper'=>array('width'=>40)),
+      array('key'=>'field_doctor4_message','label'=>'医師4_メッセ本文','name'=>'doctor4_message','type'=>'textarea','wrapper'=>array('width'=>100)),
+
+      // 医師5
+      array('key'=>'field_doctor5_heading','label'=>'医師5','name'=>'','type'=>'accordion','open'=>0),
+      array('key'=>'field_doctor5_label','label'=>'医師5_肩書','name'=>'doctor5_label','type'=>'text','default_value'=>'医師／','wrapper'=>array('width'=>30)),
+      array('key'=>'field_doctor5_name','label'=>'医師5_名前','name'=>'doctor5_name','type'=>'text','wrapper'=>array('width'=>35)),
+      array('key'=>'field_doctor5_kana','label'=>'医師5_かな','name'=>'doctor5_kana','type'=>'text','wrapper'=>array('width'=>35)),
+      array('key'=>'field_doctor5_specialty','label'=>'医師5_専門分野','name'=>'doctor5_specialty','type'=>'text','wrapper'=>array('width'=>100)),
+      array('key'=>'field_doctor5_qualification','label'=>'医師5_経歴・資格','name'=>'doctor5_qualification','type'=>'textarea','wrapper'=>array('width'=>100)),
+      array('key'=>'field_doctor5_photo','label'=>'医師5_画像','name'=>'doctor5_photo','type'=>'image','return_format'=>'array','preview_size'=>'medium','wrapper'=>array('width'=>40)),
+      array('key'=>'field_doctor5_message','label'=>'医師5_メッセ本文','name'=>'doctor5_message','type'=>'textarea','wrapper'=>array('width'=>100)),
+
+      // 医師6
+      array('key'=>'field_doctor6_heading','label'=>'医師6','name'=>'','type'=>'accordion','open'=>0),
+      array('key'=>'field_doctor6_label','label'=>'医師6_肩書','name'=>'doctor6_label','type'=>'text','default_value'=>'医師／','wrapper'=>array('width'=>30)),
+      array('key'=>'field_doctor6_name','label'=>'医師6_名前','name'=>'doctor6_name','type'=>'text','wrapper'=>array('width'=>35)),
+      array('key'=>'field_doctor6_kana','label'=>'医師6_かな','name'=>'doctor6_kana','type'=>'text','wrapper'=>array('width'=>35)),
+      array('key'=>'field_doctor6_specialty','label'=>'医師6_専門分野','name'=>'doctor6_specialty','type'=>'text','wrapper'=>array('width'=>100)),
+      array('key'=>'field_doctor6_qualification','label'=>'医師6_経歴・資格','name'=>'doctor6_qualification','type'=>'textarea','wrapper'=>array('width'=>100)),
+      array('key'=>'field_doctor6_photo','label'=>'医師6_画像','name'=>'doctor6_photo','type'=>'image','return_format'=>'array','preview_size'=>'medium','wrapper'=>array('width'=>40)),
+      array('key'=>'field_doctor6_message','label'=>'医師6_メッセ本文','name'=>'doctor6_message','type'=>'textarea','wrapper'=>array('width'=>100)),
     ),
     'location' => array(
       array( array('param'=>'post_type','operator'=>'==','value'=>'department') ),
@@ -457,7 +516,7 @@ add_action('acf/init', function () {
 add_action('acf/init', function () {
   if (!function_exists('acf_add_local_field_group')) return;
 
-  $max = 7; // 職種枠の数（必要に応じて変更）
+  $max = 13; // 職種枠の数（必要に応じて変更）
 
   acf_add_local_field_group(array(
     'key' => 'group_recruit_page',
@@ -473,11 +532,13 @@ add_action('acf/init', function () {
         ),
       ),
       array_reduce(range(1, $max), function ($carry, $i) {
-        $carry[] = array('key'=>"field_job_title_{$i}",     'label'=>"職種タイトル{$i}", 'name'=>"job_title_{$i}",     'type'=>'text');
-        $carry[] = array('key'=>"field_job_time_{$i}",      'label'=>"勤務時間{$i}",     'name'=>"job_time_{$i}",      'type'=>'textarea');
-        $carry[] = array('key'=>"field_job_salary_{$i}",    'label'=>"給与{$i}",         'name'=>"job_salary_{$i}",    'type'=>'textarea');
-        $carry[] = array('key'=>"field_job_holiday_{$i}",   'label'=>"休日休暇{$i}",     'name'=>"job_holiday_{$i}",   'type'=>'textarea');
-        $carry[] = array('key'=>"field_job_transport_{$i}", 'label'=>"交通費{$i}",       'name'=>"job_transport_{$i}", 'type'=>'textarea');
+        $open = ($i === 1) ? 1 : 0;
+        $carry[] = array('key'=>"field_job_heading_{$i}",'label'=>"職種{$i}",'name'=>'','type'=>'accordion','open'=>$open,'multi_expand'=>1);
+        $carry[] = array('key'=>"field_job_title_{$i}",     'label'=>"職種タイトル", 'name'=>"job_title_{$i}",     'type'=>'text');
+        $carry[] = array('key'=>"field_job_time_{$i}",      'label'=>"勤務時間",     'name'=>"job_time_{$i}",      'type'=>'textarea');
+        $carry[] = array('key'=>"field_job_salary_{$i}",    'label'=>"給与",         'name'=>"job_salary_{$i}",    'type'=>'textarea');
+        $carry[] = array('key'=>"field_job_holiday_{$i}",   'label'=>"休日休暇",     'name'=>"job_holiday_{$i}",   'type'=>'textarea');
+        $carry[] = array('key'=>"field_job_transport_{$i}", 'label'=>"交通費",       'name'=>"job_transport_{$i}", 'type'=>'textarea');
         return $carry;
       }, [])
     ),
@@ -503,58 +564,6 @@ add_action('acf/init', function () {
     'style' => 'default',
     'active' => true,
   ));
-});
-
-// 初期クラス付与（<head> 内にインライン出力）
-add_action('wp_head', function () {
-  if (is_admin()) return; // 管理画面は除外
-  ?>
-<script>
-(function() {
-  var cls = document.documentElement.classList;
-
-  function canUse(storage) {
-    try {
-      var k = "__t__";
-      storage.setItem(k, "1");
-      storage.removeItem(k);
-      return true;
-    } catch (e) {
-      return false;
-    }
-  }
-  if (canUse(window.localStorage)) {
-    if (localStorage.getItem("loadingShown")) {
-      cls.add("no-loading");
-    } else {
-      cls.add("show-loading");
-      localStorage.setItem("loadingShown", "1");
-    }
-    return;
-  }
-  // localStorage 使えない環境は Cookie でフォールバック（セッション中のみ）
-  var seen = /(?:^|;)\s*loadingShown=1(?:;|$)/.test(document.cookie);
-  if (seen) {
-    cls.add("no-loading");
-  } else {
-    cls.add("show-loading");
-    document.cookie = "loadingShown=1; path=/; SameSite=Lax";
-  }
-})();
-</script>
-<?php
-}, 0); // 最優先で出力（チラつき防止）
-
-// <body>直後にローダーDOMを出力
-add_action('wp_body_open', function () {
-  if (is_admin()) return; // 管理画面は除外
-  ?>
-<div class="p-loading js-loading" aria-hidden="true">
-  <div class="p-loading__inner">
-    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/common/loading.svg' ); ?>" alt="読み込み中">
-  </div>
-</div>
-<?php
 });
 
 // --- CPTスラッグからURLを取得する関数 ---

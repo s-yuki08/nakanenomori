@@ -66,7 +66,7 @@ $sitemap = esc_url(home_url('/sitemap/'));
           (C) NAKANENOMORI Hospital All Reserved.</small>
       </div>
     </div>
-
+  </div>
 </footer>
 
 <div class="c-page-top js-page-top">

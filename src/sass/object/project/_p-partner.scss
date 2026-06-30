@@ -22,23 +22,42 @@
 }
 
 .p-partner__list {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: rem(20);
+  align-items: center;
+  justify-content: center;
+
   @include mq("md") {
-    grid-template-columns: repeat(5, 1fr);
     margin: 0 auto;
-    gap: rem(40);
-    justify-items: center;
-    align-items: center;
+    gap: rem(20);
+    justify-content: flex-start;
   }
 }
 
 .p-partner__item {
-  width: 100%;
-  max-width: rem(200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(50% - rem(10));
+
   @include mq("md") {
-    max-width: rem(250);
+    // 1行目: 4列 (1-4番目)
+    width: calc(25% - rem(15));
+  }
+}
+
+// 2行目以降: 5列 (5番目以降)
+.p-partner__item:nth-child(n + 5) {
+  @include mq("md") {
+    width: calc(20% - rem(16));
+  }
+}
+
+// 最後のアイテム: 2列分
+.p-partner__item:last-child {
+  @include mq("md") {
+    width: calc(40% - rem(12));
   }
 }
 .p-partner__item:hover {
@@ -48,10 +67,18 @@
 
 .p-partner__item img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain;
-  @include mq("md") {
-    width: rem(200);
-    height: auto;
+}
+
+.p-partner__item--small {
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    width: 70%;
   }
 }

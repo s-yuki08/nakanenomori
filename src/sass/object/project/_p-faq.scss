@@ -44,7 +44,7 @@
 .p-faq__wrapper {
   margin-top: rem(30);
   @include mq(md) {
-    margin-top: rem(50);
+    margin-top: rem(80);
   }
 }
 
@@ -57,7 +57,7 @@
 }
 
 .p-faq__item {
-  border-bottom: 1px solid $color-blue;
+  border-bottom: 1px solid #1346b9;
   padding-bottom: rem(50);
   @include mq(md) {
     padding-bottom: rem(80);
@@ -95,12 +95,12 @@
 .p-faq__item-answer {
   width: 100%;
   padding-left: rem(30);
-  padding-top: rem(15);
+  padding-top: rem(24);
   @include mq(md) {
     max-width: rem(840);
     margin: 0 auto;
     padding-left: 0;
-    padding-top: rem(20);
+    padding-top: rem(48);
   }
 }
 
@@ -110,6 +110,7 @@
   margin-top: rem(10);
   padding-left: rem(7);
   @include mq(md) {
+    margin-top: 0;
     font-size: rem(18);
   }
 }
@@ -163,5 +164,78 @@
 .p-staff__item a:hover .p-staff__arr {
   @include mq(md) {
     background-image: url(../images/common/arrow-white.svg);
+  }
+}
+
+/* Schedule */
+.p-faq__schedule {
+  padding-left: rem(7);
+  @include mq(md) {
+    padding-left: 0;
+  }
+}
+
+.p-faq__schedule-block {
+  margin-top: rem(20);
+  @include mq(md) {
+    margin-top: rem(36);
+  }
+}
+
+.p-faq__schedule-block:first-child {
+  margin-top: 0;
+}
+
+.p-faq__schedule-label {
+  display: inline-block;
+  font-size: rem(16);
+  font-weight: $bold;
+  letter-spacing: 0.3em;
+  color: $color-blue;
+  border: 1px solid $color-blue;
+  border-radius: rem(40);
+  padding: rem(4) rem(15);
+  @include mq(md) {
+    font-size: rem(20);
+    padding: rem(4) rem(42);
+  }
+}
+
+.p-faq__schedule-content {
+  margin-top: rem(10);
+  @include mq(md) {
+  }
+}
+
+.p-faq__schedule-row {
+  display: flex;
+  align-items: flex-start;
+  font-size: rem(14);
+  line-height: 1.9;
+  @include mq(md) {
+    font-size: rem(18);
+  }
+}
+
+.p-faq__schedule-day {
+  display: inline-block;
+  width: rem(90);
+
+  @include mq("md") {
+    width: 6em;
+  }
+}
+
+.p-faq__schedule-time {
+  flex: 1;
+}
+
+.p-faq__schedule-note {
+  font-size: rem(14);
+  line-height: 1.9;
+  margin-top: rem(20);
+  @include mq(md) {
+    font-size: rem(18);
+    margin-top: rem(25);
   }
 }

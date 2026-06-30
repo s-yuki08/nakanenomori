@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.l-outpatient-service {
+  margin-top: rem(50);
+  @include mq("md") {
+    margin-top: rem(106);
+  }
+}

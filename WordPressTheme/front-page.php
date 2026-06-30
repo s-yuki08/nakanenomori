@@ -22,11 +22,11 @@ $visit = esc_url(home_url('/hospitalization/#visit'));
           <div class="swiper-img">
             <picture>
               <source media="(min-width: 768px)"
-                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/fv_pc.png" />
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/fv_sp.png" alt="メインビジュアル" />
+                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/fv_pc_01.webp" />
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/fv_sp_01.webp" alt="メインビジュアル" />
             </picture>
-            <div class="p-mv__heading">
-              <h2 class="p-mv__title">何科を受診すればいい？<br>迷ったり困ったりしたときは、<br>まず、「総合診療科」を<br>ご予約ください。</h2>
+            <div class="p-mv__heading p-mv__heading--sp">
+              <h2 class="p-mv__title">小さな悩みから<br>大きな不安まで<br>あなたに寄り添う医療を<br>届けます。</h2>
             </div>
           </div>
         </div>
@@ -34,11 +34,47 @@ $visit = esc_url(home_url('/hospitalization/#visit'));
           <div class="swiper-img">
             <picture>
               <source media="(min-width: 768px)"
-                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/fv_pc_01.png" />
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/fv_sp_01.png" alt="メインビジュアル" />
+                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/fv_pc_02.webp" />
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/fv_sp_02.webp" alt="メインビジュアル" />
             </picture>
             <div class="p-mv__heading p-mv__heading--sp">
               <h2 class="p-mv__title">小さな悩みから<br>大きな不安まで<br>あなたに寄り添う医療を<br>届けます。</h2>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-img">
+            <picture>
+              <source media="(min-width: 768px)"
+                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/fv_pc_03.webp" />
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/fv_sp_03.webp" alt="メインビジュアル" />
+            </picture>
+            <div class="p-mv__heading p-mv__heading--sp">
+              <h2 class="p-mv__title">小さな悩みから<br>大きな不安まで<br>あなたに寄り添う医療を<br>届けます。</h2>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-img">
+            <picture>
+              <source media="(min-width: 768px)"
+                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/fv_pc.webp" />
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/fv_sp.webp" alt="メインビジュアル" />
+            </picture>
+            <div class="p-mv__heading">
+              <h2 class="p-mv__title">何科を受診すればいい？<br>迷ったり困ったりしたときは、<br>お気軽に内科・総合診療科へ<br>ご相談ください。</h2>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-img">
+            <picture>
+              <source media="(min-width: 768px)"
+                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/fv_pc_05.webp" />
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/fv_sp_05.webp" alt="メインビジュアル" />
+            </picture>
+            <div class="p-mv__heading">
+              <h2 class="p-mv__title">何科を受診すればいい？<br>迷ったり困ったりしたときは、<br>お気軽に内科・総合診療科へ<br>ご相談ください。</h2>
             </div>
           </div>
         </div>
@@ -62,7 +98,7 @@ $visit = esc_url(home_url('/hospitalization/#visit'));
             </a>
           </li>
           <li class="p-mv__btn-item">
-            <a href="<?php echo $recruit; ?>" class="p-mv__btn-link p-mv__btn-link--blue">
+            <a href="<?php echo $checkup; ?>" class="p-mv__btn-link p-mv__btn-link--blue">
               <span class="p-mv__btn-text p-mv__btn-text--blue">検診のご案内</span>
               <span class="p-mv__btn-arrow p-mv__btn-arrow--blue">
               </span>
@@ -90,32 +126,32 @@ $visit = esc_url(home_url('/hospitalization/#visit'));
             <ul class="p-accordion-sp__list" role="list">
               <li class="p-accordion-sp__item">
                 <a href="<?php echo $outpatient; ?>" class="p-accordion-sp__link">
-                  <span class="p-accordion-sp__text">はじめて来院される方へ</span>
+                  <span class="p-accordion-sp__text">外来のご案内</span>
                 </a>
               </li>
               <li class="p-accordion-sp__item">
                 <a href="<?php echo $department; ?>" class="p-accordion-sp__link p-accordion-sp__link--green">
-                  <span class="p-accordion-sp__text p-accordion-sp__text--green">診療科のご案内</span>
-                </a>
-              </li>
-              <li class="p-accordion-sp__item">
-                <a href="<?php echo $recruit; ?>" class="p-accordion-sp__link p-accordion-sp__link--blue">
-                  <span class="p-accordion-sp__text p-accordion-sp__text--blue">求人情報</span>
-                </a>
-              </li>
-              <li class="p-accordion-sp__item">
-                <a href="<?php echo $hospitalization; ?>" class="p-accordion-sp__link p-accordion-sp__link--pink">
-                  <span class="p-accordion-sp__text p-accordion-sp__text--pink">入院の方</span>
-                </a>
-              </li>
-              <li class="p-accordion-sp__item">
-                <a href="<?php echo $visit; ?>" class="p-accordion-sp__link p-accordion-sp__link--orange">
-                  <span class="p-accordion-sp__text p-accordion-sp__text--orange">面会の方</span>
+                  <span class="p-accordion-sp__text p-accordion-sp__text--green">診療科・部門紹介</span>
                 </a>
               </li>
               <li class="p-accordion-sp__item">
                 <a href="<?php echo $checkup; ?>" class="p-accordion-sp__link p-accordion-sp__link--navy">
                   <span class="p-accordion-sp__text p-accordion-sp__text--navy">検診のご案内</span>
+                </a>
+              </li>
+              <li class="p-accordion-sp__item">
+                <a href="<?php echo $hospitalization; ?>" class="p-accordion-sp__link p-accordion-sp__link--pink">
+                  <span class="p-accordion-sp__text p-accordion-sp__text--pink">入院・面会について</span>
+                </a>
+              </li>
+              <li class="p-accordion-sp__item">
+                <a href="<?php echo $about; ?>" class="p-accordion-sp__link p-accordion-sp__link--orange">
+                  <span class="p-accordion-sp__text p-accordion-sp__text--orange">当院について</span>
+                </a>
+              </li>
+              <li class="p-accordion-sp__item">
+                <a href="<?php echo $recruit; ?>" class="p-accordion-sp__link p-accordion-sp__link--blue">
+                  <span class="p-accordion-sp__text p-accordion-sp__text--blue">求人情報</span>
                 </a>
               </li>
             </ul>
@@ -199,8 +235,8 @@ $visit = esc_url(home_url('/hospitalization/#visit'));
             </a>
           </li>
           <li class="p-menu-link__item">
-            <a href="<?php echo $visit; ?>" class="p-menu-link__btn p-menu-link__btn--orange">
-              <span class="p-menu-link__btn-text p-menu-link__btn-text--orange">面会の方</span>
+            <a href="<?php echo $about; ?>" class="p-menu-link__btn p-menu-link__btn--orange">
+              <span class="p-menu-link__btn-text p-menu-link__btn-text--orange">当院について</span>
               <span class="p-menu-link__btn-arrow p-menu-link__btn-arrow--orange">
               </span>
             </a>
@@ -222,16 +258,15 @@ $visit = esc_url(home_url('/hospitalization/#visit'));
         <div class="p-greeting__contents">
           <h2 class="p-greeting__title">ごあいさつ</h2>
           <p class="p-greeting__text">
-            私たちは、これまで目黒区内で地域住民に<br class="u-mobile">愛される<br class="u-desktop">医療を長年行ってきました。<br>そこで得た想いを新たに、<br
-              class="u-mobile">「中根の森に根ざすやさしさを、心と体に。<br class="u-desktop">笑顔が育つ、地域の“かかりつけの森”」をめざして、<br
-              class="u-desktop">“なかねの森病院”を創設しました。<br>すべてを包み込み、見守る“森”となれるよう、<br
-              class="u-desktop">最善そして最新の医療と看護を目指します。<br>温かさとやる気あふれる<br
-              class="u-mobile">国内トップクラスの先端医療を担う<br>医師と看護師と理学療法士が、<br>“なかねの森”となってチーム医療を行います。
+            私たちは、これまで目黒区内で地域住民に<br class="u-mobile">愛される<br class="u-desktop">医療を長年行ってきました。<br>
+            そこで得た想いを新たに、<br class="u-mobile">「中根の森に根ざすやさしさを、心と体に。<br class="u-desktop">笑顔が育つ、地域の“かかりつけの森”」をめざして、<br class="u-desktop">“なかねの森病院”を創設しました。<br>すべてを包み込み、見守る“森”となれるよう、<br class="u-desktop">最善そして最新の医療と看護を目指します。<br>
+            温かさとやる気あふれるすべての医療スタッフが、<br class="u-desktop">
+            “なかねの森”となってチーム医療を行います。
           </p>
         </div>
         <div class="p-greeting__image-contents">
           <div class="p-greeting__image">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/common/about_doctor.png" alt="院長先生">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/common/about_doctor.webp" alt="院長先生">
           </div>
           <p class="p-greeting__director">なかねの森病院 病院長
           </p>
@@ -340,6 +375,7 @@ $visit = esc_url(home_url('/hospitalization/#visit'));
         </p>
       </div>
     </div>
+  </div>
 </section>
 
 <!-- access -->
@@ -390,42 +426,47 @@ $visit = esc_url(home_url('/hospitalization/#visit'));
         <!-- 1段目 -->
         <li class="p-partner__item">
           <a href="https://www.showa-u.ac.jp/SUH/" target="_blank"><img
-              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_01.png" alt="昭和医科大学病院"></a>
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_01.webp" alt="昭和医科大学病院"></a>
         </li>
         <li class="p-partner__item">
           <a href="https://tkh.kkr.or.jp/index.html" target="_blank"><img
-              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_02.png" alt="東京共済病院"></a>
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_02.webp" alt="東京共済病院"></a>
         </li>
         <li class="p-partner__item">
           <a href="https://hospinfo.tokyo-med.ac.jp/" target="_blank"><img
-              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_03.png" alt="東京医科大学病院"></a>
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_03.webp" alt="東京医科大学病院"></a>
         </li>
         <li class="p-partner__item">
           <a href="https://hosp.juntendo.ac.jp/" target="_blank"><img
-              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_04.png" alt="順天堂大学病院"></a>
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_04.webp" alt="順天堂大学病院"></a>
         </li>
         <!-- 2段目 -->
         <li class="p-partner__item">
           <a href="https://himonya-hosp.com/" target="_blank"><img
-              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_05.png" alt="碑文谷病院"></a>
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_05.webp" alt="碑文谷病院"></a>
         </li>
         <li class="p-partner__item">
           <a href="https://www.tmhp.jp/ebara/index.html" target="_blank"><img
-              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_06.png" alt="東京都立荏原病院"></a>
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_06.webp" alt="東京都立荏原病院"></a>
         </li>
         <li class="p-partner__item">
           <a href="https://www.tmhp.jp/hiroo/index.html" target="_blank"><img
-              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_07.png" alt="東京都立広尾病院"></a>
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_07.webp" alt="東京都立広尾病院"></a>
         </li>
         <li class="p-partner__item">
           <a href="https://ike-naka.com/" target="_blank"><img
-              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_08.png"
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_08.webp"
               alt="池田仲通りクリニック"></a>
         </li>
-        <li class="p-partner__item">
+        <li class="p-partner__item p-partner__item--small">
           <a href="https://www.beni-dental.com/" target="_blank"><img
-              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_09.png"
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_09.webp"
               alt="BENI DENTAL CLINIC"></a>
+        </li>
+        <li class="p-partner__item">
+          <a href="https://www.kyorin-u.ac.jp/hospital/suginami/" target="_blank"><img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/common/partner_10.webp"
+              alt=""></a>
         </li>
       </ul>
     </div>

@@ -1,17 +1,34 @@
 /* リキッドレイアウト対応 */
 @use "global" as *;
 
+/* ページ全体のフェードイン */
+@keyframes page-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  animation: page-fade-in 2s ease-out forwards;
+}
+
 html {
+  //375px~787px
+  font-size: 16px;
+  // アンカーリンクのスクロール位置調整（ヘッダー分）
+  scroll-padding-top: rem(80);
+
   //~375px
   @media (max-width: 375px) {
     font-size: vw(375, 16);
   }
 
-  //375px~787px
-  font-size: 16px;
-
   @include mq("md") {
     font-size: vw(strip-unit($inner), 16);
+    scroll-padding-top: rem(170);
   }
 
   //inner~max-screen
@@ -37,4 +54,10 @@ a {
       opacity: 0.8;
     }
   }
+}
+
+/* iOSテキスト自動調整無効化 */
+table td,
+table th {
+  -webkit-text-size-adjust: 100%;
 }

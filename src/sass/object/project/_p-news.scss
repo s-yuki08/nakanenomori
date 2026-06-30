@@ -37,6 +37,9 @@
     top: -66%;
     right: calc(50% - min(49vw, rem(682)));
     position: absolute;
+    transform-origin: center center;
+    animation: swing 2s ease-in-out infinite;
+    animation-delay: 1s;
   }
 }
 

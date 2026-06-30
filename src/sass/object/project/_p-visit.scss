@@ -1,14 +1,6 @@
 @use "global" as *;
 
 .p-visit__inner.l-inner {
-  padding: 0 rem(15);
-  margin: 0 auto;
-  max-width: rem(600);
-  width: 100%;
-  @include mq(md) {
-    max-width: rem(1080);
-    padding: 0 rem(20);
-  }
 }
 
 /* タイトル */
@@ -31,6 +23,7 @@
 .p-visit__tableWrap {
   margin-top: rem(14);
   @include mq(md) {
+    margin-inline: rem(32);
     margin-top: rem(28);
   }
 }
@@ -176,15 +169,15 @@
 
 .p-visit__cautionTtl {
   margin: rem(14) 0 rem(8);
-  font-weight: 700;
-  color: $color-gray;
+  font-weight: $bold;
+  color: $color-black;
   font-size: rem(15);
 }
 .p-visit__list {
-  font-size: rem(14);
+  font-size: rem(15);
   text-indent: -1em;
   margin-left: rem(10);
-  color: $color-gray;
+  color: $color-black;
   line-height: 1.9;
   @include mq(md) {
     text-indent: -1em;

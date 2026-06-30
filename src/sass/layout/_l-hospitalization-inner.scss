@@ -1,0 +1,15 @@
+@use "global" as *;
+
+// 入院案内ページ用のインナー幅
+.l-hospitalization-inner {
+  width: 100%;
+  max-width: rem(600);
+  padding-right: $padding-sp;
+  padding-left: $padding-sp;
+  margin-right: auto;
+  margin-left: auto;
+  @include mq("md") {
+    max-width: rem(960);
+    padding: 0 rem(20);
+  }
+}

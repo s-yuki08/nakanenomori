@@ -13,7 +13,7 @@
 .p-privacy-policy__title {
   font-size: rem(24);
   line-height: calc(35 / 24);
-  font-weight: $medium;
+  font-weight: $bold;
   font-family: $heading-family;
   @include mq("md") {
     font-size: rem(32);

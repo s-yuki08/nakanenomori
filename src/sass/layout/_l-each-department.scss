@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.l-each-department {
+  padding-top: rem(100);
+  padding-bottom: rem(100);
+  display: flex;
+  flex-direction: column;
+  gap: rem(100);
+  @include mq(md) {
+    padding-top: rem(180);
+    padding-bottom: rem(375);
+    gap: rem(130);
+  }
+}

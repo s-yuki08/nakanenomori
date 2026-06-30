@@ -10,45 +10,26 @@
 .p-bring__box {
   margin-top: rem(20);
   @include mq(md) {
-    margin-top: rem(30);
+    margin-top: rem(24);
+    max-width: rem(920);
+    margin: 0 auto;
   }
 }
 
 .p-bring__list-wrapper {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: rem(10);
   border: 2px solid $color-cyan;
   border-radius: rem(20);
   padding: rem(10) rem(14);
   width: 100%;
   @include mq(md) {
-    justify-content: space-between;
-    align-items: first baseline;
-    flex-direction: row;
-    gap: 3%;
-    padding: rem(35) rem(40);
-    max-width: rem(980);
-    margin: 0 auto;
-  }
-}
-
-.p-bring__list-left {
-  width: 100%;
-  @include mq(md) {
-    width: 50%;
-  }
-}
-.p-bring__list-center {
-  width: 100%;
-  @include mq(md) {
-    width: 25%;
-  }
-}
-.p-bring__list-right {
-  width: 100%;
-  @include mq(md) {
-    width: 25%;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: rem(10) 3%;
+    padding: rem(28) rem(40);
+    align-items: start;
   }
 }
 
@@ -58,13 +39,13 @@
   @include mq(md) {
     font-size: rem(18);
     letter-spacing: 0.05em;
-  }
-}
 
-.p-bring__item + .p-bring__item {
-  margin-top: rem(10);
-  @include mq(md) {
-    margin-top: rem(15);
+    // 明示的にグリッド配置
+    &:nth-child(1) { grid-area: 1 / 1; }
+    &:nth-child(2) { grid-area: 2 / 1; }
+    &:nth-child(3) { grid-area: 1 / 2; }
+    &:nth-child(4) { grid-column: 2 / 4; grid-row: 2; }
+    &:nth-child(5) { grid-area: 1 / 3; }
   }
 }
 
@@ -72,9 +53,8 @@
   margin-top: rem(14);
   width: 100%;
   @include mq(md) {
-    max-width: rem(960);
-    margin: 0 auto;
-    padding-top: rem(24);
+    margin-top: rem(18);
+    padding-left: rem(10);
   }
 }
 

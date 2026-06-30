@@ -24,25 +24,22 @@ $news = esc_url(home_url('/news/'));
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
   <main>
-    <div class="p-loading l-loading js-loading">
-      <div class="p-loading__inner">
-        <div class="p-loading__logo">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/loading.svg" alt="なかねの森病院" />
-        </div>
-        <div class="p-loading__bird">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/loading_bird.svg" alt="鳥">
-        </div>
-      </div>
-    </div>
-
     <!-- header -->
     <header class="p-header l-header">
       <div class="p-header__inner">
-        <h1 class="p-header__logo">
-          <a href="<?php echo $home; ?>">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo.svg" alt="なかねの森病院">
-          </a>
-        </h1>
+        <?php if (is_front_page()) : ?>
+          <h1 class="p-header__logo">
+            <a href="<?php echo $home; ?>">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo.svg" alt="なかねの森病院">
+            </a>
+          </h1>
+        <?php else : ?>
+          <div class="p-header__logo">
+            <a href="<?php echo $home; ?>">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo.svg" alt="なかねの森病院">
+            </a>
+          </div>
+        <?php endif; ?>
         <nav class="p-header__nav">
           <ul class="p-header__nav-list p-header__nav-list--top">
             <li class="p-header__nav-item p-header__nav-item--qa">
@@ -85,10 +82,10 @@ $news = esc_url(home_url('/news/'));
                 <a href="<?php echo $outpatient; ?>">外来</a>
               </li>
               <li class="p-header__drawer-item">
-                <a href="<?php echo $department; ?>">診療科</a>
+                <a href="<?php echo $department; ?>">診療科・部門</a>
               </li>
               <li class="p-header__drawer-item">
-                <a href="<?php echo $hospitalization; ?>">入院</a>
+                <a href="<?php echo $hospitalization; ?>">入院・面会</a>
               </li>
               <li class="p-header__drawer-item">
                 <a href="<?php echo $about; ?>">当院について</a>
